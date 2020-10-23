@@ -16,7 +16,7 @@
 
 ```text
 {
-  "modid": "myfirstmod",
+  "modid": "my_first_mod",
   "displayName": "MyFirstMod",
   "description": "A journey ends and a new story begins.",
   "version": "1.0.0.0",
@@ -28,8 +28,8 @@
 
 | 属性 | 默认 | 描述 |
 | :--- | :--- | :--- |
-| modid | 必填 | 当前模组的命名空间ID，模组包的唯一标识符。见下面关于命名空间的概念解释。只能由小写字母、数字、下划线组成 |
-| displayName | 必填 | 游戏中对玩家可见的模组名称 |
+| modid | 必填 | 当前模组的命名空间ID，模组包的唯一标识符，模组发布后不可再修改。见下面关于命名空间的概念解释。只能由小写字母、数字、下划线组成 |
+| displayName | 必填 | 游戏中对玩家可见的模组名称， |
 | description | 空 | 游戏中对玩家可见的模组描述 |
 | version | 必填 | 模组版本号，每次更新模组时需要更新该版本号，版本号必须为4个数字并以英文点号分隔，并且更新版本时数字应该依次累加，以便于Forge自动检测每个存档对应的版本信息并提供兼容处理 |
 | tcVersion | 必填 | TerraCraft游戏本体的版本号，请准确填写以便TCF进行存档的版本检测 |
