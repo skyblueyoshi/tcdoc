@@ -8,5 +8,5 @@
   * [模组文档](cn/mod/README.md)
     * [模组API文档](cn/mod/api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
-      * [开篇词](cn/mod/tutorials/start.md)
+      * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
 
