@@ -42,7 +42,7 @@
 
 命名空间的重要作用是确保所有的对象（比如方块、物品、NPC、抛射物、特效等）的名称在全局空间中是独一无二的，每个对象在全局空间的唯一名称是`命名空间:名称`。通过如下简单的例子来理解：
 
-> 假设我加载了命名空间为happy\_days和coco\_world的两个模组，两个模组都有一个叫做dirt的方块，那么在全局空间中：  
+> 假设当前加载了命名空间为happy\_days和coco\_world的两个模组，两个模组都有一个叫做dirt的方块，那么在全局空间中：  
 > （1）dirt和tc:dirt均表示TerraCraft原版的泥土方块  
 > （2）happy\_days:dirt表示happy\_days模组的泥土方块  
 > （3）coco\_world:dirt表示coco\_world模组的泥土方块
