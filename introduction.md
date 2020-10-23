@@ -1,6 +1,8 @@
+# Introduction
+
 ![](http://blueyoshi.cn/wp-content/uploads/2020/03/logo10.png)
 
-## Hello World! 
+## Hello World!
 
 This is the official document of TerraCraft. Please choose a language to view the document.
 
