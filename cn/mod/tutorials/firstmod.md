@@ -51,14 +51,14 @@
 
 ### 中文乱码问题
 
-请将Mod中所有JSON文件保存为`UTF8 无签名`格式，否则在游戏运行过程中可能会出现乱码问题。
+请将Mod中所有JSON文件保存为`UTF8 无签名`格式，否则在游戏运行过程中可能会出现乱码问题。这是因为`UTF8 无签名`为目前游戏对于JSON文件解码的格式，用于解决全球化的字符问题。
 
 ## 2、文件管理
 
 参考/mods/terracraft的文件管理方式，您可以根据模组需求在项目主文件夹中创建这些文件夹和内部的文件：
 
 * textures：存放贴图文件的地方，请使用png作为贴图文件格式
-* blocks：存放方块的模组数据和代码
+* blocks：存放方块相关信息
   * blocks.json：方块数据表
   * covers.json：方块覆盖对象数据表
   * ores.json：矿脉数据表
@@ -70,7 +70,7 @@
   * npcs.json：NPC数据表
   * npcAIs.json：NPC的AI数据表
   * XXX.lua：NPC指定AI的处理脚本
-* effects：存放特效的模组数据和代码
+* effects：存放特效相关信息
 * projectiles：存放抛射物的模组数据和代码
 * buffs：存放状态效果的模组数据和代码
 * enchantments：存放附魔的模组数据和代码
