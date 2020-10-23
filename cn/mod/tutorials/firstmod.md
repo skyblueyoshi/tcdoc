@@ -21,7 +21,7 @@
   "description": "A journey ends and a new story begins.",
   "version": "1.0.0.0",
   "tcVersion": "Indev 0.1",
-  "authorList": [ "BlueYoshi", "KfcMario" ],
+  "authorList": [ "BlueYoshi", "KfcMario", "Catdog" ],
   "credits": "Anything you want to thank."
 }
 ```
