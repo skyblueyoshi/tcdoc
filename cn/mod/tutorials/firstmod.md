@@ -1,6 +1,6 @@
 # 创建第一个Mod
 
-## 0、TerraCraftForge
+## 0、TerraCraftForge \(TCF\)
 
 什么是TerraCraftForge？TerraCraftForge是一个从Indev版本开始TerraCraft本体自带的模组包工具，自动帮助模组玩家导入模组包信息，处理模组的依赖以及存档兼容性问题，并给模组开发者提供便利的开发体验。
 
@@ -32,20 +32,22 @@
 | displayName | 必填 | 游戏中对玩家可见的模组名称 |
 | description | 空 | 游戏中对玩家可见的模组描述 |
 | version | 必填 | 模组版本号，每次更新模组时需要更新该版本号，版本号必须为4个数字并以英文点号分隔，并且更新版本时数字应该依次累加，以便于Forge自动检测每个存档对应的版本信息并提供兼容处理 |
-| tcVersion | 必填 | TerraCraft游戏本体的版本号，请准确填写以便Forge进行存档的版本检测 |
+| tcVersion | 必填 | TerraCraft游戏本体的版本号，请准确填写以便TCF进行存档的版本检测 |
 | authorList | 必填 | 开发当前模组的作者名称，可以设置多个作者名称 |
 | credits | 空 | 感谢信息 |
 
 ### 命名空间
 
-命名空间（`modid`，又称作`namespace`）是当前模组在整个模组包的唯一标识符。如果在所有加载的模组中出现了两个或多个命名空间相同的模组，这两个模组会发生冲突导致模组包加载失败。因此在命名`modid`时请尽可能选择一个不容易发生冲突的命名空间。
+命名空间（`modid`，又称作`namespace`）是当前模组在整个模组包的唯一标识符。如果在所有加载的模组中出现了两个或多个命名空间相同的模组，这两个模组会发生冲突导致模组包加载失败。因此在命名`modid`时请尽可能选择一个不容易发生冲突的命名空间。TerraCraft原版的命名空间为`tc`或者`空`。
 
 命名空间的重要作用是确保所有的对象（比如方块、物品、NPC、抛射物、特效等）的名称在全局空间中是独一无二的，每个对象在全局空间的唯一名称是`命名空间:名称`。通过如下简单的例子来理解：
 
 > 假设我加载了命名空间为happy\_days和coco\_world的两个模组，两个模组都有一个叫做dirt的方块，那么在全局空间中：  
-> （1）dirt表示TerraCraft原版的泥土方块  
+> （1）dirt和tc:dirt均表示TerraCraft原版的泥土方块  
 > （2）happy\_days:dirt表示happy\_days模组的泥土方块  
 > （3）coco\_world:dirt表示coco\_world模组的泥土方块
+
+对于原版的所有对象，它们在全局空间的唯一名称是`名称`或者`tc:名称`，请注意区别。
 
 ### 中文乱码问题
 
@@ -57,16 +59,16 @@
 
 * textures：存放贴图文件的地方，请使用png作为贴图文件格式
 * blocks：存放方块的模组数据和代码
-  * blocks.json：方块的数据信息
-  * covers.json：方块覆盖对象的数据信息
-  * ores.json：矿脉生成信息
-  * plants.json：植物生成信息
+  * blocks.json：方块数据表
+  * covers.json：方块覆盖对象数据表
+  * ores.json：矿脉数据表
+  * plants.json：植物数据表
 * items：存放物品相关信息
-  * items.json：物品的数据信息
-  * groups.json：物品组的数据休息
+  * items.json：物品数据表
+  * groups.json：物品组的数据信息
 * npcs：存放NPC相关信息
-  * npcs.json：NPC的数据信息
-  * npcAIs.json：NPC的AI数据信息
+  * npcs.json：NPC数据表
+  * npcAIs.json：NPC的AI数据表
   * XXX.lua：NPC指定AI的处理脚本
 * effects：存放特效的模组数据和代码
 * projectiles：存放抛射物的模组数据和代码

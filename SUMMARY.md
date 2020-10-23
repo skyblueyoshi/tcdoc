@@ -9,4 +9,5 @@
     * [模组API文档](cn/mod/api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
+      * [创建第一个物品](cn/mod/tutorials/chuang-jian-di-yi-ge-wu-pin.md)
 
