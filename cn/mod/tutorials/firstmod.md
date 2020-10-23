@@ -53,5 +53,28 @@
 
 ## 2、文件管理
 
-参考/mods/terracraft的文件管理方式，您
+参考/mods/terracraft的文件管理方式，您可以根据模组需求在项目主文件夹中创建这些文件夹和内部的文件：
+
+* textures：存放贴图文件的地方，请使用png作为贴图文件格式
+* blocks：存放方块的模组数据和代码
+  * blocks.json：方块的数据信息
+  * covers.json：方块覆盖对象的数据信息
+  * ores.json：矿脉生成信息
+  * plants.json：植物生成信息
+* items：存放物品相关信息
+  * items.json：物品的数据信息
+  * groups.json：物品组的数据休息
+* npcs：存放NPC相关信息
+  * npcs.json：NPC的数据信息
+  * npcAIs.json：NPC的AI数据信息
+  * XXX.lua：NPC指定AI的处理脚本
+* effects：存放特效的模组数据和代码
+* projectiles：存放抛射物的模组数据和代码
+* buffs：存放状态效果的模组数据和代码
+* enchantments：存放附魔的模组数据和代码
+* liquids：存放流体的模组数据和代码
+* recipes：存放配方的模组数据和代码
+* skins：存放皮肤的模组数据和代码
+* trees：存放树的模组数据和代码
+* ui：存放用户图形界面的模组数据和代码
 
