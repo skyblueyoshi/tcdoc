@@ -45,6 +45,10 @@
         * [自定义地狱群系](cn/mod/tutorials/qun-xi/zi-ding-yi-di-yu-qun-xi.md)
       * [音效](cn/mod/tutorials/yin-xiao/README.md)
         * [添加自定义音效](cn/mod/tutorials/yin-xiao/tian-jia-yin-le-he-yin-xiao.md)
+      * [指令](cn/mod/tutorials/zhi-ling/README.md)
+        * [添加玩家指令](cn/mod/tutorials/zhi-ling/tian-jia-wan-jia-zhi-ling.md)
+        * [添加管理员指令](cn/mod/tutorials/zhi-ling/tian-jia-guan-li-yuan-zhi-ling.md)
+        * [添加服务器指令](cn/mod/tutorials/zhi-ling/tian-jia-fu-wu-qi-zhi-ling.md)
       * [UI](cn/mod/tutorials/ui/README.md)
         * [自定义UI](cn/mod/tutorials/ui/zi-ding-yi-ui.md)
 
