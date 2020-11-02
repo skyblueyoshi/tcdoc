@@ -46,7 +46,7 @@
 
 我们从最简单的材料类物品开始创建！
 
-![&#x8FD9;&#x662F;&#x4E00;&#x679A;IC2&#x7684;&#x786C;&#x5E01;&#xFF01;](../../../.gitbook/assets/coin.png)
+![&#x8FD9;&#x662F;&#x4E00;&#x679A;IC2&#x7684;&#x786C;&#x5E01;&#xFF01;](../../../../.gitbook/assets/coin.png)
 
 假设我们想要添加图中的物品（具体物品想怎么用你说的算0w0，比如玩家之间货币交换之类的），我们先将这个物品图标放在Mod工程目录下的`/textures/items/icon/materials`内，命名为`coin.png`。当然不一定要按这个目录放，只要你在数据表填写贴图路径时与textures文件夹的绝对路径能够对应上就行。
 
@@ -110,7 +110,7 @@
 
 我们想要创建一些可以食用的物品，比如下面这个物品（图源自IC2的锡罐头）：
 
-![filled\_tin\_can.png](../../../.gitbook/assets/filled_tin_can.png)
+![filled\_tin\_can.png](../../../../.gitbook/assets/filled_tin_can.png)
 
 我们希望食用了这个锡罐头后，能够增加生命和魔法，但是会造成虚弱和短暂的隐身效果。我们为物品数据表中写入如下信息：
 
@@ -142,7 +142,7 @@
 
 如果我们希望实现MC的喝药水模式（喝完还空瓶子），而不是TR的喝药水模式（喝完把玻璃瓶也吃了）。我们可以设定吃完当前物品后归还什么物品。假设我们加入了下面的物品：
 
-![&#x7A7A;&#x9521;&#x7F50;&#xFF08;empty\_tin\_can&#xFF09;](../../../.gitbook/assets/tin_can.png)
+![&#x7A7A;&#x9521;&#x7F50;&#xFF08;empty\_tin\_can&#xFF09;](../../../../.gitbook/assets/tin_can.png)
 
 为`filled_tin_can`继续添加如下属性：
 
