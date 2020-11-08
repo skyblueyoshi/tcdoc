@@ -20,7 +20,7 @@
 | entity.randY\(\) | double | C/S | 返回实体纵向投影上的随机纵坐标。 |
 | entity.rotateAngle\(\) | double | C/S | 返回实体旋转角度。 |
 | entity.setRotateAngle\(double angle\) | void | C/S | 设置实体旋转角度。 |
-| entity.rotate\(double angle\) | void | C/S | 在原有角度基础上旋转指定角度。 |
+| entity.rotate\(double angle\) | void | C/S | 在原有角度基础上继续旋转指定角度。 |
 
 
 
