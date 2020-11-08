@@ -1,9 +1,9 @@
-# entity
+# 实体API
 
-全局表。
+全局表名称：entity
 
-| API | 返回值 | 有效 | 描述 |
-| :--- | :--- | :--- | :--- |
+| API | 返回值 | 可用 | 描述 |
+| :--- | :---: | :---: | :--- |
 | entity.x\(\) | double | C/S | 返回实体左上角横坐标。 |
 | entity.y\(\) | double | C/S | 返回实体左上角纵坐标。 |
 | entity.setX\(double x\) | void | S | 设置实体左上角横坐标。 |
@@ -18,6 +18,9 @@
 | entity.centerY\(\) | double | C/S | 返回实体正中间纵坐标。 |
 | entity.randX\(\) | double | C/S | 返回实体横向投影上的随机横坐标。 |
 | entity.randY\(\) | double | C/S | 返回实体纵向投影上的随机纵坐标。 |
+| entity.rotateAngle\(\) | double | C/S | 返回实体旋转角度。 |
+| entity.setRotateAngle\(double angle\) | void | C/S | 设置实体旋转角度。 |
+| entity.rotate\(double angle\) | void | C/S | 在原有角度基础上旋转指定角度。 |
 
 
 
