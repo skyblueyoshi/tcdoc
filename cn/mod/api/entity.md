@@ -27,6 +27,15 @@
 | entity.rotateAngle\(\) | double | C/S | 返回实体旋转角度。 |
 | entity.setRotateAngle\(double angle\) | void | C/S | 设置实体旋转角度。 |
 | entity.rotate\(double angle\) | void | C/S | 在原有角度基础上继续旋转指定角度。 |
+| entity.applyUserInt\(\) | int | C/S | 申请一个用户自定义的整型数据，初始值为0，返回指向该数据的索引。 |
+| entity.getUserInt\(int index\) | int | C/S | 根据索引index返回用户自定义整型数据，若索引无效或指向的数据不是整型数据，返回0。 |
+| entity.setUserInt\(int index, int value\) | bool | C/S | 根据索引index设置用户自定义整型数据，若设置成功返回true，若索引无效或指向的数据不是整型数据，返回false。 |
+| entity.applyUserDouble\(\) | int | C/S | 申请一个用户自定义的浮点型数据，初始值为0.0，返回指向该数据的索引。 |
+| entity.getUserDouble\(int index\) | double | C/S | 根据索引index返回用户自定义浮点型数据，若索引无效或指向的数据不是浮点型数据，返回0.0。 |
+| entity.setUserDouble\(int index, int value\) | bool | C/S | 根据索引index设置用户自定义浮点型数据，若设置成功返回true，若索引无效或指向的数据不是浮点型数据，返回false。 |
+| entity.applyUserBool\(\) | int | C/S | 申请一个用户自定义的布尔型数据，初始值为false，返回指向该数据的索引。 |
+| entity.getUserBool\(int index\) | bool | C/S | 根据索引index返回用户自定义布尔型数据，若索引无效或指向的数据不是布尔型数据，返回false。 |
+| entity.setUserBool\(int index, bool value\) | bool | C/S | 根据索引index设置用户自定义布尔型数据，若设置成功返回true，若索引无效或指向的数据不是布尔型数据，返回false。 |
 
 
 
