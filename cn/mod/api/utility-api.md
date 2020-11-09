@@ -208,7 +208,7 @@
   </tbody>
 </table>
 
-## 部分API的C++源码（伪代码）参考：
+## C++源码（伪代码）参考：
 
 ### int ut.floorDivide\(int a, int b\)
 
