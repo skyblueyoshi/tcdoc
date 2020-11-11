@@ -8,6 +8,7 @@
   * [模组文档](cn/mod/README.md)
     * [模组数据表文档](cn/mod/datatable.md)
     * [模组API文档](cn/mod/api/README.md)
+      * [注册信息API](cn/mod/api/zhu-ce-xin-xi-api.md)
       * [通用API](cn/mod/api/utility-api.md)
       * [实体API](cn/mod/api/entity.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
