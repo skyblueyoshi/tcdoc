@@ -2,6 +2,8 @@
 
 全局表名称：reg
 
+## ID表
+
 | API | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | reg.getEffectID\(string name\) | int | 根据特效变量名返回在游戏中注册的ID。若ID不存在会直接报错。 |
