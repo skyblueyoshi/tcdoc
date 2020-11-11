@@ -233,8 +233,8 @@
 
 | API | 返回值 | 描述 |
 | :--- | :--- | :--- |
-| ut.hitBoxOverlap\(Hitbox a, Hitbox b\) | bool | 返回两个碰撞箱是否发生重叠。 |
-| ut.aabbOverlap\(Hitbox a, Hitbox b\) | bool | 返回两个轴对齐矩形是否发生重叠。 |
+| ut.hitBoxOverlap\(Hitbox a, Hitbox b\) | bool | 返回两个碰撞箱是否重叠。 |
+| ut.aabbOverlap\(Hitbox a, Hitbox b\) | bool | 返回两个轴对齐矩形是否重叠。 |
 
 
 
