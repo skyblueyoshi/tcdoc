@@ -59,6 +59,11 @@
       <td style="text-align:left">double</td>
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3002;</td>
     </tr>
+    <tr>
+      <td style="text-align:left">Entity.shape</td>
+      <td style="text-align:left">Shape</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5F62;&#x72B6;&#x3002;</td>
+    </tr>
   </tbody>
 </table>
 
