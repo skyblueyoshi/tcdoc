@@ -8,7 +8,7 @@
 
 ```lua
 function Init()
-    
+    --init current projectile here
 end
 ```
 
@@ -18,7 +18,7 @@ end
 
 ```lua
 function Update(tickTime)
-
+    --update every game loop
 end
 ```
 
@@ -28,7 +28,7 @@ end
 
 ```lua
 function Kill(tickTime)
-
+    --do something when projectile is killed
 end
 ```
 
@@ -38,7 +38,7 @@ end
 
 ```lua
 function OnHitNpc(target, attack)
-
+    --do something when projectile hit a npc
 end
 ```
 
@@ -48,7 +48,7 @@ end
 
 ```lua
 function OnHitPlayer(target, attack)
-
+    --do something when projectile hit a player
 end
 ```
 
@@ -58,7 +58,7 @@ end
 
 ```lua
 function OnTileCollide(oldSpeedX, oldSpeedY)
-
+    --do something when projectile hit tiles
 end
 ```
 
