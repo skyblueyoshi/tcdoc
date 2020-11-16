@@ -11,6 +11,7 @@
       * [注册信息API](cn/mod/api/zhu-ce-xin-xi-api.md)
       * [通用API](cn/mod/api/utility-api.md)
       * [实体API](cn/mod/api/entity.md)
+      * [抛射物API](cn/mod/api/pao-she-wu-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
       * [MOD入门——JSON数据表](cn/mod/tutorials/mod-ru-men-json-shu-ju-biao.md)

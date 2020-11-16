@@ -83,18 +83,18 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| entity:getCenterX\(\) | double | 返回实体正中间横坐标。 |
-| entity:getCenterY\(\) | double | 返回实体正中间纵坐标。 |
-| entity:setCenterX\(\) | void | 将实体中心横坐标设为指定位置。 |
-| entity:setCenterY\(\) | void | 将实体中心纵坐标设为指定位置。 |
-| entity:getRightX\(\) | double | 返回实体最右侧横坐标。 |
-| entity:getBottomY\(\) | double | 返回实体最底部纵坐标。 |
-| entity:randX\(\) | double | 返回实体横向投影上的随机横坐标。 |
-| entity:randY\(\) | double | 返回实体纵向投影上的随机纵坐标。 |
-| entity:getAngleTo\(double desX, double desY\) | double | 返回实体中心点到目标点的角度。 |
-| entity:getAngleFrom\(double srcX, double srcY\) | double | 返回来源点到实体中心点的角度。 |
-| entity:getDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
-| entity:rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
+| entity:CenterX\(\) | double | 返回实体正中间横坐标。 |
+| entity:CenterY\(\) | double | 返回实体正中间纵坐标。 |
+| entity:SetCenterX\(double newCenterX\) | void | 将实体中心横坐标设为指定位置。 |
+| entity:SetCenterY\(double newCenterY\) | void | 将实体中心纵坐标设为指定位置。 |
+| entity:GetRightX\(\) | double | 返回实体最右侧横坐标。 |
+| entity:GetBottomY\(\) | double | 返回实体最底部纵坐标。 |
+| entity:RandX\(\) | double | 返回实体横向投影上的随机横坐标。 |
+| entity:RandY\(\) | double | 返回实体纵向投影上的随机纵坐标。 |
+| entity:GetAngleTo\(double desX, double desY\) | double | 返回实体中心点到目标点的角度。 |
+| entity:GetAngleFrom\(double srcX, double srcY\) | double | 返回来源点到实体中心点的角度。 |
+| entity:GetDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
+| entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
 
 ### 碰撞检测函数
 
@@ -102,10 +102,10 @@
 
 | API | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| entity:getHitbox\(\) | Hitbox | 若实体为轴对齐矩形，返回轴对齐碰撞箱，否则返回旋转矩形碰撞箱。 |
-| entity:getAABB\(\) | Hitbox | 返回实体旋转角度为0的轴对齐碰撞箱。 |
-| entity:getMinAABB\(\) | Hitbox | 返回完全包裹实体的最小轴对齐碰撞箱。 |
-| entity:isNoCollision\(\) | bool | 返回实体是否没有发生任何形式的碰撞。 |
+| entity:GetHitbox\(\) | Hitbox | 若实体为轴对齐矩形，返回轴对齐碰撞箱，否则返回旋转矩形碰撞箱。 |
+| entity:GetAABB\(\) | Hitbox | 返回实体旋转角度为0的轴对齐碰撞箱。 |
+| entity:GetMinAABB\(\) | Hitbox | 返回完全包裹实体的最小轴对齐碰撞箱。 |
+| entity:IsNoCollision\(\) | bool | 返回实体是否没有发生任何形式的碰撞。 |
 
 ### 用户自定义数据
 
@@ -113,13 +113,13 @@
 
 | API | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| entity:applyUserInt\(\) | int | 申请一个用户自定义的整型数据，初始值为0，返回指向该数据的索引。 |
-| entity:applyUserDouble\(\) | int | 申请一个用户自定义的浮点型数据，初始值为0.0，返回指向该数据的索引。 |
-| entity:applyUserBool\(\) | int | 申请一个用户自定义的布尔型数据，初始值为false，返回指向该数据的索引。 |
-| entity:userInt\(int index\) | int | 根据索引index返回用户自定义整型数据，若索引无效或指向的数据不是整型数据，返回0。 |
-| entity:userDouble\(int index\) | double | 根据索引index返回用户自定义浮点型数据，若索引无效或指向的数据不是浮点型数据，返回0.0。 |
-| entity:userBool\(int index\) | bool | 根据索引index返回用户自定义布尔型数据，若索引无效或指向的数据不是布尔型数据，返回false。 |
-| entity:setUserInt\(int index, int value\) | bool | 根据索引index设置用户自定义整型数据，若设置成功返回true，若索引无效或指向的数据不是整型数据，返回false。 |
-| entity:setUserDouble\(int index, double value\) | bool | 根据索引index设置用户自定义浮点型数据，若设置成功返回true，若索引无效或指向的数据不是浮点型数据，返回false。 |
-| entity:setUserBool\(int index, bool value\) | bool | 根据索引index设置用户自定义布尔型数据，若设置成功返回true，若索引无效或指向的数据不是布尔型数据，返回false。 |
+| entity:ApplyUserInt\(\) | int | 申请一个用户自定义的整型数据，初始值为0，返回指向该数据的索引。 |
+| entity:ApplyUserDouble\(\) | int | 申请一个用户自定义的浮点型数据，初始值为0.0，返回指向该数据的索引。 |
+| entity:ApplyUserBool\(\) | int | 申请一个用户自定义的布尔型数据，初始值为false，返回指向该数据的索引。 |
+| entity:UserInt\(int index\) | int | 根据索引index返回用户自定义整型数据，若索引无效或指向的数据不是整型数据，返回0。 |
+| entity:UserDouble\(int index\) | double | 根据索引index返回用户自定义浮点型数据，若索引无效或指向的数据不是浮点型数据，返回0.0。 |
+| entity:UserBool\(int index\) | bool | 根据索引index返回用户自定义布尔型数据，若索引无效或指向的数据不是布尔型数据，返回false。 |
+| entity:SetUserInt\(int index, int value\) | bool | 根据索引index设置用户自定义整型数据，若设置成功返回true，若索引无效或指向的数据不是整型数据，返回false。 |
+| entity:SetUserDouble\(int index, double value\) | bool | 根据索引index设置用户自定义浮点型数据，若设置成功返回true，若索引无效或指向的数据不是浮点型数据，返回false。 |
+| entity:SetUserBool\(int index, bool value\) | bool | 根据索引index设置用户自定义布尔型数据，若设置成功返回true，若索引无效或指向的数据不是布尔型数据，返回false。 |
 
