@@ -68,7 +68,7 @@
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| entity.stand \(ro\) | bool | 【只读】实体是否为站立状态（底部碰撞）。 |
+| entity.stand | bool | 【只读】实体是否为站立状态（底部碰撞）。 |
 | entity.isCollisionTop | bool | 【只读】实体是否顶部发生碰撞。 |
 | entity.isCollisionLeft | bool | 【只读】实体是否左侧发生碰撞。 |
 | entity.isCollisionRight | bool | 【只读】实体是否右侧发生碰撞。 |
