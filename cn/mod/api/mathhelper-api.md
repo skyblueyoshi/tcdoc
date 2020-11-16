@@ -19,7 +19,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">API</th>
+      <th style="text-align:left">&#x51FD;&#x6570;</th>
       <th style="text-align:center">&#x8FD4;&#x56DE;&#x503C;</th>
       <th style="text-align:left">&#x63CF;&#x8FF0;</th>
     </tr>
@@ -140,7 +140,7 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">API</th>
+      <th style="text-align:left">&#x51FD;&#x6570;</th>
       <th style="text-align:left">&#x8FD4;&#x56DE;&#x503C;</th>
       <th style="text-align:left">&#x63CF;&#x8FF0;</th>
     </tr>
@@ -241,13 +241,6 @@
     </tr>
   </tbody>
 </table>
-
-## 碰撞检测
-
-| API | 返回值 | 描述 |
-| :--- | :--- | :--- |
-| ut.HitBoxOverlap\(Hitbox a, Hitbox b\) | bool | 返回两个碰撞箱是否重叠。 |
-| ut.AABBOverlap\(Hitbox a, Hitbox b\) | bool | 返回两个轴对齐矩形是否重叠。 |
 
 
 

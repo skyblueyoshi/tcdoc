@@ -6,7 +6,7 @@
 
 ### Hitbox
 
-| 成员参数名 | 类型 | 描述 |
+| 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
 | Hitbox.x | double | 碰撞箱在旋转角度为0时左上角横坐标。 |
 | Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
@@ -14,7 +14,10 @@
 | Hitbox.height | int | 碰撞箱的高度。 |
 | Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
 
-## 
+| 函数 | 返回值 | 描述 |
+| :--- | :--- | :--- |
+| Hitbox:Overlap\(Hitbox other\) | bool | 返回当前碰撞箱与另一个碰撞箱是否重叠。 |
+| Hitbox:OverlapAABB\(Hitbox other\) | bool | 返回当前轴对齐矩形与另一个轴对齐矩形是否重叠。 |
 
 ## 枚举类型（Enums）
 
