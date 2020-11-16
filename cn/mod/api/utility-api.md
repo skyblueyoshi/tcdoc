@@ -4,7 +4,7 @@
 
 ## 常量
 
-| 常量 | 返回值 |  |
+| 常量 | 返回值 | 描述 |
 | :--- | :--- | :--- |
 | MathHelper.E | double | 自然常数 |
 | MathHelper.LOG2E | double | 以 2 为底 e 的对数 |
