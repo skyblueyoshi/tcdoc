@@ -7,12 +7,12 @@
 | 常量 | 返回值 |  |
 | :--- | :--- | :--- |
 | MathHelper.E | double | 自然常数 |
-| MathHelper.Log2E | double | 以 2 为底 e 的对数 |
-| MathHelper.Log10E | double | 以 10 为底 e 的对数 |
-| MathHelper.Pi | double | 圆周率 |
-| MathHelper.TwoPi | double | 圆周率 x 2 |
-| MathHelper.PiOver2 | double | 圆周率 / 2 |
-| MathHelper.PiOver4 | double | 圆周率 / 4 |
+| MathHelper.LOG2E | double | 以 2 为底 e 的对数 |
+| MathHelper.LOG10E | double | 以 10 为底 e 的对数 |
+| MathHelper.PI | double | 圆周率 |
+| MathHelper.TWO\_PI | double | 圆周率 x 2 |
+| MathHelper.PI\_OVER\_2 | double | 圆周率 / 2 |
+| MathHelper.PI\_OVER\_4 | double | 圆周率 / 4 |
 
 ## 随机数
 
