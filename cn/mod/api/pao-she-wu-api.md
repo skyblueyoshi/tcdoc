@@ -4,27 +4,63 @@
 
 ## 钩子函数
 
-### Init\(\)
+### void Init\(\)
+
+```lua
+function Init()
+    
+end
+```
 
 抛射物生成时调用一次该函数。
 
-### Update\(tickTime\)
+### void Update\(int tickTime\)
+
+```lua
+function Update(tickTime)
+
+end
+```
 
 抛射物每帧运行时调用，tickTime为当前抛射物实际生存时间（帧）。
 
-### Kill\(tickTime\)
+### void Kill\(int tickTime\)
+
+```lua
+function Kill(tickTime)
+
+end
+```
 
 抛射物死亡时调用一次该函数，tickTime为当前抛射物实际生存时间（帧）。
 
-### OnHitNpc\(target, attack\)
+### void OnHitNpc\(Npc target, Attack attack\)
+
+```lua
+function OnHitNpc(target, attack)
+
+end
+```
 
 抛射物击中Npc时调用该函数。target为被击中的Npc，attack为攻击数值。
 
-### OnHitPlayer\(target, attack\)
+### void OnHitPlayer\(Player target, Attack attack\)
+
+```lua
+function OnHitPlayer(target, attack)
+
+end
+```
 
 抛射物击中玩家时调用该函数。target为被击中的玩家，attack为攻击数值。
 
-### OnTileCollide\(oldSpeedX, oldSpeedY\)
+### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
+
+```lua
+function OnTileCollide(oldSpeedX, oldSpeedY)
+
+end
+```
 
 抛射物击中实心图块时调用该函数。oldSpeedX和oldSpeedY表示击中实心图块前一帧的横向和纵向速度。
 
