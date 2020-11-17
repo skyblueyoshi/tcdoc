@@ -24,10 +24,10 @@ end
 
 抛射物每帧运行时调用，tickTime为当前抛射物实际生存时间（帧）。
 
-### void Kill\(int tickTime\)
+### void OnKilled\(int tickTime\)
 
 ```lua
-function Kill(tickTime)
+function OnKilled(tickTime)
     --do something when projectile is killed
 end
 ```
