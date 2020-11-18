@@ -1,7 +1,6 @@
 # Table of contents
 
-* [常量](README.md)
-* [Introduction](introduction.md)
+* [TerraCraft](README.md)
 * [English](english/README.md)
   * [TEST](english/test.md)
 * [简体中文](cn/README.md)

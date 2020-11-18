@@ -64,5 +64,15 @@ end
 
 抛射物击中实心图块时调用该函数。oldSpeedX和oldSpeedY表示击中实心图块前一帧的横向和纵向速度。
 
+## 成员属性
 
+
+
+## 成员函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :--- | :--- |
+| Projectile:Kill\(\) | void | 清除当前抛射物对象。 |
+| Projectile:GetPlayerOwner\(\) | Player/nil | 若当前抛射物的玩家拥有者存在且存活，返回该玩家对象，否则返回nil。 |
+| Projectile:GetNpcOwner\(\) | Npc/nil | 若当前抛射物的NPC拥有着存在且存活，返回该NPC对象，否则返回nil。 |
 
