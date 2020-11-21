@@ -34,45 +34,45 @@ end
 
 抛射物死亡时调用一次该函数，tickTime为当前抛射物实际生存时间（帧）。
 
-### void ModifyHitNpc\(Npc target, Attack hitAttack\)
+### void ModifyHitNpc\(Npc npc, Attack hitAttack\)
 
 ```lua
-function ModifyHitNpc(target, hitAttack)
+function ModifyHitNpc(npc, hitAttack)
     --modify this attack value when projectile hit a npc
 end
 ```
 
-抛射物击中Npc前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。target为被击中的Npc，hitAttack为攻击属性（见Attack数据类型）。
+抛射物击中Npc前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。其中hitAttack为攻击属性（见Attack数据类型）。
 
-### void OnHitNpc\(Npc target, Attack hitAttack\)
+### void OnHitNpc\(Npc npc, Attack hitAttack\)
 
 ```lua
-function OnHitNpc(target, hitAttack)
+function OnHitNpc(npc, hitAttack)
     --do something when projectile hit a npc
 end
 ```
 
-抛射物击中Npc时调用该函数。target为被击中的Npc，attack为攻击属性（见Attack数据类型）。
+抛射物击中Npc时调用该函数。其中attack为攻击属性（见Attack数据类型）。
 
-### void ModifyHitPlayer\(Player target, Attack hitAttack\)
+### void ModifyHitPlayer\(Player player, Attack hitAttack\)
 
 ```lua
-function ModifyHitPlayer(target, hitAttack)
+function ModifyHitPlayer(player, hitAttack)
     --modify this attack value projectile hit a player
 end
 ```
 
-抛射物击中玩家前调用该函数。target为被击中的玩家，attack为攻击数值。
+抛射物击中玩家前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。其中hitAttack为攻击属性（见Attack数据类型）。
 
-### void OnHitPlayer\(Player target, Attack hitAttack\)
+### void OnHitPlayer\(Player player, Attack hitAttack\)
 
 ```lua
-function OnHitPlayer(target, hitAttack)
+function OnHitPlayer(player, hitAttack)
     --do something when projectile hit a player
 end
 ```
 
-抛射物击中玩家时调用该函数，通常用于修改hitAttack来实现攻击数据自定义。target为被击中的玩家，hitAttack为攻击属性（见Attack数据类型）。
+抛射物击中玩家时调用该函数。hitAttack为攻击属性（见Attack数据类型）。
 
 ### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
