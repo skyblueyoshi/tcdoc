@@ -96,7 +96,25 @@ end
 
 ## 全局常量（Global Constants）
 
-| 常量名 | 描述 |
-| :--- | :--- |
-|  |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x5E38;&#x91CF;&#x540D;</th>
+      <th style="text-align:left">&#x5E38;&#x91CF;&#x503C;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">netMode</td>
+      <td style="text-align:left">&#x89C1;&#x63CF;&#x8FF0;</td>
+      <td style="text-align:left">
+        <p>&#x82E5;&#x5F53;&#x524D;&#x811A;&#x672C;&#x4E3A;&#x670D;&#x52A1;&#x7AEF;&#x73AF;&#x5883;&#xFF0C;&#x503C;&#x4E3A;<code>NET_MODE_SERVER</code>&#x3002;</p>
+        <p>&#x82E5;&#x5F53;&#x524D;&#x811A;&#x672C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x73AF;&#x5883;&#xFF0C;&#x503C;&#x4E3A;<code>NET_MODE_CLIENT</code>&#x3002;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
