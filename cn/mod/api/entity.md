@@ -1,10 +1,14 @@
 # 实体API
 
-实体（Entity）用于表示实体图形以及碰撞检测相关的基本属性。Npc、Projectile、Effect的基类均为Entity，都可以使用如下的成员属性和成员函数。
+## 实体类（Entity Class）
 
-## 成员属性
+实体类（Entity）维护实体图形以及碰撞检测相关的基本属性。
 
-### 坐标与图形属性
+Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
+
+### 类成员属性
+
+#### 坐标与图形属性
 
 <table>
   <thead>
@@ -67,7 +71,7 @@
   </tbody>
 </table>
 
-### 碰撞检测属性
+#### 碰撞检测属性
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
@@ -78,9 +82,18 @@
 | Entity.isCollisionStuck | bool | 【只读】实体是否卡在方块内部。 |
 | Entity.onSlope | bool | 【只读】实体是否站在斜坡上。 |
 
-## 成员函数
+#### 用户自定义数据
 
-### 坐标与图形函数
+您可以通过如下API，维护针对当前实体的用户自定义数据。在使用用户自定义数据之前，您需要在对应的初始化函数中申请自定义数据的数据量，建议申请的数据量不超过4。之后，您可以使用这个索引来获取或修改自定义数据。见用户[数据类型：用户自定义数据](datatypes-enums-constants.md#uservar-less-than-t-greater-than)。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Entity.ivar | UserVar&lt;int&gt; | 实体的用户自定义整型数据。 |
+| Entity.dvar | UserVar&lt;double&gt; | 实体的用户自定义浮点型数据。 |
+
+### 类成员函数
+
+#### 坐标与图形函数
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
@@ -98,7 +111,7 @@
 | Entity:GetDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
 | Entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
 
-### 碰撞检测函数
+#### 碰撞检测函数
 
 如下是当前实体的碰撞检测相关API。
 
@@ -109,19 +122,5 @@
 | Entity:GetMinAABB\(\) | Hitbox | 返回完全包裹实体的最小轴对齐碰撞箱。 |
 | Entity:IsNoCollision\(\) | bool | 返回实体是否没有发生任何形式的碰撞。 |
 
-### 用户自定义数据
 
-您可以通过如下API，维护针对当前实体的用户自定义数据。在使用用户自定义数据之前，您需要在对应的初始化函数中申请自定义数据，得到自定义数据的索引，注意该索引为一个大于0的整数。之后，您可以使用这个索引来获取或修改自定义数据。
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| Entity:ApplyUserInt\(\) | int | 申请一个用户自定义的整型数据，初始值为0，返回指向该数据的索引。 |
-| Entity:ApplyUserDouble\(\) | int | 申请一个用户自定义的浮点型数据，初始值为0.0，返回指向该数据的索引。 |
-| Entity:ApplyUserBool\(\) | int | 申请一个用户自定义的布尔型数据，初始值为false，返回指向该数据的索引。 |
-| Entity:UserInt\(int index\) | int | 根据索引index返回用户自定义整型数据，若索引无效或指向的数据不是整型数据，返回0。 |
-| Entity:UserDouble\(int index\) | double | 根据索引index返回用户自定义浮点型数据，若索引无效或指向的数据不是浮点型数据，返回0.0。 |
-| Entity:UserBool\(int index\) | bool | 根据索引index返回用户自定义布尔型数据，若索引无效或指向的数据不是布尔型数据，返回false。 |
-| Entity:SetUserInt\(int index, int value\) | bool | 根据索引index设置用户自定义整型数据，若设置成功返回true，若索引无效或指向的数据不是整型数据，返回false。 |
-| Entity:SetUserDouble\(int index, double value\) | bool | 根据索引index设置用户自定义浮点型数据，若设置成功返回true，若索引无效或指向的数据不是浮点型数据，返回false。 |
-| Entity:SetUserBool\(int index, bool value\) | bool | 根据索引index设置用户自定义布尔型数据，若设置成功返回true，若索引无效或指向的数据不是布尔型数据，返回false。 |
 

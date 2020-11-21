@@ -1,8 +1,8 @@
 # 抛射物API
 
-抛射物（Projectile）是一类实体，继承自实体（Entity）类，可以使用entity类的成员属性和函数，同时可以使用自己的成员属性和函数。在编写抛射物的Lua文件中，请直接使用self来表示当前正在操作的抛射物。
-
 ## 钩子函数
+
+请在抛射物AI脚本中使用这些钩子函数。
 
 ### void Init\(\)
 
@@ -34,25 +34,45 @@ end
 
 抛射物死亡时调用一次该函数，tickTime为当前抛射物实际生存时间（帧）。
 
-### void OnHitNpc\(Npc target, Attack attack\)
+### void ModifyHitNpc\(Npc target, Attack hitAttack\)
 
 ```lua
-function OnHitNpc(target, attack)
+function ModifyHitNpc(target, hitAttack)
+    --modify this attack value when projectile hit a npc
+end
+```
+
+抛射物击中Npc前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。target为被击中的Npc，hitAttack为攻击属性（见Attack数据类型）。
+
+### void OnHitNpc\(Npc target, Attack hitAttack\)
+
+```lua
+function OnHitNpc(target, hitAttack)
     --do something when projectile hit a npc
 end
 ```
 
-抛射物击中Npc时调用该函数。target为被击中的Npc，attack为攻击数值。
+抛射物击中Npc时调用该函数。target为被击中的Npc，attack为攻击属性（见Attack数据类型）。
 
-### void OnHitPlayer\(Player target, Attack attack\)
+### void ModifyHitPlayer\(Player target, Attack hitAttack\)
 
 ```lua
-function OnHitPlayer(target, attack)
+function ModifyHitPlayer(target, hitAttack)
+    --modify this attack value projectile hit a player
+end
+```
+
+抛射物击中玩家前调用该函数。target为被击中的玩家，attack为攻击数值。
+
+### void OnHitPlayer\(Player target, Attack hitAttack\)
+
+```lua
+function OnHitPlayer(target, hitAttack)
     --do something when projectile hit a player
 end
 ```
 
-抛射物击中玩家时调用该函数。target为被击中的玩家，attack为攻击数值。
+抛射物击中玩家时调用该函数，通常用于修改hitAttack来实现攻击数据自定义。target为被击中的玩家，hitAttack为攻击属性（见Attack数据类型）。
 
 ### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
@@ -64,15 +84,27 @@ end
 
 抛射物击中实心图块时调用该函数。oldSpeedX和oldSpeedY表示击中实心图块前一帧的横向和纵向速度。
 
-## 成员属性
+## 抛射物类（Projectile Class）
+
+在编写抛射物AI脚本时，**self表示当前正在操作的抛射物类**。
+
+### 父类
+
+该类的父类为[Entity类](entity.md#shi-ti-lei-entity-class)。可直接使用该父类的类成员属性与类成员函数。
+
+### 类成员属性
 
 
 
-## 成员函数
+### 类成员函数
 
 | 函数 | 返回值 | 描述 |
 | :--- | :--- | :--- |
 | Projectile:Kill\(\) | void | 清除当前抛射物对象。 |
 | Projectile:GetPlayerOwner\(\) | Player/nil | 若当前抛射物的玩家拥有者存在且存活，返回该玩家对象，否则返回nil。 |
 | Projectile:GetNpcOwner\(\) | Npc/nil | 若当前抛射物的NPC拥有着存在且存活，返回该NPC对象，否则返回nil。 |
+| Projectile:GetPlayerTarget\(\) | Player/nil | 若当前抛射物的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
+| Projectile:GetNpcTarget\(\) | Npc/nil | 若当前抛射物的NPC锁定目标存在且存活，返回该NPC对象，否则返回nil。 |
+| Projectile:SetPlayerTarget\(Player player\) | void | 设定当前抛射物的玩家锁定目标。 |
+| Projectile:SetNpcTarget\(Npc npc\) | void | 设定当前抛射物的NPC锁定目标。 |
 
