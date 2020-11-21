@@ -53,7 +53,7 @@
       <td style="text-align:left">
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BBE;&#x7F6E;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x8BBE;&#x7F6E;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
-        <p>&#x8BBE;&#x5B9A;&#x65B9;&#x5F0F;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x539F;&#x5219;</a>
+        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
         </p>
       </td>
     </tr>
@@ -64,7 +64,7 @@
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E3A;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6DFB;&#x52A0;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x6DFB;&#x52A0;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
         <p>&#x82E5;addCount&#x4E3A;&#x6B63;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x6DFB;&#x52A0;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;&#x82E5;addCount&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x51CF;&#x5C11;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
-        <p>&#x8BBE;&#x5B9A;&#x65B9;&#x5F0F;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x539F;&#x5219;</a>
+        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
         </p>
       </td>
     </tr>
@@ -114,17 +114,37 @@
         <p>&#x82E5;&#x64CD;&#x4F5C;&#x540E;&#x7269;&#x54C1;&#x683C;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;true&#x3002;&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4ECD;&#x7136;&#x5B58;&#x5728;&#x7269;&#x54C1;&#xFF0C;&#x8FD4;&#x56DE;false&#x3002;</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">ItemSlot:MoveFrom(ItemSlot slot)</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left">
+        <p>&#x5C06;&#x6307;&#x5B9A;&#x7269;&#x54C1;&#x683C;&#x7684;&#x5185;&#x5BB9;&#x7269;&#x54C1;&#x79FB;&#x5165;&#x5230;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x79FB;&#x5165;&#x7684;&#x7269;&#x54C1;&#x4E2A;&#x6570;&#x3002;</p>
+        <p>&#x8F6C;&#x79FB;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-zhuan-yi-gui-ze">&#x7269;&#x54C1;&#x8F6C;&#x79FB;&#x89C4;&#x5219;</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ItemSlot:MoveTo(ItemSlot slot)</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left">
+        <p>&#x5C06;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x683C;&#x7684;&#x5185;&#x5BB9;&#x7269;&#x79FB;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7269;&#x54C1;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x79FB;&#x51FA;&#x7684;&#x7269;&#x54C1;&#x4E2A;&#x6570;&#x3002;</p>
+        <p>&#x8F6C;&#x79FB;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-zhuan-yi-gui-ze">&#x7269;&#x54C1;&#x8F6C;&#x79FB;&#x89C4;&#x5219;</a>
+        </p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
-## 物品数量设定原则
+## 物品数量设定规则
 
 在物品格包含物品的情况下，若设定数量在区间**\[1, 最大允许数量\]**，则设定数量合法，直接将物品数量设为指定数量。否则：
 
 1. 若设定数量超过最大允许数量，将物品数量设为最大允许数量。
 2. 若设定数量非正数，清除内部包含的物品。
 
+## 物品转移规则
 
+将一个物品格的物品转移至另一个物品格时，若两个物品格的物品不是同类物品，不会进行转移。若物品格转移达到最大允许数量，则终止转移。
 
 
 
