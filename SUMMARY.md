@@ -15,6 +15,7 @@
       * [特效API](cn/mod/api/te-xiao-api.md)
       * [抛射物API](cn/mod/api/pao-she-wu-api.md)
       * [状态效果API](cn/mod/api/zhuang-tai-xiao-guo-api.md)
+      * [玩家API](cn/mod/api/wan-jia-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
       * [MOD入门——JSON数据表](cn/mod/tutorials/mod-ru-men-json-shu-ju-biao.md)
