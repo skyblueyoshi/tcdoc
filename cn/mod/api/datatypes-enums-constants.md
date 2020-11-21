@@ -82,8 +82,8 @@ end
 
 | 枚举值 | 描述 |
 | :--- | :--- |
-| `NET_MODE_SERVER` | 当前脚本为服务端环境。 |
-| `NET_MODE_CLIENT` | 当前脚本为客户端环境。 |
+| NET\_MODE\_SERVER | 当前脚本为服务端环境。 |
+| NET\_MODE\_CLIENT | 当前脚本为客户端环境。 |
 
 ### Shape
 
@@ -93,6 +93,18 @@ end
 | :--- | :--- |
 | SHAPE\_BOX | 碰撞箱形状为轴对齐矩形。 |
 | SHAPE\_ROTATE\_BOX | 碰撞箱形状为旋转矩形。 |
+
+### ItemType
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| ITEM\_TYPE\_NONE | 无物品。 |
+| ITEM\_TYPE\_BLOCKS | 方块类型物品。 |
+| ITEM\_TYPE\_TOOLS | 工具类型物品。 |
+| ITEM\_TYPE\_MATERIALS | 材料类型物品。 |
+| ITEM\_TYPE\_WIRES | 红石电线类型物品。 |
+| ITEM\_TYPE\_PROJECTILES | 抛射物类型物品。 |
+| ITEM\_TYPE\_CHESTS | 容器类型物品。 |
 
 ## 全局常量（Global Constants）
 

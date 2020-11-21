@@ -65,7 +65,8 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     </tr>
     <tr>
       <td style="text-align:left">Entity.shape</td>
-      <td style="text-align:left">Shape</td>
+      <td style="text-align:left"><a href="datatypes-enums-constants.md#shape">Shape</a>
+      </td>
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5F62;&#x72B6;&#x3002;</td>
     </tr>
   </tbody>
@@ -88,8 +89,8 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| Entity.ivar | UserVar&lt;int&gt; | 实体的用户自定义整型数据。 |
-| Entity.dvar | UserVar&lt;double&gt; | 实体的用户自定义浮点型数据。 |
+| Entity.ivar | [UserVar&lt;int&gt;](datatypes-enums-constants.md#uservar-less-than-t-greater-than) | 实体的用户自定义整型数据。 |
+| Entity.dvar | [UserVar&lt;double&gt;](datatypes-enums-constants.md#uservar-less-than-t-greater-than) | 实体的用户自定义浮点型数据。 |
 
 ### 类成员函数
 
@@ -115,9 +116,9 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Entity:GetHitbox\(\) | Hitbox | 若实体为轴对齐矩形，返回轴对齐碰撞箱，否则返回旋转矩形碰撞箱。 |
-| Entity:GetAABB\(\) | Hitbox | 返回实体旋转角度为0的轴对齐碰撞箱。 |
-| Entity:GetMinAABB\(\) | Hitbox | 返回完全包裹实体的最小轴对齐碰撞箱。 |
+| Entity:GetHitbox\(\) | [Hitbox](datatypes-enums-constants.md#hitbox) | 若实体为轴对齐矩形，返回轴对齐碰撞箱，否则返回旋转矩形碰撞箱。 |
+| Entity:GetAABB\(\) | [Hitbox](datatypes-enums-constants.md#hitbox) | 返回实体旋转角度为0的轴对齐碰撞箱。 |
+| Entity:GetMinAABB\(\) | [Hitbox](datatypes-enums-constants.md#hitbox) | 返回完全包裹实体的最小轴对齐碰撞箱。 |
 | Entity:IsNoCollision\(\) | bool | 返回实体是否没有发生任何形式的碰撞。 |
 
 

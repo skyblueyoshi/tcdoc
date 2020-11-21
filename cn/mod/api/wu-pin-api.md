@@ -68,6 +68,15 @@
         </p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">ItemSlot:GetType()</td>
+      <td style="text-align:center"><a href="datatypes-enums-constants.md#itemtype">ItemType</a>
+      </td>
+      <td style="text-align:left">
+        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;&#x5185;&#x7F6E;&#x7269;&#x54C1;&#x7C7B;&#x578B;&#x3002;</p>
+        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;ITEM_TYPE_NONE&#x3002;</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -102,9 +111,9 @@
       <td style="text-align:left">&#x5C06;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x683C;&#x4E0E;&#x53E6;&#x4E00;&#x4E2A;&#x7269;&#x54C1;&#x683C;&#x4EA4;&#x6362;&#x3002;</td>
     </tr>
     <tr>
-      <td style="text-align:left">ItemSlot:RemoveAll()</td>
+      <td style="text-align:left">ItemSlot:Clear()</td>
       <td style="text-align:center">void</td>
-      <td style="text-align:left">&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x9500;&#x6BC1;&#x5185;&#x90E8;&#x7684;&#x5168;&#x90E8;&#x7269;&#x54C1;&#x3002;</td>
+      <td style="text-align:left">&#x9500;&#x6BC1;&#x5185;&#x90E8;&#x7684;&#x5168;&#x90E8;&#x7269;&#x54C1;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">ItemSlot:RemoveOne()</td>
