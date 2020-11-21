@@ -10,6 +10,7 @@
       * [注册信息API](cn/mod/api/zhu-ce-xin-xi-api.md)
       * [数据类型、枚举、全局量](cn/mod/api/datatypes-enums-constants.md)
       * [数学与几何API](cn/mod/api/mathhelper-api.md)
+      * [物品API](cn/mod/api/wu-pin-api.md)
       * [实体API](cn/mod/api/entity.md)
       * [抛射物API](cn/mod/api/pao-she-wu-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)

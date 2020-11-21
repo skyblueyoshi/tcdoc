@@ -2,7 +2,7 @@
 
 ## 实体类（Entity Class）
 
-实体类（Entity）维护实体图形以及碰撞检测相关的基本属性。
+**实体（Entity）**类表示拥有图形以及碰撞检测相关的基本属性的对象。
 
 Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
 
@@ -112,8 +112,6 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 | Entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
 
 #### 碰撞检测函数
-
-如下是当前实体的碰撞检测相关API。
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
