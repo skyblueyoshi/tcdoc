@@ -22,7 +22,7 @@
 | ItemSlot.id | int | **【只读】**若物品格不为空，表示包含的物品ID，否则总是为0。 |
 | ItemSlot.count | int | **【只读】**若物品格不为空，表示包含的物品数量，否则总是为0。 |
 | ItemSlot.maxCount | int | **【只读】**若物品格不为空，表示包含的物品最大允许数量，否则总是为0。 |
-| ItemSlot.type | [ItemType](datatypes-enums-constants.md#itemtype) | **【只读】**若物品格不为空，表示内置物品类型，否则总是为`ITEM_TYPE_NONE`。 |
+| ItemSlot.type | ItemType | **【只读】**若物品格不为空，表示内置物品类型，否则总是为`ITEM_TYPE_NONE`。 |
 
 ### 类成员函数
 

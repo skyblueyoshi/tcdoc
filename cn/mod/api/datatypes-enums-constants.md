@@ -1,57 +1,8 @@
-# 数据类型、枚举类型
+# 数据类型、枚举、全局量
 
-本篇描述的数据类型、枚举类型在所有的文件均可用。
+本篇描述的数据类型、枚举类型和全局变量在所有的文件均可用。
 
 ## 数据类型（Data Types）
-
-### ArrayList&lt;T&gt;
-
-TerraCraft内置的动态数组。
-
-| 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
-| ArrayList:GetLength\(\) | int | 返回数组长度。 |
-| ArrayList\[index\] | T | 读取或写入指定下标的数组元素。index有效区间为\[1, 可用数量\]。 |
-
-#### 遍历方案
-
-```lua
-for i = 1, arrayList:GetLength() do
-    local element = arrayList[i]
-    -- do something on this element
-end
-```
-
-### UserVar&lt;T&gt;
-
-用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型。您可以通过如下使用例了解该数据类型的用法。
-
-| 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
-| UserVar:Apply\(int n\) | void | 申请指定可用数量的用户自定义数据。申请时会清空原数据，并将全部数据置为0，请仅在初始化时使用。 |
-| UserVar\[index\] | T | 读取或写入指定下标index的用户自定义数据。index有效区间为\[1, 可用数量\]。使用自定义数据前必须申请可用数量。 |
-
-#### 使用例
-
-```lua
--- This is a projectile script
-
-function Init()
-    self.ivar:Apply(4) -- Apply 4 integer values
-    self.dvar:Apply(2) -- Apply 2 double values
-    self.ivar[1] = 123
-    self.ivar[2] = 456
-    self.ivar[3] = self.ivar[1]
-    self.ivar[4] = 789
-    self.dvar[1] = 1.0
-    self.dvar[2] = 2.0
-end
-
-function Update()
-    self.ivar[2] = self.ivar[1]
-    self.dvar[2] = self.dvar[2] + 1.0
-end
-```
 
 ### Hitbox
 
@@ -84,6 +35,37 @@ end
 
 表示一个实体在对应实体类型中的唯一键值。
 
+### UserVar&lt;T&gt;
+
+用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型。您可以通过如下使用例了解该数据类型的用法。
+
+| 函数 | 返回值 | 描述 |
+| :--- | :--- | :--- |
+| UserVar:Apply\(int n\) | void | 申请指定可用数量的用户自定义数据。申请时会清空原数据，并将全部数据置为0，请仅在初始化时使用。 |
+| UserVar\[index\] | T | 读取或写入指定下标index的用户自定义数据。index有效区间为\[1, 可用数量\]。使用自定义数据前必须申请可用数量。 |
+
+#### 使用例
+
+```lua
+-- This is a projectile script
+
+function Init()
+    self.ivar:Apply(4) -- Apply 4 integer values
+    self.dvar:Apply(2) -- Apply 2 double values
+    self.ivar[1] = 123
+    self.ivar[2] = 456
+    self.ivar[3] = self.ivar[1]
+    self.ivar[4] = 789
+    self.dvar[1] = 1.0
+    self.dvar[2] = 2.0
+end
+
+function Update()
+    self.ivar[2] = self.ivar[1]
+    self.dvar[2] = self.dvar[2] + 1.0
+end
+```
+
 ## 枚举类型（Enums）
 
 注意，这里的枚举值直接当作全局常量使用，且枚举类型的变量只能使用对应枚举值。例如：
@@ -114,8 +96,6 @@ end
 
 ### ItemType
 
-描述物品类型。
-
 | 枚举值 | 描述 |
 | :--- | :--- |
 | ITEM\_TYPE\_NONE | 无物品。 |
@@ -126,5 +106,29 @@ end
 | ITEM\_TYPE\_PROJECTILES | 抛射物类型物品。 |
 | ITEM\_TYPE\_CHESTS | 容器类型物品。 |
 
-## 
+## 全局常量（Global Constants）
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x5E38;&#x91CF;&#x540D;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x5E38;&#x91CF;&#x503C;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">netMode</td>
+      <td style="text-align:left">NetMode</td>
+      <td style="text-align:left">&#x89C1;&#x63CF;&#x8FF0;</td>
+      <td style="text-align:left">
+        <p>&#x82E5;&#x5F53;&#x524D;&#x811A;&#x672C;&#x4E3A;&#x670D;&#x52A1;&#x7AEF;&#x73AF;&#x5883;&#xFF0C;&#x503C;&#x4E3A;<code>NET_MODE_SERVER</code>&#x3002;</p>
+        <p>&#x82E5;&#x5F53;&#x524D;&#x811A;&#x672C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x73AF;&#x5883;&#xFF0C;&#x503C;&#x4E3A;<code>NET_MODE_CLIENT</code>&#x3002;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
