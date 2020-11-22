@@ -4,23 +4,36 @@
 
 ## 数据类型（Data Types）
 
-### ArrayList&lt;T&gt;
+### Hitbox
 
-TerraCraft内置的动态数组。
+表示一个碰撞箱。若`angle`属性为0，表示轴对齐碰撞箱（AABB）。否则表示一个绕中心点旋转的碰撞箱。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Hitbox.x | double | 碰撞箱在旋转角度为0时左上角横坐标。 |
+| Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
+| Hitbox.width | int | 碰撞箱的宽度。 |
+| Hitbox.height | int | 碰撞箱的高度。 |
+| Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
 
 | 函数 | 返回值 | 描述 |
 | :--- | :--- | :--- |
-| ArrayList:GetLength\(\) | int | 返回数组长度。 |
-| ArrayList\[index\] | T | 读取或写入指定下标的数组元素。index有效区间为\[1, 可用数量\]。 |
+| Hitbox:Overlap\(Hitbox other\) | bool | 返回当前碰撞箱与另一个碰撞箱是否重叠。 |
+| Hitbox:OverlapAABB\(Hitbox other\) | bool | 返回当前轴对齐矩形与另一个轴对齐矩形是否重叠。 |
 
-#### 遍历方案
+### Attack
 
-```lua
-for i = 1, arrayList:GetLength() do
-    local element = arrayList[i]
-    -- do something on this element
-end
-```
+表示一个攻击属性。包括攻击值、击退值、暴击率三个属性。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Attack.attack | int | 攻击值。 |
+| Attack.knockBack | int | 攻击的击退值。 |
+| Attack.crit | int | 攻击的百分暴击率。1-100表示1-100%的概率产生双倍暴击伤害，大于100表示总是产生双倍暴击伤害，小于1表示不产生双柏暴击伤害。 |
+
+### EntityKey
+
+表示一个实体在对应实体类型中的唯一键值。
 
 ### UserVar&lt;T&gt;
 
@@ -52,37 +65,6 @@ function Update()
     self.dvar[2] = self.dvar[2] + 1.0
 end
 ```
-
-### Hitbox
-
-表示一个碰撞箱。若`angle`属性为0，表示轴对齐碰撞箱（AABB）。否则表示一个绕中心点旋转的碰撞箱。
-
-| 属性 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| Hitbox.x | double | 碰撞箱在旋转角度为0时左上角横坐标。 |
-| Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
-| Hitbox.width | int | 碰撞箱的宽度。 |
-| Hitbox.height | int | 碰撞箱的高度。 |
-| Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
-
-| 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
-| Hitbox:Overlap\(Hitbox other\) | bool | 返回当前碰撞箱与另一个碰撞箱是否重叠。 |
-| Hitbox:OverlapAABB\(Hitbox other\) | bool | 返回当前轴对齐矩形与另一个轴对齐矩形是否重叠。 |
-
-### Attack
-
-表示一个攻击属性。包括攻击值、击退值、暴击率三个属性。
-
-| 属性 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| Attack.attack | int | 攻击值。 |
-| Attack.knockBack | int | 攻击的击退值。 |
-| Attack.crit | int | 攻击的百分暴击率。1-100表示1-100%的概率产生双倍暴击伤害，大于100表示总是产生双倍暴击伤害，小于1表示不产生双柏暴击伤害。 |
-
-### EntityKey
-
-表示一个实体在对应实体类型中的唯一键值。
 
 ## 枚举类型（Enums）
 
