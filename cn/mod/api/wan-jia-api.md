@@ -27,6 +27,8 @@
 | Player:RemoveExpLevel\(int level\) | void | 消耗当前玩家的经验等级。 |
 | Player:AddBuff\(int buffID, int buffTime\) | void | 为当前玩家添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
 | Player:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
+| Player:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
+| Player:RemoveAllBuffExceptHealthCold\(\) | void | 移除除“生命冷却”外的全部状态效果。 |
 | Player:HasBuff\(int buffID\) | bool | 返回玩家是否拥有指定状态效果。 |
 | Player:HasAnyBuff\(\) | bool | 返回玩家是否存在状态效果。 |
 

@@ -22,7 +22,7 @@ function Update(tickTime)
 end
 ```
 
-抛射物每帧运行时调用，`tickTime`为当前抛射物实际生存时间（帧）。
+抛射物每帧运行时调用，tickTime为当前抛射物实际生存时间（帧）。
 
 ### void OnKilled\(int tickTime\)
 
@@ -32,7 +32,7 @@ function OnKilled(tickTime)
 end
 ```
 
-抛射物死亡时调用一次该函数，`tickTime`为当前抛射物实际生存时间（帧）。
+抛射物死亡时调用一次该函数，tickTime为当前抛射物实际生存时间（帧）。
 
 ### void ModifyHitNpc\(Npc npc, Attack hitAttack\)
 
@@ -42,7 +42,7 @@ function ModifyHitNpc(npc, hitAttack)
 end
 ```
 
-抛射物击中Npc前调用该函数，通常用于修改`hitAttack`来实现攻击数据自定义。其中`hitAttack`为攻击属性（见[Attack数据类型](datatypes-enums-constants.md#attack)）。
+抛射物击中Npc前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。其中hitAttack为攻击属性（见Attack数据类型）。
 
 ### void OnHitNpc\(Npc npc, Attack hitAttack\)
 
@@ -52,7 +52,7 @@ function OnHitNpc(npc, hitAttack)
 end
 ```
 
-抛射物击中Npc时调用该函数。
+抛射物击中Npc时调用该函数。其中attack为攻击属性（见Attack数据类型）。
 
 ### void ModifyHitPlayer\(Player player, Attack hitAttack\)
 
@@ -62,7 +62,7 @@ function ModifyHitPlayer(player, hitAttack)
 end
 ```
 
-抛射物击中玩家前调用该函数，通常用于修改`hitAttack`来实现攻击数据自定义。
+抛射物击中玩家前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。其中hitAttack为攻击属性（见Attack数据类型）。
 
 ### void OnHitPlayer\(Player player, Attack hitAttack\)
 
@@ -72,7 +72,7 @@ function OnHitPlayer(player, hitAttack)
 end
 ```
 
-抛射物击中玩家时调用该函数。
+抛射物击中玩家时调用该函数。hitAttack为攻击属性（见Attack数据类型）。
 
 ### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
@@ -82,7 +82,7 @@ function OnTileCollide(oldSpeedX, oldSpeedY)
 end
 ```
 
-抛射物击中实心图块时调用该函数。`oldSpeedX`和`oldSpeedY`表示击中实心图块前一帧的横向和纵向速度。
+抛射物击中实心图块时调用该函数。oldSpeedX和oldSpeedY表示击中实心图块前一帧的横向和纵向速度。
 
 ## 抛射物类（Projectile Class）
 

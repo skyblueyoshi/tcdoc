@@ -30,26 +30,6 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x5DE6;&#x4E0A;&#x89D2;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
-      <td style="text-align:left">Entity.centerX</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.centerY</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.rightX</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6700;&#x53F3;&#x4FA7;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.bottomY</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6700;&#x5E95;&#x90E8;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
       <td style="text-align:left">Entity.speedX</td>
       <td style="text-align:left">double</td>
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x6A2A;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
@@ -62,12 +42,12 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.width</td>
       <td style="text-align:left">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
+      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.height</td>
       <td style="text-align:left">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x9AD8;&#x5EA6;&#x3002;</td>
+      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x9AD8;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.direction</td>
@@ -84,23 +64,9 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
-      <td style="text-align:left">Entity.randX</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6A2A;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.randY</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.speedAngle</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5939;&#x89D2;&#x3002;</td>
-    </tr>
-    <tr>
       <td style="text-align:left">Entity.shape</td>
-      <td style="text-align:left">Shape</td>
+      <td style="text-align:left"><a href="datatypes-enums-constants.md#shape">Shape</a>
+      </td>
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5F62;&#x72B6;&#x3002;</td>
     </tr>
   </tbody>
@@ -110,16 +76,12 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| Entity.stand | bool | **【只读】**实体是否为站立状态（底部碰撞）。 |
-| Entity.isCollisionTop | bool | **【只读】**实体是否顶部发生碰撞。 |
-| Entity.isCollisionLeft | bool | **【只读】**实体是否左侧发生碰撞。 |
-| Entity.isCollisionRight | bool | **【只读】**实体是否右侧发生碰撞。 |
-| Entity.isCollisionStuck | bool | **【只读】**实体是否卡在方块内部。 |
-| Entity.isNoCollision | bool | **【只读】**实体是否没有发生任何形式的碰撞。 |
-| Entity.onSlope | bool | **【只读】**实体是否站在斜坡上。 |
-| Entity.hitbox | Hitbox | **【只读】**若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。 |
-| Entity.aabb | Hitbox | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
-| Entity.minAABB | Hitbox | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
+| Entity.stand | bool | 【只读】实体是否为站立状态（底部碰撞）。 |
+| Entity.isCollisionTop | bool | 【只读】实体是否顶部发生碰撞。 |
+| Entity.isCollisionLeft | bool | 【只读】实体是否左侧发生碰撞。 |
+| Entity.isCollisionRight | bool | 【只读】实体是否右侧发生碰撞。 |
+| Entity.isCollisionStuck | bool | 【只读】实体是否卡在方块内部。 |
+| Entity.onSlope | bool | 【只读】实体是否站在斜坡上。 |
 
 #### 用户自定义数据
 
@@ -127,8 +89,8 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| Entity.ivar | UserVar&lt;int&gt; | 实体的用户自定义整型数据。 |
-| Entity.dvar | UserVar&lt;double&gt; | 实体的用户自定义浮点型数据。 |
+| Entity.ivar | [UserVar&lt;int&gt;](datatypes-enums-constants.md#uservar-less-than-t-greater-than) | 实体的用户自定义整型数据。 |
+| Entity.dvar | [UserVar&lt;double&gt;](datatypes-enums-constants.md#uservar-less-than-t-greater-than) | 实体的用户自定义浮点型数据。 |
 
 ### 类成员函数
 
@@ -136,13 +98,28 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
+| Entity:CenterX\(\) | double | 返回实体正中间横坐标。 |
+| Entity:CenterY\(\) | double | 返回实体正中间纵坐标。 |
 | Entity:SetCenterX\(double newCenterX\) | void | 将实体中心横坐标设为指定位置。 |
 | Entity:SetCenterY\(double newCenterY\) | void | 将实体中心纵坐标设为指定位置。 |
+| Entity:GetRightX\(\) | double | 返回实体最右侧横坐标。 |
+| Entity:GetBottomY\(\) | double | 返回实体最底部纵坐标。 |
+| Entity:RandX\(\) | double | 返回实体横向投影上的随机横坐标。 |
+| Entity:RandY\(\) | double | 返回实体纵向投影上的随机纵坐标。 |
+| Entity:GetSpeedAngle\(\) | double | 获取当前实体运动方向的角度。 |
 | Entity:GetAngleTo\(double desX, double desY\) | double | 返回实体中心点到目标点的角度。 |
 | Entity:GetAngleFrom\(double srcX, double srcY\) | double | 返回来源点到实体中心点的角度。 |
 | Entity:GetDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
 | Entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
-| Entity:RotateSpeed\(double angle\) | void | 在原有速度角度基础上继续旋转指定速度角度。 |
+
+#### 碰撞检测函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Entity:GetHitbox\(\) | [Hitbox](datatypes-enums-constants.md#hitbox) | 若实体为轴对齐矩形，返回轴对齐碰撞箱，否则返回旋转矩形碰撞箱。 |
+| Entity:GetAABB\(\) | [Hitbox](datatypes-enums-constants.md#hitbox) | 返回实体旋转角度为0的轴对齐碰撞箱。 |
+| Entity:GetMinAABB\(\) | [Hitbox](datatypes-enums-constants.md#hitbox) | 返回完全包裹实体的最小轴对齐碰撞箱。 |
+| Entity:IsNoCollision\(\) | bool | 返回实体是否没有发生任何形式的碰撞。 |
 
 
 
