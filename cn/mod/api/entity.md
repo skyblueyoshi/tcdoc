@@ -143,6 +143,7 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 | Entity:GetAngleFrom\(double srcX, double srcY\) | double | 返回来源点到实体中心点的角度。 |
 | Entity:GetDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
 | Entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
+| Entity:RotateSpeed\(double angle\) | void | 在原有速度角度基础上继续旋转指定速度角度。 |
 
 
 
