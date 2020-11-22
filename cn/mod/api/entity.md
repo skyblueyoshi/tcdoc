@@ -32,22 +32,22 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.centerX</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.centerY</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.rightX</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x6700;&#x53F3;&#x4FA7;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6700;&#x53F3;&#x4FA7;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.bottomY</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x6700;&#x5E95;&#x90E8;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6700;&#x5E95;&#x90E8;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.speedX</td>
@@ -62,12 +62,12 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.width</td>
       <td style="text-align:left">int</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.height</td>
       <td style="text-align:left">int</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x9AD8;&#x5EA6;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x9AD8;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.direction</td>
@@ -86,17 +86,17 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.randX</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x6A2A;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6A2A;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.randY</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.speedAngle</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x3010;&#x53EA;&#x8BFB;&#x3011;&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5939;&#x89D2;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5939;&#x89D2;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.shape</td>
@@ -111,16 +111,16 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
-| Entity.stand | bool | 【只读】实体是否为站立状态（底部碰撞）。 |
-| Entity.isCollisionTop | bool | 【只读】实体是否顶部发生碰撞。 |
-| Entity.isCollisionLeft | bool | 【只读】实体是否左侧发生碰撞。 |
-| Entity.isCollisionRight | bool | 【只读】实体是否右侧发生碰撞。 |
-| Entity.isCollisionStuck | bool | 【只读】实体是否卡在方块内部。 |
-| Entity.isNoCollision | bool | 【只读】实体是否没有发生任何形式的碰撞。 |
-| Entity.onSlope | bool | 【只读】实体是否站在斜坡上。 |
-| Entity.hitbox | [Hitbox](datatypes-enums-constants.md#hitbox) | 【只读】若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。 |
-| Entity.aabb | [Hitbox](datatypes-enums-constants.md#hitbox) | 【只读】实体旋转角度为0的轴对齐碰撞箱。 |
-| Entity.minAABB | [Hitbox](datatypes-enums-constants.md#hitbox) | 【只读】完全包裹实体的最小轴对齐碰撞箱。 |
+| Entity.stand | bool | **【只读】**实体是否为站立状态（底部碰撞）。 |
+| Entity.isCollisionTop | bool | **【只读】**实体是否顶部发生碰撞。 |
+| Entity.isCollisionLeft | bool | **【只读】**实体是否左侧发生碰撞。 |
+| Entity.isCollisionRight | bool | **【只读】**实体是否右侧发生碰撞。 |
+| Entity.isCollisionStuck | bool | **【只读】**实体是否卡在方块内部。 |
+| Entity.isNoCollision | bool | **【只读】**实体是否没有发生任何形式的碰撞。 |
+| Entity.onSlope | bool | **【只读】**实体是否站在斜坡上。 |
+| Entity.hitbox | [Hitbox](datatypes-enums-constants.md#hitbox) | **【只读】**若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。 |
+| Entity.aabb | [Hitbox](datatypes-enums-constants.md#hitbox) | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
+| Entity.minAABB | [Hitbox](datatypes-enums-constants.md#hitbox) | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
 
 #### 用户自定义数据
 
