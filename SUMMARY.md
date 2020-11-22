@@ -8,7 +8,7 @@
     * [模组数据表文档](cn/mod/datatable.md)
     * [模组API文档](cn/mod/api/README.md)
       * [注册信息API](cn/mod/api/zhu-ce-xin-xi-api.md)
-      * [数据类型、枚举、全局量](cn/mod/api/datatypes-enums-constants.md)
+      * [数据类型、枚举类型](cn/mod/api/datatypes-enums-constants.md)
       * [通用API](cn/mod/api/mathhelper-api.md)
       * [物品API](cn/mod/api/wu-pin-api.md)
       * [实体API](cn/mod/api/entity.md)

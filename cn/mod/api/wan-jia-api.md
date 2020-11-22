@@ -6,7 +6,7 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :--- | :--- |
-| Player:Heal\(int heal, bool showTip = true\) | void | 为当前玩家增加生命值。showTip表示是否显示数字提示。 |
+| Player:Heal\(int heal, bool showTip = true\) | void | 为当前玩家增加生命值。showTip表示是否显示增加生命值的数字。 |
 
 
 
