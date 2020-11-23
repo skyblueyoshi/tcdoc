@@ -14,18 +14,6 @@ end
 
 抛射物生成时调用一次该函数。
 
-### void PreUpdate\(int tickTime\)
-
-```lua
-function ReadyUpdate(tickTime)
-    --update every game loop
-end
-```
-
-抛射物每帧运行`Update(tickTime)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
-
-* `tickTime`为总生存时间（帧）。
-
 ### void Update\(int tickTime\)
 
 ```lua
@@ -35,6 +23,18 @@ end
 ```
 
 抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑。
+
+* `tickTime`为总生存时间（帧）。
+
+### void PreUpdate\(int tickTime\)
+
+```lua
+function ReadyUpdate(tickTime)
+    --update every game loop
+end
+```
+
+抛射物每帧运行`Update(tickTime)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
 * `tickTime`为总生存时间（帧）。
 
