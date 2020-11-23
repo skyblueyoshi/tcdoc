@@ -30,7 +30,7 @@ end
 
 ```lua
 function OnDraw(tickTime)
-    --update every game loop
+    --change the sprite parameters before drawing every game loop
 end
 ```
 
