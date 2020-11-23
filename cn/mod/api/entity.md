@@ -121,6 +121,15 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 | Entity.aabb | Hitbox | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
 | Entity.minAABB | Hitbox | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
 
+#### 绘制相关属性
+
+您可以通过修改如下属性来自定义实体的绘制方式。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Entity.spriteRect | Rectangle | 实体绘制时在目标贴图的剪裁区域。 |
+| Entity.spriteEx | SpriteEx | 实体绘制的拓展信息。 |
+
 #### 用户自定义数据
 
 您可以通过如下API，维护针对当前实体的用户自定义数据。
