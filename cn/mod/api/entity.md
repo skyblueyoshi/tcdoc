@@ -150,9 +150,9 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
       <td style="text-align:left">
         <p>&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x65F6;&#x5728;&#x76EE;&#x6807;&#x8D34;&#x56FE;&#x7684;&#x526A;&#x88C1;&#x533A;&#x57DF;&#x3002;
           <br
-          /><code>Entity.spriteRect.width</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>Entity.spriteDefaultWidth</code>
+          /><code>spriteRect.width</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>spriteDefaultWidth</code>
         </p>
-        <p><code>Entity.spriteRect.height</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>Entity.spriteDefaultHeight</code>
+        <p><code>spriteRect.height</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>spriteDefaultHeight</code>
         </p>
       </td>
     </tr>
