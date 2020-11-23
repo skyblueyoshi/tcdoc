@@ -14,65 +14,55 @@ end
 
 抛射物生成时调用一次该函数。
 
-### void Update\(int tickTime\)
+### void Update\(\)
 
 ```lua
-function Update(tickTime)
+function Update()
     --update every game loop
 end
 ```
 
 抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑。
 
-* `tickTime`为总生存时间（帧）。
-
-### void PreUpdate\(int tickTime\)
+### void PreUpdate\(\)
 
 ```lua
-function ReadyUpdate(tickTime)
+function ReadyUpdate()
     --update every game loop
 end
 ```
 
-抛射物每帧运行`Update(tickTime)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
+抛射物每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
-* `tickTime`为总生存时间（帧）。
-
-### void PostUpdate\(int tickTime\)
+### void PostUpdate\(\)
 
 ```lua
-function PostUpdate(tickTime)
+function PostUpdate()
     --update every game loop
 end
 ```
 
-抛射物每帧运行`Update(tickTime)`函数后调用。通常用于在使用AI重用后追加逻辑。
+抛射物每帧运行`Update()`函数后调用。通常用于在使用AI重用后追加逻辑。
 
-* `tickTime`为总生存时间（帧）。
-
-### void OnDraw\(int tickTime\)
+### void OnDraw\(\)
 
 ```lua
-function OnDraw(tickTime)
+function OnDraw()
     --change the sprite parameters before drawing every game loop
 end
 ```
 
 抛射物每帧绘制前调用，在该函数内编写自定义绘制属性。不使用该钩子函数时采取默认处理方式。
 
-* `tickTime`为总生存时间（帧）。
-
-### void OnKilled\(int tickTime\)
+### void OnKilled\(\)
 
 ```lua
-function OnKilled(tickTime)
+function OnKilled()
     --do something when projectile is killed
 end
 ```
 
 抛射物死亡时调用一次该函数。
-
-* `tickTime`为总生存时间（帧）。
 
 ### void ModifyHitNpc\(Npc npc, Attack hitAttack\)
 
@@ -129,7 +119,7 @@ end
 ### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
 ```lua
-function OnTileCollide(oldSpeedX, oldSpeedY)
+function OnTileCollide()
     --do something when projectile hit tiles
 end
 ```
@@ -150,7 +140,9 @@ end
 
 ### 类成员属性
 
-
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Projectile.hots\[4\] | Point | **【只读】**当前抛射物的热固定点。允许读取最多4个热固定点。 |
 
 ### 类成员函数
 

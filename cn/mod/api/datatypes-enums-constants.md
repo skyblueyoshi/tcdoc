@@ -9,7 +9,7 @@
 TerraCraft内置的动态数组。
 
 | 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | ArrayList:GetLength\(\) | int | 返回数组长度。 |
 | ArrayList\[index\] | T | 读取或写入指定下标的数组元素。index有效区间为\[1, 可用数量\]。 |
 
@@ -27,7 +27,7 @@ end
 用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型。在使用用户自定义数据之前，您需要预先申请自定义数据的数据量，建议申请的数据量不超过4。之后，您可以使用这个索引来获取或修改自定义数据。您可以通过如下使用例了解该数据类型的用法。
 
 | 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | UserVar:Apply\(int n\) | void | 申请指定可用数量的用户自定义数据。申请时会清空原数据，并将全部数据置为0，请仅在初始化时使用。 |
 | UserVar\[index\] | T | 读取或写入指定下标index的用户自定义数据。index有效区间为\[1, 可用数量\]。使用自定义数据前必须申请可用数量。 |
 
@@ -53,14 +53,46 @@ function Update()
 end
 ```
 
-### 
+### Point
+
+表示一个点。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Point.x | double | 点的横坐标。 |
+| Point.y | double | 点的纵坐标。 |
+
+### Rectangle
+
+表示一个轴对齐矩形。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Rectangle.x | int | 矩形左上角横坐标。 |
+| Rectangle.y | int | 矩形左上角纵坐标。 |
+| Rectangle.width | int | 矩形宽度。 |
+| Rectangle.height | int | 矩形高度。 |
+
+### SpriteEx
+
+绘制拓展信息，决定绘制的相关参数。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| SpriteEx.scaleRateX | float | 贴图绘制时横向缩放尺寸。（默认为1.0） |
+| SpriteEx.scaleRateY | float | 贴图绘制时纵向缩放尺寸。（默认为1.0） |
+| SpriteEx.rotateX | float | 贴图的旋转中心点X。（若绘制对象为实体，默认为实体中心） |
+| SpriteEx.rotateY | float | 贴图的旋转中心点Y。（若绘制对象为实体，默认为实体中心） |
+| SpriteEx.angle | float | 贴图绘制时的旋转角度。（默认为0.0） |
+| SpriteEx.flipHorizontal | bool | 贴图绘制时是否水平翻转。（默认为false） |
+| SpriteEx.flipVertical | bool | 贴图绘制时是否竖直翻转。（默认为false） |
 
 ### Hitbox
 
 表示一个碰撞箱。若`angle`属性为0，表示轴对齐碰撞箱（AABB）。否则表示一个绕中心点旋转的碰撞箱。
 
 | 属性 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | Hitbox.x | double | 碰撞箱在旋转角度为0时左上角横坐标。 |
 | Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
 | Hitbox.width | int | 碰撞箱的宽度。 |
@@ -68,7 +100,7 @@ end
 | Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
 
 | 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | Hitbox:Overlap\(Hitbox other\) | bool | 返回当前碰撞箱与另一个碰撞箱是否重叠。 |
 | Hitbox:OverlapAABB\(Hitbox other\) | bool | 返回当前轴对齐矩形与另一个轴对齐矩形是否重叠。 |
 
@@ -77,7 +109,7 @@ end
 表示一个攻击属性。包括攻击值、击退值、暴击率三个属性。
 
 | 属性 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | Attack.attack | int | 攻击值。 |
 | Attack.knockBack | int | 攻击的击退值。 |
 | Attack.crit | int | 攻击的百分暴击率。1-100表示1-100%的概率产生双倍暴击伤害，大于100表示总是产生双倍暴击伤害，小于1表示不产生双柏暴击伤害。 |
@@ -85,6 +117,24 @@ end
 ### EntityKey
 
 表示一个实体在对应实体类型中的唯一键值。
+
+### Color
+
+表示一个具有Alpha（透明度）、Red、Green、Blue四个通道的颜色。每个通道有效值为\[0, 255\]。
+
+通道分量属性均只读，请通过Set函数来设置颜色的值。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Color.alpha | int | **【只读】**透明通道分量。 |
+| Color.red | int | **【只读】**红色通道分量。 |
+| Color.green | int | **【只读】**绿色通道分量。 |
+| Color.blue | int | **【只读】**蓝色通道分量。 |
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Color:Set\(int alpha, int red, int green, int blue\) | void | 设置新的颜色。 |
+| Color:Set\(DefaultColor defaultColor\) | void | 设置为指定默认颜色。 |
 
 ## 枚举类型（Enums）
 
@@ -128,5 +178,17 @@ end
 | ITEM\_TYPE\_PROJECTILES | 抛射物类型物品。 |
 | ITEM\_TYPE\_CHESTS | 容器类型物品。 |
 
-## 
+### DefaultColor
+
+描述默认颜色。
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| COLOR\_BLACK | 黑色。ARGB=\(255, 0, 0, 0\) |
+| COLOR\_WHITE | 白色。ARGB=\(255, 2555, 255, 255\) |
+| COLOR\_GRAY | 灰色。ARGB=\(255, 128, 128, 128\) |
+| COLOR\_RED | 红色。ARGB=\(255, 255, 0, 0\) |
+| COLOR\_GREEN | 绿色。ARGB=\(255, 0, 255, 0\) |
+| COLOR\_BLUE | 蓝色。ARGB=\(255, 0, 0, 255\) |
+| COLOR\_YELLOW | 黄色。ARGB=\(255, 255, 255, 0\) |
 
