@@ -111,7 +111,9 @@ end
 
 ### Color
 
-表示一个具有Alpha（透明度）、Red、Green、Blue四个通道的颜色。每个通道有效值为\[0, 255\]。通道分量属性均只读，请通过Set函数来设置颜色的值。
+表示一个具有Alpha（透明度）、Red、Green、Blue四个通道的颜色。每个通道有效值为\[0, 255\]。
+
+通道分量属性均只读，请通过Set函数来设置颜色的值。
 
 | 属性 | 类型 | 描述 |
 | :--- | :--- | :--- |
@@ -123,6 +125,7 @@ end
 | 函数 | 返回值 | 描述 |
 | :--- | :--- | :--- |
 | Color:Set\(int alpha, int red, int green, int blue\) | void | 设置新的颜色。 |
+| Color:Set\(DefaultColor defaultColor\) | void | 设置为指定默认颜色。 |
 
 ## 枚举类型（Enums）
 
@@ -166,5 +169,17 @@ end
 | ITEM\_TYPE\_PROJECTILES | 抛射物类型物品。 |
 | ITEM\_TYPE\_CHESTS | 容器类型物品。 |
 
-## 
+### DefaultColor
+
+描述默认颜色。
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| COLOR\_BLACK | 黑色。ARGB=\(255, 0, 0, 0\) |
+| COLOR\_WHITE | 白色。ARGB=\(255, 2555, 255, 255\) |
+| COLOR\_GRAY | 灰色。ARGB=\(255, 128, 128, 128\) |
+| COLOR\_RED | 红色。ARGB=\(255, 255, 0, 0\) |
+| COLOR\_GREEN | 绿色。ARGB=\(255, 0, 255, 0\) |
+| COLOR\_BLUE | 蓝色。ARGB=\(255, 0, 0, 255\) |
+| COLOR\_YELLOW | 黄色。ARGB=\(255, 255, 255, 0\) |
 
