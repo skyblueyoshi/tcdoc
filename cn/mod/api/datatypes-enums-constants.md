@@ -53,7 +53,16 @@ function Update()
 end
 ```
 
-### 
+### Rectangle
+
+表示一个轴对齐矩形。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Rectangle.x | int | 矩形左上角横坐标。 |
+| Rectangle.y | int | 矩形左上角纵坐标。 |
+| Rectangle.width | int | 矩形宽度。 |
+| Rectangle.height | int | 矩形高度。 |
 
 ### Hitbox
 
