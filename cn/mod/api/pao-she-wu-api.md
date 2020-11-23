@@ -22,7 +22,7 @@ function ReadyUpdate(tickTime)
 end
 ```
 
-抛射物每帧运行`Update(tickTime)`函数前调用。通常用于在使用AI重用后1c追加逻辑。
+抛射物每帧运行`Update(tickTime)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
 * `tickTime`为总生存时间（帧）。
 
