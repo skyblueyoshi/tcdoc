@@ -125,10 +125,54 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 
 您可以通过修改如下属性来自定义实体的绘制方式。
 
-| 属性 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| Entity.spriteRect | Rectangle | 实体绘制时在目标贴图的剪裁区域。 |
-| Entity.spriteEx | SpriteEx | 实体绘制的拓展信息。 |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x5C5E;&#x6027;</th>
+      <th style="text-align:left">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Entity.spriteDefaultWidth</td>
+      <td style="text-align:left">int</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x9ED8;&#x8BA4;&#x7ED8;&#x5236;&#x5BBD;&#x5EA6;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.spriteDefaultHeight</td>
+      <td style="text-align:left">int</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x9ED8;&#x8BA4;&#x7ED8;&#x5236;&#x9AD8;&#x5EA6;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.spriteRect</td>
+      <td style="text-align:left">Rectangle</td>
+      <td style="text-align:left">
+        <p>&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x65F6;&#x5728;&#x76EE;&#x6807;&#x8D34;&#x56FE;&#x7684;&#x526A;&#x88C1;&#x533A;&#x57DF;&#x3002;
+          <br
+          /><code>Entity.spriteRect.width</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>Entity.spriteDefaultWidth</code>
+        </p>
+        <p><code>Entity.spriteRect.height</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>Entity.spriteDefaultHeight</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.spriteEx</td>
+      <td style="text-align:left">SpriteEx</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x62D3;&#x5C55;&#x4FE1;&#x606F;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.spriteOffsetX</td>
+      <td style="text-align:left">int</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x6A2A;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.spriteOffsetY</td>
+      <td style="text-align:left">int</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x7EB5;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 用户自定义数据
 
