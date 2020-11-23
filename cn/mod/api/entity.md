@@ -81,7 +81,12 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.rotateAngle</td>
       <td style="text-align:left">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3002;</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x7684;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.speedAngle</td>
+      <td style="text-align:left">double</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5939;&#x89D2;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.randX</td>
@@ -92,11 +97,6 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
       <td style="text-align:left">Entity.randY</td>
       <td style="text-align:left">double</td>
       <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.speedAngle</td>
-      <td style="text-align:left">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5939;&#x89D2;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.shape</td>
@@ -164,17 +164,17 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.spriteOffsetX</td>
       <td style="text-align:left">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x6A2A;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x6A2A;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0.0&#xFF09;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.spriteOffsetY</td>
       <td style="text-align:left">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x7EB5;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x7EB5;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0.0&#xFF09;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.color</td>
       <td style="text-align:left">Color</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<code>COLOR_WHITE</code>&#xFF09;</td>
     </tr>
   </tbody>
 </table>
