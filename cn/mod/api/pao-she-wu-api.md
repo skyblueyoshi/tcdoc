@@ -22,7 +22,21 @@ function Update(tickTime)
 end
 ```
 
-抛射物每帧运行时调用，tickTime为当前抛射物实际生存时间（帧）。
+抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑属性。
+
+* `tickTime`为总生存时间（帧）。
+
+### void OnDraw\(int tickTime\)
+
+```lua
+function OnDraw(tickTime)
+    --change the sprite parameters before drawing every game loop
+end
+```
+
+抛射物每帧绘制前调用，在该函数内编写自定义绘制属性。不使用该钩子函数时采取默认处理方式。
+
+* `tickTime`为总生存时间（帧）。
 
 ### void OnKilled\(int tickTime\)
 
@@ -32,7 +46,9 @@ function OnKilled(tickTime)
 end
 ```
 
-抛射物死亡时调用一次该函数，tickTime为当前抛射物实际生存时间（帧）。
+抛射物死亡时调用一次该函数。
+
+* `tickTime`为总生存时间（帧）。
 
 ### void ModifyHitNpc\(Npc npc, Attack hitAttack\)
 
@@ -42,7 +58,10 @@ function ModifyHitNpc(npc, hitAttack)
 end
 ```
 
-抛射物击中Npc前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。其中hitAttack为攻击属性（见Attack数据类型）。
+抛射物击中Npc前调用该函数，通常用于修改`hitAttack`来实现攻击数据自定义。
+
+* `npc`为被击中的NPC对象。
+* `hitAttack`为攻击属性（见[Attack数据类型](datatypes-enums-constants.md#attack)）。
 
 ### void OnHitNpc\(Npc npc, Attack hitAttack\)
 
@@ -52,7 +71,10 @@ function OnHitNpc(npc, hitAttack)
 end
 ```
 
-抛射物击中Npc时调用该函数。其中attack为攻击属性（见Attack数据类型）。
+抛射物击中Npc时调用该函数。
+
+* `npc`为被击中的NPC对象。
+* `hitAttack`为攻击属性。
 
 ### void ModifyHitPlayer\(Player player, Attack hitAttack\)
 
@@ -62,7 +84,10 @@ function ModifyHitPlayer(player, hitAttack)
 end
 ```
 
-抛射物击中玩家前调用该函数，通常用于修改hitAttack来实现攻击数据自定义。其中hitAttack为攻击属性（见Attack数据类型）。
+抛射物击中玩家前调用该函数，通常用于修改`hitAttack`来实现攻击数据自定义。
+
+* `player`为被击中的玩家对象。
+* `hitAttack`为攻击属性。
 
 ### void OnHitPlayer\(Player player, Attack hitAttack\)
 
@@ -72,7 +97,10 @@ function OnHitPlayer(player, hitAttack)
 end
 ```
 
-抛射物击中玩家时调用该函数。hitAttack为攻击属性（见Attack数据类型）。
+抛射物击中玩家时调用该函数。
+
+* `player`为被击中的玩家对象。
+* `hitAttack`为攻击属性。
 
 ### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
@@ -82,7 +110,9 @@ function OnTileCollide(oldSpeedX, oldSpeedY)
 end
 ```
 
-抛射物击中实心图块时调用该函数。oldSpeedX和oldSpeedY表示击中实心图块前一帧的横向和纵向速度。
+抛射物击中实心图块时调用该函数。
+
+* `oldSpeedX`和`oldSpeedY`表示击中实心图块前一帧的横向和纵向速度。
 
 ## 抛射物类（Projectile Class）
 
@@ -101,7 +131,7 @@ end
 ### 类成员函数
 
 | 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | Projectile:Kill\(\) | void | 清除当前抛射物对象。 |
 | Projectile:GetPlayerOwner\(\) | Player/nil | 若当前抛射物的玩家拥有者存在且存活，返回该玩家对象，否则返回nil。 |
 | Projectile:GetNpcOwner\(\) | Npc/nil | 若当前抛射物的NPC拥有着存在且存活，返回该NPC对象，否则返回nil。 |

@@ -16,3 +16,5 @@
 | LightingUtils.Add\(int xi, int yi, int alpha, int red = 0, int green = 0, int blue = 0\) | void | 为指定格子添加一个光源。 |
 | LightingUtils.AddDelay\(int xi, int yi, int delayTime, int alpha, int red = 0, int green = 0, int blue = 0\) | void | 为指定格子添加一个延迟光源。光源在`delayTime`时间内会逐渐延迟消失。 |
 
+
+
