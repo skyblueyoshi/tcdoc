@@ -53,7 +53,30 @@ function Update()
 end
 ```
 
-### 
+### Rectangle
+
+表示一个轴对齐矩形。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Rectangle.x | int | 矩形左上角横坐标。 |
+| Rectangle.y | int | 矩形左上角纵坐标。 |
+| Rectangle.width | int | 矩形宽度。 |
+| Rectangle.height | int | 矩形高度。 |
+
+### SpriteEx
+
+绘制拓展信息，决定绘制的相关参数。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| SpriteEx.scaleRateX | float | 贴图绘制时横向缩放尺寸。（默认值为1.0） |
+| SpriteEx.scaleRateY | float | 贴图绘制时纵向缩放尺寸。（默认值为1.0） |
+| SpriteEx.rotateX | float | 贴图的旋转中心点X。（若绘制对象为实体，默认为实体中心） |
+| SpriteEx.rotateY | float | 贴图的旋转中心点Y。（若绘制对象为实体，默认为实体中心） |
+| SpriteEx.angle | float | 贴图绘制时的旋转角度。 |
+| SpriteEx.flipHorizontal | bool | 贴图绘制时是否水平翻转。 |
+| SpriteEx.flipVertical | bool | 贴图绘制时是否竖直翻转。 |
 
 ### Hitbox
 
@@ -85,6 +108,21 @@ end
 ### EntityKey
 
 表示一个实体在对应实体类型中的唯一键值。
+
+### Color
+
+表示一个具有Alpha（透明度）、Red、Green、Blue四个通道的颜色。每个通道有效值为\[0, 255\]。通道分量属性均只读，请通过Set函数来设置颜色的值。
+
+| 属性 | 类型 | 描述 |
+| :--- | :--- | :--- |
+| Color.alpha | int | **【只读】**透明通道分量。 |
+| Color.red | int | **【只读】**红色通道分量。 |
+| Color.green | int | **【只读】**绿色通道分量。 |
+| Color.blue | int | **【只读】**蓝色通道分量。 |
+
+| 函数 | 返回值 | 描述 |
+| :--- | :--- | :--- |
+| Color:Set\(int alpha, int red, int green, int blue\) | void | 设置新的颜色。 |
 
 ## 枚举类型（Enums）
 
