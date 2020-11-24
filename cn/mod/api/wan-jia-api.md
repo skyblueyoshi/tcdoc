@@ -7,18 +7,20 @@
 ### 类成员属性
 
 | 属性 | 类型 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | Player.health | int | **【只读】**玩家生命值。 |
 | Player.maxHealth | int | **【只读】**玩家生命值上限。 |
+| Player.maxMaxHealth | int | **【只读】**玩家最高能达到的生命值上限。 |
 | Player.mana | int | **【只读】**玩家魔法值。 |
 | Player.maxMana | int | **【只读】**玩家魔法值上限。 |
+| Player.maxMaxMana | int | **【只读】**玩家最高能达到的魔法值上限。 |
 | Player.expLevel | int | **【只读】**玩家经验等级。 |
 |  |  |  |
 
 ### 类成员函数
 
 | 函数 | 返回值 | 描述 |
-| :--- | :--- | :--- |
+| :--- | :---: | :--- |
 | Player:Heal\(int heal, bool showTip = true\) | void | 为当前玩家增加生命值。showTip表示是否显示数字提示。 |
 | Player:AddMagic\(int heal, bool showTip = true\) | void | 为当前玩家增加魔法值。showTip表示是否显示数字提示。 |
 | Player:AddMaxHealth\(int health\) | void | 为当前玩家增加生命值上限。 |

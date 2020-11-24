@@ -142,8 +142,6 @@ end
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
-| Projectile.baseAttack | Attack | 当前抛射物的基础攻击属性。 |
-| Projectile.targetTime | int | 当前抛射物的目标时间。目标时间由发射时给定，通常用于实现达到目标时间后触发相关逻辑。 |
 | Projectile.hots\[4\] | Point | **【只读】**当前抛射物的热固定点。允许读取最多4个热固定点。 |
 
 ### 类成员函数
