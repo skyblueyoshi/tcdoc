@@ -189,12 +189,6 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
   </tbody>
 </table>
 
-#### 生命属性
-
-| 属性 | 类型 | 描述 |
-| :--- | :---: | :--- |
-| Entity.tickTime | int | **【只读】**实体的实际生存的时间。 |
-
 #### 用户自定义数据
 
 您可以通过如下API，维护针对当前实体的用户自定义数据。
@@ -205,6 +199,13 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 | Entity.ivar | UserVar&lt;int&gt; | 实体的用户自定义整型数据。 |
 | Entity.dvar | UserVar&lt;double&gt; | 实体的用户自定义浮点型数据。 |
 | Entity.flags | Flags | 实体的用户自定义布尔型数据。 |
+
+#### 其他属性
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Entity.tickTime | int | **【只读】**实体的实际生存的时间。 |
+| Entity.randSeed | int | **【只读】**实体的随机数种子。 |
 
 ### 类成员函数
 

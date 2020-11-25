@@ -33,3 +33,5 @@
 | Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
 
+
+
