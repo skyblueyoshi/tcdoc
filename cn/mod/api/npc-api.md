@@ -19,5 +19,17 @@
 
 该类的父类为[Entity类](entity.md#shi-ti-lei-entity-class)。可直接使用该父类的类成员属性与类成员函数。
 
+### 类成员属性
 
+
+
+### 类成员函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Npc:AddBuff\(int buffID, int buffTime\) | void | 为当前NPC添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
+| Npc:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
+| Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
+| Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
+| Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
 
