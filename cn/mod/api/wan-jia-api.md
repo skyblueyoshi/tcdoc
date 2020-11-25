@@ -1,13 +1,5 @@
 # 玩家API
 
-## 玩家通用模块（PlayerUtils）
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| PlayerUtils.SearchByRect\(double x, double y, int width, int height\) | ArrayList&lt;Player&gt; | 返回包含于指定矩形区域内部的所有玩家列表。 |
-| PlayerUtils.SearchByCircle\(double centerX, double centerY, int radius\) | ArrayList&lt;Player&gt; | 返回包含于指定圆形区域内部的所有玩家列表。 |
-| PlayerUtils.SearchNearestPlayer\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Player/nil | 搜索在指定圆形区域内部距离圆心最近的玩家，返回该玩家。若结果不存在，返回nil。noCrossTiles表示是否排除中心到圆心的连线被图格遮挡的玩家。 |
-
 ## 玩家类（Player Class）
 
 **玩家（Player）**类表示玩家实际控制的角色实体类。
