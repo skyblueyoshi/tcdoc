@@ -2,9 +2,15 @@
 
 全局表名称：reg
 
-## ID表
+## 动态ID注册表
+
+ID是游戏运行中动态生成的正整数数值。ID在游戏过程中不会变化，但是在每次启动游戏时ID会发生变化。因此需要注意：**任何情况下都不允许将ID存储到文件或存档内！！**
+
+若需要存储ID，请使用GetXXXName\(int id\)来获取并存储其ID的字符串名称。若需要读取ID，请使用GetXXXID\(string name\)来获取其动态生成的ID。
 
 | API | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| reg.getEffectID\(string name\) | int | 根据特效变量名返回在游戏中注册的ID。若ID不存在会直接报错。 |
+| Reg.GetEffectID\(string name\) | int | 根据特效名返回注册的动态ID。 |
+| Reg.GetSoundID\(string name\) | int | 根据音效名返回注册的动态ID。 |
+| Reg.GetSoundGroupID\(string name\) | int | 根据音效组名返回注册的动态ID。 |
 
