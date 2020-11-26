@@ -4,9 +4,7 @@
 
 **实体（Entity）**类表示拥有图形以及碰撞检测相关的基本属性的对象。
 
-Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
-
-注意：由于Player的特殊性，Player关于Entity类的**【成员属性全部只读】**。若希望修改Player的相关属性详见玩家API。
+Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
 
 ### 类成员属性
 
@@ -70,11 +68,6 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
       <td style="text-align:left">Entity.speedY</td>
       <td style="text-align:center">double</td>
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.gravity</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x91CD;&#x529B;&#x52A0;&#x901F;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.width</td>
@@ -195,6 +188,17 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
     </tr>
   </tbody>
 </table>
+
+#### 用户自定义数据
+
+您可以通过如下API，维护针对当前实体的用户自定义数据。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Entity.state | int | 实体的当前在简单有限状态机中的状态。 |
+| Entity.ivar | UserVar&lt;int&gt; | 实体的用户自定义整型数据。 |
+| Entity.dvar | UserVar&lt;double&gt; | 实体的用户自定义浮点型数据。 |
+| Entity.flags | Flags | 实体的用户自定义布尔型数据。 |
 
 #### 其他属性
 
