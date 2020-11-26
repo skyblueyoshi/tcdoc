@@ -4,9 +4,7 @@
 
 **实体（Entity）**类表示拥有图形以及碰撞检测相关的基本属性的对象。
 
-Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
-
-注意：由于Player的特殊性，Player关于Entity类的**【成员属性全部只读】**。若希望修改Player的相关属性详见玩家API。
+Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
 
 ### 类成员属性
 
@@ -70,11 +68,6 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
       <td style="text-align:left">Entity.speedY</td>
       <td style="text-align:center">double</td>
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.gravity</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x91CD;&#x529B;&#x52A0;&#x901F;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.width</td>
