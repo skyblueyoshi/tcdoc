@@ -4,7 +4,9 @@
 
 **实体（Entity）**类表示拥有图形以及碰撞检测相关的基本属性的对象。
 
-Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
+Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
+
+注意：由于Player的特殊性，Player关于Entity类的**【成员属性全部只读】**。若希望修改Player的相关属性详见玩家API。
 
 ### 类成员属性
 
