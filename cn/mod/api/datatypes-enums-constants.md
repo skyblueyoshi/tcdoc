@@ -33,18 +33,29 @@ end
 #### 使用例
 
 ```lua
--- This is a projectile script
+self.ivar[1] = 123
+self.ivar[4] = 456
+self.ivar[6] = self.ivar[1]
+self.dvar[1] = 1.0
+self.dvar[4] = self.dvar[4] + 1.0
+```
 
-function Init()
-    self.ivar[1] = 123
-    self.ivar[4] = 456
-    self.ivar[6] = self.ivar[1]
-    self.dvar[1] = 1.0
-end
+### Flags
 
-function Update()
-    self.ivar[2] = self.ivar[1]
-    self.dvar[4] = self.dvar[4] + 1.0
+用户自定义布尔值数据，用于在脚本中实现自定义布尔值变量。可用64个数据。
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Flags\[index\] | bool | 读取或写入指定下标index的用户自定义布尔值数据。index有效区间为\[1, 64\]。 |
+
+#### 使用例
+
+```lua
+self.flags[1] = true
+self.flags[2] = false
+self.flags[3] = self.flags[1]
+if (self.flags[3]) then
+    -- do something
 end
 ```
 
