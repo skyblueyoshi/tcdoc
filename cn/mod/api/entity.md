@@ -72,6 +72,11 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
+      <td style="text-align:left">Entity.gravity</td>
+      <td style="text-align:center">double</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x91CD;&#x529B;&#x52A0;&#x901F;&#x5EA6;&#x3002;</td>
+    </tr>
+    <tr>
       <td style="text-align:left">Entity.width</td>
       <td style="text-align:center">int</td>
       <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
