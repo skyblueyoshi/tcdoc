@@ -128,6 +128,12 @@ end
 
 * `oldSpeedX`和`oldSpeedY`表示击中实心图块前一帧的横向和纵向速度。
 
+## 抛射物通用模块（ProjectileUtils）
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| ProjectileUtils.Create\(int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0\) | Effect | 创建一个抛射物实体，返回创建好的抛射物实体。 `id`：抛射物ID。`centerX`和`centerY`：创建抛射物的中心点。`speedX`和`speedY`：初始运动速度。 |
+
 ## 抛射物类（Projectile Class）
 
 **抛射物（Projectile）**类表示具有抛射物基本信息的实体类。通常用于表示弓箭、子弹、弹幕等实体对象。
@@ -142,6 +148,7 @@ end
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
+| Projectile.id | int | **【只读】**当前抛射物的动态ID。 |
 | Projectile.baseAttack | Attack | 当前抛射物的基础攻击属性。一般由创建时给定。 |
 | Projectile.targetTime | int | 当前抛射物的目标时间。一般由创建时给定，通常用于实现达到目标时间后触发相关逻辑。 |
 | Projectile.isCheckNpc | bool | 当前抛射物是否作用于NPC。一般由创建时给定，决定是否碰撞、伤害NPC。 |
