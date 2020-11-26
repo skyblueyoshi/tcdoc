@@ -4,11 +4,11 @@
 
 **实体（Entity）**类表示拥有图形以及碰撞检测相关的基本属性的对象。
 
-Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
+Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
 
 ### 类成员属性
 
-#### 坐标与图形属性
+#### 坐标与图形属性（当实体为玩家时全部只读）
 
 <table>
   <thead>
@@ -70,6 +70,11 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
       <td style="text-align:left">&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
     </tr>
     <tr>
+      <td style="text-align:left">Entity.gravity</td>
+      <td style="text-align:center">double</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x91CD;&#x529B;&#x52A0;&#x901F;&#x5EA6;&#x3002;</td>
+    </tr>
+    <tr>
       <td style="text-align:left">Entity.width</td>
       <td style="text-align:center">int</td>
       <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
@@ -86,6 +91,7 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
         <p>&#x5B9E;&#x4F53;&#x671D;&#x5411;&#x3002;
           <br />&#x5B9E;&#x4F53;&#x9762;&#x671D;&#x5DE6;&#x4FA7;&#x4E3A;false&#x3002;</p>
         <p>&#x5B9E;&#x4F53;&#x9762;&#x671D;&#x53F3;&#x4FA7;&#x4E3A;true&#x3002;</p>
+        <p>&#xFF08;&#x5F53;&#x5B9E;&#x4F53;&#x4E3A;&#x73A9;&#x5BB6;&#x65F6;&#x53EA;&#x8BFB;&#xFF09;</p>
       </td>
     </tr>
     <tr>
@@ -111,7 +117,7 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     <tr>
       <td style="text-align:left">Entity.shape</td>
       <td style="text-align:center">Shape</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5F62;&#x72B6;&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5F62;&#x72B6;&#x3002;</td>
     </tr>
   </tbody>
 </table>
@@ -131,7 +137,7 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
 | Entity.aabb | Hitbox | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
 | Entity.minAABB | Hitbox | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
 
-#### 绘制相关属性
+#### 绘制相关属性（当实体为玩家时全部只读）
 
 您可以通过修改如下属性来自定义实体的绘制方式。
 
@@ -188,17 +194,6 @@ Npc类、Projectile类、Effect类的基类均为Entity类，都可以使用如�
     </tr>
   </tbody>
 </table>
-
-#### 用户自定义数据
-
-您可以通过如下API，维护针对当前实体的用户自定义数据。
-
-| 属性 | 类型 | 描述 |
-| :--- | :---: | :--- |
-| Entity.state | int | 实体的当前在简单有限状态机中的状态。 |
-| Entity.ivar | UserVar&lt;int&gt; | 实体的用户自定义整型数据。 |
-| Entity.dvar | UserVar&lt;double&gt; | 实体的用户自定义浮点型数据。 |
-| Entity.flags | Flags | 实体的用户自定义布尔型数据。 |
 
 #### 其他属性
 
