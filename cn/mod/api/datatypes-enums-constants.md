@@ -24,12 +24,11 @@ end
 
 ### UserVar&lt;T&gt;
 
-用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型。在使用用户自定义数据之前，您需要预先申请自定义数据的数据量，建议申请的数据量不超过4。之后，您可以使用这个索引来获取或修改自定义数据。您可以通过如下使用例了解该数据类型的用法。
+用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型，可用64个数据。
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| UserVar:Apply\(int n\) | void | 申请指定可用数量的用户自定义数据。申请时会清空原数据，并将全部数据置为0，请仅在初始化时使用。 |
-| UserVar\[index\] | T | 读取或写入指定下标index的用户自定义数据。index有效区间为\[1, 可用数量\]。使用自定义数据前必须申请可用数量。 |
+| UserVar\[index\] | T | 读取或写入指定下标index的用户自定义数据。index有效区间为\[1, 64\]。 |
 
 #### 使用例
 
@@ -37,19 +36,15 @@ end
 -- This is a projectile script
 
 function Init()
-    self.ivar:Apply(4) -- Apply 4 integer values
-    self.dvar:Apply(2) -- Apply 2 double values
     self.ivar[1] = 123
-    self.ivar[2] = 456
-    self.ivar[3] = self.ivar[1]
-    self.ivar[4] = 789
+    self.ivar[4] = 456
+    self.ivar[6] = self.ivar[1]
     self.dvar[1] = 1.0
-    self.dvar[2] = 2.0
 end
 
 function Update()
     self.ivar[2] = self.ivar[1]
-    self.dvar[2] = self.dvar[2] + 1.0
+    self.dvar[4] = self.dvar[4] + 1.0
 end
 ```
 
