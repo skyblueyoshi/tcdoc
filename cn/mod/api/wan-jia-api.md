@@ -65,7 +65,7 @@
 | Player.foodSaturationLevel | int | **【只读】**玩家食物饱和度。有效范围为\[1, 100\]。当前食物饱和度不会超过当前饥饿值。 |
 | Player.baseAttack | Attack | 玩家的基础攻击属性。 |
 | Player.baseDefence | Defence | 玩家的基础防御属性。 |
-| Player.isInvisibility | bool | 玩家是否隐身。 |
+| Player.isInvisibility | bool | 玩家是否隐身。（每帧重置为`false`） |
 
 ### 类成员函数
 
