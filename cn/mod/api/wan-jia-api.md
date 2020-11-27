@@ -22,25 +22,6 @@
 | PlayerUtils.SearchByCircle\(double centerX, double centerY, int radius\) | ArrayList&lt;Player&gt; | 返回包含于指定圆形区域内部的所有玩家列表。 |
 | PlayerUtils.SearchNearestPlayer\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Player/nil | 搜索在指定圆形区域内部距离圆心最近的玩家，返回该玩家。若结果不存在，返回nil。noCrossTiles表示是否排除中心到圆心的连线被图格遮挡的玩家。 |
 
-## 玩家控制器类（PlayerController Class）
-
-**玩家控制器（PlayerController）**类是玩家类的一个成员属性，用于控制玩家行为。
-
-### 类成员属性
-
-| 属性 | 类型 | 描述 |
-| :--- | :---: | :--- |
-| PlayerController.defaultMaxSpeed | double | **【只读】**玩家默认最大运动速度。 |
-| PlayerController.speedRate | double | 玩家最大运动速度与默认最大运动速度比率。每帧重置为`1.0`。 |
-| PlayerController.defaultJumpTime | int | **【只读】**玩家默认跳跃持续上升时间。 |
-| PlayerController.jumpRate | double | 玩家跳跃持续上升时间与默认跳跃持续上升时间比率。每帧重置为`1.0`。 |
-| PlayerController.defaultJumpSpeed | double | **【只读】**玩家默认跳跃上升速度。 |
-| PlayerController.jumpSpeedRate | double | 玩家跳跃上升速度与默认跳跃上升速度比率。每帧重置为`1.0`。 |
-| PlayerController.defaultFallSpeed | double | **【只读】**玩家默认最大下落速度。 |
-| PlayerController.fallSpeedRate | double | 玩家最大下落速度与默认最大下落速度比率。每帧重置为`1.0`。 |
-| PlayerController.digSpeedRate | double | 玩家挖掘速度与原始挖掘速度比率。每帧重置为`1.0`。 |
-|  |  |  |
-
 ## 玩家类（Player Class）
 
 **玩家（Player）**类表示玩家实际控制的角色实体类。
@@ -53,9 +34,24 @@
 
 ### 类成员属性
 
+#### 控制器属性
+
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
-| Player.ctl | PlayerController | 玩家控制器，用于控制玩家行为。 |
+| Player.defaultMaxSpeed | double | **【只读】**玩家默认最大运动速度。 |
+| Player.speedRate | double | 玩家最大运动速度与默认最大运动速度比率。每帧重置为`1.0`。 |
+| Player.defaultJumpTime | int | **【只读】**玩家默认跳跃持续上升时间。 |
+| Player.jumpRate | double | 玩家跳跃持续上升时间与默认跳跃持续上升时间比率。每帧重置为`1.0`。 |
+| Player.defaultJumpSpeed | double | **【只读】**玩家默认跳跃上升速度。 |
+| Player.jumpSpeedRate | double | 玩家跳跃上升速度与默认跳跃上升速度比率。每帧重置为`1.0`。 |
+| Player.defaultFallSpeed | double | **【只读】**玩家默认最大下落速度。 |
+| Player.fallSpeedRate | double | 玩家最大下落速度与默认最大下落速度比率。每帧重置为`1.0`。 |
+| Player.digSpeedRate | double | 玩家挖掘速度与原始挖掘速度比率。每帧重置为`1.0`。 |
+
+#### 数值属性
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
 | Player.health | int | **【只读】**玩家生命值。 |
 | Player.maxHealth | int | **【只读】**玩家生命值上限。 |
 | Player.maxMaxHealth | int | **【只读】**玩家最高能达到的生命值上限。 |
@@ -70,7 +66,12 @@
 
 ### 类成员函数
 
+#### 控制函数
 
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Player:SetSpeedX\(double speedX\) | void | 设定玩家的横向速度。（对所控制的玩家生效） |
+| Player:SetSpeedY\(double speedY\) | void | 设定玩家的纵向速度。（对所控制的玩家生效） |
 
 #### 数值属性函数
 
