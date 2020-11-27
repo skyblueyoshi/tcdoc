@@ -2,6 +2,20 @@
 
 ## 玩家通用模块（PlayerUtils）
 
+### 通用常量
+
+| 常量 | 类型 | 值 | 描述 |
+| :--- | :---: | :---: | :--- |
+| PlayerUtils.GRAVITY | double | 0.40625 | 玩家默认重力加速度。 |
+| PlayerUtils.MAX\_SPEED | double | 3.0 | 玩家默认最大速度。 |
+| PlayerUtils.MAX\_FALL\_SPEED | double | 12.0 | 玩家默认最大下落速度。 |
+| PlayerUtils.JUMP\_TIME | int | 19 | 玩家默认跳跃上升持续时间。 |
+| PlayerUtils.JUMP\_SPEED | double | 5.3 | 玩家默认跳跃上升速度。 |
+| PlayerUtils.DEFAULT\_MAX\_HEALTH | int | 100 | 玩家默认最大生命值。 |
+| PlayerUtils.DEFAULT\_MAX\_MANA | int | 100 | 玩家默认最大魔法值。 |
+
+### 通用函数
+
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | PlayerUtils.SearchByRect\(double x, double y, int width, int height\) | ArrayList&lt;Player&gt; | 返回包含于指定矩形区域内部的所有玩家列表。 |
@@ -25,6 +39,7 @@
 | PlayerController.defaultFallSpeed | double | **【只读】**玩家默认最大下落速度。 |
 | PlayerController.fallSpeedRate | double | 玩家最大下落速度与默认最大下落速度比率。每帧重置为`1.0`。 |
 | PlayerController.digSpeedRate | double | 玩家挖掘速度与原始挖掘速度比率。每帧重置为`1.0`。 |
+|  |  |  |
 
 ## 玩家类（Player Class）
 
@@ -40,7 +55,7 @@
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
-| Player.controller | PlayerController | 玩家控制器，用于控制玩家行为。 |
+| Player.ctl | PlayerController | 玩家控制器，用于控制玩家行为。 |
 | Player.health | int | **【只读】**玩家生命值。 |
 | Player.maxHealth | int | **【只读】**玩家生命值上限。 |
 | Player.maxMaxHealth | int | **【只读】**玩家最高能达到的生命值上限。 |
