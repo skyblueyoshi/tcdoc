@@ -19,7 +19,9 @@
 | PlayerController.defaultMaxSpeed | double | **【只读】**玩家默认最大运动速度。 |
 | PlayerController.speedRate | double | 玩家最大运动速度与默认最大运动速度比率。每帧重置为`1.0`。 |
 | PlayerController.defaultJumpTime | int | **【只读】**玩家默认跳跃持续上升时间。 |
-| PlayerController.jumpTime | double | 玩家跳跃持续上升时间与默认跳跃持续上升时间比率。每帧重置为`1.0`。 |
+| PlayerController.jumpRate | double | 玩家跳跃持续上升时间与默认跳跃持续上升时间比率。每帧重置为`1.0`。 |
+| PlayerController.defaultJumpSpeed | double | **【只读】**玩家默认跳跃上升速度。 |
+| PlayerController.jumpSpeedRate | double | 玩家跳跃上升速度与默认跳跃上升速度比率。每帧重置为`1.0`。 |
 
 ## 玩家类（Player Class）
 
