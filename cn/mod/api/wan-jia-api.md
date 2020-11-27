@@ -49,7 +49,7 @@
 | Player.maxMaxMana | int | **【只读】**玩家最高能达到的魔法值上限。 |
 | Player.expLevel | int | **【只读】**玩家经验等级。 |
 | Player.isNoBreathing | bool | **【只读】**玩家当前是否不能呼吸。 |
-| Player.breath | double | **【只读】**玩家呼吸值。有效范围为\[0, 1\]。 |
+| Player.breath | double | **【只读】**玩家呼吸值。有效范围为\[0.0, 1.0\]。当呼吸值为0.0时会产生窒息伤害。 |
 
 ### 类成员函数
 
