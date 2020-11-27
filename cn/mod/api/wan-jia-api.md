@@ -50,6 +50,8 @@
 | Player.expLevel | int | **【只读】**玩家经验等级。 |
 | Player.isNoBreathing | bool | **【只读】**玩家当前是否不能呼吸。 |
 | Player.breath | double | **【只读】**玩家呼吸值。有效范围为\[0.0, 1.0\]。当呼吸值为0.0时会产生窒息伤害。 |
+| Player.foodLevel | int | **【只读】**玩家饥饿值。有效范围为\[1, 100\]。当饥饿值为0时会产生饥饿伤害。 |
+| Player.foodSaturationLevel | int | **【只读】**玩家食物饱和度。有效范围为\[1, 100\]。当前食物饱和度不会超过当前饥饿值。 |
 
 ### 类成员函数
 
