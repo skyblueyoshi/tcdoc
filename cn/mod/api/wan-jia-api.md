@@ -63,8 +63,8 @@
 | Player.breath | double | **【只读】**玩家呼吸值。有效范围为\[0.0, 1.0\]。当呼吸值为0.0时会产生窒息伤害。 |
 | Player.foodLevel | int | **【只读】**玩家饥饿值。有效范围为\[1, 100\]。当饥饿值为0时会产生饥饿伤害。 |
 | Player.foodSaturationLevel | int | **【只读】**玩家食物饱和度。有效范围为\[1, 100\]。当前食物饱和度不会超过当前饥饿值。 |
-| Player.baseAttack | Attack | **【只读】**玩家的基础攻击属性。 |
-| Player.baseDefence | Defence | **【只读】**玩家的基础防御属性。 |
+| Player.baseAttack | Attack | 玩家的基础攻击属性。 |
+| Player.baseDefence | Defence | 玩家的基础防御属性。 |
 
 ### 类成员函数
 
