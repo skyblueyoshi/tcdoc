@@ -158,8 +158,8 @@ end
 
 | 枚举值 | 描述 |
 | :--- | :--- |
-| _NET\_MODE\_SERVER_ | 当前脚本为服务端环境。 |
-| _NET\_MODE\_CLIENT_ | 当前脚本为客户端环境。 |
+| NET\_MODE\_SERVER | 当前脚本为服务端环境。 |
+| NET\_MODE\_CLIENT | 当前脚本为客户端环境。 |
 
 ### Shape
 
@@ -167,8 +167,8 @@ end
 
 | 枚举值 | 描述 |
 | :--- | :--- |
-| _SHAPE\_BOX_ | 碰撞箱形状为轴对齐矩形。 |
-| _SHAPE\_ROTATE\_BOX_ | 碰撞箱形状为旋转矩形。 |
+| SHAPE\_BOX | 碰撞箱形状为轴对齐矩形。 |
+| SHAPE\_ROTATE\_BOX | 碰撞箱形状为旋转矩形。 |
 
 ### ItemType
 
@@ -176,13 +176,13 @@ end
 
 | 枚举值 | 描述 |
 | :--- | :--- |
-| _ITEM\_TYPE\_NONE_ | 无物品。 |
-| _ITEM\_TYPE\_BLOCKS_ | 方块类型物品。 |
-| _ITEM\_TYPE\_TOOLS_ | 工具类型物品。 |
-| _ITEM\_TYPE\_MATERIALS_ | 材料类型物品。 |
-| _ITEM\_TYPE\_WIRES_ | 红石电线类型物品。 |
-| _ITEM\_TYPE\_PROJECTILES_ | 抛射物类型物品。 |
-| _ITEM\_TYPE\_CHESTS_ | 容器类型物品。 |
+| ITEM\_TYPE\_NONE | 无物品。 |
+| ITEM\_TYPE\_BLOCKS | 方块类型物品。 |
+| ITEM\_TYPE\_TOOLS | 工具类型物品。 |
+| ITEM\_TYPE\_MATERIALS | 材料类型物品。 |
+| ITEM\_TYPE\_WIRES | 红石电线类型物品。 |
+| ITEM\_TYPE\_PROJECTILES | 抛射物类型物品。 |
+| ITEM\_TYPE\_CHESTS | 容器类型物品。 |
 
 ### DefaultColor
 
@@ -190,38 +190,11 @@ end
 
 | 枚举值 | 描述 |
 | :--- | :--- |
-| _COLOR\_BLACK_ | 黑色。ARGB=\(255, 0, 0, 0\) |
-| _COLOR\_WHITE_ | 白色。ARGB=\(255, 2555, 255, 255\) |
-| _COLOR\_GRAY_ | 灰色。ARGB=\(255, 128, 128, 128\) |
-| _COLOR\_RED_ | 红色。ARGB=\(255, 255, 0, 0\) |
-| _COLOR\_GREEN_ | 绿色。ARGB=\(255, 0, 255, 0\) |
-| _COLOR\_BLUE_ | 蓝色。ARGB=\(255, 0, 0, 255\) |
-| _COLOR\_YELLOW_ | 黄色。ARGB=\(255, 255, 255, 0\) |
-
-### LightingState
-
-描述客户端光照状态。
-
-| 枚举值 | 描述 |
-| :--- | :--- |
-| _LIGHTING\_STATE\_NORMAL_ | 普通光照状态。 |
-| _LIGHTING\_STATE\_NIGHT\_VISION_ | 夜视光照状态。 |
-| _LIGHTING\_STATE\_BLINDNESS_ | 失明光照状态。 |
-
-### DeathReason
-
-描述玩家的死亡原因。
-
-| 枚举值 | 描述 |
-| :--- | :--- |
-| _DEATH\_REASON\_UNKNOWN_ | 未知原因死亡。 |
-| _DEATH\_REASON\_SUICIDE_ | 自杀。 |
-| _DEATH\_REASON\_FALL_ | 摔死。 |
-| _DEATH\_REASON\_DROWN_ | 淹死。 |
-| _DEATH\_REASON\_BOOM_ | 炸死。 |
-| _DEATH\_REASON\_BURN_ | 烧死。 |
-| _DEATH\_REASON\_LAVA_ | 在岩浆中游泳。 |
-| _DEATH\_REASON\_STARVE_ | 饿死。 |
-| _DEATH\_REASON\_BUFF_ | 状态效果作用而死。 |
-| _DEATH\_REASON\_POISON_ | 毒死。 |
+| COLOR\_BLACK | 黑色。ARGB=\(255, 0, 0, 0\) |
+| COLOR\_WHITE | 白色。ARGB=\(255, 2555, 255, 255\) |
+| COLOR\_GRAY | 灰色。ARGB=\(255, 128, 128, 128\) |
+| COLOR\_RED | 红色。ARGB=\(255, 255, 0, 0\) |
+| COLOR\_GREEN | 绿色。ARGB=\(255, 0, 255, 0\) |
+| COLOR\_BLUE | 蓝色。ARGB=\(255, 0, 0, 255\) |
+| COLOR\_YELLOW | 黄色。ARGB=\(255, 255, 255, 0\) |
 
