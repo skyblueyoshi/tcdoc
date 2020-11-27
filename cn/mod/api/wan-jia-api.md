@@ -67,6 +67,7 @@
 | Player:RemoveExpLevel\(int level\) | void | 减少经验等级。 |
 | Player:AddBreath\(double breath\) | void | 增加呼吸值。 |
 | Player:DecBreath\(double breath\) | void | 减少呼吸值。 |
+| Player:SetBreath\(double breath\) | void | 设定呼吸值。 |
 
 #### BUFF相关函数
 
