@@ -48,6 +48,8 @@
 | Player.maxMana | int | **【只读】**玩家魔法值上限。 |
 | Player.maxMaxMana | int | **【只读】**玩家最高能达到的魔法值上限。 |
 | Player.expLevel | int | **【只读】**玩家经验等级。 |
+| Player.isNoBreathing | bool | **【只读】**玩家当前是否不能呼吸。 |
+| Player.breath | double | **【只读】**玩家呼吸值。有效范围为\[0, 1\]。 |
 
 ### 类成员函数
 
@@ -57,12 +59,14 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Player:Heal\(int heal, bool showTip = true\) | void | 为当前玩家增加生命值。showTip表示是否显示数字提示。 |
-| Player:AddMagic\(int heal, bool showTip = true\) | void | 为当前玩家增加魔法值。showTip表示是否显示数字提示。 |
-| Player:AddMaxHealth\(int health\) | void | 为当前玩家增加生命值上限。 |
-| Player:AddMaxMagic\(int magic\) | void | 为当前玩家增加魔法值上限。 |
-| Player:AddExperience\(int amount\) | void | 为当前玩家增加经验值。 |
-| Player:RemoveExpLevel\(int level\) | void | 消耗当前玩家的经验等级。 |
+| Player:Heal\(int heal, bool showTip = true\) | void | 增加生命值。showTip表示是否显示数字提示。 |
+| Player:AddMagic\(int heal, bool showTip = true\) | void | 增加魔法值。showTip表示是否显示数字提示。 |
+| Player:AddMaxHealth\(int health\) | void | 增加生命值上限。 |
+| Player:AddMaxMagic\(int magic\) | void | 增加魔法值上限。 |
+| Player:AddExperience\(int amount\) | void | 增加经验值。 |
+| Player:RemoveExpLevel\(int level\) | void | 减少经验等级。 |
+| Player:AddBreath\(double breath\) | void | 增加呼吸值。 |
+| Player:DecBreath\(double breath\) | void | 减少呼吸值。 |
 
 #### BUFF相关函数
 
