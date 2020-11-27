@@ -22,6 +22,9 @@
 | PlayerController.jumpRate | double | 玩家跳跃持续上升时间与默认跳跃持续上升时间比率。每帧重置为`1.0`。 |
 | PlayerController.defaultJumpSpeed | double | **【只读】**玩家默认跳跃上升速度。 |
 | PlayerController.jumpSpeedRate | double | 玩家跳跃上升速度与默认跳跃上升速度比率。每帧重置为`1.0`。 |
+| PlayerController.defaultFallSpeed | double | **【只读】**玩家默认最大下落速度。 |
+| PlayerController.fallSpeedRate | double | 玩家最大下落速度与默认最大下落速度比率。每帧重置为`1.0`。 |
+| PlayerController.digSpeedRate | double | 玩家挖掘速度与原始挖掘速度比率。每帧重置为`1.0`。 |
 
 ## 玩家类（Player Class）
 
