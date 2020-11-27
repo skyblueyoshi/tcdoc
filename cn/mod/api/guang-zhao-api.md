@@ -15,7 +15,6 @@
 | :--- | :---: | :--- |
 | LightingUtils.Add\(int xi, int yi, int alpha, int red = 0, int green = 0, int blue = 0\) | void | 为指定格子添加一个光源。 |
 | LightingUtils.AddDelay\(int xi, int yi, int delayTime, int alpha, int red = 0, int green = 0, int blue = 0\) | void | 为指定格子添加一个延迟光源。光源在`delayTime`时间内会逐渐延迟消失。 |
-| LightingUtils.SetState\(LightingState state\) | void | 设定客户端当前的光照状态。光照渲染完毕后恢复状态为_`LIGHTING_STATE_NORMAL`。_ |
 
 
 
