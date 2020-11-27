@@ -70,6 +70,8 @@
 | Player:AddBreath\(double breath\) | void | 增加呼吸值。 |
 | Player:DecBreath\(double breath\) | void | 减少呼吸值。 |
 | Player:SetBreath\(double breath\) | void | 设定呼吸值。 |
+| Player:AddFood\(int foodLevel, int foodSaturationLevel\) | void | 增加饥饿值和食物饱和度。 |
+| Player:DecFood\(int foodLevel, int foodSaturationLevel = 0\) | void | 减少饥饿值和食物饱和度。 |
 
 #### BUFF相关函数
 
