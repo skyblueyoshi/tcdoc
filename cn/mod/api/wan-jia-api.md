@@ -67,6 +67,13 @@
 | Player.baseDefence | Defence | 玩家的基础防御属性。 |
 | Player.isInvisibility | bool | 玩家是否隐身。（每帧重置为`false`） |
 
+#### 权限属性
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Player.gameMode | int | **【只读】**玩家游戏模式。 |
+| Player.op | int | **【只读】**玩家权限。 |
+
 ### 类成员函数
 
 #### 控制函数
