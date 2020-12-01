@@ -72,7 +72,7 @@
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
 | Player.gameMode | int | **【只读】**玩家游戏模式。 |
-| Player.op | int | **【只读】**玩家权限等级。 |
+| Player.op | int | **【只读】**玩家权限。 |
 
 ### 类成员函数
 
@@ -111,12 +111,7 @@
 | Player:HasBuff\(int buffID\) | bool | 返回玩家是否拥有指定状态效果。 |
 | Player:HasAnyBuff\(\) | bool | 返回玩家是否存在状态效果。 |
 
-#### 权限函数（服务端函数）
 
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
-| Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
 
 
 
