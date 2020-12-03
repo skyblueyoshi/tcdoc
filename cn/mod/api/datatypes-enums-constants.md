@@ -260,5 +260,3 @@ end
 | _OP\_MASTER_ | 游戏拥有者（服主）。 |
 | _OP\_DEVELOPER_ | 开发者。 |
 
-
-
