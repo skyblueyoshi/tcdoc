@@ -19,6 +19,7 @@
       * [NPC API](cn/mod/api/npc-api.md)
       * [光照API](cn/mod/api/guang-zhao-api.md)
       * [音效API](cn/mod/api/yin-xiao-api.md)
+      * [语言API](cn/mod/api/yu-yan-api.md)
       * [其他API](cn/mod/api/qi-ta-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
