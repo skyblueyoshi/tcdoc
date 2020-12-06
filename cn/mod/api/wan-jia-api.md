@@ -52,6 +52,7 @@
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
+| Player.name | string | **【只读】**玩家名称。（UTF8格式） |
 | Player.health | int | **【只读】**玩家生命值。 |
 | Player.maxHealth | int | **【只读】**玩家生命值上限。 |
 | Player.maxMaxHealth | int | **【只读】**玩家最高能达到的生命值上限。 |
@@ -72,7 +73,7 @@
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
 | Player.gameMode | int | **【只读】**玩家游戏模式。 |
-| Player.op | int | **【只读】**玩家权限。 |
+| Player.op | int | **【只读】**玩家权限等级。 |
 
 ### 类成员函数
 
@@ -111,7 +112,14 @@
 | Player:HasBuff\(int buffID\) | bool | 返回玩家是否拥有指定状态效果。 |
 | Player:HasAnyBuff\(\) | bool | 返回玩家是否存在状态效果。 |
 
+#### 服务端函数
 
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
+| Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
+| Player:TeleportToSpawn\(\) | void | 传送当前玩家到出生点。 |
+| Player:GoHome\(\) | bool | 传送当前玩家到玩家设定重生点，传送成功返回true。如果玩家设定重生点不存在，不执行传送并返回false。 |
 
 
 
