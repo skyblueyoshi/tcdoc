@@ -1,5 +1,7 @@
 # NPC API
 
+NPC在TerraCraft中泛指除了玩家之外的所有生物，如动物、敌怪、村民、BOSS等。
+
 ## NPC通用模块（NpcUtils）
 
 | 函数 | 返回值 | 描述 |
