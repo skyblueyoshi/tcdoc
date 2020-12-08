@@ -2,6 +2,82 @@
 
 NPC在TerraCraft中泛指除了玩家之外的所有生物，如动物、敌怪、村民、BOSS等。
 
+## 钩子函数
+
+请在**NPCAI**脚本中使用这些钩子函数。
+
+#### void Init\(\)
+
+```lua
+function Init()
+    --init current npc here
+end
+```
+
+NPC生成时调用一次该函数。
+
+#### void Update\(\)
+
+```lua
+function Update()
+    --update every game loop
+end
+```
+
+NPC抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑。
+
+#### void PreUpdate\(\)
+
+```lua
+function ReadyUpdate()
+    --update every game loop
+end
+```
+
+NPC抛射物每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
+
+#### void PostUpdate\(\)
+
+```lua
+function PostUpdate()
+    --update every game loop
+end
+```
+
+NPC每帧运行`Update()`函数后调用。通常用于在使用AI重用后追加逻辑。
+
+#### void OnDraw\(\)
+
+```lua
+function OnDraw()
+    --change the sprite parameters before drawing every game loop
+end
+```
+
+NPC每帧绘制前调用，在该函数内编写自定义绘制属性。不使用该钩子函数时采取默认处理方式。
+
+#### void OnKilled\(\)
+
+```lua
+function OnKilled()
+    --do something when npc is killed
+end
+```
+
+NPC死亡时调用一次该函数。
+
+#### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
+
+```lua
+function OnTileCollide()
+    --do something when npc hit tiles
+end
+```
+
+NPC与图块碰撞时调用该函数。
+
+* `oldSpeedX`和`oldSpeedY`表示击中实心图块前一帧的横向和纵向速度。
+
 ## NPC通用模块（NpcUtils）
 
 | 函数 | 返回值 | 描述 |
