@@ -206,7 +206,7 @@ NPC与图块碰撞时调用该函数。
       </td>
       <td style="text-align:left">
         <p>&#x4F20;&#x9001;NPC&#x81EA;&#x5DF1;&#x5230;&#x4EE5;&#x81EA;&#x5DF1;&#x4E3A;&#x5706;&#x5FC3;&#x7684;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x968F;&#x673A;&#x4F4D;&#x7F6E;&#x3002;</p>
-        <p>distance&#x8868;&#x793A;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x7684;&#x534A;&#x5F84;&#xFF0C;noToAir&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x534A;&#x7A7A;&#x4E2D;&#xFF08;&#x5373;&#x4F20;&#x9001;&#x5230;&#x5730;&#x9762;&#x4E0A;&#xFF09;&#xFF0C;noToLiquid&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x6D41;&#x4F53;&#x5185;&#x3002;</p>
+        <p><code>distance</code>&#x8868;&#x793A;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x7684;&#x534A;&#x5F84;&#xFF0C;<code>noToAir</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x534A;&#x7A7A;&#x4E2D;&#xFF08;&#x5373;&#x4F20;&#x9001;&#x5230;&#x5730;&#x9762;&#x4E0A;&#xFF09;&#xFF0C;<code>noToLiquid</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x6D41;&#x4F53;&#x5185;&#x3002;</p>
         <p>&#x82E5;&#x4F20;&#x9001;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false&#x3002;</p>
       </td>
     </tr>
