@@ -135,6 +135,7 @@ NPC与图块碰撞时调用该函数。
 | Npc:RandomPumpSwim\(\) | void | 执行**随机泵式**_游泳_模板。 |
 | Npc:Swim\(bool followTarget = true\) | void | 执行**游泳**模板。 |
 | Npc:Fly\(bool followTarget = true, double force = 0.1, bool gradientSpeed = false\) | void | 执行**飞行**模板。 |
+| Npc:RandomTeleport\(int distance, bool noToAir = true, bool noToLiquid = true\) | bool | 执行**随机传送**模板。 |
 
 <table>
   <thead>
@@ -198,6 +199,15 @@ NPC与图块碰撞时调用该函数。
         <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#xFF0C;<code>force</code>&#x8868;&#x793A;&#x98DE;&#x5411;&#x76EE;&#x6807;&#x7684;&#x529B;&#xFF0C;<code>gradientSpeed</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x6E10;&#x53D8;&#x901F;&#x5EA6;&#xFF0C;&#x5426;&#x5219;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5927;&#x5C0F;&#x603B;&#x662F;&#x6052;&#x5B9A;&#x7684;&#x3002;
           <br
           />&#x76EE;&#x6807;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x968F;&#x673A;&#x8FD0;&#x52A8;&#x3002;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>&#x968F;&#x673A;&#x4F20;&#x9001;</b>
+      </td>
+      <td style="text-align:left">
+        <p>&#x4F20;&#x9001;NPC&#x81EA;&#x5DF1;&#x5230;&#x4EE5;&#x81EA;&#x5DF1;&#x4E3A;&#x5706;&#x5FC3;&#x7684;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x968F;&#x673A;&#x4F4D;&#x7F6E;&#x3002;</p>
+        <p>distance&#x8868;&#x793A;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x7684;&#x534A;&#x5F84;&#xFF0C;noToAir&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x534A;&#x7A7A;&#x4E2D;&#xFF08;&#x5373;&#x4F20;&#x9001;&#x5230;&#x5730;&#x9762;&#x4E0A;&#xFF09;&#xFF0C;noToLiquid&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x6D41;&#x4F53;&#x5185;&#x3002;</p>
+        <p>&#x82E5;&#x4F20;&#x9001;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false&#x3002;</p>
       </td>
     </tr>
   </tbody>
