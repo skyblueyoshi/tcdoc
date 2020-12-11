@@ -134,7 +134,7 @@ NPC与图块碰撞时调用该函数。
 | Npc:Walk\(bool followTarget = true\) | void | 执行_**行走运动**_模板。 |
 | Npc:RandomPumpSwim\(\) | void | 执行**随机泵式**_游泳_模板。 |
 | Npc:Swim\(bool followTarget = true\) | void | 执行**游泳**模板。 |
-| Npc:Fly\(bool followTarget = true, double force = 0.1\) | void | 执行**飞行**模板。 |
+| Npc:Fly\(bool followTarget = true, double force = 0.1, bool gradientSpeed = false\) | void | 执行**飞行**模板。 |
 
 <table>
   <thead>
@@ -195,7 +195,7 @@ NPC与图块碰撞时调用该函数。
       </td>
       <td style="text-align:left">
         <p>&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x98DE;&#x884C;&#x3002;</p>
-        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#xFF0C;<code>force</code>&#x8868;&#x793A;&#x98DE;&#x5411;&#x76EE;&#x6807;&#x7684;&#x529B;&#x3002;
+        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#xFF0C;<code>force</code>&#x8868;&#x793A;&#x98DE;&#x5411;&#x76EE;&#x6807;&#x7684;&#x529B;&#xFF0C;<code>gradientSpeed</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x6E10;&#x53D8;&#x901F;&#x5EA6;&#xFF0C;&#x5426;&#x5219;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5927;&#x5C0F;&#x603B;&#x662F;&#x6052;&#x5B9A;&#x7684;&#x3002;
           <br
           />&#x76EE;&#x6807;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x968F;&#x673A;&#x8FD0;&#x52A8;&#x3002;</p>
       </td>
