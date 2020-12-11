@@ -128,6 +128,7 @@ NPC与图块碰撞时调用该函数。
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
+| Npc:Stand\(bool faceToTarget = true\) | void | 执行**静立**运动模板。 |
 | Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行**随机行走**运动模板。 |
 | Npc:KeepWalking\(bool followTarget = true\) | void | 执行**持续行走**运动模板。 |
 | Npc:Walk\(bool followTarget = true\) | void | 执行_**行走运动**_模板。 |
@@ -143,6 +144,11 @@ NPC与图块碰撞时调用该函数。
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td style="text-align:left"><b>&#x9759;&#x7ACB;</b>
+      </td>
+      <td style="text-align:left">&#x7AD9;&#x7ACB;&#x9759;&#x6B62;&#x4E0D;&#x52A8;&#x3002;&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>faceToTarget</code>&#x8868;&#x793A;&#x59CB;&#x7EC8;&#x9762;&#x671D;&#x73A9;&#x5BB6;&#x3002;</td>
+    </tr>
     <tr>
       <td style="text-align:left"><b>&#x968F;&#x673A;&#x884C;&#x8D70;</b>
       </td>
