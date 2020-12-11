@@ -128,8 +128,9 @@ NPC与图块碰撞时调用该函数。
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行**随机行走**运动模板。 |
-| Npc:KeepWalking\(bool followTarget = true\) | void | 执行**持续行走**运动模板。 |
+| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行_**随机行走**_运动模板。 |
+| Npc:KeepWalking\(bool followTarget = true\) | void | 执行_**持续行走**_运动模板。 |
+| Npc:Walk\(\) | void | 执行_**行走**_运动模板。 |
 
 <table>
   <thead>
@@ -144,8 +145,8 @@ NPC与图块碰撞时调用该函数。
       </td>
       <td style="text-align:left">
         <p>&#x968F;&#x673A;&#x5730;&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x6216;&#x505C;&#x4E0B;&#x3002;</p>
-        <p>&#x505C;&#x4E0B;&#x65F6;&#x603B;&#x5171;&#x95F2;&#x7F6E;<code>idleTime &#xB1; idleTimeOffset</code>&#x65F6;&#x95F4;&#x3002;</p>
-        <p>&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x65F6;&#x6301;&#x7EED;<code>walkTime &#xB1; walkTimeOffset</code>&#x65F6;&#x95F4;&#x3002;</p>
+        <p>&#x505C;&#x4E0B;&#x65F6;&#x95F2;&#x7F6E;<code>idleTime &#xB1; idleTimeOffset</code>&#x8303;&#x56F4;&#x5185;&#x968F;&#x673A;&#x65F6;&#x95F4;&#x3002;</p>
+        <p>&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x65F6;&#x6301;&#x7EED;<code>walkTime &#xB1; walkTimeOffset</code>&#x8303;&#x56F4;&#x5185;&#x968F;&#x673A;&#x65F6;&#x95F4;&#x3002;</p>
         <p>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5BFB;&#x8DEF;&#x903B;&#x8F91;&#xFF0C;&#x9047;&#x5230;&#x5899;&#x58C1;&#x4F1A;&#x5C1D;&#x8BD5;&#x8DF3;&#x8DC3;3&#x6B21;&#x3002;</p>
       </td>
     </tr>
@@ -158,6 +159,18 @@ NPC与图块碰撞时调用该函数。
           /><code>followTarget</code>&#x8868;&#x793A;&#x5728;&#x76EE;&#x6807;&#x5B58;&#x5728;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;</p>
         <p>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5BFB;&#x8DEF;&#x903B;&#x8F91;&#xFF0C;&#x9047;&#x5230;&#x5899;&#x58C1;&#x4F1A;&#x5C1D;&#x8BD5;&#x8DF3;&#x8DC3;3&#x6B21;&#x3002;</p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>&#x884C;&#x8D70;</b>
+      </td>
+      <td style="text-align:left">
+        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x91C7;&#x7528;<em><b>&#x6301;&#x7EED;&#x884C;&#x8D70;</b></em>&#x6A21;&#x677F;&#x3002;</p>
+        <p>&#x76EE;&#x6807;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x91C7;&#x7528;<em><b>&#x968F;&#x673A;&#x884C;&#x8D70;</b></em>&#x6A21;&#x677F;&#x3002;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>
