@@ -100,7 +100,16 @@ NPC与图块碰撞时调用该函数。
 
 ### 类成员属性
 
-
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Npc.id | int | **【只读】**当前NPC的动态ID。 |
+| Npc.baseAttack | Attack | 当前NPC的基础攻击属性。 |
+| Npc.defaultMaxSpeed | double | **【只读】**当前NPC的默认最大横向移动速度。 |
+| Npc.maxSpeed | double | 当前NPC的最大横向移动速度。每帧重置为所在环境（流体黏性等）决定的最大移动速度。 |
+| Npc.defaultGravity | double | **【只读】**当前NPC的默认重力加速度。 |
+| Npc.gravity | double | 当前NPC的纵向加速度。每帧重置为作用了所在环境纵向受力以及重力后的纵向加速度。 |
+| Npc.defaultMaxFallSpeed | double | **【只读】**当前NPC的默认最大下落速度。 |
+| Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
 
 ### 类成员函数
 
