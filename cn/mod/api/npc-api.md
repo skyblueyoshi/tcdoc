@@ -110,6 +110,7 @@ NPC与图块碰撞时调用该函数。
 | Npc.gravity | double | 当前NPC的纵向加速度。每帧重置为作用了所在环境纵向受力以及重力后的纵向加速度。 |
 | Npc.defaultMaxFallSpeed | double | **【只读】**当前NPC的默认最大下落速度。 |
 | Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
+| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
 
 ### 类成员函数
 
@@ -120,6 +121,34 @@ NPC与图块碰撞时调用该函数。
 | Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
 | Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
+
+#### 运动模板函数
+
+调用这些函数可以执行内置的运动逻辑。
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行**随机行走**运动模板。 |
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x8FD0;&#x52A8;&#x6A21;&#x677F;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">&#x968F;&#x673A;&#x884C;&#x8D70;</td>
+      <td style="text-align:left">
+        <p>&#x968F;&#x673A;&#x5730;&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x6216;&#x505C;&#x4E0B;&#x3002;</p>
+        <p>&#x505C;&#x4E0B;&#x65F6;&#x603B;&#x5171;&#x95F2;&#x7F6E;<code>idleTime &#xB1; idleTimeOffset</code>&#x65F6;&#x95F4;&#x3002;</p>
+        <p>&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x65F6;&#x6301;&#x7EED;<code>walkTime &#xB1; walkTimeOffset</code>&#x65F6;&#x95F4;&#x3002;</p>
+        <p>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5BFB;&#x8DEF;&#x903B;&#x8F91;&#xFF0C;&#x9047;&#x5230;&#x5899;&#x58C1;&#x4F1A;&#x5C1D;&#x8BD5;&#x8DF3;&#x8DC3;3&#x6B21;&#x3002;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 
