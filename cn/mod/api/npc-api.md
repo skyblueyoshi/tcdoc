@@ -128,11 +128,12 @@ NPC与图块碰撞时调用该函数。
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行_**随机行走**_运动模板。 |
-| Npc:KeepWalking\(bool followTarget = true\) | void | 执行_**持续行走**_运动模板。 |
-| Npc:Walk\(bool followTarget = true\) | void | 执行_**行走**_运动模板。 |
-| Npc:RandomPumpSwim\(\) | void | 执行_**随机泵式游泳**_模板。 |
-| Npc:Swim\(bool followTarget = true\) | void | 执行_**游泳**_模板。 |
+| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行**随机行走**运动模板。 |
+| Npc:KeepWalking\(bool followTarget = true\) | void | 执行**持续行走**运动模板。 |
+| Npc:Walk\(bool followTarget = true\) | void | 执行_**行走运动**_模板。 |
+| Npc:RandomPumpSwim\(\) | void | 执行**随机泵式**_游泳_模板。 |
+| Npc:Swim\(bool followTarget = true\) | void | 执行**游泳**模板。 |
+| Npc:Fly\(bool followTarget = true\) | void | 执行**飞行**模板。 |
 
 <table>
   <thead>
@@ -181,6 +182,14 @@ NPC与图块碰撞时调用该函数。
       <td style="text-align:left">
         <p>&#x5728;&#x6D41;&#x4F53;&#x4E2D;&#x6E38;&#x6CF3;&#xFF0C;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x8E66;&#x8DF6;&#x3002;</p>
         <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;&#x5426;&#x5219;&#x5728;&#x6D41;&#x4F53;&#x4E2D;&#x968F;&#x673A;&#x8FD0;&#x52A8;&#x3002;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>&#x98DE;&#x884C;</b>
+      </td>
+      <td style="text-align:left">
+        <p>&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x98DE;&#x884C;&#x3002;</p>
+        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;&#x5426;&#x5219;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x968F;&#x673A;&#x8FD0;&#x52A8;&#x3002;</p>
       </td>
     </tr>
   </tbody>
