@@ -144,7 +144,7 @@ NPC与图块碰撞时调用该函数。
       <td style="text-align:left"><b>&#x968F;&#x673A;&#x884C;&#x8D70;</b>
       </td>
       <td style="text-align:left">
-        <p>&#x968F;&#x673A;&#x5730;&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x6216;&#x505C;&#x4E0B;&#x3002;</p>
+        <p>&#x968F;&#x673A;&#x5730;&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x6216;&#x505C;&#x4E0B;&#x6216;&#x8F6C;&#x5F2F;&#x3002;</p>
         <p>&#x505C;&#x4E0B;&#x65F6;&#x95F2;&#x7F6E;<code>idleTime &#xB1; idleTimeOffset</code>&#x8303;&#x56F4;&#x5185;&#x968F;&#x673A;&#x65F6;&#x95F4;&#x3002;</p>
         <p>&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x65F6;&#x6301;&#x7EED;<code>walkTime &#xB1; walkTimeOffset</code>&#x8303;&#x56F4;&#x5185;&#x968F;&#x673A;&#x65F6;&#x95F4;&#x3002;</p>
         <p>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5BFB;&#x8DEF;&#x903B;&#x8F91;&#xFF0C;&#x9047;&#x5230;&#x5899;&#x58C1;&#x4F1A;&#x5C1D;&#x8BD5;&#x8DF3;&#x8DC3;3&#x6B21;&#x3002;</p>
