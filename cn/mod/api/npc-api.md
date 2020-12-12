@@ -123,8 +123,6 @@ NPC与图块碰撞时调用该函数。
 | Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
 | Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
-| Npc:TryMakeSound\(int tryTimes = 512\) | void | NPC尝试发出平时声音。平均经过tryTimes时间发出一次平时声音。 |
-| Npc:MakeSound\(\) | void | NPC发出平时声音。 |
 
 ### 运动模板函数
 
