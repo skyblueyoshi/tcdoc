@@ -20,6 +20,7 @@
       * [光照API](cn/mod/api/guang-zhao-api.md)
       * [音效API](cn/mod/api/yin-xiao-api.md)
       * [语言API](cn/mod/api/yu-yan-api.md)
+      * [地图API](cn/mod/api/di-tu-api.md)
       * [其他API](cn/mod/api/qi-ta-api.md)
       * [骨骼模型API](cn/mod/api/gu-ge-mo-xing-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
