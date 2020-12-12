@@ -153,8 +153,8 @@ end
 | Projectile.id | int | **【只读】**当前抛射物的动态ID。 |
 | Projectile.baseAttack | Attack | 当前抛射物的基础攻击属性。一般由创建时给定。 |
 | Projectile.targetTime | int | 当前抛射物的目标时间。一般由创建时给定，通常用于实现达到目标时间后触发相关逻辑。 |
-| Projectile.isCheckNpc | bool | 当前抛射物是否作用于NPC。一般由创建时给定，决定是否碰撞、伤害NPC。 |
-| Projectile.isCheckPlayer | bool | 当前抛射物是否作用于玩家。一般由创建时给定，决定是否碰撞、伤害玩家。 |
+| Projectile.isCheckNpc | bool | 当前抛射物是否作用于NPC。一般由创建时指定，默认为false，决定是否碰撞、伤害NPC。 |
+| Projectile.isCheckPlayer | bool | 当前抛射物是否作用于玩家。一般由创建时指定，默认为false，决定是否碰撞、伤害玩家。 |
 | Projectile.maxSpeed | double | **【只读】**当前抛射物最大移动速度。 |
 | Projectile.hots\[4\] | Point | **【只读】**当前抛射物的热固定点。允许读取最多4个热固定点。 |
 | Projectile.state | int | 抛射物的当前在简单有限状态机中的状态。 |
