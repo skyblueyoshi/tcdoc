@@ -190,12 +190,7 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
     <tr>
       <td style="text-align:left">Entity.color</td>
       <td style="text-align:center">Color</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<em><code>COLOR_WHITE</code></em>&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameTickTime</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7528;&#x7684;&#x5E27;&#x8BA1;&#x65F6;&#x5668;&#x3002;&#xFF08;&#x6BCF;&#x5E27;&#x81EA;&#x589E;1&#xFF09;</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<code>COLOR_WHITE</code>&#xFF09;</td>
     </tr>
   </tbody>
 </table>
