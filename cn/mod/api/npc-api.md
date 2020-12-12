@@ -112,6 +112,7 @@ NPC与图块碰撞时调用该函数。
 | Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
 | Npc.defaultJumpForce | double | **【只读】**当前NPC的默认跳跃力度。 |
 | Npc.jumpForce | double | 当前NPC的跳跃力度。每帧重置为作用了所在环境纵向阻力后的跳跃力度。 |
+| Npc.inLiquid | bool | **【只读】**当前NPC是否处在流体环境中。 |
 | Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
 | Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
