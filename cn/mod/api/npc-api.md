@@ -110,6 +110,7 @@ NPC与图块碰撞时调用该函数。
 | Npc.gravity | double | 当前NPC的纵向加速度。每帧重置为作用了所在环境纵向受力以及重力后的纵向加速度。 |
 | Npc.defaultMaxFallSpeed | double | **【只读】**当前NPC的默认最大下落速度。 |
 | Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
+| Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
 | Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
 | Npc.angry | bool | 当前NPC是否为愤怒状态。 |
@@ -123,6 +124,8 @@ NPC与图块碰撞时调用该函数。
 | Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
 | Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
+| Npc:TryMakeSound\(int tryTimes = 512\) | void | NPC尝试发出平时声音。平均经过tryTimes时间发出一次平时声音。 |
+| Npc:MakeSound\(\) | void | NPC发出平时声音。 |
 
 ### 运动模板函数
 
