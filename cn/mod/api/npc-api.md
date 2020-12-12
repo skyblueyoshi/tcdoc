@@ -110,11 +110,6 @@ NPC与图块碰撞时调用该函数。
 | Npc.gravity | double | 当前NPC的纵向加速度。每帧重置为作用了所在环境纵向受力以及重力后的纵向加速度。 |
 | Npc.defaultMaxFallSpeed | double | **【只读】**当前NPC的默认最大下落速度。 |
 | Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
-| Npc.defaultJumpForce | double | **【只读】**当前NPC的默认跳跃力度。 |
-| Npc.jumpForce | double | 当前NPC的跳跃力度。每帧重置为作用了所在环境纵向阻力后的跳跃力度。 |
-| Npc.inLiquid | bool | **【只读】**当前NPC是否处在流体环境中。 |
-| Npc.oldInLiquid | bool | **【只读】**上一帧的NPC是否处在流体环境中。 |
-| Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
 | Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
 | Npc.angry | bool | 当前NPC是否为愤怒状态。 |
@@ -128,8 +123,6 @@ NPC与图块碰撞时调用该函数。
 | Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
 | Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
-| Npc:TryMakeSound\(int tryTimes = 512\) | void | NPC尝试发出平时声音。平均经过tryTimes时间发出一次平时声音。 |
-| Npc:MakeSound\(\) | void | NPC发出平时声音。 |
 
 ### 运动模板函数
 
@@ -141,6 +134,7 @@ NPC与图块碰撞时调用该函数。
 | Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行**随机行走**运动模板。 |
 | Npc:KeepWalking\(bool followTarget = true\) | void | 执行**持续行走**运动模板。 |
 | Npc:Walk\(bool followTarget = true\) | void | 执行_**行走运动**_模板。 |
+| Npc:RandomPumpSwim\(\) | void | 执行**随机泵式**_游泳_模板。 |
 | Npc:Swim\(bool followTarget = true\) | void | 执行**游泳**模板。 |
 | Npc:Fly\(bool followTarget = true, double force = 0.1, bool gradientSpeed = false\) | void | 执行**飞行**模板。 |
 | Npc:RandomTeleport\(int distance, bool noToAir = true, bool noToLiquid = true\) | bool | 执行**随机传送**模板。 |
@@ -185,6 +179,11 @@ NPC与图块碰撞时调用该函数。
         <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x91C7;&#x7528;<em><b>&#x6301;&#x7EED;&#x884C;&#x8D70;</b></em>&#x6A21;&#x677F;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;</p>
         <p>&#x76EE;&#x6807;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x91C7;&#x7528;<em><b>&#x968F;&#x673A;&#x884C;&#x8D70;</b></em>&#x6A21;&#x677F;&#x3002;</p>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>&#x968F;&#x673A;&#x6CF5;&#x5F0F;&#x6E38;&#x6CF3;</b>
+      </td>
+      <td style="text-align:left">&#x5728;&#x6D41;&#x4F53;&#x4E2D;&#x5468;&#x671F;&#x6027;&#x968F;&#x673A;&#x6CF5;&#x5F0F;&#x6E38;&#x6CF3;&#xFF0C;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x8E66;&#x8DF6;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>&#x6E38;&#x6CF3;</b>
