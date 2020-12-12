@@ -124,6 +124,7 @@ NPC与图块碰撞时调用该函数。
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | Npc:Kill\(\) | void | 不掉落物品直接清除当前NPC对象。 |
+| Projectile:GetPlayerTarget\(\) | Player/nil | 若当前NPC的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
 | Npc:AddBuff\(int buffID, int buffTime\) | void | 为当前NPC添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
 | Npc:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
 | Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
