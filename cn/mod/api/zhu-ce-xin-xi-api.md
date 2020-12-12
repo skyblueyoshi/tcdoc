@@ -15,4 +15,5 @@ ID是游戏运行中动态生成的正整数数值。ID在游戏过程中不会�
 | Reg.BuffID\(string name\) | int | 根据**BUFF名**返回注册的动态ID。 |
 | Reg.SoundID\(string name\) | int | 根据**音效名**返回注册的动态ID。 |
 | Reg.SoundGroupID\(string name\) | int | 根据**音效组名**返回注册的动态ID。 |
+| Reg.LiquidID\(string name\) | int | 根据**流体名**返回注册的动态ID。 |
 
