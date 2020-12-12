@@ -132,9 +132,9 @@ end
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| ProjectileUtils.Create\(int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack\) | Projectile | 创建一个抛射物实体，返回创建好的抛射物实体。 `id`：抛射物ID。`centerX`和`centerY`：创建抛射物的中心点。`speedX`和`speedY`：初始运动速度。`Attack`：抛射物的基础攻击力。 |
-| ProjectileUtils.CreateFromPlayer\(Player playerOwner, int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack\) | Projectile | 创建一个以指定玩家为拥有者的抛射物实体，返回创建好的抛射物实体。 |
-| ProjectileUtils.CreateFromNpc\(Npc npcOwner, int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack\) | Projectile | 创建一个以指定NPC为拥有者的抛射物实体，返回创建好的抛射物实体。 |
+| ProjectileUtils.Create\(int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack = Attack:new\(0, 0, 0\)\) | Projectile | 创建一个抛射物实体，返回创建好的抛射物实体。 `id`：抛射物ID。`centerX`和`centerY`：创建抛射物的中心点。`speedX`和`speedY`：初始运动速度。`Attack`：抛射物的基础攻击力。 |
+| ProjectileUtils.CreateFromPlayer\(Player playerOwner, int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack = Attack:new\(0, 0, 0\)\) | Projectile | 创建一个以指定玩家为拥有者的抛射物实体，返回创建好的抛射物实体。 |
+| ProjectileUtils.CreateFromNpc\(Npc npcOwner, int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack = Attack:new\(0, 0, 0\)\) | Projectile | 创建一个以指定NPC为拥有者的抛射物实体，返回创建好的抛射物实体。 |
 
 ## 抛射物类（Projectile Class）
 
