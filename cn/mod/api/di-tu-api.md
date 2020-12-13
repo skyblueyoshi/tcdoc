@@ -22,8 +22,6 @@
 
 如下函数都不会进行区块的存在性检测。
 
-在使用这些函数之前，必须使用IsValid或者IsAreaValid来证明格子所在区块死存在的。
-
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | MapUtils.IsSolidUnsafe\(int xi, int yi\) | bool | IsSolid函数的不安全版本。 |
