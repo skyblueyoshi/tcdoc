@@ -24,27 +24,57 @@ function Update()
 end
 ```
 
-NPC抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑。
+NPC每帧运行时调用，您可以在该函数内编写运动等逻辑。
 
 #### void PreUpdate\(\)
 
 ```lua
-function ReadyUpdate()
-    --update every game loop
+function PreUpdate()
+    --be called before Update()
 end
 ```
 
-NPC抛射物每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
+NPC每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
 #### void PostUpdate\(\)
 
 ```lua
 function PostUpdate()
-    --update every game loop
+    --be called after Update()
 end
 ```
 
 NPC每帧运行`Update()`函数后调用。通常用于在使用AI重用后追加逻辑。
+
+#### void UpdateSkeleton\(Skeleton skeleton\)
+
+```lua
+function UpdateSkeleton(Skeleton skeleton)
+    --update skeleton module every game loop
+end
+```
+
+若NPC拥有骨骼模型，每帧执行完`PostUpdate`后调用，用于处理自定义骨骼模型逻辑。
+
+#### void PreUpdateSkeleton\(Skeleton skeleton\)
+
+```lua
+function PreUpdateSkeleton(Skeleton skeleton)
+    --be called before UpdateSkeleton(Skeleton skeleton)
+end
+```
+
+NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新的骨骼模型逻辑。
+
+#### void PostUpdateSkeleton\(Skeleton skeleton\)
+
+```lua
+function PostUpdateSkeleton(Skeleton skeleton)
+    --be called after UpdateSkeleton(Skeleton skeleton)
+end
+```
+
+NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数后调用。通常用于在使用AI重用后追加骨骼模型逻辑。
 
 #### void OnDraw\(\)
 
@@ -117,8 +147,8 @@ NPC与图块碰撞时调用该函数。
 | Npc.oldInLiquid | bool | **【只读】**上一帧的NPC是否处在流体环境中。 |
 | Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
-| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
-| Npc.angry | bool | 当前NPC是否为愤怒状态。 |
+| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走模板不会停下来。 |
+| Npc.angry | bool | 当前NPC是否为愤怒状态。易怒的NPC在被玩家击中后会将该玩家视为目标，并置愤怒状态为true。 |
 
 ### 类成员函数
 
