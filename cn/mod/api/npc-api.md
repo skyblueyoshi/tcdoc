@@ -149,6 +149,7 @@ NPC与图块碰撞时调用该函数。
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
 | Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走模板不会停下来。 |
 | Npc.angry | bool | 当前NPC是否为愤怒状态。易怒的NPC在被玩家击中后会将该玩家视为目标，并置愤怒状态为true。 |
+| Npc.itemSlots | ArrayList&lt;ItemSlot&gt; | 当前NPC自己的物品格子列表。物品格子数目在NPC的AI数据表中指定。 |
 
 ### 类成员函数
 
