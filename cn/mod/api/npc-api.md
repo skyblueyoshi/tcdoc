@@ -54,7 +54,7 @@ function UpdateSkeleton(Skeleton skeleton)
 end
 ```
 
-若NPC拥有骨骼模型，每帧执行完`PostUpdate`后调用，用于处理自定义骨骼模型逻辑。
+若NPC拥有骨骼模型，每帧执行完`PostUpdate`后调用，用于处理自定义骨骼模型逻辑。执行完该函数后，会对所有骨骼模型关节重新计算。
 
 #### void PreUpdateSkeleton\(Skeleton skeleton\)
 
@@ -74,7 +74,7 @@ function PostUpdateSkeleton(Skeleton skeleton)
 end
 ```
 
-NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数后调用。通常用于在使用AI重用后追加骨骼模型逻辑。
+NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数，并将全部骨骼关节进行修正后调用。当前函数中所有骨骼关节为实际作用数据。
 
 #### void OnDraw\(\)
 
