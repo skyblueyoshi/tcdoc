@@ -24,27 +24,57 @@ function Update()
 end
 ```
 
-NPC抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑。
+NPC每帧运行时调用，您可以在该函数内编写运动等逻辑。
 
 #### void PreUpdate\(\)
 
 ```lua
-function ReadyUpdate()
-    --update every game loop
+function PreUpdate()
+    --be called before Update()
 end
 ```
 
-NPC抛射物每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
+NPC每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
 #### void PostUpdate\(\)
 
 ```lua
 function PostUpdate()
-    --update every game loop
+    --be called after Update()
 end
 ```
 
 NPC每帧运行`Update()`函数后调用。通常用于在使用AI重用后追加逻辑。
+
+#### void UpdateSkeleton\(Skeleton skeleton\)
+
+```lua
+function UpdateSkeleton(Skeleton skeleton)
+    --update skeleton module every game loop
+end
+```
+
+若NPC拥有骨骼模型，每帧执行完`PostUpdate`后调用，用于处理自定义骨骼模型逻辑。执行完该函数后，会对所有骨骼模型关节重新计算。
+
+#### void PreUpdateSkeleton\(Skeleton skeleton\)
+
+```lua
+function PreUpdateSkeleton(Skeleton skeleton)
+    --be called before UpdateSkeleton(Skeleton skeleton)
+end
+```
+
+NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新的骨骼模型逻辑。
+
+#### void PostUpdateSkeleton\(Skeleton skeleton\)
+
+```lua
+function PostUpdateSkeleton(Skeleton skeleton)
+    --be called after UpdateSkeleton(Skeleton skeleton)
+end
+```
+
+NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数，并将全部骨骼关节进行修正后调用。当前函数中所有骨骼关节为实际作用数据。
 
 #### void OnDraw\(\)
 
@@ -112,12 +142,17 @@ NPC与图块碰撞时调用该函数。
 | Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
 | Npc.defaultJumpForce | double | **【只读】**当前NPC的默认跳跃力度。 |
 | Npc.jumpForce | double | 当前NPC的跳跃力度。每帧重置为作用了所在环境纵向阻力后的跳跃力度。 |
+| Npc.noMove | bool | 决定当前NPC在行走模板中是否停止行走。 |
 | Npc.inLiquid | bool | **【只读】**当前NPC是否处在流体环境中。 |
 | Npc.oldInLiquid | bool | **【只读】**上一帧的NPC是否处在流体环境中。 |
 | Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
-| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
-| Npc.angry | bool | 当前NPC是否为愤怒状态。 |
+| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走模板不会停下来。 |
+| Npc.angry | bool | 当前NPC是否为愤怒状态。易怒的NPC在被玩家击中后会将该玩家视为目标，并置愤怒状态为true。 |
+| Npc.animation | int | NPC当前执行的动画状态。通常用于表示骨骼模型的动画状态。 |
+| Npc.animationTickTime | int | NPC在当前动画索引所经过的时间。每帧自动自增1，当动画状态切换时自动重置为0。 |
+| Npc.watchAngle | double | **【只读】**NPC的目视角度。若NPC目标存在，则总是目视目标。否则总是根据朝向水平目视。 |
+| Npc.itemSlots | ArrayList&lt;ItemSlot&gt; | 当前NPC自己的物品格子列表。物品格子数目在NPC的AI数据表中指定。 |
 
 ### 类成员函数
 
@@ -132,6 +167,7 @@ NPC与图块碰撞时调用该函数。
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
 | Npc:TryMakeSound\(int tryTimes = 512\) | void | NPC尝试发出平时声音。平均经过tryTimes时间发出一次平时声音。 |
 | Npc:MakeSound\(\) | void | NPC发出平时声音。 |
+| Npc:UseTool\(ItemSlot itemSlot, int skJointID\) | void | NPC使用指定物品格子内的工具。itemSlot为指定物品格子，skJointID为当前NPC使用工具的骨骼模型关节ID。 |
 
 ### 运动模板函数
 
