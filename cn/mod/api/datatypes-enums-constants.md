@@ -8,6 +8,10 @@
 
 TerraCraft内置的动态数组。
 
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| ArrayList.length | int | **【只读】**数组长度。 |
+
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | ArrayList:GetLength\(\) | int | 返回数组长度。 |
@@ -197,6 +201,28 @@ end
 | _ITEM\_TYPE\_WIRES_ | 红石电线类型物品。 |
 | _ITEM\_TYPE\_PROJECTILES_ | 抛射物类型物品。 |
 | _ITEM\_TYPE\_CHESTS_ | 容器类型物品。 |
+
+### ToolType
+
+描述工具类型。
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| _TOOL\_TYPE\_NONE_ | 无有效工具类型。 |
+| _TOOL\_TYPE\_AXE_ | 斧头。 |
+| _TOOL\_TYPE\_PICKAXE_ | 镐子。 |
+| _TOOL\_TYPE\_SWORD_ | 剑。 |
+| _TOOL\_TYPE\_BOW_ | 弓/枪械。 |
+| _TOOL\_TYPE\_HELMET_ | 头盔。 |
+| _TOOL\_TYPE\_CHESTPLATE_ | 胸甲。 |
+| _TOOL\_TYPE\_LEGGINGS_ | 裤腿。 |
+| _TOOL\_TYPE\_BOOK_ | 书本。 |
+| _TOOL\_TYPE\_SHEARS_ | 剪刀。 |
+| _TOOL\_TYPE\_HOE_ | 锄。 |
+| _TOOL\_TYPE\_WIRE\_CUTTER_ | 剪线钳。 |
+| _TOOL\_TYPE\_DRILL_ | 钻头。 |
+| _TOOL\_TYPE\_SAW_ | 锯子。 |
+| _TOOL\_TYPE\_STAFF_ | 法杖。 |
 
 ### DefaultColor
 
