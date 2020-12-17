@@ -146,6 +146,7 @@ NPC与图块碰撞时调用该函数。
 | Npc.inLiquid | bool | **【只读】**当前NPC是否处在流体环境中。 |
 | Npc.oldInLiquid | bool | **【只读】**上一帧的NPC是否处在流体环境中。 |
 | Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
+| Npc.isEnemy | bool | **【只读】**当前NPC是否会伤害玩家。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
 | Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走模板不会停下来。 |
 | Npc.angry | bool | 当前NPC是否为愤怒状态。易怒的NPC在被玩家击中后会将该玩家视为目标，并置愤怒状态为true。 |
