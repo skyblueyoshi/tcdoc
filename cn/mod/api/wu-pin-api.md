@@ -6,8 +6,9 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| ItemUtils.Type\(int itemID\) | ItemType | 返回指定物品ID的物品类型。若物品ID为0，返回_`ITEM_TYPE_NONE`_。 |
 | ItemUtils.MaxCount\(int itemID\) | int | 返回指定物品ID的最大允许数量。若物品ID为0，返回0。 |
+| ItemUtils.Type\(int itemID\) | ItemType | 返回指定物品ID的物品类型。若物品ID为0，返回_`ITEM_TYPE_NONE`_。 |
+| ItemUtils.ToolType\(int itemID\) | ToolType | 若指定物品ID为工具，表示指定物品ID的工具类型，否则总是为_`TOOL_TYPE_NONE`_。 |
 
 #### 功能函数
 
