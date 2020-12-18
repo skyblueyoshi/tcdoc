@@ -136,7 +136,7 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
 | Entity.hitbox | Hitbox | **【只读】**若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。 |
 | Entity.aabb | Hitbox | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
 | Entity.minAABB | Hitbox | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
-| Entity.isCheckCollision | bool | 决定是否执行与方块的碰撞检测。 |
+| Entity.allowCheckCollision | bool | 决定是否执行与方块的碰撞检测。 |
 
 #### 绘制相关属性（当实体为玩家时全部只读）
 
