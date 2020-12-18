@@ -136,6 +136,7 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
 | Entity.hitbox | Hitbox | **【只读】**若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。 |
 | Entity.aabb | Hitbox | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
 | Entity.minAABB | Hitbox | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
+| Entity.isCheckCollision | bool | 决定是否执行与方块的碰撞检测。 |
 
 #### 绘制相关属性（当实体为玩家时全部只读）
 
@@ -190,7 +191,22 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
     <tr>
       <td style="text-align:left">Entity.color</td>
       <td style="text-align:center">Color</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<code>COLOR_WHITE</code>&#xFF09;</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<em><code>COLOR_WHITE</code></em>&#xFF09;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.frameTickTime</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7528;&#x7684;&#x5E27;&#x8BA1;&#x65F6;&#x5668;&#x3002;&#xFF08;&#x6BCF;&#x5E27;&#x81EA;&#x589E;1&#xFF09;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.frames</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x603B;&#x5E27;&#x6570;&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.frameSpeed</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x5E27;&#x5207;&#x6362;&#x5468;&#x671F;&#x3002;</td>
     </tr>
   </tbody>
 </table>
