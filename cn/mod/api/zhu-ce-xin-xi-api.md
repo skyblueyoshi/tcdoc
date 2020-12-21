@@ -10,7 +10,16 @@ ID是游戏运行中动态生成的正整数数值。ID在游戏过程中不会�
 
 | API | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Reg.GetEffectID\(string name\) | int | 根据**特效名**返回注册的动态ID。 |
-| Reg.GetSoundID\(string name\) | int | 根据**音效名**返回注册的动态ID。 |
-| Reg.GetSoundGroupID\(string name\) | int | 根据**音效组名**返回注册的动态ID。 |
+| Reg.ItemID\(string name\) | int | 根据**物品名**返回注册的动态ID。 |
+| Reg.EffectID\(string name\) | int | 根据**特效名**返回注册的动态ID。 |
+| Reg.BuffID\(string name\) | int | 根据**BUFF名**返回注册的动态ID。 |
+| Reg.EnchantmentID\(string name\) | int | 根据**附魔名**返回注册的动态ID。 |
+| Reg.NpcID\(string name\) | int | 根据**NPC名**返回注册的动态ID。 |
+| Reg.ProjectileID\(string name\) | int | 根据**抛射物名**返回注册的动态ID。 |
+| Reg.SoundID\(string name\) | int | 根据**音效名**返回注册的动态ID。 |
+| Reg.SoundGroupID\(string name\) | int | 根据**音效组名**返回注册的动态ID。 |
+| Reg.LiquidID\(string name\) | int | 根据**流体名**返回注册的动态ID。 |
+| Reg.SkeletonJointID\(string skeletonName, string jointName\) | int | 根据**骨骼模型名**和**关节名**返回关节在该骨骼模型注册的动态ID。 |
+
+
 
