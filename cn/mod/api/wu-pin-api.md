@@ -19,10 +19,10 @@ end
 * `hitbox`表示当前物品的碰撞箱。
 * `fireX`和`fireY`表示当前物品实际开火坐标。
 
-#### bool OnShootFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, int projectileID, double fireX, double fireY, double shootSpeed, double shootAngle\)
+#### bool OnShootFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, int projectileID, double fireX, double fireY, double shootSpeed, double shootAngle, Attack baseAttack\)
 
 ```lua
-function OnShootFromPlayer(player, itemSlot, hitbox, projectileID, fireX, fireY, shootSpeed, shootAngle)
+function OnShootFromPlayer(player, itemSlot, hitbox, projectileID, fireX, fireY, shootSpeed, shootAngle, baseAttack)
     return true
 end
 ```
@@ -36,6 +36,7 @@ end
 * `fireX`和`fireY`表示当前物品实际开火坐标。
 * `shootSpeed`表示抛射物的发射初始速度。
 * `shootAngle`表示抛射物的发射角度。
+* `baseAttack`表示抛射物的初始攻击属性。
 
 #### bool CheckConsumeItem\(Player player, ItemSlot itemSlot, int projectileID\)
 
