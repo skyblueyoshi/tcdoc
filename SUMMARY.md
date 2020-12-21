@@ -15,6 +15,7 @@
       * [特效API](cn/mod/api/te-xiao-api.md)
       * [抛射物API](cn/mod/api/pao-she-wu-api.md)
       * [状态效果API](cn/mod/api/zhuang-tai-xiao-guo-api.md)
+      * [附魔API](cn/mod/api/fu-mo-api.md)
       * [玩家API](cn/mod/api/wan-jia-api.md)
       * [NPC API](cn/mod/api/npc-api.md)
       * [骨骼模型API](cn/mod/api/gu-ge-mo-xing-api.md)
