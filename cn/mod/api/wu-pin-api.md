@@ -1,5 +1,70 @@
 # 物品API
 
+## 钩子函数
+
+请在**物品（Item）**脚本中使用这些钩子函数。
+
+#### void OnUseFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY\)
+
+```lua
+function OnUseFromPlayer(player, itemSlot, hitbox, fireX, fireY)
+    
+end
+```
+
+玩家正在使用该工具物品时调用该函数。
+
+* `player`表示使用当前物品的玩家。
+* `itemSlot`表示正在使用的物品所在的物品格子。
+* `hitbox`表示当前物品的碰撞箱。
+* `fireX`和`fireY`表示当前物品实际开火坐标。
+
+#### bool OnShootFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, int projectileID, double fireX, double fireY, double shootSpeed, double shootAngle, Attack baseAttack\)
+
+```lua
+function OnShootFromPlayer(player, itemSlot, hitbox, projectileID, fireX, fireY, shootSpeed, shootAngle, baseAttack)
+    return true
+end
+```
+
+玩家使用该工具物品发射抛射物时调用该函数。`return true`表示是否发射成功。若发射成功则继续执行消耗背包抛射物物品函数。
+
+* `player`表示使用当前物品的玩家。
+* `itemSlot`表示正在使用的物品所在的物品格子。
+* `hitbox`表示当前物品的碰撞箱。
+* `projectileID`表示根据背包情况决定发射的抛射物ID。
+* `fireX`和`fireY`表示当前物品实际开火坐标。
+* `shootSpeed`表示抛射物的发射初始速度。
+* `shootAngle`表示抛射物的发射角度。
+* `baseAttack`表示抛射物的初始攻击属性。
+
+#### bool CheckConsumeItem\(Player player, ItemSlot itemSlot, int projectileID\)
+
+```lua
+function CheckConsumeItem(player, itemSlot, projectileID)
+    return true
+end
+```
+
+决定当前工具物品发射出抛射物后是否消耗背包抛射物物品。`return false`表示不会消耗背包抛射物物品。
+
+## 物品通用模块（ItemUtils）
+
+#### 数值函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| ItemUtils.MaxCount\(int itemID\) | int | 返回指定物品ID的最大允许数量。若物品ID为0，返回0。 |
+| ItemUtils.Type\(int itemID\) | ItemType | 返回指定物品ID的物品类型。若物品ID为0，返回_`ITEM_TYPE_NONE`_。 |
+| ItemUtils.ToolType\(int itemID\) | ToolType | 若指定物品ID为工具，表示指定物品ID的工具类型，否则总是为_`TOOL_TYPE_NONE`_。 |
+| ItemUtils.ColdTime\(int coldTime\) | int | 若指定物品ID为工具，返回指定物品ID的工具冷却时间（使用时间），否则总是返回0。 |
+
+#### 功能函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| ItemUtils.CreateDrop\(int itemID, int count, double centerX, double centerY, double speedX, double speedY, int coldTime = 0\) | void | 创建一个物品掉落物。 `itemID`：创建的物品ID。`count`：创建的物品个数。`centerX`和`centerY`：创建掉落物的中心位置。`speedX`和`speedY`：创建掉落物的初始速度。`coldTime`：掉落物能被玩家前的等待时间。 |
+
 ## 物品格类（ItemSlot Class）
 
 **物品格（ItemSlot）**类表示拥有物品格子基本信息的类对象。
@@ -14,73 +79,19 @@
 
 **在对物品格进行相关物品操作时必须预先判断当前物品格是否包含物品。**
 
+### **类成员属性**
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| ItemSlot.hasItem | bool | **【只读】**当前物品格是否包含物品。 |
+| ItemSlot.id | int | **【只读】**若物品格不为空，表示包含的物品ID，否则总是为0。 |
+| ItemSlot.count | int | **【只读】**若物品格不为空，表示包含的物品数量，否则总是为0。 |
+| ItemSlot.maxCount | int | **【只读】**若物品格不为空，表示包含的物品最大允许数量，否则总是为0。 |
+| ItemSlot.type | ItemType | **【只读】**若物品格不为空，表示内置物品类型，否则总是为_`ITEM_TYPE_NONE`_。 |
+| ItemSlot.toolType | ToolType | **【只读】**若物品格不为空且物品为工具，表示内置物品的工具类型，否则总是为_`TOOL_TYPE_NONE`_。 |
+| ItemSlot.coldTime | int | **【只读】**若物品格不为空且物品为工具，表示内置物品的工具冷却时间（使用时间），否则总是为0。 |
+
 ### 类成员函数
-
-#### 简单操作
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x51FD;&#x6570;</th>
-      <th style="text-align:center">&#x8FD4;&#x56DE;&#x503C;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">ItemSlot:HasItem()</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left">&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x683C;&#x662F;&#x5426;&#x5305;&#x542B;&#x7269;&#x54C1;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:GetID()</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;ID&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:GetCount()</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6570;&#x91CF;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:GetMaxCount()</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6700;&#x5927;&#x5141;&#x8BB8;&#x6570;&#x91CF;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;0&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:SetCount(int count)</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BBE;&#x7F6E;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x8BBE;&#x7F6E;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
-        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:AddCount(int addCount)</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E3A;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6DFB;&#x52A0;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x6DFB;&#x52A0;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
-        <p>&#x82E5;addCount&#x4E3A;&#x6B63;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x6DFB;&#x52A0;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;&#x82E5;addCount&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x51CF;&#x5C11;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
-        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:GetType()</td>
-      <td style="text-align:center"><a href="datatypes-enums-constants.md#itemtype">ItemType</a>
-      </td>
-      <td style="text-align:left">
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;&#x5185;&#x7F6E;&#x7269;&#x54C1;&#x7C7B;&#x578B;&#x3002;</p>
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD4;&#x56DE;ITEM_TYPE_NONE&#x3002;</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-#### 物品格操作
 
 <table>
   <thead>
@@ -141,10 +152,38 @@
         </p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">ItemSlot:SetCount(int count)</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left">
+        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BBE;&#x7F6E;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x8BBE;&#x7F6E;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
+        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
+        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ItemSlot:AddCount(int addCount)</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left">
+        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E3A;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6DFB;&#x52A0;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x6DFB;&#x52A0;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
+        <p>&#x82E5;addCount&#x4E3A;&#x6B63;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x6DFB;&#x52A0;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;&#x82E5;addCount&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x51CF;&#x5C11;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
+        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
+        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ItemSlot:GetEnchantmentLevel(int enchantmentID)</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left">&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#x4E14;&#x5185;&#x5BB9;&#x7269;&#x54C1;&#x62E5;&#x6709;&#x9644;&#x9B54;&#xFF0C;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x9644;&#x9B54;&#x7684;&#x7B49;&#x7EA7;&#x3002;&#x82E5;&#x9644;&#x9B54;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x603B;&#x662F;&#x8FD4;&#x56DE;0&#x3002;</td>
+    </tr>
   </tbody>
 </table>
 
 ## 物品数量设定规则
+
+在物品格不包含物品的情况下，不会进行任何设定操作。
 
 在物品格包含物品的情况下，若设定数量在区间**\[1, 最大允许数量\]**，则设定数量合法，直接将物品数量设为指定数量。否则：
 
