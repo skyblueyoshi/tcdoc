@@ -85,13 +85,14 @@ end
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
 | ItemSlot.hasItem | bool | **【只读】**当前物品格是否包含物品。 |
-| ItemSlot.id | int | **【只读】**若物品格不为空，表示包含的物品ID，否则总是为0。 |
-| ItemSlot.count | int | **【只读】**若物品格不为空，表示包含的物品数量，否则总是为0。 |
-| ItemSlot.maxCount | int | **【只读】**若物品格不为空，表示包含的物品最大允许数量，否则总是为0。 |
-| ItemSlot.type | ItemType | **【只读】**若物品格不为空，表示内置物品类型，否则总是为_`ITEM_TYPE_NONE`_。 |
-| ItemSlot.toolType | ToolType | **【只读】**若物品格不为空且物品为工具，表示内置物品的工具类型，否则总是为_`TOOL_TYPE_NONE`_。 |
-| ItemSlot.coldTime | int | **【只读】**若物品格不为空且物品为工具，表示内置物品的工具冷却时间（使用时间），否则总是为0。 |
-| ItemSlot.shootTimes | int | **【只读】**若物品格不为空且物品为工具，表示内置物品工具的发射次数，否则总是为0。 |
+| ItemSlot.id | int | **【只读】**若物品格不为空，表示包含的**物品ID**，否则总是为0。 |
+| ItemSlot.count | int | **【只读】**若物品格不为空，表示包含的物品**数量**，否则总是为0。 |
+| ItemSlot.maxCount | int | **【只读】**若物品格不为空，表示包含的物品**最大允许数量**，否则总是为0。 |
+| ItemSlot.type | ItemType | **【只读】**若物品格不为空，表示内置物品**类型**，否则总是为_`ITEM_TYPE_NONE`_。 |
+| ItemSlot.toolType | ToolType | **【只读】**若物品格不为空且物品为工具，表示内置物品的**工具类型**，否则总是为_`TOOL_TYPE_NONE`_。 |
+| ItemSlot.coldTime | int | **【只读】**若物品格不为空且物品为工具，表示内置物品的工具**冷却时间（使用时间）**，否则总是为0。 |
+| ItemSlot.shootTimes | int | **【只读】**若物品格不为空且物品为工具，表示内置物品工具的**发射次数**，否则总是为0。 |
+| ItemSlot.deviation | double | **【只读】**若物品格不为空且物品为工具，表示内置物品工具的**发射偏差角度**，否则总是为0。 |
 
 ### 类成员函数
 
