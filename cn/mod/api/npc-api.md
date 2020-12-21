@@ -10,7 +10,7 @@ NPC在TerraCraft中泛指除了玩家之外的所有生物，如动物、敌怪�
 
 ```lua
 function Init()
-    
+    --init current npc here
 end
 ```
 
@@ -20,73 +20,37 @@ NPC生成时调用一次该函数。
 
 ```lua
 function Update()
-    
+    --update every game loop
 end
 ```
 
-NPC每帧运行时调用，您可以在该函数内编写运动等逻辑。
+NPC抛射物每帧运行时调用，您可以在该函数内编写运动等逻辑。
 
 #### void PreUpdate\(\)
 
 ```lua
-function PreUpdate()
-    
+function ReadyUpdate()
+    --update every game loop
 end
 ```
 
-NPC每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
+NPC抛射物每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
 #### void PostUpdate\(\)
 
 ```lua
 function PostUpdate()
-    
+    --update every game loop
 end
 ```
 
 NPC每帧运行`Update()`函数后调用。通常用于在使用AI重用后追加逻辑。
 
-#### void UpdateSkeleton\(Skeleton skeleton\)
-
-```lua
-function UpdateSkeleton(Skeleton skeleton)
-    
-end
-```
-
-若NPC拥有骨骼模型，每帧执行完`PostUpdate`后调用，用于处理自定义骨骼模型逻辑。执行完该函数后，会对所有骨骼模型关节重新计算。
-
-* `skeleton`表示当前NPC的骨骼模型。
-
-#### void PreUpdateSkeleton\(Skeleton skeleton\)
-
-```lua
-function PreUpdateSkeleton(Skeleton skeleton)
-    
-end
-```
-
-NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新的骨骼模型逻辑。
-
-* `skeleton`表示当前NPC的骨骼模型。
-
-#### void PostUpdateSkeleton\(Skeleton skeleton\)
-
-```lua
-function PostUpdateSkeleton(Skeleton skeleton)
-    
-end
-```
-
-NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数，并将全部骨骼关节进行修正后调用。当前函数中所有骨骼关节为实际作用数据。
-
-* `skeleton`表示当前NPC的骨骼模型。
-
 #### void OnDraw\(\)
 
 ```lua
 function OnDraw()
-    
+    --change the sprite parameters before drawing every game loop
 end
 ```
 
@@ -96,7 +60,7 @@ NPC每帧绘制前调用，在该函数内编写自定义绘制属性。不使�
 
 ```lua
 function OnKilled()
-    
+    --do something when npc is killed
 end
 ```
 
@@ -106,7 +70,7 @@ NPC死亡时调用一次该函数。
 
 ```lua
 function OnTileCollide()
-    
+    --do something when npc hit tiles
 end
 ```
 
@@ -121,7 +85,7 @@ NPC与图块碰撞时调用该函数。
 | NpcUtils.Create\(int id, double x, double y, double speedX = 0.0, double speedY = 0.0\) | Npc | 在指定位置创建一个NPC，返回创建好的NPC实体。 `id`：NPC的ID。`x`和`y`：创建NPC的坐标。`speedX`和`speedY`：初始运动速度。 |
 | NpcUtils.SearchByRect\(double x, double y, int width, int height\) | ArrayList&lt;Npc&gt; | 返回包含于指定矩形区域内部的所有NPC列表。 |
 | NpcUtils.SearchByCircle\(double centerX, double centerY, int radius\) | ArrayList&lt;Npc&gt; | 返回包含于指定圆形区域内部的所有NPC列表。 |
-| NpcUtils.SearchNearestNpc\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Npc/nil | 搜索在指定圆形区域内部距离圆心最近的NPC，返回该NPC。若结果不存在，返回nil。`noCrossTiles`表示是否排除中心到圆心的连线被图格遮挡的NPC。 |
+| NpcUtils.SearchNearestNpc\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Npc/nil | 搜索在指定圆形区域内部距离圆心最近的NPC，返回该NPC。若结果不存在，返回nil。noCrossTiles表示是否排除中心到圆心的连线被图格遮挡的NPC。 |
 | NpcUtils.SearchNearestEnemy\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Npc/nil | 搜索在指定圆形区域内部距离圆心最近的敌对NPC，返回该NPC。若结果不存在，返回nil。noCrossTiles表示是否排除中心到圆心的连线被图格遮挡的NPC。 |
 
 ## NPC类（Npc Class）
@@ -148,27 +112,19 @@ NPC与图块碰撞时调用该函数。
 | Npc.maxFallSpeed | double | 当前NPC的最大下落速度。每帧重置为作用了所在环境纵向阻力后的最大下落速度。 |
 | Npc.defaultJumpForce | double | **【只读】**当前NPC的默认跳跃力度。 |
 | Npc.jumpForce | double | 当前NPC的跳跃力度。每帧重置为作用了所在环境纵向阻力后的跳跃力度。 |
-| Npc.noMove | bool | 决定当前NPC在行走模板中是否停止行走。 |
 | Npc.inLiquid | bool | **【只读】**当前NPC是否处在流体环境中。 |
 | Npc.oldInLiquid | bool | **【只读】**上一帧的NPC是否处在流体环境中。 |
 | Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
-| Npc.isEnemy | bool | **【只读】**当前NPC是否会伤害玩家。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
-| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走模板不会停下来。 |
-| Npc.maxHealth | int | 当前NPC的生命值上限。 |
-| Npc.health | int | 当前NPC的生命值。 |
-| Npc.angry | bool | 当前NPC是否为愤怒状态。易怒的NPC在被玩家击中后会将该玩家视为目标，并置愤怒状态为true。 |
-| Npc.animation | int | NPC当前执行的动画状态。通常用于表示骨骼模型的动画状态。 |
-| Npc.animationTickTime | int | NPC在当前动画索引所经过的时间。每帧自动自增1，当动画状态切换时自动重置为0。 |
-| Npc.watchAngle | double | **【只读】**NPC的目视角度。若NPC目标存在，则总是目视目标。否则总是根据朝向水平目视。 |
-| Npc.itemSlots | ArrayList&lt;ItemSlot&gt; | 当前NPC自己的物品格子列表。物品格子数目在NPC的AI数据表中指定。 |
+| Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走运动模板不会停下来。 |
+| Npc.angry | bool | 当前NPC是否为愤怒状态。 |
 
 ### 类成员函数
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | Npc:Kill\(\) | void | 不掉落物品直接清除当前NPC对象。 |
-| Npc:GetPlayerTarget\(\) | Player/nil | 若当前NPC的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
+| Projectile:GetPlayerTarget\(\) | Player/nil | 若当前NPC的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
 | Npc:AddBuff\(int buffID, int buffTime\) | void | 为当前NPC添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
 | Npc:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
 | Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
@@ -176,7 +132,6 @@ NPC与图块碰撞时调用该函数。
 | Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
 | Npc:TryMakeSound\(int tryTimes = 512\) | void | NPC尝试发出平时声音。平均经过tryTimes时间发出一次平时声音。 |
 | Npc:MakeSound\(\) | void | NPC发出平时声音。 |
-| Npc:UseTool\(ItemSlot itemSlot, int skJointID\) | void | NPC使用指定物品格子内的工具。itemSlot为指定物品格子，skJointID为当前NPC使用工具的骨骼模型关节ID。 |
 
 ### 运动模板函数
 

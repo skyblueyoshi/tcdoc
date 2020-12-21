@@ -12,7 +12,7 @@ function OnUseFromPlayer(player, itemSlot, hitbox, fireX, fireY)
 end
 ```
 
-玩家正在使用该物品时调用该函数。
+玩家正在使用该工具物品时调用该函数。
 
 * `player`表示使用当前物品的玩家。
 * `itemSlot`表示正在使用的物品所在的物品格子。
@@ -27,7 +27,7 @@ function OnShootFromPlayer(player, itemSlot, hitbox, projectileID, fireX, fireY,
 end
 ```
 
-玩家使用该物品发射抛射物时调用该函数。`return true`表示是否发射成功。若发射成功则继续执行消耗背包抛射物物品函数。
+玩家使用该工具物品发射抛射物时调用该函数。`return true`表示是否发射成功。若发射成功则继续执行消耗背包抛射物物品函数。
 
 * `player`表示使用当前物品的玩家。
 * `itemSlot`表示正在使用的物品所在的物品格子。
@@ -43,7 +43,7 @@ function CheckConsumeItem(player, itemSlot, projectileID)
 end
 ```
 
-决定是否消耗背包抛射物物品。`return false`表示不会消耗背包抛射物物品。
+决定当前工具物品发射出抛射物后是否消耗背包抛射物物品。`return false`表示不会消耗背包抛射物物品。
 
 ## 物品通用模块（ItemUtils）
 
