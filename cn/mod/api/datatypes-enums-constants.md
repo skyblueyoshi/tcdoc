@@ -107,6 +107,8 @@ end
 | Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
 | Hitbox.width | int | 碰撞箱的宽度。 |
 | Hitbox.height | int | 碰撞箱的高度。 |
+| Hitbox.centerX | double | 碰撞箱中心点的横坐标。 |
+| Hitbox.centerY | double | 碰撞箱中心点的纵坐标。 |
 | Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
 
 | 函数 | 返回值 | 描述 |
