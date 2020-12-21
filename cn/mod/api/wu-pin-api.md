@@ -27,7 +27,7 @@ function OnShootFromPlayer(player, itemSlot, hitbox, consumeItemID, projectileID
 end
 ```
 
-玩家使用该工具物品发射抛射物时调用该函数。`return true`表示是否发射成功。若发射成功则继续执行消耗背包抛射物物品函数。
+玩家使用该工具物品发射抛射物时调用该函数。`return true`表示是否发射成功。若发射成功则消耗背包抛射物物品。
 
 * `player`表示使用当前物品的玩家。
 * `itemSlot`表示正在使用的物品所在的物品格子。
