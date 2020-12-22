@@ -107,6 +107,8 @@ end
 | Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
 | Hitbox.width | int | 碰撞箱的宽度。 |
 | Hitbox.height | int | 碰撞箱的高度。 |
+| Hitbox.centerX | double | **【只读】**碰撞箱中心点的横坐标。 |
+| Hitbox.centerY | double | **【只读】**碰撞箱中心点的纵坐标。 |
 | Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
 
 | 函数 | 返回值 | 描述 |
@@ -223,6 +225,19 @@ end
 | _TOOL\_TYPE\_DRILL_ | 钻头。 |
 | _TOOL\_TYPE\_SAW_ | 锯子。 |
 | _TOOL\_TYPE\_STAFF_ | 法杖。 |
+
+### NpcType
+
+描述NPC类型。
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| _NPC\_TYPE\_NORMAL_ | 普通NPC。 |
+| _NPC\_TYPE\_ANIMAL_ | 动物类NPC。 |
+| _NPC\_TYPE\_VILLAGER_ | 村民类NPC。 |
+| _NPC\_TYPE\_ARTHROPODS_ | 节肢类NPC。 |
+| _NPC\_TYPE\_SMITE_ | 亡灵类NPC。 |
+| _NPC\_TYPE\_BOSS_ | BOSS类NPC。 |
 
 ### DefaultColor
 
