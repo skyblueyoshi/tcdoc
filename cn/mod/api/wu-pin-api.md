@@ -4,7 +4,7 @@
 
 请在**物品（Item）**脚本中使用这些钩子函数。
 
-#### void OnUseFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY\)
+### void OnUseFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY\)
 
 ```lua
 function OnUseFromPlayer(player, itemSlot, hitbox, fireX, fireY)
@@ -19,7 +19,7 @@ end
 * `hitbox`表示当前物品的碰撞箱。
 * `fireX`和`fireY`表示当前物品实际开火坐标。
 
-#### bool OnShootFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, int consumeItemID, int projectileID, double fireX, double fireY, double shootSpeed, double shootAngle, Attack baseAttack\)
+### bool OnShootFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, int consumeItemID, int projectileID, double fireX, double fireY, double shootSpeed, double shootAngle, Attack baseAttack\)
 
 ```lua
 function OnShootFromPlayer(player, itemSlot, hitbox, consumeItemID, projectileID, fireX, fireY, shootSpeed, shootAngle, baseAttack)
@@ -27,7 +27,7 @@ function OnShootFromPlayer(player, itemSlot, hitbox, consumeItemID, projectileID
 end
 ```
 
-玩家使用该工具物品发射抛射物时调用该函数。`return true`表示是否发射成功。若发射成功则消耗背包抛射物物品。
+玩家使用该工具物品发射抛射物时调用该函数，可以在该函数内自定义具体的抛射物发射方式。`return true`表示是否发射成功。若发射成功则消耗背包抛射物物品。
 
 * `player`表示使用当前物品的玩家。
 * `itemSlot`表示正在使用的物品所在的物品格子。
@@ -39,7 +39,52 @@ end
 * `shootAngle`表示抛射物的发射角度。
 * `baseAttack`表示抛射物的初始攻击属性。
 
-#### bool CheckConsumeItem\(Player player, ItemSlot itemSlot, int projectileID\)
+### bool OnShootFromNpc\(Npc npc, ItemSlot itemSlot, Hitbox hitbox, int consumeItemID, int projectileID, double fireX, double fireY, double shootSpeed, double shootAngle, Attack baseAttack\)
+
+```lua
+function OnShootFromNpc(npc, itemSlot, hitbox, consumeItemID, projectileID, fireX, fireY, shootSpeed, shootAngle, baseAttack)
+    return true
+end
+```
+
+NPC使用该工具物品发射抛射物时调用该函数，可以在该函数内自定义具体的抛射物发射方式。`return true`表示是否发射成功。
+
+* `npc`表示使用当前物品的NPC。
+
+### bool CheckHitNpc\(Npc npcTarget, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY, double hitAngle, ref Attack baseAttack\)
+
+```lua
+function CheckHitNpc(npcTarget, itemSlot, hitbox, fireX, fireY, hitAngle, baseAttack)
+    return true
+end
+```
+
+该工具物品击中NPC时调用该函数，可以通过修改`baseAttack`参数决定攻击力，并允许自定义击中效果。
+
+`return true`表示决定执行命中逻辑，`return false`表示取消命中逻辑。
+
+* `npcTarget`表示被击中的NPC。
+* `itemSlot`表示正在使用的物品所在的物品格子。
+* `hitbox`表示当前物品的碰撞箱。
+* `fireX`和`fireY`表示当前物品实际开火坐标。
+* `hitAngle`表示击中角度。
+* `baseAttack`表示初始攻击属性。
+
+### bool CheckHitPlayer\(Player playerTarget, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY, double hitAngle, Attack baseAttack\)
+
+```lua
+function CheckHitPlayer(playerTarget, itemSlot, hitbox, fireX, fireY, hitAngle, baseAttack)
+    return true
+end
+```
+
+该工具物品击中玩家时调用该函数，可以通过修改`baseAttack`参数决定攻击力，并允许自定义击中效果。
+
+`return true`表示决定执行命中逻辑，`return false`表示取消命中逻辑。
+
+* `playerTarget`表示被击中的玩家。
+
+### bool CheckConsumeItem\(Player player, ItemSlot itemSlot, int projectileID\)
 
 ```lua
 function CheckConsumeItem(player, itemSlot, projectileID)
