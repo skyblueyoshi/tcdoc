@@ -39,6 +39,26 @@ end
 * `shootAngle`表示抛射物的发射角度。
 * `baseAttack`表示抛射物的初始攻击属性。
 
+
+
+#### bool OnHitNpcFromPlayer\(Player player, Npc npc, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY, double hitAngle, Attack baseAttack\)
+
+```lua
+function OnHitNpcFromPlayer(player, npc, itemSlot, hitbox, fireX, fireY, hitAngle, baseAttack)
+    return true
+end
+```
+
+玩家使用该工具物品击中NPC时调用该函数。`return true`表示是否击中成功。若发射成功则消耗工具耐久。
+
+* `player`表示使用当前物品的玩家。
+* `npc`表示被击中的NPC。
+* `itemSlot`表示正在使用的物品所在的物品格子。
+* `hitbox`表示当前物品的碰撞箱。
+* `fireX`和`fireY`表示当前物品实际开火坐标。
+* `hitAngle`表示击中角度。
+* `baseAttack`表示初始攻击属性。
+
 #### bool CheckConsumeItem\(Player player, ItemSlot itemSlot, int projectileID\)
 
 ```lua
