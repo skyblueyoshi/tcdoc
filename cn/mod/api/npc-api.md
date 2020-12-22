@@ -172,7 +172,6 @@ NPC与图块碰撞时调用该函数。
 | Npc:Strike\(Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个对当前NPC的伤害。`attack`表示当前伤害属性，`hitAngle`表示产生伤害的角度，`immune`表示产生当前伤害后是否让NPC处于无敌帧状态，`hurtSound`表示是否播放NPC受伤音效，`lootingLevel`表示掠夺等级。 |
 | Npc:StrikeFromPlayer\(Player player, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个某玩家对当前NPC的伤害。其中`player`表示造成伤害的玩家。 |
 | Npc:StrikeFromNpc\(Npc npc, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个某NPC对当前NPC的伤害。其中`npc`表示造成伤害的NPC。 |
-| Player:Strike\(DeathReason reason, Attack attack, double hitAngle = 0, bool immune = false, bool hurtSound = true\) | void | 伤害当前玩家。`reason`表示死亡原因，`attack`表示当前伤害属性，`hitAngle`表示产生伤害的角度，`immune`表示产生当前伤害后是否让玩家处于无敌帧状态，`hurtSound`表示是否播放玩家受伤音效。 |
 | Npc:GetPlayerTarget\(\) | Player/nil | 若当前NPC的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
 | Npc:AddBuff\(int buffID, int buffTime\) | void | 为当前NPC添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
 | Npc:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |

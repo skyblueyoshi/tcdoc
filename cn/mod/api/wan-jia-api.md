@@ -52,6 +52,7 @@
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
+| Player.name | string | **【只读】**玩家名称。（UTF8格式） |
 | Player.health | int | **【只读】**玩家生命值。 |
 | Player.maxHealth | int | **【只读】**玩家生命值上限。 |
 | Player.maxMaxHealth | int | **【只读】**玩家最高能达到的生命值上限。 |
@@ -72,7 +73,7 @@
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
 | Player.gameMode | int | **【只读】**玩家游戏模式。 |
-| Player.op | int | **【只读】**玩家权限。 |
+| Player.op | int | **【只读】**玩家权限等级。 |
 
 ### 类成员函数
 
@@ -88,6 +89,8 @@
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
 | Player:Strike\(DeathReason reason, Attack attack, double hitAngle = 0, bool immune = false, bool hurtSound = true\) | void | 伤害当前玩家。`reason`表示死亡原因，`attack`表示当前伤害属性，`hitAngle`表示产生伤害的角度，`immune`表示产生当前伤害后是否让玩家处于无敌帧状态，`hurtSound`表示是否播放玩家受伤音效。 |
+| Player:StrikeFromNpcWeapon\(Npc npc, ItemSlot weaponItemSlot, Attack attack, double hitAngle = 0, bool immune = false, bool hurtSound = true\) | void | 指定NPC使用武器伤害当前玩家。`npc`表示造成伤害的NPC，`weaponItemSlot`表示NPC所用的武器物品格子。 |
+| Player:StrikeFromPlayerWeapon\(Player player, ItemSlot weaponItemSlot, Attack attack, double hitAngle = 0, bool immune = false, bool hurtSound = true\) | void | 指定玩家使用武器伤害当前玩家。`player`表示造成伤害的玩家，`weaponItemSlot`表示玩家所用的武器物品格子。 |
 | Player:Heal\(int heal, bool showTip = true\) | void | 增加生命值。showTip表示是否显示数字提示。 |
 | Player:AddMagic\(int heal, bool showTip = true\) | void | 增加魔法值。showTip表示是否显示数字提示。 |
 | Player:AddMaxHealth\(int health\) | void | 增加生命值上限。 |
@@ -111,7 +114,15 @@
 | Player:HasBuff\(int buffID\) | bool | 返回玩家是否拥有指定状态效果。 |
 | Player:HasAnyBuff\(\) | bool | 返回玩家是否存在状态效果。 |
 
+#### 服务端函数
 
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
+| Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
+| Player:TeleportToSpawn\(\) | void | 传送当前玩家到出生点。 |
+| Player:GoHome\(\) | bool | 传送当前玩家到玩家设定重生点，传送成功返回true。如果玩家设定重生点不存在，不执行传送并返回false。 |
+| Player:AddBackpack\(int itemID, int itemCount\) | void | 添加指定物品ID和数量的物品到玩家背包。如果玩家背包已满则会以掉落物的形式抛出。 |
 
 
 

@@ -2,13 +2,13 @@
 
 ## 钩子函数
 
-请在**抛射物AI**脚本中使用这些钩子函数。
+请在抛射物AI脚本中使用这些钩子函数。
 
 ### void Init\(\)
 
 ```lua
 function Init()
-    
+    --init current projectile here
 end
 ```
 
@@ -18,7 +18,7 @@ end
 
 ```lua
 function Update()
-    
+    --update every game loop
 end
 ```
 
@@ -28,7 +28,7 @@ end
 
 ```lua
 function ReadyUpdate()
-    
+    --update every game loop
 end
 ```
 
@@ -38,7 +38,7 @@ end
 
 ```lua
 function PostUpdate()
-    
+    --update every game loop
 end
 ```
 
@@ -48,7 +48,7 @@ end
 
 ```lua
 function OnDraw()
-    
+    --change the sprite parameters before drawing every game loop
 end
 ```
 
@@ -58,7 +58,7 @@ end
 
 ```lua
 function OnKilled()
-    
+    --do something when projectile is killed
 end
 ```
 
@@ -68,7 +68,7 @@ end
 
 ```lua
 function ModifyHitNpc(npc, hitAttack)
-    
+    --modify this attack value when projectile hit a npc
 end
 ```
 
@@ -81,7 +81,7 @@ end
 
 ```lua
 function OnHitNpc(npc, hitAttack)
-    
+    --do something when projectile hit a npc
 end
 ```
 
@@ -94,7 +94,7 @@ end
 
 ```lua
 function ModifyHitPlayer(player, hitAttack)
-    
+    --modify this attack value projectile hit a player
 end
 ```
 
@@ -107,7 +107,7 @@ end
 
 ```lua
 function OnHitPlayer(player, hitAttack)
-    
+    --do something when projectile hit a player
 end
 ```
 
@@ -120,24 +120,13 @@ end
 
 ```lua
 function OnTileCollide()
-    
+    --do something when projectile hit tiles
 end
 ```
 
 抛射物击中实心图块时调用该函数。
 
 * `oldSpeedX`和`oldSpeedY`表示击中实心图块前一帧的横向和纵向速度。
-
-## 抛射物通用模块（ProjectileUtils）
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| ProjectileUtils.Create\(int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack = Attack:new\(0, 0, 0\)\) | Projectile | 创建一个抛射物实体，返回创建好的抛射物实体。 `id`：抛射物ID。`centerX`和`centerY`：创建抛射物的中心点。`speedX`和`speedY`：初始运动速度。`Attack`：抛射物的基础攻击力。 |
-| ProjectileUtils.CreateFromPlayer\(Player playerOwner, int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack = Attack:new\(0, 0, 0\)\) | Projectile | 创建一个以指定玩家为拥有者的抛射物实体，返回创建好的抛射物实体。 |
-| ProjectileUtils.CreateFromNpc\(Npc npcOwner, int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, Attack attack = Attack:new\(0, 0, 0\)\) | Projectile | 创建一个以指定NPC为拥有者的抛射物实体，返回创建好的抛射物实体。 |
-| ProjectileUtils.SearchByRect\(double x, double y, int width, int height\) | ArrayList&lt;Projectile&gt; | 返回包含于指定矩形区域内部的所有抛射物列表。 |
-| ProjectileUtils.SearchByCircle\(double centerX, double centerY, int radius\) | ArrayList&lt;Projectile&gt; | 返回包含于指定圆形区域内部的所有抛射物列表。 |
-| ProjectileUtils.SearchNearestProjectile\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Projectile/nil | 搜索在指定圆形区域内部距离圆心最近的抛射物，返回该抛射物。若结果不存在，返回nil。`noCrossTiles`表示是否排除中心到圆心的连线被图格遮挡的抛射物。 |
 
 ## 抛射物类（Projectile Class）
 
@@ -153,17 +142,7 @@ end
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
-| Projectile.id | int | **【只读】**当前抛射物的动态ID。 |
-| Projectile.baseAttack | Attack | 当前抛射物的基础攻击属性。一般由创建时给定。 |
-| Projectile.targetTime | int | 当前抛射物的目标时间。一般由创建时给定，通常用于实现达到目标时间后触发相关逻辑。 |
-| Projectile.isCheckNpc | bool | 当前抛射物是否作用于NPC。一般由创建时指定，默认为false，决定是否碰撞、伤害NPC。 |
-| Projectile.isCheckPlayer | bool | 当前抛射物是否作用于玩家。一般由创建时指定，默认为false，决定是否碰撞、伤害玩家。 |
-| Projectile.maxSpeed | double | **【只读】**当前抛射物最大移动速度。 |
 | Projectile.hots\[4\] | Point | **【只读】**当前抛射物的热固定点。允许读取最多4个热固定点。 |
-| Projectile.state | int | 抛射物的当前在简单有限状态机中的状态。 |
-| Projectile.ivar | UserVar&lt;int&gt; | 抛射物的用户自定义整型数据。 |
-| Projectile.dvar | UserVar&lt;double&gt; | 抛射物的用户自定义浮点型数据。 |
-| Projectile.flags | Flags | 抛射物的用户自定义布尔型数据。 |
 
 ### 类成员函数
 
@@ -171,7 +150,7 @@ end
 | :--- | :---: | :--- |
 | Projectile:Kill\(\) | void | 清除当前抛射物对象。 |
 | Projectile:GetPlayerOwner\(\) | Player/nil | 若当前抛射物的玩家拥有者存在且存活，返回该玩家对象，否则返回nil。 |
-| Projectile:GetNpcOwner\(\) | Npc/nil | 若当前抛射物的NPC拥有者存在且存活，返回该NPC对象，否则返回nil。 |
+| Projectile:GetNpcOwner\(\) | Npc/nil | 若当前抛射物的NPC拥有着存在且存活，返回该NPC对象，否则返回nil。 |
 | Projectile:GetPlayerTarget\(\) | Player/nil | 若当前抛射物的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
 | Projectile:GetNpcTarget\(\) | Npc/nil | 若当前抛射物的NPC锁定目标存在且存活，返回该NPC对象，否则返回nil。 |
 | Projectile:SetPlayerTarget\(Player player\) | void | 设定当前抛射物的玩家锁定目标。 |
