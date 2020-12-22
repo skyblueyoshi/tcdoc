@@ -6,7 +6,7 @@ NPC在TerraCraft中泛指除了玩家之外的所有生物，如动物、敌怪�
 
 请在**NPCAI**脚本中使用这些钩子函数。
 
-#### void Init\(\)
+### void Init\(\)
 
 ```lua
 function Init()
@@ -16,7 +16,7 @@ end
 
 NPC生成时调用一次该函数。
 
-#### void Update\(\)
+### void Update\(\)
 
 ```lua
 function Update()
@@ -26,7 +26,7 @@ end
 
 NPC每帧运行时调用，您可以在该函数内编写运动等逻辑。
 
-#### void PreUpdate\(\)
+### void PreUpdate\(\)
 
 ```lua
 function PreUpdate()
@@ -36,7 +36,7 @@ end
 
 NPC每帧运行`Update()`函数前调用。通常用于在使用AI重用后在原逻辑前插入新逻辑。
 
-#### void PostUpdate\(\)
+### void PostUpdate\(\)
 
 ```lua
 function PostUpdate()
@@ -46,7 +46,7 @@ end
 
 NPC每帧运行`Update()`函数后调用。通常用于在使用AI重用后追加逻辑。
 
-#### void UpdateSkeleton\(Skeleton skeleton\)
+### void UpdateSkeleton\(Skeleton skeleton\)
 
 ```lua
 function UpdateSkeleton(Skeleton skeleton)
@@ -58,7 +58,7 @@ end
 
 * `skeleton`表示当前NPC的骨骼模型。
 
-#### void PreUpdateSkeleton\(Skeleton skeleton\)
+### void PreUpdateSkeleton\(Skeleton skeleton\)
 
 ```lua
 function PreUpdateSkeleton(Skeleton skeleton)
@@ -70,7 +70,7 @@ NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数前调用。通常用于
 
 * `skeleton`表示当前NPC的骨骼模型。
 
-#### void PostUpdateSkeleton\(Skeleton skeleton\)
+### void PostUpdateSkeleton\(Skeleton skeleton\)
 
 ```lua
 function PostUpdateSkeleton(Skeleton skeleton)
@@ -82,7 +82,7 @@ NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数，并将全部骨骼关
 
 * `skeleton`表示当前NPC的骨骼模型。
 
-#### void OnDraw\(\)
+### void OnDraw\(\)
 
 ```lua
 function OnDraw()
@@ -92,7 +92,7 @@ end
 
 NPC每帧绘制前调用，在该函数内编写自定义绘制属性。不使用该钩子函数时采取默认处理方式。
 
-#### void OnKilled\(\)
+### void OnKilled\(\)
 
 ```lua
 function OnKilled()
@@ -102,7 +102,7 @@ end
 
 NPC死亡时调用一次该函数。
 
-#### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
+### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
 ```lua
 function OnTileCollide()
@@ -171,6 +171,7 @@ NPC与图块碰撞时调用该函数。
 | Npc:Kill\(\) | void | 不掉落物品直接清除当前NPC对象。 |
 | Npc:Strike\(Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个对当前NPC的伤害。`attack`表示当前伤害属性，`hitAngle`表示产生伤害的角度，`immune`表示产生当前伤害后是否让NPC处于无敌帧状态，`hurtSound`表示是否播放NPC受伤音效，`lootingLevel`表示掠夺等级。 |
 | Npc:StrikeFromPlayer\(Player player, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个某玩家对当前NPC的伤害。其中`player`表示造成伤害的玩家。 |
+| Npc:StrikeFromNpc\(Npc npc, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个某NPC对当前NPC的伤害。其中`npc`表示造成伤害的NPC。 |
 | Player:Strike\(DeathReason reason, Attack attack, double hitAngle = 0, bool immune = false, bool hurtSound = true\) | void | 伤害当前玩家。`reason`表示死亡原因，`attack`表示当前伤害属性，`hitAngle`表示产生伤害的角度，`immune`表示产生当前伤害后是否让玩家处于无敌帧状态，`hurtSound`表示是否播放玩家受伤音效。 |
 | Npc:GetPlayerTarget\(\) | Player/nil | 若当前NPC的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
 | Npc:AddBuff\(int buffID, int buffTime\) | void | 为当前NPC添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
