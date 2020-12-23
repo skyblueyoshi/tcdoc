@@ -194,8 +194,8 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">MapUtils.RemoveFront(int xi, int yi, bool showEffect = true, bool playSound
-        = true)</td>
+      <td style="text-align:left">MapUtils.RemoveFront(int xi, int yi, bool showEffect = false, bool playSound
+        = false)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left"><b>&#x79FB;&#x9664;</b>&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;<b>&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
         <br
@@ -204,7 +204,7 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.RemoveFrontAndDrop(int xi, int yi, bool isDropOriginal = false,
-        int dropFortune = 0, bool showEffect = false, bool playSound = false)</td>
+        int dropFortune = 0, bool showEffect = true, bool playSound = true)</td>
       <td
       style="text-align:center">bool</td>
         <td style="text-align:left"><b>&#x79FB;&#x9664;</b>&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;<b>&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#xFF0C;&#x5E76;&#x751F;&#x6210;<b>&#x6389;&#x843D;&#x7269;</b>&#x3002;
@@ -215,8 +215,8 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
         </td>
     </tr>
     <tr>
-      <td style="text-align:left">MapUtils.RemoveWall(int xi, int yi, bool showEffect = true, bool playSound
-        = true)</td>
+      <td style="text-align:left">MapUtils.RemoveWall(int xi, int yi, bool showEffect = false, bool playSound
+        = false)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left"><b>&#x79FB;&#x9664;</b>&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;<b>&#x80CC;&#x666F;&#x5899;&#x65B9;&#x5757;</b>&#x3002;
         <br
@@ -225,7 +225,7 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.RemoveWallAndDrop(int xi, int yi, bool isDropOriginal = false,
-        int dropFortune = 0, bool showEffect = false, bool playSound = false)</td>
+        int dropFortune = 0, bool showEffect = true, bool playSound = true)</td>
       <td
       style="text-align:center">bool</td>
         <td style="text-align:left"><b>&#x79FB;&#x9664;</b>&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;<b>&#x80CC;&#x666F;&#x5899;&#x65B9;&#x5757;</b>&#xFF0C;&#x5E76;&#x751F;&#x6210;<b>&#x6389;&#x843D;&#x7269;</b>&#x3002;
