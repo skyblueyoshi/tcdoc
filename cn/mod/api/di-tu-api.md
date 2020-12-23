@@ -1,6 +1,6 @@
 # 地图API
 
-## 地图元素
+## 地图元素（Map Elements）
 
 在阅读本篇API时，您需要了解TerraCraft中地图元素的基本概念。
 
@@ -19,6 +19,12 @@
 ### 流体（Liquids）
 
 流体是一种模拟现实液体的可流动地图元素，游戏会采用实时计算让流体得以平衡。一个地图格子中流体可以与家具和背景墙共存，但是不能与前景图块共存。
+
+## 区块有效性（Chunk Validity）
+
+TerraCraft中的地图采用动态区块加载技术实现无限地图。一个区块为1024x1024格。如果地图格子所在的区块存在，则这个地图格子有效。
+
+在使用地图API时，请使用`IsValid`或`IsAreaValid`函数来保证所操作格子是有效的。对无效格子进行任何操作都是**没有意义**的行为。
 
 ## 地图通用模块（MapUtils）
 
@@ -133,9 +139,9 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| MapUtils.RemoveFront\(int xi, int yi\) | bool | **移除**指定格子的**前景方块**（图块或家具）。 _若不存在前景或格子无效总是返回false。_ |
+| MapUtils.RemoveFront\(int xi, int yi\) | bool | **移除**指定格子的**前景方块**。 _若不存在前景或格子无效总是返回false。_ |
 | MapUtils.RemoveWall\(int xi, int yi\) | bool | **移除**指定格子的**背景墙方块**。 _若不存在背景墙或格子无效总是返回false。_ |
-| MapUtils.SetFrontTile\(int xi, int yi, int blockID, int tag = 0\) | bool | 在指定位置 |
+| MapUtils.SetFrontTile\(int xi, int yi, int blockID, int tag = 0\) | bool | 在指定位置写入一个前景方块。 |
 | MapUtils.SetFurniture\(int xi, int yi, int blockID, int tag = 0\) | bool |  |
 | MapUtils.SetFront\(int xi, int yi, int blockID, int tag = 0\) | bool |  |
 
