@@ -4,21 +4,26 @@
 
 在阅读本篇API时，您需要了解TerraCraft中地图元素的基本概念。
 
-![](../../../.gitbook/assets/map.png)
+![](../../../.gitbook/assets/map%20%281%29.png)
 
 ### 方块（Blocks）
 
-方块是最常见的地图元素，包括如下三种类型的方块。
+方块是最常见的地图元素，包括如下两种类型的方块。
 
-* **图块（Tiles）**是由一个格子组成的前景方块。
-* **背景墙（Walls）**是一个格子组成的后景方块，一般用于装饰。
-* **家具（Furnitures）**是占用一个整体矩形区域的前景方块，占用一个或多个格子。一般用于处理大量功能拓展。
+* **图块（Tiles）**是由一个格子组成的方块，可以作为**前景图块（Front Tiles）**，也可以作为**背景墙（Walls）**。
+* **家具（Furnitures）**是占用一个整体矩形区域的**前景方块**，占用一个或多个格子。一般用于处理大量功能拓展。
 
-**前景**方块指的是**图块和家具**，**后景**方块指的是**背景墙**。
+**前景方块（Front Block）**即前景图块和家具。
+
+**后景方块（Back Block）**即背景墙。
+
+### **写入（Set）**和**放置（Place）方块**的区别
+
+**写入**表示不需要靠着其他方块而加入新的方块，而**放置**必须靠着附近可以被附着的方块才能放入。
 
 ### 流体（Liquids）
 
-流体是一种模拟现实液体的可流动地图元素，游戏会采用实时计算让流体得以平衡。一个地图格子中流体可以与家具和背景墙共存，但是不能与前景图块共存。
+流体是一种模拟现实液体的可流动地图元素，游戏会实时计算让流体得以平衡。一个地图格子中流体可以与家具和背景墙共存，但是不能与前景图块共存。
 
 ## 区块有效性（Chunk Validity）
 
@@ -54,12 +59,12 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
     <tr>
       <td style="text-align:left">MapUtils.IsValid(int xi, int yi)</td>
       <td style="text-align:center">bool</td>
-      <td style="text-align:left">&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x662F;&#x5426;&#x6709;&#x6548;&#xFF0C;&#x5373;&#x6240;&#x5728;&#x533A;&#x5757;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;</td>
+      <td style="text-align:left">&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x662F;&#x5426;<b>&#x6709;&#x6548;</b>&#xFF0C;&#x5373;&#x6240;&#x5728;&#x533A;&#x5757;&#x662F;&#x5426;&#x5B58;&#x5728;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.IsAreaValid(int xi, int yi, int width, int height)</td>
       <td style="text-align:center">bool</td>
-      <td style="text-align:left">&#x5224;&#x65AD;&#x77E9;&#x5F62;&#x533A;&#x57DF;&#x5185;&#x6240;&#x6709;&#x683C;&#x5B50;&#x662F;&#x5426;&#x90FD;&#x6709;&#x6548;&#xFF0C;&#x5373;&#x77E9;&#x5F62;&#x533A;&#x57DF;&#x8986;&#x76D6;&#x7684;&#x533A;&#x5757;&#x662F;&#x5426;&#x5168;&#x90E8;&#x5B58;&#x5728;&#x3002;</td>
+      <td style="text-align:left">&#x5224;&#x65AD;&#x77E9;&#x5F62;&#x533A;&#x57DF;&#x5185;&#x6240;&#x6709;&#x683C;&#x5B50;&#x662F;&#x5426;&#x90FD;<b>&#x6709;&#x6548;</b>&#xFF0C;&#x5373;&#x77E9;&#x5F62;&#x533A;&#x57DF;&#x8986;&#x76D6;&#x7684;&#x533A;&#x5757;&#x662F;&#x5426;&#x5168;&#x90E8;&#x5B58;&#x5728;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.IsSolid(int xi, int yi)</td>
@@ -128,6 +133,29 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
         /><em>&#x82E5;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x683C;&#x5B50;&#x65E0;&#x6548;&#x603B;&#x662F;&#x8FD4;&#x56DE;0&#x3002;</em>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.CanSetWall(int xi, int yi, int blockID)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5199;&#x5165;&#x80CC;&#x666F;&#x5899;&#x65B9;&#x5757;</b>&#x3002;</p>
+        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x80CC;&#x666F;&#x5899;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x80CC;&#x666F;&#x5899;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.CanPlaceWall(int xi, int yi, int blockID)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x653E;&#x7F6E;&#x80CC;&#x666F;&#x5899;&#x65B9;&#x5757;</b>&#x3002;</p>
+        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x80CC;&#x666F;&#x5899;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x80CC;&#x666F;&#x5899;&#x3001;&#x9644;&#x8FD1;&#x65E0;&#x4F9D;&#x9760;&#x65B9;&#x5757;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
+    </tr>
   </tbody>
 </table>
 
@@ -137,13 +165,74 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
 
 **在客户端中或者格子无效时不进行任何操作并总是返回false。游戏会通过内部算法自动将服务端的地图变化同步到客户端。**
 
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| MapUtils.RemoveFront\(int xi, int yi\) | bool | **移除**指定格子的**前景方块**。 _若不存在前景或格子无效总是返回false。_ |
-| MapUtils.RemoveWall\(int xi, int yi\) | bool | **移除**指定格子的**背景墙方块**。 _若不存在背景墙或格子无效总是返回false。_ |
-| MapUtils.SetFrontTile\(int xi, int yi, int blockID, int tag = 0\) | bool | 在指定位置写入一个前景方块。 |
-| MapUtils.SetFurniture\(int xi, int yi, int blockID, int tag = 0\) | bool |  |
-| MapUtils.SetFront\(int xi, int yi, int blockID, int tag = 0\) | bool |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x51FD;&#x6570;</th>
+      <th style="text-align:center">&#x8FD4;&#x56DE;&#x503C;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">MapUtils.RemoveFront(int xi, int yi)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left"><b>&#x79FB;&#x9664;</b>&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;<b>&#x524D;&#x666F;&#x65B9;&#x5757;</b>&#x3002;
+        <br
+        /><em>&#x9700;&#x4FDD;&#x8BC1;<code>HasFront(xi, yi)</code>&#x4E3A;&#x771F;&#x3002;</em>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.RemoveWall(int xi, int yi)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left"><b>&#x79FB;&#x9664;</b>&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;<b>&#x80CC;&#x666F;&#x5899;&#x65B9;&#x5757;</b>&#x3002;
+        <br
+        /><em>&#x9700;&#x4FDD;&#x8BC1;<code>HasWall(xi, yi)</code>&#x4E3A;&#x771F;&#x3002;</em>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.SetFrontTile(int xi, int yi, int blockID, int tag = 0)</td>
+      <td
+      style="text-align:center">bool</td>
+        <td style="text-align:left">&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x5199;&#x5165;&#x524D;&#x666F;&#x56FE;&#x683C;</b>&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.SetFurniture(int xi, int yi, int blockID, int tag = 0)</td>
+      <td
+      style="text-align:center">bool</td>
+        <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.SetFront(int xi, int yi, int blockID, int tag = 0)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.SetWall(int xi, int yi, int blockID, bool showEffect = false,
+        bool playSound = false)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x5199;&#x5165;&#x80CC;&#x666F;&#x5899;</b>&#x3002;
+          <br
+          /><code>showEffect</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x7C92;&#x5B50;&#x6548;&#x679C;&#x3002;<code>playSound</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x64AD;&#x653E;&#x653E;&#x7F6E;&#x97F3;&#x6548;&#x3002;</p>
+        <p><em>&#x9700;&#x4FDD;&#x8BC1;<code>CanSetWall(xi, yi, blockID)</code>&#x4E3A;&#x771F;&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.PlaceWall(int xi, int yi, int blockID, bool showEffect = false,
+        bool playSound = false)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x653E;&#x7F6E;&#x80CC;&#x666F;&#x5899;</b>&#x3002;
+          <br
+          /><code>showEffect</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x7C92;&#x5B50;&#x6548;&#x679C;&#x3002;<code>playSound</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x64AD;&#x653E;&#x653E;&#x7F6E;&#x97F3;&#x6548;&#x3002;</p>
+        <p><em>&#x9700;&#x4FDD;&#x8BC1;<code>CanPlaceWall(xi, yi, blockID)</code>&#x4E3A;&#x771F;&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 
 
