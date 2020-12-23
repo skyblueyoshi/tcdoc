@@ -153,24 +153,24 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.CanSetFront(int xi, int yi, int blockID, bool destroyFraglie
-        = true)</td>
+        = true, bool checkEntities = false)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left">
         <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5199;&#x5165;&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
           <br
-          /><code>destroyFraglie</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x5C06;&#x8981;&#x5F3A;&#x884C;&#x7834;&#x574F;&#x6613;&#x788E;&#x65B9;&#x5757;&#x6765;&#x5199;&#x5165;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x3002;</p>
+          /><code>destroyFraglie</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x5C06;&#x8981;&#x5F3A;&#x884C;&#x7834;&#x574F;&#x6613;&#x788E;&#x65B9;&#x5757;&#x6765;&#x5199;&#x5165;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x3002;<code>checkEntities</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x68C0;&#x6D4B;&#x6709;&#x65E0;&#x5B9E;&#x4F53;&#x5835;&#x7740;&#x683C;&#x5B50;&#x3002;</p>
         <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x524D;&#x666F;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x524D;&#x666F;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
         </p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.CanPlaceFront(int xi, int yi, int blockID, bool destroyFraglie
-        = true)</td>
+        = true, bool checkEntities = false)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left">
         <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x653E;&#x7F6E;&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
           <br
-          /><code>destroyFraglie</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x5C06;&#x8981;&#x5F3A;&#x884C;&#x7834;&#x574F;&#x6613;&#x788E;&#x65B9;&#x5757;&#x6765;&#x5199;&#x5165;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x3002;</p>
+          /><code>destroyFraglie</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x5C06;&#x8981;&#x5F3A;&#x884C;&#x7834;&#x574F;&#x6613;&#x788E;&#x65B9;&#x5757;&#x6765;&#x5199;&#x5165;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x3002;<code>checkEntities</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x68C0;&#x6D4B;&#x6709;&#x65E0;&#x5B9E;&#x4F53;&#x5835;&#x7740;&#x683C;&#x5B50;&#x3002;</p>
         <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x524D;&#x666F;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x524D;&#x666F;&#x3001;&#x9644;&#x8FD1;&#x65E0;&#x53EF;&#x4F9D;&#x9760;&#x65B9;&#x5757;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
         </p>
       </td>
