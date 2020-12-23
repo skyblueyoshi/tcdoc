@@ -78,7 +78,7 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
       <td style="text-align:left">MapUtils.HasFront(int xi, int yi)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left">
-        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x662F;&#x5426;&#x6709;<b>&#x524D;&#x666F;&#x65B9;&#x5757;</b>&#x3002;</p>
+        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x662F;&#x5426;&#x6709;<b>&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;</p>
         <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
         </p>
       </td>
@@ -147,14 +147,33 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
       <td style="text-align:center">bool</td>
       <td style="text-align:left">
         <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x653E;&#x7F6E;&#x80CC;&#x666F;&#x5899;&#x65B9;&#x5757;</b>&#x3002;</p>
-        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x80CC;&#x666F;&#x5899;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x80CC;&#x666F;&#x5899;&#x3001;&#x9644;&#x8FD1;&#x65E0;&#x4F9D;&#x9760;&#x65B9;&#x5757;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
+        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x80CC;&#x666F;&#x5899;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x80CC;&#x666F;&#x5899;&#x3001;&#x9644;&#x8FD1;&#x65E0;&#x53EF;&#x4F9D;&#x9760;&#x65B9;&#x5757;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
         </p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:center"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">MapUtils.CanSetFront(int xi, int yi, int blockID, bool destroyFraglie
+        = true)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5199;&#x5165;&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
+          <br
+          /><code>destroyFraglie</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x5C06;&#x8981;&#x5F3A;&#x884C;&#x7834;&#x574F;&#x6613;&#x788E;&#x65B9;&#x5757;&#x6765;&#x5199;&#x5165;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x3002;</p>
+        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x524D;&#x666F;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x524D;&#x666F;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.CanPlaceFront(int xi, int yi, int blockID, bool destroyFraglie
+        = true)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x662F;&#x5426;&#x5141;&#x8BB8;&#x653E;&#x7F6E;&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
+          <br
+          /><code>destroyFraglie</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x5C06;&#x8981;&#x5F3A;&#x884C;&#x7834;&#x574F;&#x6613;&#x788E;&#x65B9;&#x5757;&#x6765;&#x5199;&#x5165;&#x5F53;&#x524D;&#x65B9;&#x5757;&#x3002;</p>
+        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x3001;&#x524D;&#x666F;&#x88AB;&#x5360;&#x7528;&#x3001;&#x65B9;&#x5757;ID&#x4E0D;&#x53EF;&#x4F5C;&#x4E3A;&#x524D;&#x666F;&#x3001;&#x9644;&#x8FD1;&#x65E0;&#x53EF;&#x4F9D;&#x9760;&#x65B9;&#x5757;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
+        </p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -191,23 +210,6 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">MapUtils.SetFrontTile(int xi, int yi, int blockID, int tag = 0)</td>
-      <td
-      style="text-align:center">bool</td>
-        <td style="text-align:left">&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x5199;&#x5165;&#x524D;&#x666F;&#x56FE;&#x683C;</b>&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MapUtils.SetFurniture(int xi, int yi, int blockID, int tag = 0)</td>
-      <td
-      style="text-align:center">bool</td>
-        <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">MapUtils.SetFront(int xi, int yi, int blockID, int tag = 0)</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
       <td style="text-align:left">MapUtils.SetWall(int xi, int yi, int blockID, bool showEffect = false,
         bool playSound = false)</td>
       <td style="text-align:center">bool</td>
@@ -220,14 +222,38 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">MapUtils.PlaceWall(int xi, int yi, int blockID, bool showEffect = false,
-        bool playSound = false)</td>
+      <td style="text-align:left">MapUtils.PlaceWall(int xi, int yi, int blockID, bool showEffect = true,
+        bool playSound = true)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left">
         <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x653E;&#x7F6E;&#x80CC;&#x666F;&#x5899;</b>&#x3002;
           <br
-          /><code>showEffect</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x7C92;&#x5B50;&#x6548;&#x679C;&#x3002;<code>playSound</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x64AD;&#x653E;&#x653E;&#x7F6E;&#x97F3;&#x6548;&#x3002;</p>
+          /><code>showEffect</code>&#x8868;&#x793A;&#x653E;&#x7F6E;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x7C92;&#x5B50;&#x6548;&#x679C;&#x3002;<code>playSound</code>&#x8868;&#x793A;&#x653E;&#x7F6E;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x64AD;&#x653E;&#x653E;&#x7F6E;&#x97F3;&#x6548;&#x3002;</p>
         <p><em>&#x9700;&#x4FDD;&#x8BC1;<code>CanPlaceWall(xi, yi, blockID)</code>&#x4E3A;&#x771F;&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.SetFront(int xi, int yi, int blockID, bool destroyFraglie = true,
+        bool showEffect = false, bool playSound = false)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x5199;&#x5165;&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
+          <br
+          /><code>showEffect</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x7C92;&#x5B50;&#x6548;&#x679C;&#x3002;<code>playSound</code>&#x8868;&#x793A;&#x5199;&#x5165;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x64AD;&#x653E;&#x653E;&#x7F6E;&#x97F3;&#x6548;&#x3002;</p>
+        <p><em>&#x9700;&#x4FDD;&#x8BC1;<code>CanSetFront(xi, yi, blockID, destroyFraglie)</code>&#x4E3A;&#x771F;&#x3002;</em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">MapUtils.PlaceFront(int xi, int yi, int blockID, bool destroyFraglie =
+        true, bool showEffect = true, bool playSound = true)</td>
+      <td style="text-align:center">bool</td>
+      <td style="text-align:left">
+        <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;<b>&#x653E;&#x7F6E;&#x524D;&#x666F;&#x65B9;&#x5757;&#xFF08;&#x524D;&#x666F;&#x56FE;&#x5757;&#x6216;&#x5BB6;&#x5177;&#xFF09;</b>&#x3002;
+          <br
+          /><code>showEffect</code>&#x8868;&#x793A;&#x653E;&#x7F6E;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x4EA7;&#x751F;&#x7C92;&#x5B50;&#x6548;&#x679C;&#x3002;<code>playSound</code>&#x8868;&#x793A;&#x653E;&#x7F6E;&#x77AC;&#x95F4;&#x662F;&#x5426;&#x64AD;&#x653E;&#x653E;&#x7F6E;&#x97F3;&#x6548;&#x3002;</p>
+        <p><em>&#x9700;&#x4FDD;&#x8BC1;<code>CanPlaceFront(xi, yi, blockID, destroyFraglie)</code>&#x4E3A;&#x771F;&#x3002;</em>
         </p>
       </td>
     </tr>
