@@ -1,5 +1,25 @@
 # 地图API
 
+## 地图元素
+
+在阅读本篇API时，您需要了解TerraCraft中地图元素的基本概念。
+
+![](../../../.gitbook/assets/map.png)
+
+### 方块（Blocks）
+
+方块是最常见的地图元素，包括如下三种类型的方块。
+
+* **图块（Tiles）**是由一个格子组成的前景方块。
+* **背景墙（Walls）**是一个格子组成的后景方块，一般用于装饰。
+* **家具（Furnitures）**是占用一个整体矩形区域的前景方块，占用一个或多个格子。一般用于处理大量功能拓展。
+
+**前景**方块指的是**图块和家具**，**后景**方块指的是**背景墙**。
+
+### 流体（Liquids）
+
+流体是一种模拟现实液体的可流动地图元素，游戏会采用实时计算让流体得以平衡。一个地图格子中流体可以与家具和背景墙共存，但是不能与前景图块共存。
+
 ## 地图通用模块（MapUtils）
 
 ### 通用常量
@@ -47,7 +67,7 @@
       <td style="text-align:left">MapUtils.HasFront(int xi, int yi)</td>
       <td style="text-align:center">bool</td>
       <td style="text-align:left">
-        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x662F;&#x5426;&#x6709;<b>&#x524D;&#x666F;</b>&#x3002;</p>
+        <p>&#x5224;&#x65AD;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x662F;&#x5426;&#x6709;<b>&#x524D;&#x666F;&#x65B9;&#x5757;</b>&#x3002;</p>
         <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;false&#x3002;</em>
         </p>
       </td>
@@ -107,13 +127,17 @@
 
 #### 修改地图相关函数
 
-这些函数只在服务端执行。
+这些函数只在服务端执行，操作成功均返回true。
 
-**游戏会通过内部算法自动将服务端的地图变化同步到客户端。**
+**在客户端中或者格子无效时不进行任何操作并总是返回false。游戏会通过内部算法自动将服务端的地图变化同步到客户端。**
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| MapUtils.SetFront\(int xi, int yi, int blockID, int tag = 0\) | void |  |
+| MapUtils.RemoveFront\(int xi, int yi\) | bool | **移除**指定格子的**前景方块**（图块或家具）。 _若不存在前景或格子无效总是返回false。_ |
+| MapUtils.RemoveWall\(int xi, int yi\) | bool | **移除**指定格子的**背景墙方块**。 _若不存在背景墙或格子无效总是返回false。_ |
+| MapUtils.SetFrontTile\(int xi, int yi, int blockID, int tag = 0\) | bool | 在指定位置 |
+| MapUtils.SetFurniture\(int xi, int yi, int blockID, int tag = 0\) | bool |  |
+| MapUtils.SetFront\(int xi, int yi, int blockID, int tag = 0\) | bool |  |
 
 #### 
 
