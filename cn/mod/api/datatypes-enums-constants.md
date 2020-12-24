@@ -26,6 +26,56 @@ for i = 1, arrayList:GetLength() do
 end
 ```
 
+### ExData
+
+拓展数据。在TerraCraft模组中拥有两种拓展数据。
+
+**局部拓展数据（ModData）**为当前使用该数据的对象独有，整个游戏中该对象只拥有一个局部拓展数据。
+
+**全局拓展数据（GlobalData）**为同一类对象均拥有的属性，整个游戏中该对象可拥有多个全局拓展数据。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| ExData.xxx | 由xxx的具体类型决定 | 读写拓展数据。 |
+
+#### 案例
+
+1. 某个模组的NPC拥有`GlobalData`，数据为`bool isCold`和`int coldTime`。
+2. `npc1`拥有`ModData`，数据为`int timer`和`double targetAngle`。
+3. `npc2`拥有`ModData`，数据为`int magicLevel`。
+4. `npc3`没有`ModData`。
+
+如下是访问这些数据的范例：
+
+```lua
+-- access global data of npc1
+local globalData1 = npc1:GetGlobalData()
+globalData1.isCold = true
+globalData1.coldTime = 32
+
+-- access mod data of npc1
+local modData1 = npc1:GetModData()
+modData1.timer = modData1.timer + 1
+modData1.targetAngle = Utils.PI
+
+-- access global data of npc2
+local globalData2 = npc2:GetGlobalData()
+globalData2.isCold = false
+globalData2.coldTime = 0
+
+-- access mod data of npc2
+local modData2 = npc2:GetModData()
+modData2.magicLevel = 2
+
+-- access global data of npc3
+local globalData3 = npc3:GetGlobalData()
+globalData3.isCold = not globalData3.isCold
+
+-- cannot access mod data of npc3
+local modData3 = npc3:GetModData()
+-- modData3 is nil, cannot read or write data
+```
+
 ### UserVar&lt;T&gt;
 
 用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型，可用16个数据。
