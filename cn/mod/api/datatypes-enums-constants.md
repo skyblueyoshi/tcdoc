@@ -38,10 +38,6 @@ end
 | :--- | :---: | :--- |
 | ExData.xxx | 由xxx的具体类型决定 | 读写拓展数据。 |
 
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| ExData:DataOf\(string dataSetName\) | bool | 判断当前数据是否拥有指定数据集。 |
-
 #### 案例
 
 1. 某个模组的NPC拥有`GlobalData`，数据为`bool isCold`和`int coldTime`。
