@@ -37,6 +37,11 @@ end
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
 | ExData.xxx | 由xxx的具体类型决定 | 读写拓展数据。 |
+| ExData.xxx\[n\] | 由xxx的具体类型决定 | 读写拓展数据数组。 |
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| ExData:DataOf\(string dataSetName\) | bool | 判断当前数据是否拥有指定数据集。 |
 
 #### 案例
 
@@ -76,7 +81,9 @@ local modData3 = npc3:GetModData()
 -- modData3 is nil, cannot read or write data
 ```
 
-### UserVar&lt;T&gt;
+### UserVar&lt;T&gt;（已弃用）
+
+**该数据类型已弃用，请使用更通用的ExData。**
 
 用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型，可用16个数据。
 
@@ -94,7 +101,9 @@ self.dvar[1] = 1.0
 self.dvar[4] = self.dvar[4] + 1.0
 ```
 
-### Flags
+### Flags（已弃用）
+
+**该数据类型已弃用，请使用更通用的ExData。**
 
 用户自定义布尔值数据，用于在脚本中实现自定义布尔值变量。可用32个数据。
 
