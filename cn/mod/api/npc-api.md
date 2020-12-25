@@ -155,7 +155,6 @@ NPC与图块碰撞时调用该函数。
 | Npc.touchLiquidID | int | **【只读】**当前NPC所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Npc.isEnemy | bool | **【只读】**当前NPC是否会伤害玩家。 |
 | Npc.state | bool | NPC当前在简单有限状态机中的状态。 |
-| Npc.stateTimer | int | NPC的状态机计时器。 |
 | Npc.hurry | bool | 当前NPC是否为匆忙状态。匆忙状态下随机走模板不会停下来。 |
 | Npc.maxHealth | int | 当前NPC的生命值上限。 |
 | Npc.health | int | 当前NPC的生命值。 |
