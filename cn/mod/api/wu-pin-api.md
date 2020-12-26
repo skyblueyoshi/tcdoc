@@ -245,15 +245,6 @@ end
       <td style="text-align:center">int</td>
       <td style="text-align:left">&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#x4E14;&#x5185;&#x5BB9;&#x7269;&#x54C1;&#x62E5;&#x6709;&#x9644;&#x9B54;&#xFF0C;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x9644;&#x9B54;&#x7684;&#x7B49;&#x7EA7;&#x3002;&#x82E5;&#x9644;&#x9B54;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x603B;&#x662F;&#x8FD4;&#x56DE;0&#x3002;</td>
     </tr>
-    <tr>
-      <td style="text-align:left">ItemSlot:AddEnchantment(int enchantmentID, int level)</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left">
-        <p>&#x4E3A;&#x6307;&#x5B9A;&#x7269;&#x54C1;&#x683C;&#x7684;&#x5185;&#x5BB9;&#x7269;&#x54C1;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x9644;&#x9B54;&#xFF0C;&#x8FD4;&#x56DE;&#x662F;&#x5426;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x3002;</p>
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;false&#x3002;</p>
-        <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x5185;&#x7269;&#x54C1;&#x65E0;&#x6CD5;&#x4E0E;&#x9644;&#x9B54;&#x5BF9;&#x5E94;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;false&#x3002;</p>
-      </td>
-    </tr>
   </tbody>
 </table>
 
