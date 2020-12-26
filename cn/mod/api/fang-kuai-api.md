@@ -4,10 +4,10 @@
 
 请在**方块预设（Block Preset）**脚本中使用这些钩子函数。
 
-### void OnCollidePlayer\(int xi, int yi, Player player, Direction collisionDirection\)
+### void OnCollidePlayer\(int xi, int yi, Player player, Direction collisionDirection, double oldSpeedX, double oldSpeedY\)
 
 ```lua
-function OnCollidePlayer(xi, yi, player, collisionDirection)
+function OnCollidePlayer(xi, yi, player, collisionDirection, oldSpeedX, oldSpeedY)
     
 end
 ```
