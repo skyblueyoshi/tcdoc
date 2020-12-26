@@ -66,6 +66,9 @@
 | Player.foodSaturationLevel | int | **【只读】**玩家食物饱和度。有效范围为\[1, 100\]。当前食物饱和度不会超过当前饥饿值。 |
 | Player.baseAttack | Attack | 玩家的基础攻击属性。 |
 | Player.baseDefence | Defence | 玩家的基础防御属性。 |
+| Player.inLiquid | bool | **【只读】**当前玩家是否处在流体环境中。 |
+| Player.oldInLiquid | bool | **【只读】**上一帧的玩家是否处在流体环境中。 |
+| Player.touchLiquidID | int | **【只读】**当前玩家所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Player.isInvisibility | bool | 玩家是否隐身。（每帧重置为`false`） |
 
 #### 权限属性
