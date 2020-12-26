@@ -240,6 +240,17 @@ end
 | _NET\_MODE\_SERVER_ | 当前脚本为服务端环境。 |
 | _NET\_MODE\_CLIENT_ | 当前脚本为客户端环境。 |
 
+### Direction
+
+描述方向。
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| _DIRECTION\_LEFT_ | 左边。 |
+| _DIRECTION\_TOP_ | 上面。 |
+| _DIRECTION\_BOTTOM_ | 下面。 |
+| _DIRECTION\_RIGHT_ | 右边。 |
+
 ### Shape
 
 描述形状类型。
