@@ -24,6 +24,7 @@
       * [音效API](cn/mod/api/yin-xiao-api.md)
       * [方块API](cn/mod/api/fang-kuai-api.md)
       * [地图API](cn/mod/api/di-tu-api.md)
+      * [渲染API](cn/mod/api/xuan-ran-api.md)
       * [其他API](cn/mod/api/qi-ta-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
