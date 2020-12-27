@@ -6,10 +6,10 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| LangUtils.ModText\(string key\) | string | 根据key值返回Mod在当前语言的**自定义文本**。 |
-| LangUtils.BuffName\(int buffID\) | string | 根据BUFF的ID返回**BUFF**在当前语言的名称。 |
-| LangUtils.EnchantmentName\(int enchantmentID\) | string | 根据附魔的ID返回**附魔**在当前语言的名称。 |
-| LangUtils.NpcName\(int npcID\) | string | 根据NPC的ID返回**NPC**在当前语言的名称。 |
+| LangUtils.ModText\(string key\) | string | 根据key值返回Mod在当前语言的自定义文本。 |
+| LangUtils.BuffName\(int buffID\) | string | 根据BUFF的ID返回BUFF在当前语言的名称。 |
+| LangUtils.EnchantmentName\(int enchantmentID\) | string | 根据附魔的ID返回附魔在当前语言的名称。 |
+| LangUtils.NpcName\(int npcID\) | string | 根据NPC的ID返回NPC在当前语言的名称。 |
 
 
 
