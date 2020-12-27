@@ -317,7 +317,7 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
     </tr>
     <tr>
       <td style="text-align:left">MapUtils.TriggerSignal(int xi, int yi, bool isOn)</td>
-      <td style="text-align:center">void</td>
+      <td style="text-align:center">bool</td>
       <td style="text-align:left">
         <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x5199;&#x5165;<b>&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x7EA2;&#x77F3;&#x4FE1;&#x53F7;</b>&#x3002;</p>
         <p><code>isOn</code>&#x8868;&#x793A;&#x7EA2;&#x77F3;&#x4FE1;&#x53F7;&#x662F;&#x6FC0;&#x6D3B;&#x8FD8;&#x662F;&#x53D6;&#x6D88;&#x6FC0;&#x6D3B;&#x3002;</p>
@@ -326,7 +326,7 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
     <tr>
       <td style="text-align:left">MapUtils.DelayTriggerSignal(int xi, int yi, bool isOn, int delayTime)</td>
       <td
-      style="text-align:center">int</td>
+      style="text-align:center">bool</td>
         <td style="text-align:left">
           <p>&#x5728;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7B49;&#x5F85;&#x6307;&#x5B9A;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x540E;<b>&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x7EA2;&#x77F3;&#x4FE1;&#x53F7;</b>&#x3002;</p>
           <p><code>isOn</code>&#x8868;&#x793A;&#x7EA2;&#x77F3;&#x4FE1;&#x53F7;&#x662F;&#x6FC0;&#x6D3B;&#x8FD8;&#x662F;&#x53D6;&#x6D88;&#x6FC0;&#x6D3B;&#xFF0C;<code>delayTime</code>&#x8868;&#x793A;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x3002;</p>
