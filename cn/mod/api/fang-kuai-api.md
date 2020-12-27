@@ -68,7 +68,7 @@ function PreRenderFurniture(int xi, int yi, spriteRenderer, tickTime)
 end
 ```
 
-绘制当前家具前调用该函数，用来在绘制家具前绘制自定义内容。
+允许在绘制家具前绘制自定义内容。
 
 ### void PostRenderFurniture\(int xi, int yi, SpriteRenderer spriteRenderer, int tickTime\)
 
@@ -78,5 +78,5 @@ function PostRenderFurniture(int xi, int yi, spriteRenderer, tickTime)
 end
 ```
 
-绘制完当前家具后调用该函数，用来在绘制家具后绘制自定义内容。
+允许在绘制家具后绘制自定义内容。
 
