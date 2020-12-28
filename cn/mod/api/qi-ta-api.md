@@ -2,6 +2,17 @@
 
 ## 杂项通用模块（MiscUtils）
 
+### 通用变量
+
+| 变量名 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| MiscUtils.screenX | double | **【只读】**当前客户端屏幕左上角横坐标。 |
+| MiscUtils.screenY | double | **【只读】**当前客户端屏幕左上角纵坐标。 |
+| MiscUtils.screenWidth | int | **【只读】**当前客户端屏幕宽度（像素）。 |
+| MiscUtils.screenHeight | int | **【只读】**当前客户端屏幕高度（像素）。 |
+
+### 通用函数
+
 #### 文本传输函数
 
 注意：若使用了**UTF8文本**，请使用UTF8文本传输函数。
