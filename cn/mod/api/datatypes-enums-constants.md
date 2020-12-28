@@ -142,6 +142,10 @@ end
 | Rectangle.width | int | 矩形宽度。 |
 | Rectangle.height | int | 矩形高度。 |
 
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Rectangle:Set\(int x, int y, int width, int height\) | void | 设置新的矩形。 |
+
 ### SpriteEx
 
 绘制拓展信息，决定绘制的相关参数。
@@ -150,11 +154,15 @@ end
 | :--- | :--- | :--- |
 | SpriteEx.scaleRateX | float | 贴图绘制时横向缩放尺寸。（默认为1.0） |
 | SpriteEx.scaleRateY | float | 贴图绘制时纵向缩放尺寸。（默认为1.0） |
-| SpriteEx.rotateX | float | 贴图的旋转中心点X。（若绘制对象为实体，默认为实体中心） |
-| SpriteEx.rotateY | float | 贴图的旋转中心点Y。（若绘制对象为实体，默认为实体中心） |
+| SpriteEx.rotateX | float | 贴图的旋转中心点X。（若绘制对象为实体，默认为实体中心，否则默认为0.0） |
+| SpriteEx.rotateY | float | 贴图的旋转中心点Y。（若绘制对象为实体，默认为实体中心，否则默认为0.0） |
 | SpriteEx.angle | float | 贴图绘制时的旋转角度。（默认为0.0） |
 | SpriteEx.flipHorizontal | bool | 贴图绘制时是否水平翻转。（默认为false） |
 | SpriteEx.flipVertical | bool | 贴图绘制时是否竖直翻转。（默认为false） |
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| SpriteEx:SetDefault\(\) | void | 恢复默认值。 |
 
 ### Hitbox
 
@@ -183,7 +191,11 @@ end
 | :--- | :---: | :--- |
 | Attack.attack | int | 攻击值。 |
 | Attack.knockBack | int | 攻击的击退值。 |
-| Attack.crit | int | 攻击的百分暴击率。1-100表示1-100%的概率产生双倍暴击伤害，大于100表示总是产生双倍暴击伤害，小于1表示不产生双柏暴击伤害。 |
+| Attack.crit | int | 攻击的百分暴击率。1-100表示1-100%的概率产生双倍暴击伤害，大于100表示总是产生双倍暴击伤害，小于1表示不产生暴击伤害。 |
+
+| 静态函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Attack:new\_local\(int attack, int knockBack, int crit\) | Attack | 返回一个Attack对象。 |
 
 ### Defense
 
@@ -239,6 +251,17 @@ end
 | :--- | :--- |
 | _NET\_MODE\_SERVER_ | 当前脚本为服务端环境。 |
 | _NET\_MODE\_CLIENT_ | 当前脚本为客户端环境。 |
+
+### Direction
+
+描述方向。
+
+| 枚举值 | 描述 |
+| :--- | :--- |
+| _DIRECTION\_LEFT_ | 左边。 |
+| _DIRECTION\_TOP_ | 上面。 |
+| _DIRECTION\_BOTTOM_ | 下面。 |
+| _DIRECTION\_RIGHT_ | 右边。 |
 
 ### Shape
 
