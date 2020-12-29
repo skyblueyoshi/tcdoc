@@ -201,7 +201,12 @@ Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可�
     <tr>
       <td style="text-align:left">Entity.frameIndex</td>
       <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x5E27;&#x7D22;&#x5F15;&#xFF0C;&#x5373;<code>frameTickTime/frameSpeed</code>&#x3002;</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x5E27;&#x7D22;&#x5F15;&#xFF0C;&#x5373;<code>(frameTickTime/frameSpeed)%frames</code>&#x3002;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Entity.frameStyles</td>
+      <td style="text-align:center">int</td>
+      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6837;&#x5F0F;&#x6570;&#x3002;</td>
     </tr>
     <tr>
       <td style="text-align:left">Entity.frames</td>
