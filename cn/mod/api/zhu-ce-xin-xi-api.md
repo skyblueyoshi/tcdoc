@@ -21,7 +21,7 @@ ID是游戏运行中动态生成的正整数数值。ID在游戏过程中不会�
 | Reg.SoundGroupID\(string name\) | int | 根据**音效组名**返回注册的动态ID。 |
 | Reg.LiquidID\(string name\) | int | 根据**流体名**返回注册的动态ID。 |
 | Reg.SkeletonJointID\(string skeletonName, string jointName\) | int | 根据**骨骼模型名**和**关节名**返回关节在该骨骼模型注册的动态ID。 |
-| Reg.ModTextureID\(string name\) | int | 根据**模组贴图名**返回注册的动态**贴图ID**。 |
+| Reg.ModTextureID\(string name\) | int | 根据**模组贴图名**返回注册的动态**贴图ID**。服务端总是返回0。 |
 
 
 
