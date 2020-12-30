@@ -66,9 +66,6 @@
 | Player.foodSaturationLevel | int | **【只读】**玩家食物饱和度。有效范围为\[1, 100\]。当前食物饱和度不会超过当前饥饿值。 |
 | Player.baseAttack | Attack | 玩家的基础攻击属性。 |
 | Player.baseDefence | Defence | 玩家的基础防御属性。 |
-| Player.inLiquid | bool | **【只读】**当前玩家是否处在流体环境中。 |
-| Player.oldInLiquid | bool | **【只读】**上一帧的玩家是否处在流体环境中。 |
-| Player.touchLiquidID | int | **【只读】**当前玩家所处流体环境的ID。如果不在任何流体内，则ID总是为0。 |
 | Player.isInvisibility | bool | 玩家是否隐身。（每帧重置为`false`） |
 
 #### 权限属性
@@ -87,7 +84,7 @@
 | Player:SetSpeedX\(double speedX\) | void | 设定玩家的横向速度。（对所控制的玩家生效） |
 | Player:SetSpeedY\(double speedY\) | void | 设定玩家的纵向速度。（对所控制的玩家生效） |
 
-#### 其他函数
+#### 数值属性函数
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
@@ -105,7 +102,11 @@
 | Player:SetBreath\(double breath\) | void | 设定呼吸值。 |
 | Player:AddFood\(int foodLevel, int foodSaturationLevel\) | void | 增加饥饿值和食物饱和度。 |
 | Player:DecFood\(int foodLevel, int foodSaturationLevel = 0\) | void | 减少饥饿值和食物饱和度。 |
-| Player:GetHeldItemSlot\(\) | ItemSlot | 返回玩家当前手持物品格子。 |
+
+#### BUFF相关函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
 | Player:AddBuff\(int buffID, int buffTime\) | void | 为当前玩家添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
 | Player:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
 | Player:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
@@ -119,11 +120,9 @@
 | :--- | :---: | :--- |
 | Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
 | Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
-| Player:Teleport\(double newCenterX, double newBottomY, bool playTeleportSound = false\) | void | 传送当前玩家到指定坐标。`newCenterX`表示玩家传送后中心横坐标，`newBottomY`表示玩家传送后的底部纵坐标，`playTeleportSound`表示是否播放传送音效。 |
 | Player:TeleportToSpawn\(\) | void | 传送当前玩家到出生点。 |
 | Player:GoHome\(\) | bool | 传送当前玩家到玩家设定重生点，传送成功返回true。如果玩家设定重生点不存在，不执行传送并返回false。 |
 | Player:AddBackpack\(int itemID, int itemCount\) | void | 添加指定物品ID和数量的物品到玩家背包。如果玩家背包已满则会以掉落物的形式抛出。 |
-| Player:ClearBackpack\(\) | void | 清空玩家背包数据。 |
 
 
 
