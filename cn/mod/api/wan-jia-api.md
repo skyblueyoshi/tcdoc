@@ -119,10 +119,11 @@
 | :--- | :---: | :--- |
 | Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
 | Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
-| Player:Teleport\(double newCenterY, double newBottomY\) | void | 传送当前玩家到指定坐标。 |
+| Player:Teleport\(double newCenterX, double newBottomY, bool playTeleportSound = false\) | void | 传送当前玩家到指定坐标。`newCenterX`表示玩家传送后中心横坐标，`newBottomY`表示玩家传送后的底部纵坐标，`playTeleportSound`表示是否播放传送音效。 |
 | Player:TeleportToSpawn\(\) | void | 传送当前玩家到出生点。 |
 | Player:GoHome\(\) | bool | 传送当前玩家到玩家设定重生点，传送成功返回true。如果玩家设定重生点不存在，不执行传送并返回false。 |
 | Player:AddBackpack\(int itemID, int itemCount\) | void | 添加指定物品ID和数量的物品到玩家背包。如果玩家背包已满则会以掉落物的形式抛出。 |
+| Player:ClearBackpack\(\) | void | 清空玩家背包数据。 |
 
 
 
