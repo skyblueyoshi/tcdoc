@@ -4,7 +4,7 @@
 
 请在**指令（Command）**脚本中使用这些钩子函数。
 
-### void RunCommand\(Player player, ...\)
+### void RunCommandFromPlayer\(Player player, ...\)
 
 ```lua
 function RunCommand(player, ...)
