@@ -35,4 +35,6 @@
 | MiscUtils.SetDayTimeFormat\(int hours, int minutes, int seconds\) | void | 设置当日时间。`hours`表示小时数，`minutes`表示分钟数，`seconds`表示秒数。 |
 | MiscUtils.GetDayTime\(\) | int | 获取当日时间。 |
 | MiscUtils.GetDayTimeFormat\(\) | int, int, int | 获取当日时间，依次返回小时数、分钟数、秒数。 |
+| MiscUtils.SetDaySpeed\(double daySpeed\) | void | 设置时间流逝速度比率。 |
+| MiscUtils.GetDaySpeed\(\) | double | 获取时间流逝速度比率。 |
 
