@@ -38,6 +38,7 @@ end
 | 函数 | 返回值 | 描述 |
 | :--- | :--- | :--- |
 | SourceCmd:Response\(string message\) | void | 给当前指令源返回一条响应信息。若指令源为服务端控制台，则在控制台打印响应信息。若指令源为玩家，则会单播响应消息到玩家所在的客户端。 |
+| SourceCmd:ResponseUTF8\(string message\) | void | 给当前指令源返回一条UTF8格式的响应信息。 |
 
 
 
