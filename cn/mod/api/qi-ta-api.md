@@ -37,4 +37,6 @@
 | MiscUtils.GetDayTimeFormat\(\) | int, int, int | 获取当日时间，依次返回小时数、分钟数、秒数。 |
 | MiscUtils.SetDaySpeed\(double daySpeed\) | void | 设置时间流逝速度比率。 |
 | MiscUtils.GetDaySpeed\(\) | double | 获取时间流逝速度比率。 |
+| MiscUtils.SetWeatherTime\(int weatherTime\) | void | 设置天气事件进行时间。总时间为216000。 |
+| MiscUtils.GetWeatherTime\(\) | int | 获取天气事件进行时间。 |
 
