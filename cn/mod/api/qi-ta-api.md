@@ -51,4 +51,5 @@
 | :--- | :---: | :--- |
 | MiscUtils.SaveAll\(\) | void | 立即保存全部数据。若服务端当前正在执行保存任务，则结束任务后立即执行当前请求。 |
 | MiscUtils.SetAutoSaveEnabled\(bool enabled\) | void | 决定是否开启自动保存模式。`enabled`为`true`时开启自动保存，为`false`时关闭自动保存。 |
+| MiscUtils.GetPortNumber\(\) | int | 返回服务器的端口号。如果是客户端调用，总是返回0。 |
 
