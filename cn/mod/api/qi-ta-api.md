@@ -55,6 +55,6 @@
 | MiscUtils.GetPortNumber\(\) | int | 返回服务器的端口号。如果是客户端调用，总是返回0。 |
 | MiscUtils.SetPVP\(bool enabled\) | void | 决定是否开启玩家对战模式。`enabled`为`true`时开启玩家对战，为`false`时关闭玩家对战。 |
 | MiscUtils.GetPVP\(\) | bool | 返回是否开启了玩家对战模式。 |
-| MiscUtils.SetWorldGameMode\(GameMode gameMode\) | void | 设置世界游戏模式。 |
-| MiscUtils.GetWorldGameMode\(\) | GameMode | 获取世界游戏模式 |
+| MiscUtils.SetGameMode\(GameMode gameMode\) | void | 设置世界游戏模式。 |
+| MiscUtils.GetGameMode\(\) | GameMode | 获取世界游戏模式。 |
 
