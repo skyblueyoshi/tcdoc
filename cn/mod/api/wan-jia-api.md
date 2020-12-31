@@ -50,126 +50,23 @@
 
 #### 数值属性
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x5C5E;&#x6027;</th>
-      <th style="text-align:center">&#x7C7B;&#x578B;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Player.name</td>
-      <td style="text-align:center">string</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x540D;&#x79F0;&#x3002;&#xFF08;UTF8&#x683C;&#x5F0F;&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.ip</td>
-      <td style="text-align:center">string</td>
-      <td style="text-align:left">
-        <p><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x8FDE;&#x63A5;&#x4F1A;&#x8BDD;&#x7684;IP&#x5730;&#x5740;&#x3002;&#xFF08;UTF8&#x683C;&#x5F0F;&#xFF09;</p>
-        <p>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x8BE5;&#x503C;&#x603B;&#x662F;&#x8868;&#x793A;&#x4E3A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.portNumber</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">
-        <p><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x8FDE;&#x63A5;&#x4F1A;&#x8BDD;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x3002;</p>
-        <p>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x8BE5;&#x503C;&#x603B;&#x662F;&#x8868;&#x793A;&#x4E3A;0&#x3002;</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.health</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x751F;&#x547D;&#x503C;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.maxHealth</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x751F;&#x547D;&#x503C;&#x4E0A;&#x9650;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.maxMaxHealth</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x6700;&#x9AD8;&#x80FD;&#x8FBE;&#x5230;&#x7684;&#x751F;&#x547D;&#x503C;&#x4E0A;&#x9650;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.mana</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x9B54;&#x6CD5;&#x503C;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.maxMana</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x9B54;&#x6CD5;&#x503C;&#x4E0A;&#x9650;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.maxMaxMana</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x6700;&#x9AD8;&#x80FD;&#x8FBE;&#x5230;&#x7684;&#x9B54;&#x6CD5;&#x503C;&#x4E0A;&#x9650;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.expLevel</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x7ECF;&#x9A8C;&#x7B49;&#x7EA7;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.isNoBreathing</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x5F53;&#x524D;&#x662F;&#x5426;&#x4E0D;&#x80FD;&#x547C;&#x5438;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.breath</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x547C;&#x5438;&#x503C;&#x3002;&#x6709;&#x6548;&#x8303;&#x56F4;&#x4E3A;[0.0,
-        1.0]&#x3002;&#x5F53;&#x547C;&#x5438;&#x503C;&#x4E3A;0.0&#x65F6;&#x4F1A;&#x4EA7;&#x751F;&#x7A92;&#x606F;&#x4F24;&#x5BB3;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.foodLevel</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x9965;&#x997F;&#x503C;&#x3002;&#x6709;&#x6548;&#x8303;&#x56F4;&#x4E3A;[1,
-        100]&#x3002;&#x5F53;&#x9965;&#x997F;&#x503C;&#x4E3A;0&#x65F6;&#x4F1A;&#x4EA7;&#x751F;&#x9965;&#x997F;&#x4F24;&#x5BB3;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.foodSaturationLevel</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x73A9;&#x5BB6;&#x98DF;&#x7269;&#x9971;&#x548C;&#x5EA6;&#x3002;&#x6709;&#x6548;&#x8303;&#x56F4;&#x4E3A;[1,
-        100]&#x3002;&#x5F53;&#x524D;&#x98DF;&#x7269;&#x9971;&#x548C;&#x5EA6;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;&#x5F53;&#x524D;&#x9965;&#x997F;&#x503C;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.baseAttack</td>
-      <td style="text-align:center">Attack</td>
-      <td style="text-align:left">&#x73A9;&#x5BB6;&#x7684;&#x57FA;&#x7840;&#x653B;&#x51FB;&#x5C5E;&#x6027;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.baseDefence</td>
-      <td style="text-align:center">Defence</td>
-      <td style="text-align:left">&#x73A9;&#x5BB6;&#x7684;&#x57FA;&#x7840;&#x9632;&#x5FA1;&#x5C5E;&#x6027;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.inLiquid</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x73A9;&#x5BB6;&#x662F;&#x5426;&#x5904;&#x5728;&#x6D41;&#x4F53;&#x73AF;&#x5883;&#x4E2D;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.oldInLiquid</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x4E0A;&#x4E00;&#x5E27;&#x7684;&#x73A9;&#x5BB6;&#x662F;&#x5426;&#x5904;&#x5728;&#x6D41;&#x4F53;&#x73AF;&#x5883;&#x4E2D;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.touchLiquidID</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x73A9;&#x5BB6;&#x6240;&#x5904;&#x6D41;&#x4F53;&#x73AF;&#x5883;&#x7684;ID&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5728;&#x4EFB;&#x4F55;&#x6D41;&#x4F53;&#x5185;&#xFF0C;&#x5219;ID&#x603B;&#x662F;&#x4E3A;0&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Player.isInvisibility</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left">&#x73A9;&#x5BB6;&#x662F;&#x5426;&#x9690;&#x8EAB;&#x3002;&#xFF08;&#x6BCF;&#x5E27;&#x91CD;&#x7F6E;&#x4E3A;<code>false</code>&#xFF09;</td>
-    </tr>
-  </tbody>
-</table>
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| Player.name | string | **【只读】**玩家名称。（UTF8格式） |
+| Player.health | int | **【只读】**玩家生命值。 |
+| Player.maxHealth | int | **【只读】**玩家生命值上限。 |
+| Player.maxMaxHealth | int | **【只读】**玩家最高能达到的生命值上限。 |
+| Player.mana | int | **【只读】**玩家魔法值。 |
+| Player.maxMana | int | **【只读】**玩家魔法值上限。 |
+| Player.maxMaxMana | int | **【只读】**玩家最高能达到的魔法值上限。 |
+| Player.expLevel | int | **【只读】**玩家经验等级。 |
+| Player.isNoBreathing | bool | **【只读】**玩家当前是否不能呼吸。 |
+| Player.breath | double | **【只读】**玩家呼吸值。有效范围为\[0.0, 1.0\]。当呼吸值为0.0时会产生窒息伤害。 |
+| Player.foodLevel | int | **【只读】**玩家饥饿值。有效范围为\[1, 100\]。当饥饿值为0时会产生饥饿伤害。 |
+| Player.foodSaturationLevel | int | **【只读】**玩家食物饱和度。有效范围为\[1, 100\]。当前食物饱和度不会超过当前饥饿值。 |
+| Player.baseAttack | Attack | 玩家的基础攻击属性。 |
+| Player.baseDefence | Defence | 玩家的基础防御属性。 |
+| Player.isInvisibility | bool | 玩家是否隐身。（每帧重置为`false`） |
 
 #### 权限属性
 
@@ -187,7 +84,7 @@
 | Player:SetSpeedX\(double speedX\) | void | 设定玩家的横向速度。（对所控制的玩家生效） |
 | Player:SetSpeedY\(double speedY\) | void | 设定玩家的纵向速度。（对所控制的玩家生效） |
 
-#### 其他函数
+#### 数值属性函数
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
@@ -205,7 +102,11 @@
 | Player:SetBreath\(double breath\) | void | 设定呼吸值。 |
 | Player:AddFood\(int foodLevel, int foodSaturationLevel\) | void | 增加饥饿值和食物饱和度。 |
 | Player:DecFood\(int foodLevel, int foodSaturationLevel = 0\) | void | 减少饥饿值和食物饱和度。 |
-| Player:GetHeldItemSlot\(\) | ItemSlot | 返回玩家当前手持物品格子。 |
+
+#### BUFF相关函数
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
 | Player:AddBuff\(int buffID, int buffTime\) | void | 为当前玩家添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
 | Player:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
 | Player:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
@@ -219,11 +120,9 @@
 | :--- | :---: | :--- |
 | Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
 | Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
-| Player:Teleport\(double newCenterX, double newBottomY, bool playTeleportSound = false\) | void | 传送当前玩家到指定坐标。`newCenterX`表示玩家传送后中心横坐标，`newBottomY`表示玩家传送后的底部纵坐标，`playTeleportSound`表示是否播放传送音效。 |
 | Player:TeleportToSpawn\(\) | void | 传送当前玩家到出生点。 |
 | Player:GoHome\(\) | bool | 传送当前玩家到玩家设定重生点，传送成功返回true。如果玩家设定重生点不存在，不执行传送并返回false。 |
 | Player:AddBackpack\(int itemID, int itemCount\) | void | 添加指定物品ID和数量的物品到玩家背包。如果玩家背包已满则会以掉落物的形式抛出。 |
-| Player:ClearBackpack\(\) | void | 清空玩家背包数据。 |
 
 
 
