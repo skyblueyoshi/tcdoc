@@ -49,6 +49,6 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| MiscUtils.SaveAll\(\) | void | 立即保存全部数据。若服务端当前正在执行保存任务，则忽略该函数的请求。 |
+| MiscUtils.SaveAll\(\) | void | 立即保存全部数据。若服务端当前正在执行保存任务，则结束任务后立即执行当前请求。 |
 | MiscUtils.SetAutoSaveEnabled\(bool enabled\) | void | 决定是否开启自动保存模式。`enabled`为`true`时开启自动保存，为`false`时关闭自动保存。 |
 
