@@ -20,7 +20,7 @@ TerraCraft内置的动态数组。
 #### 遍历方案
 
 ```lua
-for i = 1, arrayList.length do
+for i = 1, arrayList:GetLength() do
     local element = arrayList[i]
     -- do something on this element
 end

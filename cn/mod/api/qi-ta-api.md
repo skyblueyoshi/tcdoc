@@ -49,15 +49,6 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| MiscUtils.SaveAll\(\) | void | 立即保存全部数据。若服务端当前正在执行保存任务，则结束任务后立即执行当前请求。 |
+| MiscUtils.SaveAll\(\) | void | 立即保存全部数据。若服务端当前正在执行保存任务，则忽略该函数的请求。 |
 | MiscUtils.SetAutoSaveEnabled\(bool enabled\) | void | 决定是否开启自动保存模式。`enabled`为`true`时开启自动保存，为`false`时关闭自动保存。 |
-| MiscUtils.GetAutoSaveEnabled\(\) | bool | 返回是否开启了自动保存模式。 |
-| MiscUtils.GetPortNumber\(\) | int | 返回服务器的端口号。如果是客户端调用，总是返回0。 |
-| MiscUtils.SetPVP\(bool enabled\) | void | 决定是否开启玩家对战模式。`enabled`为`true`时开启玩家对战，为`false`时关闭玩家对战。 |
-| MiscUtils.GetPVP\(\) | bool | 返回是否开启了玩家对战模式。 |
-| MiscUtils.SetSafeBlow\(bool enabled\) | void | 决定是否开启爆炸保护模式。`enabled`为`true`时开启爆炸保护模式，为`false`时关闭爆炸保护模式。爆炸保护在开启状态下所有爆炸均不会破坏方块。 |
-| MiscUtils.GetSafeBlow\(\) | bool | 返回是否开启了爆炸保护模式。 |
-| MiscUtils.SetGameMode\(GameMode gameMode\) | void | 设置世界游戏模式。 |
-| MiscUtils.GetGameMode\(\) | GameMode | 获取世界游戏模式。 |
-| MiscUtils.GetOnlinePlayerList\(\) | ArrayList&lt;Player&gt; | 获取所有在线玩家。 |
 
