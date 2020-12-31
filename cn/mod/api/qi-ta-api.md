@@ -55,6 +55,8 @@
 | MiscUtils.GetPortNumber\(\) | int | 返回服务器的端口号。如果是客户端调用，总是返回0。 |
 | MiscUtils.SetPVP\(bool enabled\) | void | 决定是否开启玩家对战模式。`enabled`为`true`时开启玩家对战，为`false`时关闭玩家对战。 |
 | MiscUtils.GetPVP\(\) | bool | 返回是否开启了玩家对战模式。 |
+| MiscUtils.SetSafeBlow\(bool enabled\) | void | 决定是否开启爆炸保护模式。`enabled`为`true`时开启爆炸保护模式，为`false`时关闭爆炸保护模式。爆炸保护在开启状态下所有爆炸均不会破坏方块。 |
+| MiscUtils.GetSafeBlow\(\) | bool | 返回是否开启了爆炸保护模式。 |
 | MiscUtils.SetGameMode\(GameMode gameMode\) | void | 设置世界游戏模式。 |
 | MiscUtils.GetGameMode\(\) | GameMode | 获取世界游戏模式。 |
 
