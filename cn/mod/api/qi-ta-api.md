@@ -65,6 +65,7 @@
 | MiscUtils.Ban\(string ip\) | void | 封禁指定IP，并将该IP加入服务器黑名单。 |
 | MiscUtils.RemoveBan\(string ip\) | bool | 从服务器黑名单中移除指定IP。 |
 | MiscUtils.GetBlackList\(\) | ArrayList&lt;string&gt; | 获取服务器IP黑名单，返回封禁的IP列表。 |
+|  |  |  |
 
 
 
