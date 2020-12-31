@@ -60,6 +60,8 @@
 | MiscUtils.SetGameMode\(GameMode gameMode\) | void | 设置世界游戏模式。 |
 | MiscUtils.GetGameMode\(\) | GameMode | 获取世界游戏模式。 |
 | MiscUtils.GetOnlinePlayerList\(\) | ArrayList&lt;Player&gt; | 获取所有在线玩家。 |
-| MiscUtils.Kick\(string playerName\) | void | 将指定名称的玩家踢出服务器。 |
-| MiscUtils.KickAll\(\) | void | 将所有玩家踢出服务器。 |
+| MiscUtils.KickPlayer\(string playerName\) | bool | 将指定名称的玩家踢出服务器，返回是否踢出成功。 |
+| MiscUtils.KickAllPlayers\(\) | int | 将所有玩家踢出服务器，返回踢出玩家的个数。 |
+
+
 
