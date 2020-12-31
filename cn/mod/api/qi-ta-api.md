@@ -59,4 +59,5 @@
 | MiscUtils.GetSafeBlow\(\) | bool | 返回是否开启了爆炸保护模式。 |
 | MiscUtils.SetGameMode\(GameMode gameMode\) | void | 设置世界游戏模式。 |
 | MiscUtils.GetGameMode\(\) | GameMode | 获取世界游戏模式。 |
+| MiscUtils.GetOnlinePlayerList\(\) | ArrayList&lt;Player&gt; | 获取所有在线玩家。 |
 
