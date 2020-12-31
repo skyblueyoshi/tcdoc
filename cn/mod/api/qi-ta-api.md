@@ -62,6 +62,9 @@
 | MiscUtils.GetOnlinePlayerList\(\) | ArrayList&lt;Player&gt; | 获取所有在线玩家。 |
 | MiscUtils.KickPlayer\(string playerName\) | bool | 将指定名称的玩家踢出服务器，返回是否踢出成功。 |
 | MiscUtils.KickAllPlayers\(\) | int | 将所有玩家踢出服务器，返回踢出玩家的个数。 |
+| MiscUtils.Ban\(string ip\) | void | 封禁指定IP，并将该IP加入服务器黑名单。 |
+| MiscUtils.RemoveBan\(string ip\) | bool | 从服务器黑名单中移除指定IP。 |
+| MiscUtils.GetBlackList\(\) | ArrayList&lt;string&gt; | 获取服务器IP黑名单，返回封禁的IP列表。 |
 
 
 
