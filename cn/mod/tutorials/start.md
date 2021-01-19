@@ -8,7 +8,7 @@ TerraCraft开发理念是让玩家在无限大的地图中自由创作与游玩�
 
 ## 开发模组需要什么技术？
 
-**开发环境：Visual Studio Code（VS Code）**
+**开发环境（推荐）：Visual Studio Code（VS Code）**
 
 **数据交换语言：Json**
 
