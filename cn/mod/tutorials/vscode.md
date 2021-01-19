@@ -38,5 +38,5 @@ VS Code官网：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ![](../../../.gitbook/assets/image%20%288%29.png)
 
-注：本教程使用的VS Code为英文版本，方便国外的同学进行翻译。
+注：本教程使用的VS Code为英文版本，便于翻译。
 

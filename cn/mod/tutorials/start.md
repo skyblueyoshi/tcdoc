@@ -8,9 +8,15 @@ TerraCraft开发理念是让玩家在无限大的地图中自由创作与游玩�
 
 ## 开发模组需要什么技术？
 
-在技术层面，TerraCraft的模组主要采用Json和Lua两种方式进行开发。Json用于填写游戏数据的基本信息，Lua用于编写高级的游戏逻辑。其中Lua为5.1版本。本教程将假定您已经对Json和Lua有一定的了解，或者您也可以通过本教程逐步学习这些技术。对于绝大部分模组内容，可以简单地使用Json进行编写。而对于希望实现高级的游戏内容，则可以使用Lua进行开发。
+**开发环境：Visual Studio Code（VS Code）**
 
-#### Lua相关参考资料：
+**数据交换语言：Json**
+
+**编程语言：Lua（版本为5.1）**
+
+本教程将假定您已经对Json和Lua有一定的了解，或者您也可以通过本教程逐步学习这些语言。对于大部分模组内容，您可以简单地通过编写Json进行开发。对于高级游戏内容，您可以通过Lua编写相关游戏逻辑。
+
+#### Lua参考资料：
 
 1. [Lua官方教程](http://lua-users.org/wiki/LearningLua)（英文）
 2. [Lua中文手册](https://www.codingnow.com/2000/download/lua_manual.html)
