@@ -160,10 +160,9 @@ end
 | Projectile.isCheckPlayer | bool | 当前抛射物是否作用于玩家。一般由创建时指定，默认为false，决定是否碰撞、伤害玩家。 |
 | Projectile.maxSpeed | double | **【只读】**当前抛射物最大移动速度。 |
 | Projectile.hots\[4\] | Point | **【只读】**当前抛射物的热固定点。允许读取最多4个热固定点。 |
-| Projectile.state | int | 抛射物的当前在简单有限状态机中的状态。 |
-| Projectile.ivar | UserVar&lt;int&gt; | 抛射物的用户自定义整型数据。 |
-| Projectile.dvar | UserVar&lt;double&gt; | 抛射物的用户自定义浮点型数据。 |
-| Projectile.flags | Flags | 抛射物的用户自定义布尔型数据。 |
+| Projectile.state | int | 抛射物当前在简单有限状态机中的状态。 |
+| Projectile.stateTimer | int | 抛射物的状态机计时器。 |
+| Projectile.modData | ExData | 抛射物当前模组自定义模组数据。 |
 
 ### 类成员函数
 

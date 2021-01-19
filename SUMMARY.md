@@ -28,6 +28,8 @@
       * [指令API](cn/mod/api/zhi-ling-api.md)
       * [其他API](cn/mod/api/qi-ta-api.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
+      * [开始](cn/mod/tutorials/start.md)
+      * [安装Visual Studio Code](cn/mod/tutorials/vscode.md)
       * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
       * [MOD入门——JSON数据表](cn/mod/tutorials/mod-ru-men-json-shu-ju-biao.md)
       * [MOD进阶——更强大的LUA](cn/mod/tutorials/mod-jin-jie-geng-qiang-da-de-lua.md)
