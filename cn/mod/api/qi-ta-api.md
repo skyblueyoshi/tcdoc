@@ -44,6 +44,8 @@
 | MiscUtils.GetDaySpeed\(\) | double | 获取时间流逝速度比率。 |
 | MiscUtils.SetWeatherTime\(int weatherTime\) | void | 设置天气事件进行时间。总时间为216000。 |
 | MiscUtils.GetWeatherTime\(\) | int | 获取天气事件进行时间。 |
+| MiscUtils.SetWorldGameMode\(GameMode gamemode\) | void | 设置当前世界的游戏模式。新加入的玩家默认采用世界游戏模式作为自己的游戏模式。 |
+| MiscUtils.GetWorldGameMode\(\) | GameMode | 获取当前世界游戏模式。 |
 
 #### 服务端相关函数
 
