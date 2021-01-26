@@ -47,6 +47,7 @@
 | Player.defaultFallSpeed | double | **【只读】**玩家默认最大下落速度。 |
 | Player.fallSpeedRate | double | 玩家最大下落速度与默认最大下落速度比率。每帧重置为`1.0`。 |
 | Player.digSpeedRate | double | 玩家挖掘速度与原始挖掘速度比率。每帧重置为`1.0`。 |
+| Player.isCurrentClientPlayer | bool | **【只读】**玩家是否为当前客户端所操作的玩家。若当前运行环境为服务端总是表示`false`。 |
 
 #### 数值属性
 
@@ -217,7 +218,7 @@
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Player:SetGameMode\(GameMode gameMode\) | void | 为当前玩家设定游戏模式。 |
+| Player:SetGameMode\(GameMode gameMode, bool changeFromSelf = false\) | void | 为当前玩家设定游戏模式。`changeFromSelf`表示变更是否来自玩家自己，若为`true`且玩家先前为创造模式，则仍然拥有创造模式指令权限。 |
 | Player:SetOP\(OP op\) | void | 为当前玩家设定权限等级。 |
 | Player:Teleport\(double newCenterX, double newBottomY, bool playTeleportSound = false\) | void | 传送当前玩家到指定坐标。`newCenterX`表示玩家传送后中心横坐标，`newBottomY`表示玩家传送后的底部纵坐标，`playTeleportSound`表示是否播放传送音效。 |
 | Player:TeleportToSpawn\(\) | void | 传送当前玩家到出生点。 |
