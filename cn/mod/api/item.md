@@ -206,7 +206,7 @@ end
       <td style="text-align:center">int</td>
       <td style="text-align:left">
         <p>&#x5C06;&#x6307;&#x5B9A;&#x7269;&#x54C1;&#x683C;&#x7684;&#x5185;&#x5BB9;&#x7269;&#x54C1;&#x79FB;&#x5165;&#x5230;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x79FB;&#x5165;&#x7684;&#x7269;&#x54C1;&#x4E2A;&#x6570;&#x3002;</p>
-        <p>&#x8F6C;&#x79FB;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-zhuan-yi-gui-ze">&#x7269;&#x54C1;&#x8F6C;&#x79FB;&#x89C4;&#x5219;</a>
+        <p>&#x8F6C;&#x79FB;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="item.md#wu-pin-zhuan-yi-gui-ze">&#x7269;&#x54C1;&#x8F6C;&#x79FB;&#x89C4;&#x5219;</a>
         </p>
       </td>
     </tr>
@@ -215,7 +215,7 @@ end
       <td style="text-align:center">int</td>
       <td style="text-align:left">
         <p>&#x5C06;&#x5F53;&#x524D;&#x7269;&#x54C1;&#x683C;&#x7684;&#x5185;&#x5BB9;&#x7269;&#x79FB;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7269;&#x54C1;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x79FB;&#x51FA;&#x7684;&#x7269;&#x54C1;&#x4E2A;&#x6570;&#x3002;</p>
-        <p>&#x8F6C;&#x79FB;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-zhuan-yi-gui-ze">&#x7269;&#x54C1;&#x8F6C;&#x79FB;&#x89C4;&#x5219;</a>
+        <p>&#x8F6C;&#x79FB;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="item.md#wu-pin-zhuan-yi-gui-ze">&#x7269;&#x54C1;&#x8F6C;&#x79FB;&#x89C4;&#x5219;</a>
         </p>
       </td>
     </tr>
@@ -225,7 +225,7 @@ end
       <td style="text-align:left">
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BBE;&#x7F6E;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x8BBE;&#x7F6E;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
-        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
+        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="item.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
         </p>
       </td>
     </tr>
@@ -236,7 +236,7 @@ end
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E3A;&#x5305;&#x542B;&#x7684;&#x7269;&#x54C1;&#x6DFB;&#x52A0;&#x6570;&#x91CF;&#xFF0C;&#x8FD4;&#x56DE;&#x6DFB;&#x52A0;&#x540E;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
         <p>&#x82E5;addCount&#x4E3A;&#x6B63;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x6DFB;&#x52A0;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;&#x82E5;addCount&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x51CF;&#x5C11;&#x7269;&#x54C1;&#x6570;&#x91CF;&#x3002;</p>
         <p>&#x82E5;&#x7269;&#x54C1;&#x683C;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E0D;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x5E76;&#x8FD4;&#x56DE;0&#x3002;</p>
-        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="wu-pin-api.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
+        <p>&#x8BBE;&#x5B9A;&#x89C4;&#x5219;&#x89C1;&#xFF1A;<a href="item.md#wu-pin-shu-liang-she-ding-yuan-ze">&#x7269;&#x54C1;&#x6570;&#x91CF;&#x8BBE;&#x5B9A;&#x89C4;&#x5219;</a>
         </p>
       </td>
     </tr>
