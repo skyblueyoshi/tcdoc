@@ -1,3 +1,7 @@
+---
+description: 安装VS Code作为模组开发环境
+---
+
 # 安装Visual Studio Code
 
 Visual Studio Code（VS Code）是一个免费、轻量级的集成开发环境**。**本教程我们将使用VS Code进行模组开发。

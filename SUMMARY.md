@@ -40,11 +40,5 @@
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [开始](cn/mod/tutorials/start.md)
       * [安装Visual Studio Code](cn/mod/tutorials/vscode.md)
-      * [未完待续……](cn/mod/tutorials/wei-wan-dai-xu.md)
-      * [创建第一个Mod](cn/mod/tutorials/firstmod.md)
-      * [MOD入门——JSON数据表](cn/mod/tutorials/mod-ru-men-json-shu-ju-biao.md)
-      * [MOD进阶——更强大的LUA](cn/mod/tutorials/mod-jin-jie-geng-qiang-da-de-lua.md)
-      * [物品](cn/mod/tutorials/wu-pin/README.md)
-        * [创建基本的物品](cn/mod/tutorials/wu-pin/baseitem.md)
-        * [创建工具、武器等物品](cn/mod/tutorials/wu-pin/chuang-jian-gong-ju-wu-qi-deng-wu-pin.md)
+      * [未完待续……](cn/mod/tutorials/wait_by.md)
 

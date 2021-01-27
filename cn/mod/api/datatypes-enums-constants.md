@@ -81,47 +81,6 @@ local modData3 = npc3:GetModData()
 -- modData3 is nil, cannot read or write data
 ```
 
-### UserVar&lt;T&gt;（已弃用）
-
-**该数据类型已弃用，请使用更通用的ExData。**
-
-用户自定义数据，用于在脚本中实现自定义变量。`T`可以为`int`类型或者`double`类型，可用16个数据。
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| UserVar\[index\] | T | 读取或写入指定下标index的用户自定义数据。index有效区间为\[1, 16\]。 |
-
-#### 使用例
-
-```lua
-self.ivar[1] = 123
-self.ivar[4] = 456
-self.ivar[6] = self.ivar[1]
-self.dvar[1] = 1.0
-self.dvar[4] = self.dvar[4] + 1.0
-```
-
-### Flags（已弃用）
-
-**该数据类型已弃用，请使用更通用的ExData。**
-
-用户自定义布尔值数据，用于在脚本中实现自定义布尔值变量。可用32个数据。
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| Flags\[index\] | bool | 读取或写入指定下标index的用户自定义布尔值数据。index有效区间为\[1, 32\]。 |
-
-#### 使用例
-
-```lua
-self.flags[1] = true
-self.flags[2] = false
-self.flags[3] = self.flags[1]
-if (self.flags[3]) then
-    -- do something
-end
-```
-
 ### Point
 
 表示一个点。
