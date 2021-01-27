@@ -8,7 +8,7 @@ description: 模组导论与简要介绍
 
 ![](../../../.gitbook/assets/terracraft-guan-fang-mod-qun-qun-er-wei-ma-.png)
 
-您可以在QQ群里交流模组制作，并时不时催更蓝耀西更新教程和推进模组开发。
+您可以在QQ群里交流模组制作，时不时催更蓝耀西更新教程和推进模组开发。
 
 ## 什么是模组？
 
