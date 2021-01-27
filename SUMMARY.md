@@ -38,7 +38,7 @@
       * [指令API](cn/mod/api/command.md)
       * [其他API](cn/mod/api/misc.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
-      * [开始](cn/mod/tutorials/start.md)
-      * [安装Visual Studio Code](cn/mod/tutorials/vscode.md)
+      * [1.1 开始](cn/mod/tutorials/start.md)
+      * [1.2 安装Visual Studio Code](cn/mod/tutorials/vscode.md)
       * [未完待续……](cn/mod/tutorials/wait_by.md)
 
