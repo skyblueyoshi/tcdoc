@@ -7,6 +7,7 @@
   * [模组文档](cn/mod/README.md)
     * [模组数据表文档](cn/mod/datatable/README.md)
       * [基本JSON类型](cn/mod/datatable/ji-ben-json-lei-xing.md)
+      * [模组配置表（tcmod.json）](cn/mod/datatable/mo-zu-pei-zhi-biao-tcmod.json.md)
       * [物品配置表](cn/mod/datatable/item_config.md)
       * [物品表](cn/mod/datatable/item.md)
       * [弹药表（ammos.json）](cn/mod/datatable/tan-yao-biao-ammos.json.md)
@@ -40,5 +41,6 @@
     * [模组开发官方教程](cn/mod/tutorials/README.md)
       * [1.1 开始](cn/mod/tutorials/start.md)
       * [1.2 安装Visual Studio Code](cn/mod/tutorials/vscode.md)
+      * [1.3 创建第一个模组](cn/mod/tutorials/1.3-chuang-jian-di-yi-ge-mo-zu.md)
       * [未完待续……](cn/mod/tutorials/wait_by.md)
 
