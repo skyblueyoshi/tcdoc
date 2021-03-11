@@ -34,6 +34,7 @@
       * [光照API](cn/mod/api/lighting.md)
       * [音效API](cn/mod/api/sound.md)
       * [方块API](cn/mod/api/block.md)
+      * [方块实体API](cn/mod/api/blockentity.md)
       * [地图API](cn/mod/api/map.md)
       * [渲染API](cn/mod/api/render.md)
       * [指令API](cn/mod/api/command.md)
