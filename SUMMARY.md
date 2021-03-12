@@ -19,6 +19,7 @@
       * [着色器表（shaders.json）](cn/mod/datatable/zhe-se-qi-biao-shaders.json.md)
     * [模组API文档](cn/mod/api/README.md)
       * [数据类型、枚举类型](cn/mod/api/datatypes-enums-constants.md)
+      * [JSON API](cn/mod/api/json.md)
       * [注册信息API](cn/mod/api/reg.md)
       * [语言API](cn/mod/api/lang.md)
       * [通用API](cn/mod/api/utils.md)
