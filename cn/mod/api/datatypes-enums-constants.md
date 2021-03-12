@@ -15,15 +15,15 @@
 | Json:SetInt\(string key, int value\) | void | 写入字符串键和整数值。 |
 | Json:SetInt\(int value\) | void | 写入整数。 |
 | Json:SetDouble\(string key, double value\) | void | 写入字符串键和浮点数值。 |
-| Json:SetDouble\(double value\) | void | 写入浮点数值。 |
+| Json:SetDouble\(double value\) | void | 写入浮点数。 |
 | Json:SetBoolean\(string key, bool value\) | void | 写入字符串键和布尔值。 |
 | Json:SetBoolean\(bool value\) | void | 写入布尔值。 |
 | Json:SetString\(string key, string value\) | void | 写入字符串键和字符串值。 |
-| Json:SetString\(string value\) | void | 写入字符串值。 |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Json:SetString\(string value\) | void | 写入字符串。 |
+| Json:SetObject\(string key, Json value\) | void | 写入字符串键和JSON对象值。 |
+| Json:SetObject\(Json value\) | void | 写入JSON对象。 |
+| Json:MoveSetObject\(string key, Json value\) | void | 写入字符串键和JSON对象值。value使用**移动构造**方式加入到键值对中，**注意传参后value不允许再次使用**。 |
+| Json:MoveSetObject\(Json value\) | void | 写入JSON对象。value使用**移动构造**方式加入，**注意传参后value不允许再次使用**。 |
 | Json:GetInt\(string key\) | int | 由字符串键读取整数值，若键值对不存在或值非整数类型，总是返回0。 |
 | Json:GetInt\(\) | int | 读取整数值，若不存在或非整数类型，总是返回0。 |
 | Json:GetDouble\(string key\) | double | 由字符串键读取浮点数值，若键值对不存在或值非浮点数类型，总是返回0.0。 |
