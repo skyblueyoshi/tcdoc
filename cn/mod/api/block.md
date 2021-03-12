@@ -32,6 +32,59 @@ end
 * `yi`表示当前方块所在格子纵坐标。
 * `player`表示与当前方块重叠的玩家。
 
+### void OnRandomTick\(int xi, int yi\)
+
+```lua
+function OnRandomTick(xi, yi)
+    
+end
+```
+
+**【仅服务端调用】**当前方块在服务端被随机刻选中时执行。
+
+* `xi`表示当前方块所在格子横坐标。
+* `yi`表示当前方块所在格子纵坐标。
+
+### void OnPlaced\(int xi, int yi\)
+
+```lua
+function OnPlaced(xi, yi)
+    
+end
+```
+
+**【仅服务端调用】**当前方块在服务端被放置时执行。
+
+* `xi`表示当前方块所在格子横坐标。
+* `yi`表示当前方块所在格子纵坐标。
+
+### void OnClicked\(int xi, int yi\)
+
+```lua
+function OnClicked(xi, yi)
+    
+end
+```
+
+**【仅服务端调用】**当前方块在服务端被玩家右键点击时执行。
+
+* `xi`表示当前方块所在格子横坐标。
+* `yi`表示当前方块所在格子纵坐标。
+
+### void OnSignal\(int xi, int yi, bool isActivated\)
+
+```lua
+function OnSignal(xi, yi, isActivated)
+    
+end
+```
+
+**【仅服务端调用】**当前方块在服务端被红石信号触发时执行。
+
+* `xi`表示当前方块所在格子横坐标。
+* `yi`表示当前方块所在格子纵坐标。
+* `isActivated`表示红石信号是否为激活信号，若为否，表示反激活信号。
+
 ### void UpdateScreen\(int xi, int yi\)
 
 ```lua

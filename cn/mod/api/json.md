@@ -42,6 +42,7 @@
 | Json:GetString\(string key\) | string | 由字符串键读取字符串值，若键值对不存在或值非字符串类型，总是返回空字符串。 |
 | Json:GetString\(\) | string | 由读取字符串值，若不存在或非字符串类型，总是返回空字符串。 |
 | Json:HasKey\(string key\) | bool | 判断当前JSON对象是否拥有指定键。 |
+| Json:Dump\(\) | string | 返回当前JSON的 |
 
 #### 数组操作
 
@@ -52,4 +53,13 @@
 | Json:AddJson\(Json value\) | void | 加入一个JSON到当前JSON数组。 |
 | Json:MoveAddJson\(Json value\) | void | 加入一个JSON到当前JSON数组。**value使用移动构造方式加入，注意传参后value不允许再次使用。** |
 | Json:GetList\(\) | ArrayList&lt;Json&gt; | 返回当前JSON数组。 |
+
+#### 编码与解码操作
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Json:Dump\(\) | string | 将当前JSON编码成文本。 |
+| Json:Load\(string text\) | void | 将文本解码到当前JSON。 |
+
+
 
