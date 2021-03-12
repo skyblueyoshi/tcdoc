@@ -45,10 +45,10 @@ end
 * `xi`表示当前方块所在格子横坐标。
 * `yi`表示当前方块所在格子纵坐标。
 
-### void OnPlaced\(int xi, int yi\)
+### void OnPlaced\(int xi, int yi, PlaceParameter placeParameter\)
 
 ```lua
-function OnPlaced(xi, yi)
+function OnPlaced(xi, yi, placeParameter)
     
 end
 ```
@@ -57,11 +57,26 @@ end
 
 * `xi`表示当前方块所在格子横坐标。
 * `yi`表示当前方块所在格子纵坐标。
+* `placeParameter`表示放置方块附加的信息参数。
 
-### void OnClicked\(int xi, int yi\)
+### void OnDestroy\(int xi, int yi, DestroyParameter destroyParameter\)
 
 ```lua
-function OnClicked(xi, yi)
+function OnDestroy(xi, yi, destroyParameter)
+    
+end
+```
+
+**【仅服务端调用】**当前方块在服务端被破坏前执行。
+
+* `xi`表示当前方块所在格子横坐标。
+* `yi`表示当前方块所在格子纵坐标。
+* `destroyParameter`表示破坏方块附加的信息参数。
+
+### void OnClicked\(int xi, int yi, ClickParameter clickParameter\)
+
+```lua
+function OnClicked(xi, yi, clickParameter)
     
 end
 ```
@@ -70,6 +85,7 @@ end
 
 * `xi`表示当前方块所在格子横坐标。
 * `yi`表示当前方块所在格子纵坐标。
+* `placeParameter`表示右键点击方块附加的信息参数。
 
 ### void OnSignal\(int xi, int yi, bool isActivated\)
 
@@ -98,10 +114,10 @@ end
 * `xi`表示当前方块所在格子横坐标。
 * `yi`表示当前方块所在格子纵坐标。
 
-### void RenderFurniture\(int xi, int yi, SpriteRenderer spriteRenderer, int tickTime\)
+### void RenderFurniture\(int xi, int yi, int tickTime\)
 
 ```lua
-function RenderFurniture(int xi, int yi, spriteRenderer, tickTime)
+function RenderFurniture(int xi, int yi, tickTime)
     
 end
 ```
@@ -110,23 +126,22 @@ end
 
 * `xi`表示当前方块所在格子横坐标。
 * `yi`表示当前方块所在格子纵坐标。
-* `spriteRenderer`表示精灵渲染器。
 * `tickTime`表示客户端全局渲染时间。
 
-### void PreRenderFurniture\(int xi, int yi, SpriteRenderer spriteRenderer, int tickTime\)
+### void PreRenderFurniture\(int xi, int yi, int tickTime\)
 
 ```lua
-function PreRenderFurniture(int xi, int yi, spriteRenderer, tickTime)
+function PreRenderFurniture(int xi, int yi, tickTime)
     
 end
 ```
 
 **【仅客户端调用】**允许在绘制家具前绘制自定义内容。
 
-### void PostRenderFurniture\(int xi, int yi, SpriteRenderer spriteRenderer, int tickTime\)
+### void PostRenderFurniture\(int xi, int yi, int tickTime\)
 
 ```lua
-function PostRenderFurniture(int xi, int yi, spriteRenderer, tickTime)
+function PostRenderFurniture(int xi, int yi, tickTime)
     
 end
 ```
