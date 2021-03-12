@@ -4,6 +4,38 @@
 
 ## 数据类型（Data Types）
 
+### JSON
+
+| 静态函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Json:new\_local\(\) | Attack | 返回一个JSON对象。 |
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| Json:SetInt\(string key, int value\) | void | 写入字符串键和整数值。 |
+| Json:SetInt\(int value\) | void | 写入整数。 |
+| Json:SetDouble\(string key, double value\) | void | 写入字符串键和浮点数值。 |
+| Json:SetDouble\(double value\) | void | 写入浮点数值。 |
+| Json:SetBoolean\(string key, bool value\) | void | 写入字符串键和布尔值。 |
+| Json:SetBoolean\(bool value\) | void | 写入布尔值。 |
+| Json:SetString\(string key, string value\) | void | 写入字符串键和字符串值。 |
+| Json:SetString\(string value\) | void | 写入字符串值。 |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+| Json:GetInt\(string key\) | int | 由字符串键读取整数值，若键值对不存在或值非整数类型，总是返回0。 |
+| Json:GetInt\(\) | int | 读取整数值，若不存在或非整数类型，总是返回0。 |
+| Json:GetDouble\(string key\) | double | 由字符串键读取浮点数值，若键值对不存在或值非浮点数类型，总是返回0.0。 |
+| Json:GetDouble\(\) | double | 由读取浮点数值，若不存在或非浮点数类型，总是返回0.0。 |
+| Json:GetBoolean\(string key\) | bool | 由字符串键读取布尔值，若键值对不存在或值非布尔类型，总是返回false。 |
+| Json:GetBoolean\(\) | bool | 由读取布尔值，若不存在或非布尔类型，总是返回false。 |
+| Json:GetString\(string key\) | string | 由字符串键读取字符串值，若键值对不存在或值非字符串类型，总是返回空字符串。 |
+| Json:GetString\(\) | string | 由读取字符串值，若不存在或非字符串类型，总是返回空字符串。 |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
 ### ArrayList&lt;T&gt;
 
 TerraCraft内置的动态数组。
