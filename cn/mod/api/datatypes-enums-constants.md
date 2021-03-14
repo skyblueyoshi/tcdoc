@@ -4,6 +4,48 @@
 
 ## 数据类型（Data Types）
 
+### ObjectRef（抽象类）
+
+维护指定类型对象的引用。
+
+继承该抽象类的子类：BlockEntityRef。
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x5C5E;&#x6027;</th>
+      <th style="text-align:center">&#x7C7B;&#x578B;</th>
+      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">ObjectRef.ref</td>
+      <td style="text-align:center">Object/nil</td>
+      <td style="text-align:left">
+        <p>&#x8BFB;&#x53D6;&#x65F6;&#x8FD4;&#x56DE;&#x88AB;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x82E5;&#x5BF9;&#x8C61;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x8FD4;&#x56DE;nil&#x3002;</p>
+        <p>&#x5199;&#x5165;&#x65F6;&#x5C06;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x8986;&#x76D6;&#x5230;&#x5F53;&#x524D;&#x5F15;&#x7528;&#xFF0C;&#x5199;&#x5165;nil&#x8868;&#x793A;&#x5199;&#x5165;&#x7A7A;&#x5F15;&#x7528;&#x3002;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### 案例
+
+例如，在如下范例中，`self.modData.blockEntityRef`表示方块实体引用。`blockEntity2`表示某个方块实体对象。
+
+```lua
+local br = self.modData.blockEntityRef        -- Get the reference of block entity
+local blockEntity = br.ref        -- Get the block entity from reference
+if blockEntity ~= nil then
+    -- do something
+end
+br.ref = blockEntity2        -- Set the reference point to blockEntity2
+local blockEntity3 = br.ref        -- blockEntity3 is the same object blockEntity2
+br.ref = nil        -- Set the renference point to nothing
+local blockEntity4 = br.ref        -- blockEntity4 is nil
+```
+
 ### ArrayList&lt;T&gt;
 
 TerraCraft内置的动态数组。
