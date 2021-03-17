@@ -73,5 +73,8 @@ end
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
-| Cell:SetHookSlot\(ItemSlot itemSlot\) | void | 将指定物品格子的数据绑定到当前控件。 |
+| Cell:HookTempSlot\(\) | void | 为当前控件绑定一个临时物品格子。 |
+| Cell:HookBlockEntitySlot\(ItemSlot itemSlot\) | void | 为当前控件绑定一个方块实体的物品格子。该物品只能从`hookData.blockEntityRef`中获取。 |
+
+
 
