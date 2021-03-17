@@ -193,13 +193,9 @@ TerraCraft中的地图采用动态区块加载技术实现无限地图。一个�
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">MapUtils.GetBlockEntity(int blockEntityID, int xi, int yi)</td>
-      <td style="text-align:center">BlockEntity/nil</td>
-      <td style="text-align:left">
-        <p>&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x683C;&#x5B50;&#x7684;&#x65B9;&#x5757;&#x5B9E;&#x4F53;&#x3002;<code>blockEntityID</code>&#x8868;&#x793A;&#x5F85;&#x8FD4;&#x56DE;&#x7684;&#x65B9;&#x5757;&#x5B9E;&#x4F53;ID&#x3002;</p>
-        <p><em>&#x683C;&#x5B50;&#x65E0;&#x6548;&#x6216;&#x65B9;&#x5757;&#x5B9E;&#x4F53;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#x603B;&#x662F;&#x8FD4;&#x56DE;nil&#x3002;</em>
-        </p>
-      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:center"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>

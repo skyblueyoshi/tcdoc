@@ -40,7 +40,7 @@ end
 | EffectUtils.SendFromServer\(int id, double centerX, double centerY, double speedX = 0.0, double speedY = 0.0, double rotateSpeed = 0.0, double scale = 1.0, double alpha = 1.0\) | Effect | 在服务端发送一个特效实体到所有可见该特效的客户端。 |
 | EffectUtils.CreateExplosion\(double centerX, double centerY\) | void | 创建一个爆炸特效。 |
 
-## 特效类（Effect Class）
+## 特效类（Effect Class，继承自Entity Class）
 
 特效（Effect）类表示具有粒子客户端效果的实体类。
 

@@ -139,7 +139,7 @@ end
 | ProjectileUtils.SearchByCircle\(double centerX, double centerY, int radius\) | ArrayList&lt;Projectile&gt; | 返回包含于指定圆形区域内部的所有抛射物列表。 |
 | ProjectileUtils.SearchNearestProjectile\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Projectile/nil | 搜索在指定圆形区域内部距离圆心最近的抛射物，返回该抛射物。若结果不存在，返回nil。`noCrossTiles`表示是否排除中心到圆心的连线被图格遮挡的抛射物。 |
 
-## 抛射物类（Projectile Class）
+## 抛射物类（Projectile Class，继承自Entity Class）
 
 **抛射物（Projectile）**类表示具有抛射物基本信息的实体类。通常用于表示弓箭、子弹、弹幕等实体对象。
 

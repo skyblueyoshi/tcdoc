@@ -12,7 +12,6 @@ ID是游戏运行中动态生成的正整数数值。ID在游戏过程中不会�
 | Reg.BlockID\(string name\) | int | 根据**方块名**返回注册的动态ID。 |
 | Reg.BlockGroupID\(string name\) | int | 根据**方块组名**返回注册的动态ID。 |
 | Reg.BlockSubGroupID\(string name\) | int | 根据**方块子组名**返回注册的动态ID。 |
-| Reg.BlockEntityID\(string name\) | int | 根据**方块实体名**返回注册的动态ID。 |
 | Reg.EffectID\(string name\) | int | 根据**特效名**返回注册的动态ID。 |
 | Reg.BuffID\(string name\) | int | 根据**BUFF名**返回注册的动态ID。 |
 | Reg.EnchantmentID\(string name\) | int | 根据**附魔名**返回注册的动态ID。 |
