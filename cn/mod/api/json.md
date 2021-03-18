@@ -1,5 +1,14 @@
 # JSON API
 
+## Json通用模块（JsonUtils）
+
+| 函数 | 返回值 | 描述 |
+| :--- | :---: | :--- |
+| JsonUtils.SetItemSlot\(Json json, string key, ItemSlot itemSlot\) | void | 为指定JSON写入字符串键和物品格子数据。 |
+| JsonUtils.SetItemSlot\(Json json, ItemSlot itemSlot\) | void | 为指定JSON写入物品格子数据。 |
+| JsonUtils.GetItemSlot\(Json json, string key, ItemSlot itemSlot\) | void | 从指定JSON根据字符串键读取物品格子数据。 |
+| JsonUtils.GetItemSlot\(Json json, ItemSlot itemSlot\) | void | 从指定JSON读取物品格子数据。 |
+
 ## Json类（Json Class）
 
 **Json**类为标记化序列，是一个序列化的对象或数组，满足标准JSON语法规范。
