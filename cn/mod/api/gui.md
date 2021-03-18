@@ -1,8 +1,6 @@
 # 用户图形界面UI
 
-## 钩子函数
-
-请在**用户图形界面（GUI）**脚本中使用这些钩子函数。
+## 钩子函数（用户图形界面脚本：contents/guis/...）
 
 ### void CheckOnLoad\(\)
 
@@ -23,6 +21,53 @@ end
 ```
 
 决定当前GUI的加载行为。一般在该函数中设置GUI属性、创建控件等初始化操作。
+
+### void OnUnload\(\)
+
+```lua
+function OnUnload()
+    
+end
+```
+
+决定当前GUI的卸载时的行为。
+
+### void OnPushSlot\(int cellID, KeyboardTag kbTag\)
+
+```lua
+function OnPushSlot(cellID, kbTag)
+    
+end
+```
+
+**【仅服务端调用】**当物品放入某个格子控件时执行。
+
+* `cellID`表示被放入物品的格子控件ID，使用`self:GetCell(cellID).hookItem`获取对应物品格子。
+* `kbTag`表示放入物品时键盘附加情况。
+
+### void OnPickSlot\(int cellID, KeyboardTag kbTag\)
+
+```lua
+function OnPushSlot(cellID, kbTag)
+    
+end
+```
+
+**【仅服务端调用】**当物品从某个格子控件取出时执行。
+
+### bool RequestQuickPush\(ItemSlot itemSlot\)
+
+```lua
+function RequestQuickPush(itemSlot)
+    return false
+end
+```
+
+**【仅服务端调用】**当收到快速放入物品的请求时执行。返回true表示执行成功，返回false表示执行未发生变化。
+
+* `itemSlot`表示待快速放入的物品格子。
+
+
 
 ## 用户图形界面通用模块（GuiUtils）
 

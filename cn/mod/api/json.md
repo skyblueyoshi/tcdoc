@@ -8,10 +8,6 @@
 | JsonUtils.SetItemSlot\(Json json, ItemSlot itemSlot\) | void | 为指定JSON写入物品格子数据。 |
 | JsonUtils.GetItemSlot\(Json json, string key, ItemSlot itemSlot\) | void | 从指定JSON根据字符串键读取物品格子数据。 |
 | JsonUtils.GetItemSlot\(Json json, ItemSlot itemSlot\) | void | 从指定JSON读取物品格子数据。 |
-| JsonUtils.SetItemSlotArray\(Json json, string key, ItemSlot itemSlotFirstElement, int length\) | void | 为指定JSON写入字符串键和物品格子数组数据。`itemSlotFirstElement`表示物品格子数组的第一个元素，`length`表示数组长度。 |
-| JsonUtils.SetItemSlotArray\(Json json, ItemSlot itemSlotFirstElement, int length\) | void | 为指定JSON写入物品格子数组数据。 |
-| JsonUtils.GetItemSlotArray\(Json json, string key, ItemSlot itemSlotFirstElement, int length\) | void | 从指定JSON根据字符串键读取物品格子数组数据。 |
-| JsonUtils.GetItemSlotArray\(Json json, ItemSlot itemSlotFirstElement, int length\) | void | 从指定JSON读取物品格子数组数据。 |
 
 ## Json类（Json Class）
 

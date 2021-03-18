@@ -1,6 +1,6 @@
 # 特效API
 
-## 钩子函数
+## 钩子函数（特效脚本：contents/effect\_ai/...）
 
 ### void Init\(\)
 

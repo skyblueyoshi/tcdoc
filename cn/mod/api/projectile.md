@@ -1,8 +1,6 @@
 # 抛射物API
 
-## 钩子函数
-
-请在**抛射物AI**脚本中使用这些钩子函数。
+## 钩子函数（抛射物脚本：contents/projectile\_ai/...）
 
 ### void Init\(\)
 
