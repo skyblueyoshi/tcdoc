@@ -1,6 +1,8 @@
 # 物品API
 
-## 钩子函数（物品脚本：contents/item\_ai/...）
+## 钩子函数
+
+请在**物品（Item）**脚本中使用这些钩子函数。
 
 ### void OnUseFromPlayer\(Player player, ItemSlot itemSlot, Hitbox hitbox, double fireX, double fireY\)
 

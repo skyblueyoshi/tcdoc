@@ -43,6 +43,7 @@
       * [用户图形界面UI](cn/mod/api/gui.md)
       * [其他API](cn/mod/api/misc.md)
     * [模组开发官方教程](cn/mod/tutorials/README.md)
+      * [1.0 教程对应版本（Indev 1.1）](cn/mod/tutorials/1.0-jiao-cheng-dui-ying-ban-ben-indev-1.1.md)
       * [1.1 开始](cn/mod/tutorials/start.md)
       * [1.2 安装Visual Studio Code](cn/mod/tutorials/vscode.md)
       * [1.3 创建第一个模组](cn/mod/tutorials/1.3-chuang-jian-di-yi-ge-mo-zu.md)

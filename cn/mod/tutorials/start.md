@@ -8,8 +8,6 @@ description: 模组导论与简要介绍
 
 ![](../../../.gitbook/assets/terracraft-guan-fang-mod-qun-qun-er-wei-ma-.png)
 
-您可以在QQ群里交流模组制作，时不时催更蓝耀西更新教程和推进模组开发。
-
 ## 什么是模组？
 
 TerraCraft的模组是一个允许玩家对游戏内容进行添加或者修改的功能或游戏内容拓展包，以追求给玩家提供更好的游戏体验。

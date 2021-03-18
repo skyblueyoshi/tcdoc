@@ -1,6 +1,8 @@
 # 状态效果API
 
-## 钩子函数（状态效果脚本：contents/buffs/...）
+## 钩子函数
+
+请在**状态效果（Buff）**脚本中使用这些钩子函数。
 
 ### void UpdatePlayer\(Player player, int buffRemainTime\)
 

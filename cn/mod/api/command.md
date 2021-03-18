@@ -1,6 +1,8 @@
 # 指令API
 
-## 钩子函数（指令脚本：contents/commands/...）
+## 钩子函数
+
+请在**指令（Command）**脚本中使用这些钩子函数。
 
 ### void RunCommandFromPlayer\(Player player, ...\)
 

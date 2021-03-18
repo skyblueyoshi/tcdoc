@@ -2,7 +2,9 @@
 
 NPC在TerraCraft中泛指除了玩家之外的所有生物，如动物、敌怪、村民、BOSS等。
 
-## 钩子函数（NPC脚本：contents/npc\_ai/...）
+## 钩子函数
+
+请在**NPCAI**脚本中使用这些钩子函数。
 
 ### void Init\(\)
 
