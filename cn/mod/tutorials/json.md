@@ -23,7 +23,7 @@ Mod对于所有对象均采用**JSON数据表**的形式进行初始化。数据
 
 使用VS Code编写JSON文件时，VS Code会智能地提示出现语法错误的地方，您可以根据VS Code的提示修正语法问题。
 
-![](../../../.gitbook/assets/image%20%2813%29.png)
+![](../../../.gitbook/assets/image%20%2814%29.png)
 
 在_**contents**_文件夹下的所有JSON文件一般而言，均为此类格式：
 
