@@ -52,8 +52,8 @@
       * [1.5 认识JSON数据表](cn/mod/tutorials/json.md)
       * [1.6 第一个物品](cn/mod/tutorials/item.md)
       * [1.7 认识地图元素](cn/mod/tutorials/map_element.md)
-      * [1.8 第一个图块](cn/mod/tutorials/tile.md)
-      * [1.9 第一个家具](cn/mod/tutorials/1.9-di-yi-ge-jia-ju.md)
-      * [1.10 加入合成表](cn/mod/tutorials/1.10-jia-ru-he-cheng-biao.md)
+      * [1.8 第一个图块TODO](cn/mod/tutorials/tile.md)
+      * [1.9 第一个家具TODO](cn/mod/tutorials/1.9-di-yi-ge-jia-ju.md)
+      * [1.10 加入合成表TODO](cn/mod/tutorials/1.10-jia-ru-he-cheng-biao.md)
       * [未完待续……](cn/mod/tutorials/wait_by.md)
 
