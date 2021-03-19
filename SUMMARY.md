@@ -49,6 +49,7 @@
       * [1.2 安装Visual Studio Code](cn/mod/tutorials/vscode.md)
       * [1.3 配置模组环境](cn/mod/tutorials/config.md)
       * [1.4 认识模组路径](cn/mod/tutorials/path.md)
-      * [1.5 第一个物品](cn/mod/tutorials/item.md)
+      * [1.5 认识JSON数据表](cn/mod/tutorials/json.md)
+      * [1.6 第一个物品](cn/mod/tutorials/item.md)
       * [未完待续……](cn/mod/tutorials/wait_by.md)
 

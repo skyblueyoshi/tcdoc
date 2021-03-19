@@ -10,13 +10,13 @@
 
 在VS Code中点击菜单项的**File-&gt;Open Folder...**，打开刚刚创建的模组文件夹。
 
-![](../../../.gitbook/assets/image%20%2810%29.png)
+![](../../../.gitbook/assets/image%20%2812%29.png)
 
 ## 配置模组基本信息
 
 在所打开的ExampleMod文件夹项目在如图位置点击**New File**按钮，创建tcmod.json作为当前模组的主要配置表。
 
-![](../../../.gitbook/assets/image%20%2811%29.png)
+![](../../../.gitbook/assets/image%20%2814%29.png)
 
 在tcmod.json文件中编写模组的基本信息。
 
@@ -63,7 +63,7 @@
 
 正确配置模组的界面如图，注意右下角必须使用`UTF8`格式对JSON文件编码。
 
-![](../../../.gitbook/assets/image%20%2812%29.png)
+![](../../../.gitbook/assets/image%20%2816%29.png)
 
 ## 检测模组是否配置成功
 
