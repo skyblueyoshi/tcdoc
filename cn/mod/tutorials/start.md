@@ -4,8 +4,6 @@ description: 模组导论与简要介绍
 
 # 1.1 开始
 
-## 模组制作QQ群
-
 ![](../../../.gitbook/assets/terracraft-guan-fang-mod-qun-qun-er-wei-ma-.png)
 
 ## 什么是模组？

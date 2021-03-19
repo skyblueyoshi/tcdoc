@@ -1,8 +1,6 @@
 # 附魔API
 
-## 钩子函数
-
-请在**附魔（Enchantment）**脚本中使用这些钩子函数。
+## 钩子函数（附魔脚本：contents/enchantments/...）
 
 ### void UpdateArmoredByPlayer\(Player player, ItemSlot itemSlot, int level\)
 
