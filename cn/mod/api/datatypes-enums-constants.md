@@ -234,6 +234,32 @@ local modData3 = npc3:GetModData()
 | Color:Set\(int alpha, int red, int green, int blue\) | void | 设置新的颜色。 |
 | Color:Set\(DefaultColor defaultColor\) | void | 设置为指定默认颜色。 |
 
+### PlaceParameter
+
+放置方块的参数类型。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| PlaceParameter.placeDir | Direction | **【只读】**放置的朝向。 |
+
+### ClickParameter
+
+点击方块的参数类型。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| ClickParameter.playerRef | PlayerRef | **【只读】**发生点击的玩家引用。 |
+
+### DestroyParameter
+
+破坏方块的参数类型。
+
+| 属性 | 类型 | 描述 |
+| :--- | :---: | :--- |
+| DestroyParameter.boom | bool | **【只读】**是否为由爆炸产生的破坏。 |
+| DestroyParameter.silkTouch | int | **【只读】**破坏时精准采集等级。 |
+| DestroyParameter.fortune | int | **【只读】**破坏时时运等级。 |
+
 ## 枚举类型（Enums）
 
 注意，这里的枚举值直接当作全局常量使用，且枚举类型的变量只能使用对应枚举值。例如：
