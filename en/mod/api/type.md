@@ -2,7 +2,7 @@
 
 本篇描述的数据类型、枚举类型在所有的文件均可用。
 
-## 数据类型（Data Types）
+## Data Types
 
 ### ObjectRef（抽象类）
 
@@ -258,7 +258,7 @@ Represents a color with four channels of alpha \(transparency\), red, green, and
 | DestroyParameter.silkTouch | int | **【只读】**破坏时精准采集等级。 |
 | DestroyParameter.fortune | int | **【只读】**破坏时时运等级。 |
 
-## 枚举类型（Enums）
+## Enums
 
 注意，这里的枚举值直接当作全局常量使用，且枚举类型的变量只能使用对应枚举值。例如：
 
@@ -353,7 +353,7 @@ Represents default color.
 | Value | Description |
 | :--- | :--- |
 | _COLOR\_BLACK_ | ARGB=\(255, 0, 0, 0\) |
-| _COLOR\_WHITE_ | ARGB=\(255, 2555, 255, 255\) |
+| _COLOR\_WHITE_ | ARGB=\(255, 255, 255, 255\) |
 | _COLOR\_GRAY_ | ARGB=\(255, 128, 128, 128\) |
 | _COLOR\_RED_ | ARGB=\(255, 255, 0, 0\) |
 | _COLOR\_GREEN_ | ARGB=\(255, 0, 255, 0\) |
