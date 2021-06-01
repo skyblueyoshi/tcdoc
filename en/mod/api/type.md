@@ -175,9 +175,9 @@ Represents a collision box. If the `angle` attribute is 0, it means axis aligned
 | Hitbox.y | double | The y coordinate of the upper left corner of the hitbox when the rotation angle is 0. |
 | Hitbox.width | int | The width of the hitbox. |
 | Hitbox.height | int | The height of the hitbox. |
-| Hitbox.centerX | double | **\[Read-only\]** Returns the center x coordinate of the hitbox. |
-| Hitbox.centerY | double | **\[Read-only\]** Returns the center y coordinate of the hitbox. |
-| Hitbox.angle | double | **\[Read-only\]** Returns the rotation angle of the collision box if the collision box can be rotated. |
+| Hitbox.centerX | double | **\[ Read-only \]** Returns the center x coordinate of the hitbox. |
+| Hitbox.centerY | double | **\[ Read-only \]** Returns the center y coordinate of the hitbox. |
+| Hitbox.angle | double | **\[ Read-only \]** Returns the rotation angle of the collision box if the collision box can be rotated. |
 
 | Function | Returns | Description |
 | :--- | :---: | :--- |
@@ -222,10 +222,10 @@ Represents a color with four channels of alpha \(transparency\), red, green, and
 
 | Member | Type | Description |
 | :--- | :---: | :--- |
-| Color.alpha | int | **\[Read-only\]** Transparent channel value, valid interval is \[0,255\]. |
-| Color.red | int | **\[Read-only\]** Red channel value, valid interval is \[0,255\]. |
-| Color.green | int | **\[Read-only\]** Green channel value, valid interval is \[0,255\]. |
-| Color.blue | int | **\[Read-only\]** Blue channel value, valid interval is \[0,255\].  |
+| Color.alpha | int | **\[ Read-only \]** Transparent channel value, valid interval is \[0,255\]. |
+| Color.red | int | **\[ Read-only \]** Red channel value, valid interval is \[0,255\]. |
+| Color.green | int | **\[ Read-only \]** Green channel value, valid interval is \[0,255\]. |
+| Color.blue | int | **\[ Read-only \]** Blue channel value, valid interval is \[0,255\].  |
 
 | Function | Returns | Description |
 | :--- | :---: | :--- |
