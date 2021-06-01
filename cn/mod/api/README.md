@@ -31,7 +31,7 @@
 
 ### 类
 
-* 基本类：[基本数据类型](datatypes-enums-constants.md#shu-ju-lei-xing-data-types)
+* 基本类：[基本数据类型](type.md#shu-ju-lei-xing-data-types)
 * 物品格子类：[ItemSlot](item.md#wu-pin-ge-lei-itemslot-class)
 * 实体类：[Entity](entity.md#shi-ti-lei-entity-class)
 * 特效类：[Effect](effect.md#te-xiao-lei-effect-class)，继承自Entity类

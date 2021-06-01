@@ -73,7 +73,7 @@ end
 抛射物击中Npc前调用该函数，通常用于修改`hitAttack`来实现攻击数据自定义。
 
 * `npc`为被击中的NPC对象。
-* `hitAttack`为攻击属性（见[Attack数据类型](datatypes-enums-constants.md#attack)）。
+* `hitAttack`为攻击属性（见[Attack数据类型](type.md#attack)）。
 
 ### void OnHitNpc\(Npc npc, Attack hitAttack\)
 
