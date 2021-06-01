@@ -167,22 +167,22 @@ local modData3 = npc3:GetModData()
 
 ### Hitbox
 
-表示一个碰撞箱。若`angle`属性为0，表示轴对齐碰撞箱（AABB）。否则表示一个绕中心点旋转的碰撞箱。
+Represents a collision box. If the `angle` attribute is 0, it means axis aligned collision box \(AABB\). Otherwise, it represents a collision box rotating around the center point.
 
-| 属性 | 类型 | 描述 |
+| Member | Type | Description |
 | :--- | :---: | :--- |
-| Hitbox.x | double | 碰撞箱在旋转角度为0时左上角横坐标。 |
-| Hitbox.y | double | 碰撞箱在旋转角度为0时左上角纵坐标。 |
-| Hitbox.width | int | 碰撞箱的宽度。 |
-| Hitbox.height | int | 碰撞箱的高度。 |
-| Hitbox.centerX | double | **【只读】**碰撞箱中心点的横坐标。 |
-| Hitbox.centerY | double | **【只读】**碰撞箱中心点的纵坐标。 |
-| Hitbox.angle | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
+| Hitbox.x | double | The x coordinate of the upper left corner of the hitbox when the rotation angle is 0. |
+| Hitbox.y | double | The y coordinate of the upper left corner of the hitbox when the rotation angle is 0. |
+| Hitbox.width | int | The width of the hitbox. |
+| Hitbox.height | int | The height of the hitbox. |
+| Hitbox.centerX | double | **\[Read-only\]** Returns the center x coordinate of the hitbox. |
+| Hitbox.centerY | double | **\[Read-only\]** Returns the center y coordinate of the hitbox. |
+| Hitbox.angle | double | **\[Read-only\]** Returns the rotation angle of the collision box if the collision box can be rotated. |
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Hitbox:Overlap\(Hitbox other\) | bool | 返回当前碰撞箱与另一个碰撞箱是否重叠。 |
-| Hitbox:OverlapAABB\(Hitbox other\) | bool | 返回当前轴对齐矩形与另一个轴对齐矩形是否重叠。 |
+| Hitbox:Overlap\(Hitbox other\) | bool | Returns whether the current hitbox overlaps with another hitbox. |
+| Hitbox:OverlapAABB\(Hitbox other\) | bool | Returns whether the current axis-aligned rectangle overlaps with another axis-aligned rectangle. |
 
 ### Attack
 
