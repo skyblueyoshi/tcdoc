@@ -17,47 +17,111 @@
 
 The Json class is a serialized object or array that meets the standard JSON syntax specification.
 
-### 静态函数
+### Static Function
 
 | Function | Returns | Description |
 | :--- | :---: | :--- |
 | Json:new\_local\(\) | Json | Returns a JSON. |
 
-### 类成员函数
+### Member Function
 
-#### 对象写入操作
+#### Object writing function
 
-| 函数 | 返回值 | 描述 |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Function</th>
+      <th style="text-align:center">Returns</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Json:SetInt(string key, int value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a key-value pair which value is integer.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetInt(int value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write an integer value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetDouble(string key, double value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a key-value pair which value is double.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetDouble(double value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a double value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetBoolean(string key, bool value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a key-value pair which value is boolean.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetBoolean(bool value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a boolean value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetString(string key, string value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a key-value pair which value is string.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetString(string value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a string value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetJson(string key, Json value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a key-value pair which value is JSON.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:SetJson(Json value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">Write a JSON value.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:MoveSetJson(string key, Json value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">
+        <p>Write a key-value pair which value is JSON using std::move(value) in C++.</p>
+        <p><em><b>Note: the value is not allowed to be used again after the parameter is passed.</b></em>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Json:MoveSetJson(Json value)</td>
+      <td style="text-align:center">void</td>
+      <td style="text-align:left">
+        <p>Write a JSON value using std::move(value) in C++.</p>
+        <p><em><b>Note: same above.</b></em>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### Object reading function
+
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Json:SetInt\(string key, int value\) | void | 写入字符串键和整数值。 |
-| Json:SetInt\(int value\) | void | 写入整数。 |
-| Json:SetDouble\(string key, double value\) | void | 写入字符串键和浮点数值。 |
-| Json:SetDouble\(double value\) | void | 写入浮点数。 |
-| Json:SetBoolean\(string key, bool value\) | void | 写入字符串键和布尔值。 |
-| Json:SetBoolean\(bool value\) | void | 写入布尔值。 |
-| Json:SetString\(string key, string value\) | void | 写入字符串键和字符串值。 |
-| Json:SetString\(string value\) | void | 写入字符串。 |
-| Json:SetJson\(string key, Json value\) | void | 写入字符串键和JSON值。 |
-| Json:SetJson\(Json value\) | void | 写入JSON。 |
-| Json:MoveSetJson\(string key, Json value\) | void | 写入字符串键和JSON值。**value使用移动构造方式加入，注意传参后value不允许再次使用。** |
-| Json:MoveSetJson\(Json value\) | void | 写入JSON。**value使用移动构造方式加入，注意传参后value不允许再次使用。** |
+| Json:GetInt\(string key\) | int | Read the integer value. Always returns 0 if does not exist. |
+| Json:GetInt\(\) | int | Read the integer value. Always returns 0 if does not exist. |
+| Json:GetDouble\(string key\) | double | Read the double value. Always returns 0.0 if does not exist. |
+| Json:GetDouble\(\) | double | Read the double value. Always returns 0.0 if does not exist. |
+| Json:GetBoolean\(string key\) | bool | Read the boolean value. Always returns false if does not exist. |
+| Json:GetBoolean\(\) | bool | Read the boolean value. Always returns false if does not exist. |
+| Json:GetString\(string key\) | string | Read the string value. Always returns empty string if does not exist. |
+| Json:GetString\(\) | string | Read the string value. Always returns empty string if does not exist. |
+| Json:HasKey\(string key\) | bool | Returns whether the current JSON has the specified key. |
 
-#### 对象读取操作
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| Json:GetInt\(string key\) | int | 由字符串键读取整数值，若键值对不存在或值非整数类型，总是返回0。 |
-| Json:GetInt\(\) | int | 读取整数值，若不存在或非整数类型，总是返回0。 |
-| Json:GetDouble\(string key\) | double | 由字符串键读取浮点数值，若键值对不存在或值非浮点数类型，总是返回0.0。 |
-| Json:GetDouble\(\) | double | 由读取浮点数值，若不存在或非浮点数类型，总是返回0.0。 |
-| Json:GetBoolean\(string key\) | bool | 由字符串键读取布尔值，若键值对不存在或值非布尔类型，总是返回false。 |
-| Json:GetBoolean\(\) | bool | 由读取布尔值，若不存在或非布尔类型，总是返回false。 |
-| Json:GetString\(string key\) | string | 由字符串键读取字符串值，若键值对不存在或值非字符串类型，总是返回空字符串。 |
-| Json:GetString\(\) | string | 由读取字符串值，若不存在或非字符串类型，总是返回空字符串。 |
-| Json:HasKey\(string key\) | bool | 判断当前JSON对象是否拥有指定键。 |
-| Json:Dump\(\) | string | 返回当前JSON的 |
-
-#### 数组操作
+#### Array function
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
@@ -67,10 +131,10 @@ The Json class is a serialized object or array that meets the standard JSON synt
 | Json:MoveAddJson\(Json value\) | void | 加入一个JSON到当前JSON数组。**value使用移动构造方式加入，注意传参后value不允许再次使用。** |
 | Json:GetList\(\) | ArrayList&lt;Json&gt; | 返回当前JSON数组。 |
 
-#### 编码与解码操作
+#### Encoding and decoding
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Json:Dump\(\) | string | 将当前JSON编码成文本。 |
-| Json:Load\(string text\) | void | 将文本解码到当前JSON。 |
+| Json:Dump\(\) | string | Returns the current JSON encoded text. |
+| Json:Load\(string text\) | void | Decode the text to the current JSON. |
 
