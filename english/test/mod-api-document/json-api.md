@@ -1,8 +1,8 @@
-# JSON API
+# Json API
 
-## Json通用模块（JsonUtils）
+## JsonUtils
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
 | JsonUtils.SetItemSlot\(Json json, string key, ItemSlot itemSlot\) | void | 为指定JSON写入字符串键和物品格子数据。 |
 | JsonUtils.SetItemSlot\(Json json, ItemSlot itemSlot\) | void | 为指定JSON写入物品格子数据。 |
@@ -13,15 +13,15 @@
 | JsonUtils.GetItemSlotArray\(Json json, string key, ItemSlot itemSlotFirstElement, int length\) | void | 从指定JSON根据字符串键读取物品格子数组数据。 |
 | JsonUtils.GetItemSlotArray\(Json json, ItemSlot itemSlotFirstElement, int length\) | void | 从指定JSON读取物品格子数组数据。 |
 
-## Json类（Json Class）
+## Json Class
 
-**Json**类为标记化序列，是一个序列化的对象或数组，满足标准JSON语法规范。
+The Json class is a serialized object or array that meets the standard JSON syntax specification.
 
 ### 静态函数
 
-| 静态函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Json:new\_local\(\) | Json | 返回一个JSON类。 |
+| Json:new\_local\(\) | Json | Returns a JSON. |
 
 ### 类成员函数
 
@@ -73,6 +73,4 @@
 | :--- | :---: | :--- |
 | Json:Dump\(\) | string | 将当前JSON编码成文本。 |
 | Json:Load\(string text\) | void | 将文本解码到当前JSON。 |
-
-
 

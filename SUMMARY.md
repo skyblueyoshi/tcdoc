@@ -2,7 +2,9 @@
 
 * [TerraCraft](README.md)
 * [English](english/README.md)
-  * [TEST](english/test.md)
+  * [Mod Document](english/test/README.md)
+    * [Mod API Document](english/test/mod-api-document/README.md)
+      * [Json API](english/test/mod-api-document/json-api.md)
 * [简体中文](cn/README.md)
   * [模组文档](cn/mod/README.md)
     * [模组数据表文档](cn/mod/datatable/README.md)
