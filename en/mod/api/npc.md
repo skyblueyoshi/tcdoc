@@ -1,8 +1,8 @@
 # NPC
 
-NPC泛指除了玩家之外的所有生物，如动物、敌怪、村民、BOSS等。
+NPC refers to all creatures except players, such as animals, enemies, villagers, BOSS, etc.
 
-## 钩子函数（NPC脚本：contents/npc\_ai/...）
+## Hook Funtion \(contents/npc\_ai/...\)
 
 ### void Init\(\)
 
@@ -12,7 +12,7 @@ function Init()
 end
 ```
 
-NPC生成时调用一次该函数。
+This function is called once when the NPC is spawned.
 
 ### void Update\(\)
 
@@ -22,7 +22,7 @@ function Update()
 end
 ```
 
-NPC每帧运行时调用，您可以在该函数内编写运动等逻辑。
+Called when NPC runs every update tick, usually write logic in this function.
 
 ### void PreUpdate\(\)
 
@@ -32,7 +32,7 @@ function PreUpdate()
 end
 ```
 
-NPC每帧运行`Update()`函数前调用。通常用于在原逻辑前插入新逻辑。
+Called before the NPC runs the `Update()` function every update tick. It is usually used to insert new logic before the original logic.
 
 ### void PostUpdate\(\)
 
@@ -42,7 +42,7 @@ function PostUpdate()
 end
 ```
 
-NPC每帧运行`Update()`函数后调用。通常用于追加逻辑。
+Called after the NPC runs the `Update()` function every update tick. It is usually used to insert new logic after the original logic.
 
 ### void UpdateSkeleton\(Skeleton skeleton\)
 
@@ -52,9 +52,9 @@ function UpdateSkeleton(skeleton)
 end
 ```
 
-若NPC拥有骨骼模型，每帧执行完`PostUpdate`后调用，用于处理自定义骨骼模型逻辑。执行完该函数后，会对所有骨骼模型关节重新计算。
+If the NPC has a skeleton model, it is called after `PostUpdate()` to process the logic of the custom skeleton model. After executing this function, all joints of the skeleton model will be recalculated.
 
-* `skeleton`表示当前NPC的骨骼模型。
+* `skeleton`Represents the skeleton model of the current NPC.
 
 ### void PreUpdateSkeleton\(Skeleton skeleton\)
 
@@ -64,9 +64,9 @@ function PreUpdateSkeleton(skeleton)
 end
 ```
 
-NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数前调用。通常用于在使用AI重用后在原逻辑前插入新的骨骼模型逻辑。
+Called before the NPC runs the `UpdateSkeleton(skeleton)` function every update tick. It is usually used to insert new logic before the original logic.
 
-* `skeleton`表示当前NPC的骨骼模型。
+* `skeleton`Represents the skeleton model of the current NPC.
 
 ### void PostUpdateSkeleton\(Skeleton skeleton\)
 
@@ -76,9 +76,9 @@ function PostUpdateSkeleton(skeleton)
 end
 ```
 
-NPC每帧运行`UpdateSkeleton(Skeleton skeleton)`函数，并将全部骨骼关节进行修正后调用。当前函数中所有骨骼关节为实际作用数据。
+Called after the NPC runs the `UpdateSkeleton(skeleton)` function every update tick. It is usually used to insert new logic after the original logic.
 
-* `skeleton`表示当前NPC的骨骼模型。
+* `skeleton`Represents the skeleton model of the current NPC.
 
 ### void OnDraw\(\)
 
@@ -88,7 +88,7 @@ function OnDraw()
 end
 ```
 
-NPC每帧绘制前调用，在该函数内编写自定义绘制属性。不使用该钩子函数时采取默认处理方式。
+Called before each tick of NPC drawing, just write custom drawing behavior in this function.
 
 ### void OnKilled\(\)
 
@@ -98,7 +98,7 @@ function OnKilled()
 end
 ```
 
-NPC死亡时调用一次该函数。
+Called when NPC was killed.
 
 ### void OnTileCollide\(double oldSpeedX, double oldSpeedY\)
 
@@ -108,11 +108,12 @@ function OnTileCollide(oldSpeedX, oldSpeedY)
 end
 ```
 
-NPC与图块碰撞时调用该函数。
+Called when NPC collides the tiles.
 
-* `oldSpeedX`和`oldSpeedY`表示击中实心图块前一帧的横向和纵向速度。
+* `oldSpeedX` represents the X speed before colliding tiles.
+* `oldSpeedY` represents the Y speed before colliding tiles.
 
-## NPC通用模块（NpcUtils）
+## NpcUtils
 
 | 函数 | 返回值 | 描述 |
 | :--- | :---: | :--- |
@@ -122,17 +123,13 @@ NPC与图块碰撞时调用该函数。
 | NpcUtils.SearchNearestNpc\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Npc/nil | 搜索在指定圆形区域内部距离圆心最近的NPC，返回该NPC。若结果不存在，返回nil。`noCrossTiles`表示是否排除中心到圆心的连线被图格遮挡的NPC。 |
 | NpcUtils.SearchNearestEnemy\(double centerX, double centerY, int radius, bool noCrossTiles = false\) | Npc/nil | 搜索在指定圆形区域内部距离圆心最近的敌对NPC，返回该NPC。若结果不存在，返回nil。noCrossTiles表示是否排除中心到圆心的连线被图格遮挡的NPC。 |
 
-## NPC类（Npc Class，继承自Entity Class）
+## Npc Class \(Inherited from Entity Class\)
 
-**NPC**类表示具有生物基本信息的非玩家实体类。
+The NPC class represents a non-player character entity class with basic biological information. 
 
-在编写NPC AI脚本时，**self表示当前正在操作的NPC类**。
+_**Note: When writing an NPC AI script, `self` represents the NPC class currently being operated.**_
 
-### 父类
-
-该类的父类为[Entity类](../../../cn/mod/api/entity.md#shi-ti-lei-entity-class)。可直接使用该父类的类成员属性与类成员函数。
-
-### 类成员属性
+### Member
 
 | 属性 | 类型 | 描述 |
 | :--- | :---: | :--- |
@@ -163,22 +160,22 @@ NPC与图块碰撞时调用该函数。
 | Npc.watchAngle | double | **【只读】**NPC的目视角度。若NPC目标存在，则总是目视目标。否则总是根据朝向水平目视。 |
 | Npc.itemSlots | ArrayList&lt;ItemSlot&gt; | 当前NPC自己的物品格子列表。物品格子数目在NPC的AI数据表中指定。 |
 
-### 类成员函数
+### Member Function
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Npc:Kill\(\) | void | 不掉落物品直接清除当前NPC对象。 |
-| Npc:Strike\(Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个对当前NPC的伤害。`attack`表示当前伤害属性，`hitAngle`表示产生伤害的角度，`immune`表示产生当前伤害后是否让NPC处于无敌帧状态，`hurtSound`表示是否播放NPC受伤音效，`lootingLevel`表示掠夺等级。 |
-| Npc:StrikeFromPlayer\(Player player, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个某玩家对当前NPC的伤害。其中`player`表示造成伤害的玩家。 |
-| Npc:StrikeFromNpc\(Npc npc, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | 制造一个某NPC对当前NPC的伤害。其中`npc`表示造成伤害的NPC。 |
+| Npc:Kill\(\) | void | Destroy current NPC entity without dropping items. |
+| Npc:Strike\(Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | Create a damage to the current NPC.`attack` represents the current damage attribute.`hitAngle` represents the angle at which the damage is generated.`immune` represents whether the NPC is in an invincible frame state after the current damage is generated.`hurtSound` represents whether to play the NPC injury sound effect. |
+| Npc:StrikeFromPlayer\(Player player, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | Create a damage to the current NPC from player. `player` represents the player who caused the damage. |
+| Npc:StrikeFromNpc\(Npc npc, Attack attack, double hitAngle = 0, bool immune = true, bool hurtSound = true, int lootingLevel = 0\) | void | Create a damage to the current NPC from other NPC. `npc` represents the NPC who caused the damage. |
 | Npc:GetPlayerTarget\(\) | Player/nil | 若当前NPC的玩家锁定目标存在且存活，返回该玩家对象，否则返回nil。 |
-| Npc:AddBuff\(int buffID, int buffTime\) | void | 为当前NPC添加一个状态效果。若原状态效果存在，以最长时间为新状态效果的持续时间。 |
-| Npc:RemoveBuff\(int buffID\) | void | 移除一个状态效果。 |
-| Npc:RemoveAllBuff\(\) | void | 移除全部状态效果。 |
-| Npc:HasBuff\(int buffID\) | bool | 返回NPC是否拥有指定状态效果。 |
-| Npc:HasAnyBuff\(\) | bool | 返回NPC是否存在状态效果。 |
-| Npc:TryMakeSound\(int tryTimes = 512\) | void | NPC尝试发出平时声音。平均经过tryTimes时间发出一次平时声音。 |
-| Npc:MakeSound\(\) | void | NPC发出平时声音。 |
+| Npc:AddBuff\(int buffID, int buffTime\) | void | Add a buff to the current NPC. If the buff exists and new buff time greater than old's, use new buff time. |
+| Npc:RemoveBuff\(int buffID\) | void | Remove a buff from current NPC. |
+| Npc:RemoveAllBuff\(\) | void | Remove all buffs from current NPC. |
+| Npc:HasBuff\(int buffID\) | bool | Returns whether the NPC has the target buff. |
+| Npc:HasAnyBuff\(\) | bool | Returns whether the NPC has a buff. |
+| Npc:TryMakeSound\(int tryTimes = 512\) | void | The NPC tries to make a normal voice randomly. Sound is emitted once after trying `tryTimes` times on average. |
+| Npc:MakeSound\(\) | void | The NPC makes a normal voice randomly. |
 | Npc:UseTool\(ItemSlot itemSlot, int skJointID\) | void | NPC使用指定物品格子内的工具。itemSlot为指定物品格子，skJointID为当前NPC使用工具的骨骼模型关节ID。 |
 
 ### Movement Member Function
