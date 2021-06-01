@@ -54,103 +54,37 @@ _note: all members read only when the entity is a player._
 
 _note: all members read only when the entity is a player._
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x5C5E;&#x6027;</th>
-      <th style="text-align:center">&#x7C7B;&#x578B;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Entity.spriteDefaultWidth</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x9ED8;&#x8BA4;&#x7ED8;&#x5236;&#x5BBD;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteDefaultHeight</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x9ED8;&#x8BA4;&#x7ED8;&#x5236;&#x9AD8;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteRect</td>
-      <td style="text-align:center">Rectangle</td>
-      <td style="text-align:left">
-        <p>&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x65F6;&#x5728;&#x76EE;&#x6807;&#x8D34;&#x56FE;&#x7684;&#x526A;&#x88C1;&#x533A;&#x57DF;&#x3002;
-          <br
-          /><code>spriteRect.width</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>spriteDefaultWidth</code>
-        </p>
-        <p><code>spriteRect.height</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>spriteDefaultHeight</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteEx</td>
-      <td style="text-align:center">SpriteEx</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x62D3;&#x5C55;&#x4FE1;&#x606F;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteOffsetX</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x6A2A;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0.0&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteOffsetY</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x7EB5;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0.0&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.color</td>
-      <td style="text-align:center">Color</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<em><code>COLOR_WHITE</code></em>&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameTickTime</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7528;&#x7684;&#x5E27;&#x8BA1;&#x65F6;&#x5668;&#x3002;&#xFF08;&#x6BCF;&#x5E27;&#x81EA;&#x589E;1&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameIndex</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x5E27;&#x7D22;&#x5F15;&#xFF0C;&#x5373;<code>(frameTickTime/frameSpeed)%frames</code>&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameStyles</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6837;&#x5F0F;&#x6570;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frames</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x603B;&#x5E27;&#x6570;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameSpeed</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x5E27;&#x5207;&#x6362;&#x5468;&#x671F;&#x3002;</td>
-    </tr>
-  </tbody>
-</table>
-
-#### 其他属性
-
-| 属性 | 类型 | 描述 |
+| Member | Type | Description |
 | :--- | :---: | :--- |
-| Entity.tickTime | int | **【只读】**实体的实际生存的时间。 |
-| Entity.randSeed | int | **【只读】**实体的随机数种子。 |
+| Entity.spriteDefaultWidth | int | **\[ Read-only \]** The default drawing width of the entity. |
+| Entity.spriteDefaultHeight | int | **\[ Read-only \]** The default drawing height of the entity. |
+| Entity.spriteRect | Rectangle | Represents the clipping area of the target texture when the entity is drawn. |
+| Entity.spriteEx | SpriteEx | Sprite extension information when the entity is drawn. |
+| Entity.spriteOffsetX | int | \[ default `0.0` \] The horizontal offset of the entity drawing. |
+| Entity.spriteOffsetY | int | \[ default `0.0` \] The vertical offset of the entity drawing. |
+| Entity.color | Color | \[ default `COLOR_WHITE` \] The color of the entity when it is drawn. |
+| Entity.frameTickTime | int | The frame timer for entity drawing, increments by 1 every update tick. |
+| Entity.frameIndex | int | **\[ Read-only \]** The frame index. Which is `(frameTickTime / frameSpeed) % frames` in C++. |
+| Entity.frameStyles | int | **\[ Read-only \]** The total of entity frame styles. |
+| Entity.frames | int | **\[ Read-only \]** The total of entity frames in one loop. |
+| Entity.frameSpeed | int | **\[ Read-only \]** How many ticks to switch frames. |
 
-### 类成员函数
+#### Other Member
 
-#### 坐标与图形函数
-
-| 函数 | 返回值 | 描述 |
+| Member | Type | Description |
 | :--- | :---: | :--- |
-| Entity:SetCenterX\(double newCenterX\) | void | 将实体中心横坐标设为指定位置。 |
-| Entity:SetCenterY\(double newCenterY\) | void | 将实体中心纵坐标设为指定位置。 |
-| Entity:GetAngleTo\(double desX, double desY\) | double | 返回实体中心点到目标点的角度。 |
-| Entity:GetAngleFrom\(double srcX, double srcY\) | double | 返回来源点到实体中心点的角度。 |
-| Entity:GetDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
-| Entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
-| Entity:RotateSpeed\(double angle\) | void | 在原有速度角度基础上继续旋转指定速度角度。 |
+| Entity.tickTime | int | **\[ Read-only \]** The actual survival time of the entity, increments by 1 every update tick when survival. |
+| Entity.randSeed | int | **\[ Read-only \]** The random seed of current entity. |
+
+### Member Function
+
+| Function | Returns | Description |
+| :--- | :---: | :--- |
+| Entity:SetCenterX\(double newCenterX\) | void | Set the x coordinate of the center of the entity. |
+| Entity:SetCenterY\(double newCenterY\) | void | Set the y coordinate of the center of the entity. |
+| Entity:GetAngleTo\(double desX, double desY\) | double | Returns the angle from the center point of the entity to the target point. |
+| Entity:GetAngleFrom\(double srcX, double srcY\) | double | Returns the angle from the source point to the center point of the entity. |
+| Entity:GetDistance\(double otherX, double otherY\) | double | Returns the distance from the center of the entity to the specified point. |
+| Entity:Rotate\(double angle\) | void | Continue to rotate the specified angle based on the original angle. |
+| Entity:RotateSpeed\(double angle\) | void | Continue to rotate the specified speed angle based on the original speed angle. |
 
