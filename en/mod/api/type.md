@@ -218,7 +218,7 @@ local modData3 = npc3:GetModData()
 
 ### Color
 
-Represents a color with four channels of Alpha \(transparency\), Red, Green, and Blue.
+Represents a color with four channels of alpha \(transparency\), red, green, and blue.
 
 | Member | Type | Description |
 | :--- | :---: | :--- |
@@ -229,8 +229,8 @@ Represents a color with four channels of Alpha \(transparency\), Red, Green, and
 
 | Function | Returns | Description |
 | :--- | :---: | :--- |
-| Color:Set\(int alpha, int red, int green, int blue\) | void | 设置新的颜色。 |
-| Color:Set\(DefaultColor defaultColor\) | void | 设置为指定默认颜色。 |
+| Color:Set\(int alpha, int red, int green, int blue\) | void | Set new color. |
+| Color:Set\(DefaultColor defaultColor\) | void | Set color by default. |
 
 ### PlaceParameter
 
@@ -348,17 +348,17 @@ end
 
 ### DefaultColor
 
-描述默认颜色。
+Represents default color.
 
 | Value | Description |
 | :--- | :--- |
-| _COLOR\_BLACK_ | Black. ARGB=\(255, 0, 0, 0\) |
-| _COLOR\_WHITE_ | White. ARGB=\(255, 2555, 255, 255\) |
-| _COLOR\_GRAY_ | 灰色。ARGB=\(255, 128, 128, 128\) |
-| _COLOR\_RED_ | 红色。ARGB=\(255, 255, 0, 0\) |
-| _COLOR\_GREEN_ | 绿色。ARGB=\(255, 0, 255, 0\) |
-| _COLOR\_BLUE_ | 蓝色。ARGB=\(255, 0, 0, 255\) |
-| _COLOR\_YELLOW_ | 黄色。ARGB=\(255, 255, 255, 0\) |
+| _COLOR\_BLACK_ | ARGB=\(255, 0, 0, 0\) |
+| _COLOR\_WHITE_ | ARGB=\(255, 2555, 255, 255\) |
+| _COLOR\_GRAY_ | ARGB=\(255, 128, 128, 128\) |
+| _COLOR\_RED_ | ARGB=\(255, 255, 0, 0\) |
+| _COLOR\_GREEN_ | ARGB=\(255, 0, 255, 0\) |
+| _COLOR\_BLUE_ | ARGB=\(255, 0, 0, 255\) |
+| _COLOR\_YELLOW_ | ARGB=\(255, 255, 255, 0\) |
 
 ### LightingState
 
