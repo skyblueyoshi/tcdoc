@@ -125,12 +125,12 @@ local modData3 = npc3:GetModData()
 
 ### Point
 
-表示一个点。
+Represents a point.
 
-| 属性 | 类型 | 描述 |
+| Member | Type | Description |
 | :--- | :---: | :--- |
-| Point.x | double | 点的横坐标。 |
-| Point.y | double | 点的纵坐标。 |
+| Point.x | double | The x coordinate of the point. |
+| Point.y | double | The y coordinate of the point. |
 
 ### Rectangle
 
