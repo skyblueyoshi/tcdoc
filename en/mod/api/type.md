@@ -134,18 +134,18 @@ local modData3 = npc3:GetModData()
 
 ### Rectangle
 
-表示一个轴对齐矩形。
+Represents an axis-aligned rectangle.
 
-| 属性 | 类型 | 描述 |
+| Member | Type | Description |
 | :--- | :---: | :--- |
-| Rectangle.x | int | 矩形左上角横坐标。 |
-| Rectangle.y | int | 矩形左上角纵坐标。 |
-| Rectangle.width | int | 矩形宽度。 |
-| Rectangle.height | int | 矩形高度。 |
+| Rectangle.x | int | The x coordinate of the upper left corner of the rectangle. |
+| Rectangle.y | int | The y coordinate of the upper left corner of the rectangle. |
+| Rectangle.width | int | The width of the rectangle. |
+| Rectangle.height | int | The height of the rectangle. |
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Rectangle:Set\(int x, int y, int width, int height\) | void | 设置新的矩形。 |
+| Rectangle:Set\(int x, int y, int width, int height\) | void | Set a new rectangle. |
 
 ### SpriteEx
 
