@@ -32,7 +32,11 @@ VS Code官网：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ![](../../../.gitbook/assets/image%20%289%29.png)
 
-（可选）您还可以继续安装一个**Lua Helper**插件，提高开发效率。
+【重要】安装**EmmyLua**插件，以支持自动补全功能。安装完后如图所示：
+
+![](../../../.gitbook/assets/image%20%2823%29.png)
+
+
 
 ## **安装中文语言包（可选）**
 

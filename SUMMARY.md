@@ -3,6 +3,7 @@
 * [TerraCraft](README.md)
 * [English](en/README.md)
   * [Mod Document](en/mod/README.md)
+    * [Mod Dev Tutorial](en/mod/mod-dev-tutorial.md)
     * [Mod API Document](en/mod/api/README.md)
       * [Data Types and Enums](en/mod/api/type.md)
       * [JSON](en/mod/api/json.md)
