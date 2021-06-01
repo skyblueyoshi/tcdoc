@@ -1,4 +1,4 @@
-# Entity API
+# Entity
 
 ## Entity Class
 
