@@ -7,6 +7,7 @@
       * [Data Types and Enums](en/mod/api/type.md)
       * [JSON](en/mod/api/json.md)
       * [Entity](en/mod/api/entity.md)
+      * [NPC](en/mod/api/npc.md)
 * [简体中文](cn/README.md)
   * [模组文档](cn/mod/README.md)
     * [模组数据表文档](cn/mod/datatable/README.md)

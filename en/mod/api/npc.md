@@ -1,4 +1,4 @@
-# NPC API
+# NPC
 
 NPC泛指除了玩家之外的所有生物，如动物、敌怪、村民、BOSS等。
 
@@ -130,7 +130,7 @@ NPC与图块碰撞时调用该函数。
 
 ### 父类
 
-该类的父类为[Entity类](entity.md#shi-ti-lei-entity-class)。可直接使用该父类的类成员属性与类成员函数。
+该类的父类为[Entity类](../../../cn/mod/api/entity.md#shi-ti-lei-entity-class)。可直接使用该父类的类成员属性与类成员函数。
 
 ### 类成员属性
 
@@ -181,86 +181,89 @@ NPC与图块碰撞时调用该函数。
 | Npc:MakeSound\(\) | void | NPC发出平时声音。 |
 | Npc:UseTool\(ItemSlot itemSlot, int skJointID\) | void | NPC使用指定物品格子内的工具。itemSlot为指定物品格子，skJointID为当前NPC使用工具的骨骼模型关节ID。 |
 
-### 运动模板函数
+### Movement Member Function
 
-调用这些函数执行内置的运动逻辑。
+Call these functions to execute the built-in movement logic.
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| Npc:Stand\(bool faceToTarget = true\) | void | 执行**静立**运动模板。 |
-| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | 执行**随机行走**运动模板。 |
-| Npc:KeepWalking\(bool followTarget = true\) | void | 执行**持续行走**运动模板。 |
-| Npc:Walk\(bool followTarget = true\) | void | 执行_**行走运动**_模板。 |
-| Npc:Swim\(bool followTarget = true\) | void | 执行**游泳**模板。 |
-| Npc:Fly\(bool followTarget = true, double force = 0.1, bool gradientSpeed = false\) | void | 执行**飞行**模板。 |
-| Npc:RandomTeleport\(int distance, bool noToAir = true, bool noToLiquid = true\) | bool | 执行**随机传送**模板。 |
+| Npc:Stand\(bool faceToTarget = true\) | void | See below. |
+| Npc:RandomWalk\(int idleTime = 128, int idleTimeOffset = 64, int walkTime = 96, int walkTimeOffset = 32\) | void | See below. |
+| Npc:KeepWalking\(bool followTarget = true\) | void | See below. |
+| Npc:Walk\(bool followTarget = true\) | void | See below. |
+| Npc:Swim\(bool followTarget = true\) | void | See below. |
+| Npc:Fly\(bool followTarget = true, double force = 0.1, bool gradientSpeed = false\) | void | See below. |
+| Npc:RandomTeleport\(int distance, bool noToAir = true, bool noToLiquid = true\) | bool | See below. |
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">&#x8FD0;&#x52A8;&#x6A21;&#x677F;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
+      <th style="text-align:left">Movement</th>
+      <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>&#x9759;&#x7ACB;</b>
-      </td>
-      <td style="text-align:left">&#x7AD9;&#x7ACB;&#x9759;&#x6B62;&#x4E0D;&#x52A8;&#x3002;&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>faceToTarget</code>&#x8868;&#x793A;&#x59CB;&#x7EC8;&#x9762;&#x671D;&#x73A9;&#x5BB6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>&#x968F;&#x673A;&#x884C;&#x8D70;</b>
-      </td>
+      <td style="text-align:left">Stand</td>
       <td style="text-align:left">
-        <p>&#x968F;&#x673A;&#x5730;&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x6216;&#x505C;&#x4E0B;&#x6216;&#x8F6C;&#x5F2F;&#x3002;</p>
-        <p>&#x505C;&#x4E0B;&#x65F6;&#x95F2;&#x7F6E;<code>idleTime &#xB1; idleTimeOffset</code>&#x8303;&#x56F4;&#x5185;&#x968F;&#x673A;&#x65F6;&#x95F4;&#x3002;</p>
-        <p>&#x671D;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x884C;&#x8D70;&#x65F6;&#x6301;&#x7EED;<code>walkTime &#xB1; walkTimeOffset</code>&#x8303;&#x56F4;&#x5185;&#x968F;&#x673A;&#x65F6;&#x95F4;&#x3002;</p>
-        <p>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5BFB;&#x8DEF;&#x903B;&#x8F91;&#xFF0C;&#x9047;&#x5230;&#x5899;&#x58C1;&#x4F1A;&#x5C1D;&#x8BD5;&#x8DF3;&#x8DC3;3&#x6B21;&#x3002;</p>
+        <p>Just stand and no move.</p>
+        <p><code>faceToTarget</code> represents whether to always face the player.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>&#x6301;&#x7EED;&#x884C;&#x8D70;</b>
-      </td>
+      <td style="text-align:left">RandomWalk</td>
       <td style="text-align:left">
-        <p>&#x6301;&#x7EED;&#x884C;&#x8D70;&#x800C;&#x4E0D;&#x505C;&#x4E0B;&#x3002;
-          <br
-          /><code>followTarget</code>&#x8868;&#x793A;&#x5728;&#x76EE;&#x6807;&#x5B58;&#x5728;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;</p>
-        <p>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x5BFB;&#x8DEF;&#x903B;&#x8F91;&#xFF0C;&#x9047;&#x5230;&#x5899;&#x58C1;&#x4F1A;&#x5C1D;&#x8BD5;&#x8DF3;&#x8DC3;3&#x6B21;&#x3002;</p>
+        <p>Randomly walk or stop or turn the direction.</p>
+        <p>Random time within the range of <code>idleTime &#xB1; idleTimeOffset</code> when
+          it stops.</p>
+        <p>When walking in one direction, continue for a random time within the range
+          of <code>walkTime &#xB1; walkTimeOffset</code>.</p>
+        <p>This function will use the built-in pathfinding logic and it will try
+          to jump 3 times when touch a wall.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>&#x884C;&#x8D70;</b>
-      </td>
+      <td style="text-align:left">KeepWalking</td>
       <td style="text-align:left">
-        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x91C7;&#x7528;<em><b>&#x6301;&#x7EED;&#x884C;&#x8D70;</b></em>&#x6A21;&#x677F;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;</p>
-        <p>&#x76EE;&#x6807;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x91C7;&#x7528;<em><b>&#x968F;&#x673A;&#x884C;&#x8D70;</b></em>&#x6A21;&#x677F;&#x3002;</p>
+        <p>Keep walking without stopping.
+          <br /><code>followTarget</code>represents that if the target exists, it will
+          walk towards the target as possible.</p>
+        <p>This function will use the built-in pathfinding logic and it will try
+          to jump 3 times when touch a wall.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>&#x6E38;&#x6CF3;</b>
-      </td>
+      <td style="text-align:left">Walk</td>
+      <td style="text-align:left">When the target exists, call <code>KeepWalking(followTarget)</code>, otherwise
+        call <code>RandomWalk()</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Swim</td>
       <td style="text-align:left">
-        <p>&#x5728;&#x6D41;&#x4F53;&#x4E2D;&#x6E38;&#x6CF3;&#xFF0C;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x8E66;&#x8DF6;&#x3002;</p>
-        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#x3002;&#x5426;&#x5219;&#x5728;&#x6D41;&#x4F53;&#x4E2D;&#x968F;&#x673A;&#x8FD0;&#x52A8;&#x3002;</p>
+        <p>Swim in the liquid, bouncing in the air.</p>
+        <p>When the target does not exist, it moves randomly in the liquid.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>&#x98DE;&#x884C;</b>
-      </td>
+      <td style="text-align:left">Fly</td>
       <td style="text-align:left">
-        <p>&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x98DE;&#x884C;&#x3002;</p>
-        <p>&#x76EE;&#x6807;&#x5B58;&#x5728;&#x65F6;&#xFF0C;<code>followTarget</code>&#x8868;&#x793A;&#x5C3D;&#x53EF;&#x80FD;&#x9760;&#x8FD1;&#x76EE;&#x6807;&#xFF0C;<code>force</code>&#x8868;&#x793A;&#x98DE;&#x5411;&#x76EE;&#x6807;&#x7684;&#x529B;&#xFF0C;<code>gradientSpeed</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x6E10;&#x53D8;&#x901F;&#x5EA6;&#xFF0C;&#x5426;&#x5219;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5927;&#x5C0F;&#x603B;&#x662F;&#x6052;&#x5B9A;&#x7684;&#x3002;
-          <br
-          />&#x76EE;&#x6807;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x5728;&#x7A7A;&#x6C14;&#x4E2D;&#x968F;&#x673A;&#x8FD0;&#x52A8;&#x3002;</p>
+        <p>Flying in the air.</p>
+        <p><code>followTarget </code>represents that if the target exists, it will
+          walk towards the target as possible, otherwise flies randomly.</p>
+        <p><code>force</code> represents the force to fly towards the target.</p>
+        <p><code>gradientSpeed</code> indicates whether to use gradual speed, otherwise
+          the vector length of the speed is always constant.</p>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>&#x968F;&#x673A;&#x4F20;&#x9001;</b>
-      </td>
+      <td style="text-align:left">RandomTeleport</td>
       <td style="text-align:left">
-        <p>&#x4F20;&#x9001;NPC&#x81EA;&#x5DF1;&#x5230;&#x4EE5;&#x81EA;&#x5DF1;&#x4E3A;&#x5706;&#x5FC3;&#x7684;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x968F;&#x673A;&#x4F4D;&#x7F6E;&#x3002;</p>
-        <p><code>distance</code>&#x8868;&#x793A;&#x5706;&#x5F62;&#x533A;&#x57DF;&#x7684;&#x534A;&#x5F84;&#xFF0C;<code>noToAir</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x534A;&#x7A7A;&#x4E2D;&#xFF08;&#x5373;&#x4F20;&#x9001;&#x5230;&#x5730;&#x9762;&#x4E0A;&#xFF09;&#xFF0C;<code>noToLiquid</code>&#x8868;&#x793A;&#x662F;&#x5426;&#x4E0D;&#x4F20;&#x9001;&#x5230;&#x6D41;&#x4F53;&#x5185;&#x3002;</p>
-        <p>&#x82E5;&#x4F20;&#x9001;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;true&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;false&#x3002;</p>
+        <p>Send the NPC to a random location in a circular area centered on itself.</p>
+        <p><code>distance</code> represents the radius of the circular area.
+          <br /><code>noToAir</code> represents whether it will be teleported to the ground.</p>
+        <p><code>noToLiquid</code> represents whether it will not be teleported into
+          any liquid.</p>
+        <p>Returns true if teleport success, otherwise returns false.</p>
       </td>
     </tr>
   </tbody>

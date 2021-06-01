@@ -270,23 +270,25 @@ end
 
 ### NetMode
 
-描述当前脚本为客户端或者服务端。注意单人模式下客户端和内置服务端是同时运行的。
+Describe the runtime environment is the client or server. 
 
-| 枚举值 | 描述 |
+_**Note that the client and built-in server are running at the same time in single mode.**_
+
+| Enum | Description |
 | :--- | :--- |
-| _NET\_MODE\_SERVER_ | 当前脚本为服务端环境。 |
-| _NET\_MODE\_CLIENT_ | 当前脚本为客户端环境。 |
+| _NET\_MODE\_SERVER_ | The runtime environment is server. |
+| _NET\_MODE\_CLIENT_ | The runtime environment is client. |
 
 ### Direction
 
-描述方向。
+Represents what the direction is.
 
-| 枚举值 | 描述 |
+| Enum | Description |
 | :--- | :--- |
-| _DIRECTION\_LEFT_ | 左边。 |
-| _DIRECTION\_TOP_ | 上面。 |
-| _DIRECTION\_BOTTOM_ | 下面。 |
-| _DIRECTION\_RIGHT_ | 右边。 |
+| _DIRECTION\_LEFT_ | Left. |
+| _DIRECTION\_TOP_ | Top. |
+| _DIRECTION\_BOTTOM_ | Bottom. |
+| _DIRECTION\_RIGHT_ | Right. |
 
 ### Shape
 
