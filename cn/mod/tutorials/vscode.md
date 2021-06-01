@@ -32,9 +32,9 @@ VS Code官网：[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ![](../../../.gitbook/assets/image%20%289%29.png)
 
-【重要】安装**EmmyLua**插件，以支持自动补全功能。安装完后如图所示：
+【重要】安装**EmmyLua**插件，以全面支持自动补全功能。安装完后如图所示：
 
-![](../../../.gitbook/assets/image%20%2823%29.png)
+![](../../../.gitbook/assets/image%20%2825%29.png)
 
 
 

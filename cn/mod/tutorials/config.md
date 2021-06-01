@@ -2,9 +2,9 @@
 
 ## 创建模组文件夹
 
-在游戏主目录的devmods文件夹内创建一个文件夹作为将要开发Mod的模组文件夹，文件夹名称任意取名。
+将游戏主目录的`empty_mod`文件夹完整地复制粘贴到游戏主目录的`devmods`文件夹内，作为将要开发Mod的模组文件夹，并将文件夹名称重命名为模组名称。
 
-> _注：本教程以“ExampleMod”为例子，在devmods文件夹内创建"ExampleMod"文件夹，请按自己想要开发的模组名称给文件夹命名。_
+> _注：本教程以“ExampleMod”为例子，将文件夹重命名为ExampleMod，请按自己想要开发的模组名称给文件夹命名。_
 
 ## 使用VS Code打开模组文件夹
 
@@ -13,10 +13,6 @@
 ![](../../../.gitbook/assets/image%20%2813%29.png)
 
 ## 配置模组基本信息
-
-在所打开的ExampleMod文件夹项目在如图位置点击**New File**按钮，创建tcmod.json作为当前模组的主要配置表。
-
-![](../../../.gitbook/assets/image%20%2816%29.png)
 
 在tcmod.json文件中编写模组的基本信息。
 
@@ -54,9 +50,17 @@
 
 正确配置模组的界面如图，注意右下角必须使用`UTF8`格式对JSON文件编码。
 
-![](../../../.gitbook/assets/image%20%2820%29.png)
+![](../../../.gitbook/assets/image%20%2823%29.png)
 
 ## 检测模组是否配置成功
 
 直接运行**TerraCraft.exe**，在菜单界面中点击“模组”按钮，若看到自己的模组在模组列表内，表示你的模组加载成功！
+
+![](../../../.gitbook/assets/image%20%2824%29.png)
+
+## 配置API
+
+当游戏本体更新时，您需要将最新的`empty_mod/apis`文件夹覆盖到您的模组项目的`apis`文件夹中。apis文件夹用于给**EmmyLua**插件提供自动补全的功能。
+
+![](../../../.gitbook/assets/11.gif)
 
