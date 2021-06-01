@@ -1,12 +1,12 @@
 # Table of contents
 
 * [TerraCraft](README.md)
-* [English](english/README.md)
-  * [Mod Document](english/test/README.md)
-    * [Mod API Document](english/test/mod-api-document/README.md)
-      * [Data Types and Enums](english/test/mod-api-document/type.md)
-      * [JSON API](english/test/mod-api-document/json-api.md)
-      * [Entity API](english/test/mod-api-document/entity-api.md)
+* [English](en/README.md)
+  * [Mod Document](en/mod/README.md)
+    * [Mod API Document](en/mod/api/README.md)
+      * [Data Types and Enums](en/mod/api/type.md)
+      * [JSON API](en/mod/api/json-api.md)
+      * [Entity API](en/mod/api/entity-api.md)
 * [简体中文](cn/README.md)
   * [模组文档](cn/mod/README.md)
     * [模组数据表文档](cn/mod/datatable/README.md)
