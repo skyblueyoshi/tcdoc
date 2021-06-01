@@ -290,12 +290,12 @@ end
 
 ### Shape
 
-描述形状类型。
+Represents a shape.
 
-| 枚举值 | 描述 |
+| Enum | Description |
 | :--- | :--- |
-| _SHAPE\_BOX_ | 碰撞箱形状为轴对齐矩形。 |
-| _SHAPE\_ROTATE\_BOX_ | 碰撞箱形状为旋转矩形。 |
+| _SHAPE\_BOX_ | The shape of the hitbox is an axis-aligned rectangle. |
+| _SHAPE\_ROTATE\_BOX_ | The shape of the hitbox is a rotating rectangle. |
 
 ### ItemType
 
@@ -350,7 +350,7 @@ end
 
 Represents default color.
 
-| Value | Description |
+| Enum | Description |
 | :--- | :--- |
 | _COLOR\_BLACK_ | ARGB=\(255, 0, 0, 0\) |
 | _COLOR\_WHITE_ | ARGB=\(255, 255, 255, 255\) |
