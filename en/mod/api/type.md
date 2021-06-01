@@ -149,21 +149,21 @@ Represents an axis-aligned rectangle.
 
 ### SpriteEx
 
-绘制拓展信息，决定绘制的相关参数。
+Sprite extension information, has the relevant parameters of drawing.
 
-| 属性 | 类型 | 描述 |
+| Member | Type | Description |
 | :--- | :--- | :--- |
-| SpriteEx.scaleRateX | float | 贴图绘制时横向缩放尺寸。（默认为1.0） |
-| SpriteEx.scaleRateY | float | 贴图绘制时纵向缩放尺寸。（默认为1.0） |
-| SpriteEx.rotateX | float | 贴图的旋转中心点X。（若绘制对象为实体，默认为实体中心，否则默认为0.0） |
-| SpriteEx.rotateY | float | 贴图的旋转中心点Y。（若绘制对象为实体，默认为实体中心，否则默认为0.0） |
-| SpriteEx.angle | float | 贴图绘制时的旋转角度。（默认为0.0） |
-| SpriteEx.flipHorizontal | bool | 贴图绘制时是否水平翻转。（默认为false） |
-| SpriteEx.flipVertical | bool | 贴图绘制时是否竖直翻转。（默认为false） |
+| SpriteEx.scaleRateX | float | \[ default `1.0` \] The horizontal zoom size when the sprite is drawn. |
+| SpriteEx.scaleRateY | float | \[ default `1.0` \] The vertical zoom size when the sprite is drawn. |
+| SpriteEx.rotateX | float | The center point X of the sprite's rotation. If the drawing object is an entity, the default is the center of the entity, otherwise the default is 0.0. |
+| SpriteEx.rotateY | float | The center point Y of the sprite's rotation. If the drawing object is an entity, the default is the center of the entity, otherwise the default is 0.0. |
+| SpriteEx.angle | float | \[ default `0.0` \] The rotation angle when the sprite is drawn. |
+| SpriteEx.flipHorizontal | bool | \[ default `false` \] Whether to flip horizontally when the sprite is drawn. |
+| SpriteEx.flipVertical | bool | \[ default `false` \] Whether to flip vertically when the sprite is drawn. |
 
-| 函数 | 返回值 | 描述 |
+| Function | Returns | Description |
 | :--- | :---: | :--- |
-| SpriteEx:SetDefault\(\) | void | 恢复默认值。 |
+| SpriteEx:SetDefault\(\) | void | Restore Defaults. |
 
 ### Hitbox
 
