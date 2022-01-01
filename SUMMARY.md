@@ -48,6 +48,7 @@
       * [ModNpc](cn/mod/game-api/modnpc.md)
       * [Npc : Entity](cn/mod/game-api/npc-entity.md)
       * [NpcUtils](cn/mod/game-api/npcutils.md)
+      * [Reg](cn/mod/game-api/reg.md)
     * [模组API文档](cn/mod/api/README.md)
       * [数据类型、枚举类型](cn/mod/api/type.md)
       * [JSON API](cn/mod/api/json.md)

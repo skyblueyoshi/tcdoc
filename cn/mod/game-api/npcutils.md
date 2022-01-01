@@ -4,6 +4,8 @@ description: NPC通用模块。
 
 # NpcUtils
 
+NPC通用模块。
+
 ## 函数
 
 | 函数                                                                                                                                                                                                                                                                      |

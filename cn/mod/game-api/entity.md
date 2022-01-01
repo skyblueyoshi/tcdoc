@@ -4,6 +4,8 @@ description: 实体（Entity）类表示拥有图形以及碰撞检测相关的�
 
 # Entity
 
+实体（Entity）类表示拥有图形以及碰撞检测相关的基本属性的对象。 Npc类、Projectile类、Effect类、Player类继承Entity类。
+
 ## 属性
 
 | 属性                                                                                                                                                                                                          |

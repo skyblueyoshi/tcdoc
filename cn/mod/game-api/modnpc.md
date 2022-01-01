@@ -4,6 +4,8 @@ description: 每个Npc实例都会挂载一个ModNpc对象。
 
 # ModNpc
 
+每个Npc实例都会挂载的一个ModNpc对象。
+
 ## 属性
 
 | 属性                                                    |
