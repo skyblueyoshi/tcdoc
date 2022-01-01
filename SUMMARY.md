@@ -14,6 +14,7 @@
     * [API](cn/mod/api/README.md)
       * [Entity](cn/mod/api/entity.md)
       * [ModNpc](cn/mod/api/modnpc.md)
+      * [NpcUtils](cn/mod/api/npcutils.md)
       * [Npc](cn/mod/api/npc.md)
     * [模组API文档](cn/mod/api-1/README.md)
       * [数据类型、枚举类型](cn/mod/api-1/type.md)
