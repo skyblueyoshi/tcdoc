@@ -13,5 +13,3 @@ description: NPC通用模块。
 | <p><strong>ArrayList&#x3C;Npc> NpcUtils.SearchByCircle(double centerX, double centerY, int radius)</strong><br>返回包含于指定圆形区域内部的所有NPC列表。</p>                                                                                                                               |
 | <p><strong>Npc/nil NpcUtils.SearchNearestNpc(double centerX, double centerY, int radius, bool noCrossTiles = false)</strong><br>搜索在指定圆形区域内部距离圆心最近的NPC，返回该NPC。若结果不存在，返回nil。<code>noCrossTiles</code>表示是否排除中心到圆心的连线被图格遮挡的NPC。</p>                                         |
 | <p><strong>Npc/nil NpcUtils.SearchNearestEnemy(double centerX, double centerY, int radius, bool noCrossTiles = false)</strong><br>搜索在指定圆形区域内部距离圆心最近的敌对NPC，返回该NPC。若结果不存在，返回nil。noCrossTiles表示是否排除中心到圆心的连线被图格遮挡的NPC。</p>                                                  |
-
-## NPC类（Npc Class，继承自Entity Class）
