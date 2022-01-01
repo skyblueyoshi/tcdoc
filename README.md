@@ -10,6 +10,4 @@ The ultimate goal of TerraCraft is to support a large number of mods in the _INF
 
 ## TerraCraftX
 
-**TerraCraftX \(TCX\)** project is a mod package collection. We welcome everyone to make your own mods, integrate your modules into TCX to share your mods with others!  
-
-
+**TerraCraftX (TCX)** project is a mod package collection. We welcome everyone to make your own mods, integrate your modules into TCX to share your mods with others!\

@@ -1,246 +1,63 @@
-# 实体API
+# Entity
 
-## 实体类（Entity Class）
+### 属性
 
-**实体（Entity）**类表示拥有图形以及碰撞检测相关的基本属性的对象。
+| 属性                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>double x</p><p>实体左上角横坐标。</p>                                                                                                                                                            |
+| <p>double y<br>实体左上角纵坐标。</p>                                                                                                                                                               |
+| <p>double centerX<br><strong>【只读】</strong>实体正中间横坐标。</p>                                                                                                                                    |
+| <p>double centerY<br><strong>【只读】</strong>实体正中间纵坐标。</p>                                                                                                                                    |
+| <p>int centerXi<br><strong>【只读】</strong>实体正中间格子横坐标。</p>                                                                                                                                    |
+| <p>int centerYi<br><strong>【只读】</strong>实体正中间格子纵坐标。</p>                                                                                                                                    |
+| <p>double rightX<br><strong>【只读】</strong>实体最右侧横坐标。</p>                                                                                                                                     |
+| <p>double bottomY<br><strong>【只读】</strong>实体最底部纵坐标。</p>                                                                                                                                    |
+| <p>double speedX<br>实体横向速度。</p>                                                                                                                                                            |
+| <p>double speedY<br>实体纵向速度。</p>                                                                                                                                                            |
+| <p>double gravity<br>实体的重力加速度。</p>                                                                                                                                                         |
+| <p>int width<br><strong>【只读】</strong>实体碰撞箱宽度。</p>                                                                                                                                          |
+| <p>int height<br><strong>【只读】</strong>实体碰撞箱高度。</p>                                                                                                                                         |
+| <p>bool direction<br>实体朝向。<br>实体面朝左侧为false。</p><p>实体面朝右侧为true。</p><p>（当实体为玩家时只读）</p>                                                                                                       |
+| <p>double rotateAngle<br>实体碰撞箱的旋转角度。</p>                                                                                                                                                   |
+| <p>double speedAngle<br><strong>【只读】</strong>当前实体运动速度的向量夹角。</p>                                                                                                                            |
+| <p>double randX<br><strong>【只读】</strong>实体横向投影上的随机横坐标。</p>                                                                                                                                 |
+| <p>double randY<br><strong>【只读】</strong>实体纵向投影上的随机纵坐标。</p>                                                                                                                                 |
+| <p>Shape shape<br><strong>【只读】</strong>实体碰撞箱形状。</p>                                                                                                                                        |
+| <p>bool stand<br><strong>【只读】</strong>实体是否为站立状态（底部碰撞）。</p>                                                                                                                                 |
+| <p>bool isCollisionTop<br><strong>【只读】</strong>实体是否顶部发生碰撞。</p>                                                                                                                             |
+| <p>bool isCollisionLeft<br><strong>【只读】</strong>实体是否左侧发生碰撞。</p>                                                                                                                            |
+| <p>bool isCollisionRight<br><strong>【只读】</strong>实体是否右侧发生碰撞。</p>                                                                                                                           |
+| <p>bool isCollisionStuck<br><strong>【只读】</strong>实体是否卡在方块内部。</p>                                                                                                                           |
+| <p>bool isNoCollision<br><strong>【只读】</strong>实体是否没有发生任何形式的碰撞。</p>                                                                                                                         |
+| <p>bool onSlope<br>【只读<strong>】</strong>实体是否站在斜坡上。</p>                                                                                                                                     |
+| <p>Hitbox hitbox<br><strong>【只读】</strong>若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。</p>                                                                                                                |
+| <p>Hitbox aabb<br><strong>【只读】</strong>实体旋转角度为0的轴对齐碰撞箱。</p>                                                                                                                                |
+| <p>Hitbox minAABB<br><strong>【只读】</strong>完全包裹实体的最小轴对齐碰撞箱。</p>                                                                                                                             |
+| <p>bool allowCheckCollision<br>决定是否执行与方块的碰撞检测。</p>                                                                                                                                         |
+| <p>int spriteDefaultWidth<br><strong>【只读】</strong>实体默认绘制宽度。</p>                                                                                                                            |
+| <p>int spriteDefaultHeight<br><strong>【只读】</strong>实体默认绘制高度。</p>                                                                                                                           |
+| <p>Rectangle spriteRect<br>实体绘制时在目标贴图的剪裁区域。<br><code>spriteRect.width</code>默认为<code>spriteDefaultWidth</code></p><p><code>spriteRect.height</code>默认为<code>spriteDefaultHeight</code></p> |
+| <p>SpriteEx spriteEx<br>实体绘制的拓展信息。</p>                                                                                                                                                     |
+| <p>int spriteOffsetX<br>实体绘制的横向偏移量。（默认为0.0）</p>                                                                                                                                            |
+| <p>int spriteOffsetY<br>实体绘制的纵向偏移量。（默认为0.0）</p>                                                                                                                                            |
+| <p>Color color<br>实体绘制的颜色。（默认为<em><code>COLOR_WHITE</code></em>）</p>                                                                                                                       |
+| <p>int frameTickTime<br>实体绘制用的帧计时器。（每帧自增1）</p>                                                                                                                                             |
+| <p>int frameIndex<br><strong>【只读】</strong>当前实体帧索引，即<code>(frameTickTime/frameSpeed)%frames</code>。</p>                                                                                     |
+| <p>int frameStyles<br><strong>【只读】</strong>实体样式数。</p>                                                                                                                                      |
+| <p>int frames<br><strong>【只读】</strong>实体总帧数。</p>                                                                                                                                           |
+| <p>int frameSpeed<br><strong>【只读】</strong>实体帧切换周期。</p>                                                                                                                                     |
+| <p>int tickTime<br><strong>【只读】</strong>实体的实际生存的时间。</p>                                                                                                                                    |
+| <p>int randSeed<br><strong>【只读】</strong>实体的随机数种子。</p>                                                                                                                                      |
 
-Npc类、Projectile类、Effect类、Player类的基类均为Entity类，都可以使用如下的成员属性和成员函数。
+### 函数
 
-### 类成员属性
-
-#### 坐标与图形属性（当实体为玩家时全部只读）
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x5C5E;&#x6027;</th>
-      <th style="text-align:center">&#x7C7B;&#x578B;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Entity.x</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x5DE6;&#x4E0A;&#x89D2;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.y</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x5DE6;&#x4E0A;&#x89D2;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.centerX</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.centerY</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.centerXi</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x683C;&#x5B50;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.centerYi</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6B63;&#x4E2D;&#x95F4;&#x683C;&#x5B50;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.rightX</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6700;&#x53F3;&#x4FA7;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.bottomY</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6700;&#x5E95;&#x90E8;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.speedX</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x6A2A;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.speedY</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x901F;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.gravity</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x91CD;&#x529B;&#x52A0;&#x901F;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.width</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5BBD;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.height</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x9AD8;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.direction</td>
-      <td style="text-align:center">bool</td>
-      <td style="text-align:left">
-        <p>&#x5B9E;&#x4F53;&#x671D;&#x5411;&#x3002;
-          <br />&#x5B9E;&#x4F53;&#x9762;&#x671D;&#x5DE6;&#x4FA7;&#x4E3A;false&#x3002;</p>
-        <p>&#x5B9E;&#x4F53;&#x9762;&#x671D;&#x53F3;&#x4FA7;&#x4E3A;true&#x3002;</p>
-        <p>&#xFF08;&#x5F53;&#x5B9E;&#x4F53;&#x4E3A;&#x73A9;&#x5BB6;&#x65F6;&#x53EA;&#x8BFB;&#xFF09;</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.rotateAngle</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x7684;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.speedAngle</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x8FD0;&#x52A8;&#x901F;&#x5EA6;&#x7684;&#x5411;&#x91CF;&#x5939;&#x89D2;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.randX</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6A2A;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x6A2A;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.randY</td>
-      <td style="text-align:center">double</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x7EB5;&#x5411;&#x6295;&#x5F71;&#x4E0A;&#x7684;&#x968F;&#x673A;&#x7EB5;&#x5750;&#x6807;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.shape</td>
-      <td style="text-align:center">Shape</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x78B0;&#x649E;&#x7BB1;&#x5F62;&#x72B6;&#x3002;</td>
-    </tr>
-  </tbody>
-</table>
-
-#### 碰撞检测属性
-
-| 属性 | 类型 | 描述 |
-| :--- | :---: | :--- |
-| Entity.stand | bool | **【只读】**实体是否为站立状态（底部碰撞）。 |
-| Entity.isCollisionTop | bool | **【只读】**实体是否顶部发生碰撞。 |
-| Entity.isCollisionLeft | bool | **【只读】**实体是否左侧发生碰撞。 |
-| Entity.isCollisionRight | bool | **【只读】**实体是否右侧发生碰撞。 |
-| Entity.isCollisionStuck | bool | **【只读】**实体是否卡在方块内部。 |
-| Entity.isNoCollision | bool | **【只读】**实体是否没有发生任何形式的碰撞。 |
-| Entity.onSlope | bool | **【只读】**实体是否站在斜坡上。 |
-| Entity.hitbox | Hitbox | **【只读】**若实体为轴对齐矩形，表轴对齐碰撞箱，否则表示旋转矩形碰撞箱。 |
-| Entity.aabb | Hitbox | **【只读】**实体旋转角度为0的轴对齐碰撞箱。 |
-| Entity.minAABB | Hitbox | **【只读】**完全包裹实体的最小轴对齐碰撞箱。 |
-| Entity.allowCheckCollision | bool | 决定是否执行与方块的碰撞检测。 |
-
-#### 绘制相关属性（当实体为玩家时全部只读）
-
-您可以通过修改如下属性来自定义实体的绘制方式。
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">&#x5C5E;&#x6027;</th>
-      <th style="text-align:center">&#x7C7B;&#x578B;</th>
-      <th style="text-align:left">&#x63CF;&#x8FF0;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Entity.spriteDefaultWidth</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x9ED8;&#x8BA4;&#x7ED8;&#x5236;&#x5BBD;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteDefaultHeight</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x9ED8;&#x8BA4;&#x7ED8;&#x5236;&#x9AD8;&#x5EA6;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteRect</td>
-      <td style="text-align:center">Rectangle</td>
-      <td style="text-align:left">
-        <p>&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x65F6;&#x5728;&#x76EE;&#x6807;&#x8D34;&#x56FE;&#x7684;&#x526A;&#x88C1;&#x533A;&#x57DF;&#x3002;
-          <br
-          /><code>spriteRect.width</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>spriteDefaultWidth</code>
-        </p>
-        <p><code>spriteRect.height</code>&#x9ED8;&#x8BA4;&#x4E3A;<code>spriteDefaultHeight</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteEx</td>
-      <td style="text-align:center">SpriteEx</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x62D3;&#x5C55;&#x4FE1;&#x606F;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteOffsetX</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x6A2A;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0.0&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.spriteOffsetY</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x7EB5;&#x5411;&#x504F;&#x79FB;&#x91CF;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;0.0&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.color</td>
-      <td style="text-align:center">Color</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7684;&#x989C;&#x8272;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<em><code>COLOR_WHITE</code></em>&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameTickTime</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left">&#x5B9E;&#x4F53;&#x7ED8;&#x5236;&#x7528;&#x7684;&#x5E27;&#x8BA1;&#x65F6;&#x5668;&#x3002;&#xFF08;&#x6BCF;&#x5E27;&#x81EA;&#x589E;1&#xFF09;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameIndex</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5F53;&#x524D;&#x5B9E;&#x4F53;&#x5E27;&#x7D22;&#x5F15;&#xFF0C;&#x5373;<code>(frameTickTime/frameSpeed)%frames</code>&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameStyles</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x6837;&#x5F0F;&#x6570;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frames</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x603B;&#x5E27;&#x6570;&#x3002;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Entity.frameSpeed</td>
-      <td style="text-align:center">int</td>
-      <td style="text-align:left"><b>&#x3010;&#x53EA;&#x8BFB;&#x3011;</b>&#x5B9E;&#x4F53;&#x5E27;&#x5207;&#x6362;&#x5468;&#x671F;&#x3002;</td>
-    </tr>
-  </tbody>
-</table>
-
-#### 其他属性
-
-| 属性 | 类型 | 描述 |
-| :--- | :---: | :--- |
-| Entity.tickTime | int | **【只读】**实体的实际生存的时间。 |
-| Entity.randSeed | int | **【只读】**实体的随机数种子。 |
-
-### 类成员函数
-
-#### 坐标与图形函数
-
-| 函数 | 返回值 | 描述 |
-| :--- | :---: | :--- |
-| Entity:SetCenterX\(double newCenterX\) | void | 将实体中心横坐标设为指定位置。 |
-| Entity:SetCenterY\(double newCenterY\) | void | 将实体中心纵坐标设为指定位置。 |
-| Entity:GetAngleTo\(double desX, double desY\) | double | 返回实体中心点到目标点的角度。 |
-| Entity:GetAngleFrom\(double srcX, double srcY\) | double | 返回来源点到实体中心点的角度。 |
-| Entity:GetDistance\(double otherX, double otherY\) | double | 返回实体中心到指定点的距离。 |
-| Entity:Rotate\(double angle\) | void | 在原有角度基础上继续旋转指定角度。 |
-| Entity:RotateSpeed\(double angle\) | void | 在原有速度角度基础上继续旋转指定速度角度。 |
-
-
+| 函数                                                                               |
+| -------------------------------------------------------------------------------- |
+| <p>void Entity:SetCenterX(double newCenterX)<br>将实体中心横坐标设为指定位置。</p>              |
+| <p>void Entity:SetCenterY(double newCenterY)<br>将实体中心纵坐标设为指定位置。</p>              |
+| <p>double Entity:GetAngleTo(double desX, double desY)<br>返回实体中心点到目标点的角度。</p>     |
+| <p>double Entity:GetAngleFrom(double srcX, double srcY)<br>返回来源点到实体中心点的角度。</p>   |
+| <p>double Entity:GetDistance(double otherX, double otherY)<br>返回实体中心到指定点的距离。</p> |
+| <p>void Entity:Rotate(double angle)<br>在原有角度基础上继续旋转指定角度。</p>                     |
+| <p>void Entity:RotateSpeed(double angle)<br>在原有速度角度基础上继续旋转指定速度角度。</p>            |
 

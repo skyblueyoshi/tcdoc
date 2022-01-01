@@ -1,8 +1,6 @@
-# Data Types and Enums
+# 数据类型、枚举类型
 
-本篇描述的数据类型、枚举类型在所有的文件均可用。
-
-## Data Types
+## 数据类型（Data Types）
 
 ### ObjectRef（抽象类）
 
@@ -109,64 +107,64 @@ local modData3 = npc3:GetModData()
 
 ### Point
 
-Represents a point.
+表示一个点。
 
-| Member  |  Type  | Description                    |
-| ------- | :----: | ------------------------------ |
-| Point.x | double | The x coordinate of the point. |
-| Point.y | double | The y coordinate of the point. |
+| 属性      |   类型   | 描述     |
+| ------- | :----: | ------ |
+| Point.x | double | 点的横坐标。 |
+| Point.y | double | 点的纵坐标。 |
 
 ### Rectangle
 
-Represents an axis-aligned rectangle.
+表示一个轴对齐矩形。
 
-| Member           | Type | Description                                                 |
-| ---------------- | :--: | ----------------------------------------------------------- |
-| Rectangle.x      |  int | The x coordinate of the upper left corner of the rectangle. |
-| Rectangle.y      |  int | The y coordinate of the upper left corner of the rectangle. |
-| Rectangle.width  |  int | The width of the rectangle.                                 |
-| Rectangle.height |  int | The height of the rectangle.                                |
+| 属性               |  类型 | 描述        |
+| ---------------- | :-: | --------- |
+| Rectangle.x      | int | 矩形左上角横坐标。 |
+| Rectangle.y      | int | 矩形左上角纵坐标。 |
+| Rectangle.width  | int | 矩形宽度。     |
+| Rectangle.height | int | 矩形高度。     |
 
-| Function                                           | Returns | Description          |
-| -------------------------------------------------- | :-----: | -------------------- |
-| Rectangle:Set(int x, int y, int width, int height) |   void  | Set a new rectangle. |
+| 函数                                                 |  返回值 | 描述      |
+| -------------------------------------------------- | :--: | ------- |
+| Rectangle:Set(int x, int y, int width, int height) | void | 设置新的矩形。 |
 
 ### SpriteEx
 
-Sprite extension information, has the relevant parameters of drawing.
+绘制拓展信息，决定绘制的相关参数。
 
-| Member                  | Type  | Description                                                                                                                                             |
-| ----------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SpriteEx.scaleRateX     | float | \[ default `1.0` ] The horizontal zoom size when the sprite is drawn.                                                                                   |
-| SpriteEx.scaleRateY     | float | \[ default `1.0` ] The vertical zoom size when the sprite is drawn.                                                                                     |
-| SpriteEx.rotateX        | float | The center point X of the sprite's rotation. If the drawing object is an entity, the default is the center of the entity, otherwise the default is 0.0. |
-| SpriteEx.rotateY        | float | The center point Y of the sprite's rotation. If the drawing object is an entity, the default is the center of the entity, otherwise the default is 0.0. |
-| SpriteEx.angle          | float | \[ default `0.0` ] The rotation angle when the sprite is drawn.                                                                                         |
-| SpriteEx.flipHorizontal | bool  | \[ default `false` ] Whether to flip horizontally when the sprite is drawn.                                                                             |
-| SpriteEx.flipVertical   | bool  | \[ default `false` ] Whether to flip vertically when the sprite is drawn.                                                                               |
+| 属性                      | 类型    | 描述                                    |
+| ----------------------- | ----- | ------------------------------------- |
+| SpriteEx.scaleRateX     | float | 贴图绘制时横向缩放尺寸。（默认为1.0）                  |
+| SpriteEx.scaleRateY     | float | 贴图绘制时纵向缩放尺寸。（默认为1.0）                  |
+| SpriteEx.rotateX        | float | 贴图的旋转中心点X。（若绘制对象为实体，默认为实体中心，否则默认为0.0） |
+| SpriteEx.rotateY        | float | 贴图的旋转中心点Y。（若绘制对象为实体，默认为实体中心，否则默认为0.0） |
+| SpriteEx.angle          | float | 贴图绘制时的旋转角度。（默认为0.0）                   |
+| SpriteEx.flipHorizontal | bool  | 贴图绘制时是否水平翻转。（默认为false）                |
+| SpriteEx.flipVertical   | bool  | 贴图绘制时是否竖直翻转。（默认为false）                |
 
-| Function              | Returns | Description       |
-| --------------------- | :-----: | ----------------- |
-| SpriteEx:SetDefault() |   void  | Restore Defaults. |
+| 函数                    |  返回值 | 描述     |
+| --------------------- | :--: | ------ |
+| SpriteEx:SetDefault() | void | 恢复默认值。 |
 
 ### Hitbox
 
-Represents a collision box. If the `angle` attribute is 0, it means axis aligned collision box (AABB). Otherwise, it represents a collision box rotating around the center point.
+表示一个碰撞箱。若`angle`属性为0，表示轴对齐碰撞箱（AABB）。否则表示一个绕中心点旋转的碰撞箱。
 
-| Member         |  Type  | Description                                                                                             |
-| -------------- | :----: | ------------------------------------------------------------------------------------------------------- |
-| Hitbox.x       | double | The x coordinate of the upper left corner of the hitbox when the rotation angle is 0.                   |
-| Hitbox.y       | double | The y coordinate of the upper left corner of the hitbox when the rotation angle is 0.                   |
-| Hitbox.width   |   int  | The width of the hitbox.                                                                                |
-| Hitbox.height  |   int  | The height of the hitbox.                                                                               |
-| Hitbox.centerX | double | **\[ Read-only ]** Returns the center x coordinate of the hitbox.                                       |
-| Hitbox.centerY | double | **\[ Read-only ]** Returns the center y coordinate of the hitbox.                                       |
-| Hitbox.angle   | double | **\[ Read-only ]** Returns the rotation angle of the collision box if the collision box can be rotated. |
+| 属性             |   类型   | 描述                   |
+| -------------- | :----: | -------------------- |
+| Hitbox.x       | double | 碰撞箱在旋转角度为0时左上角横坐标。   |
+| Hitbox.y       | double | 碰撞箱在旋转角度为0时左上角纵坐标。   |
+| Hitbox.width   |   int  | 碰撞箱的宽度。              |
+| Hitbox.height  |   int  | 碰撞箱的高度。              |
+| Hitbox.centerX | double | **【只读】**碰撞箱中心点的横坐标。  |
+| Hitbox.centerY | double | **【只读】**碰撞箱中心点的纵坐标。  |
+| Hitbox.angle   | double | 若碰撞箱可以旋转，表示碰撞箱的旋转角度。 |
 
-| Function                         | Returns | Description                                                                                      |
-| -------------------------------- | :-----: | ------------------------------------------------------------------------------------------------ |
-| Hitbox:Overlap(Hitbox other)     |   bool  | Returns whether the current hitbox overlaps with another hitbox.                                 |
-| Hitbox:OverlapAABB(Hitbox other) |   bool  | Returns whether the current axis-aligned rectangle overlaps with another axis-aligned rectangle. |
+| 函数                               |  返回值 | 描述                      |
+| -------------------------------- | :--: | ----------------------- |
+| Hitbox:Overlap(Hitbox other)     | bool | 返回当前碰撞箱与另一个碰撞箱是否重叠。     |
+| Hitbox:OverlapAABB(Hitbox other) | bool | 返回当前轴对齐矩形与另一个轴对齐矩形是否重叠。 |
 
 ### Attack
 
@@ -202,19 +200,21 @@ Represents a collision box. If the `angle` attribute is 0, it means axis aligned
 
 ### Color
 
-Represents a color with four channels of alpha (transparency), red, green, and blue.
+表示一个具有Alpha（透明度）、Red、Green、Blue四个通道的颜色。每个通道有效值为\[0, 255]。
 
-| Member      | Type | Description                                                               |
-| ----------- | :--: | ------------------------------------------------------------------------- |
-| Color.alpha |  int | **\[ Read-only ]** Transparent channel value, valid interval is \[0,255]. |
-| Color.red   |  int | **\[ Read-only ]** Red channel value, valid interval is \[0,255].         |
-| Color.green |  int | **\[ Read-only ]** Green channel value, valid interval is \[0,255].       |
-| Color.blue  |  int | **\[ Read-only ]** Blue channel value, valid interval is \[0,255].        |
+通道分量属性均只读，请通过Set函数来设置颜色的值。
 
-| Function                                           | Returns | Description           |
-| -------------------------------------------------- | :-----: | --------------------- |
-| Color:Set(int alpha, int red, int green, int blue) |   void  | Set new color.        |
-| Color:Set(DefaultColor defaultColor)               |   void  | Set color by default. |
+| 属性          |  类型 | 描述              |
+| ----------- | :-: | --------------- |
+| Color.alpha | int | **【只读】**透明通道分量。 |
+| Color.red   | int | **【只读】**红色通道分量。 |
+| Color.green | int | **【只读】**绿色通道分量。 |
+| Color.blue  | int | **【只读】**蓝色通道分量。 |
+
+| 函数                                                 |  返回值 | 描述         |
+| -------------------------------------------------- | :--: | ---------- |
+| Color:Set(int alpha, int red, int green, int blue) | void | 设置新的颜色。    |
+| Color:Set(DefaultColor defaultColor)               | void | 设置为指定默认颜色。 |
 
 ### PlaceParameter
 
@@ -242,7 +242,7 @@ Represents a color with four channels of alpha (transparency), red, green, and b
 | DestroyParameter.silkTouch |  int | **【只读】**破坏时精准采集等级。   |
 | DestroyParameter.fortune   |  int | **【只读】**破坏时时运等级。     |
 
-## Enums
+## 枚举类型（Enums）
 
 注意，这里的枚举值直接当作全局常量使用，且枚举类型的变量只能使用对应枚举值。例如：
 
@@ -254,34 +254,32 @@ end
 
 ### NetMode
 
-Describe the runtime environment is the client or server.&#x20;
+描述当前运行环境为客户端或者服务端。注意单人模式下客户端和内置服务端是同时运行的。
 
-_**Note that the client and built-in server are running at the same time in single mode.**_
-
-| Enum                | Description                        |
-| ------------------- | ---------------------------------- |
-| _NET\_MODE\_SERVER_ | The runtime environment is server. |
-| _NET\_MODE\_CLIENT_ | The runtime environment is client. |
+| 枚举值                 | 描述            |
+| ------------------- | ------------- |
+| _NET\_MODE\_SERVER_ | 当前运行环境为服务端环境。 |
+| _NET\_MODE\_CLIENT_ | 当前运行环境为客户端环境。 |
 
 ### Direction
 
-Represents what the direction is.
+描述方向。
 
-| Enum                | Description |
-| ------------------- | ----------- |
-| _DIRECTION\_LEFT_   | Left.       |
-| _DIRECTION\_TOP_    | Top.        |
-| _DIRECTION\_BOTTOM_ | Bottom.     |
-| _DIRECTION\_RIGHT_  | Right.      |
+| 枚举值                 | 描述  |
+| ------------------- | --- |
+| _DIRECTION\_LEFT_   | 左边。 |
+| _DIRECTION\_TOP_    | 上面。 |
+| _DIRECTION\_BOTTOM_ | 下面。 |
+| _DIRECTION\_RIGHT_  | 右边。 |
 
 ### Shape
 
-Represents a shape.
+描述形状类型。
 
-| Enum                 | Description                                           |
-| -------------------- | ----------------------------------------------------- |
-| _SHAPE\_BOX_         | The shape of the hitbox is an axis-aligned rectangle. |
-| _SHAPE\_ROTATE\_BOX_ | The shape of the hitbox is a rotating rectangle.      |
+| 枚举值                  | 描述           |
+| -------------------- | ------------ |
+| _SHAPE\_BOX_         | 碰撞箱形状为轴对齐矩形。 |
+| _SHAPE\_ROTATE\_BOX_ | 碰撞箱形状为旋转矩形。  |
 
 ### ItemType
 
@@ -334,17 +332,17 @@ Represents a shape.
 
 ### DefaultColor
 
-Represents default color.
+描述默认颜色。
 
-| Enum            | Description               |
-| --------------- | ------------------------- |
-| _COLOR\_BLACK_  | ARGB=(255, 0, 0, 0)       |
-| _COLOR\_WHITE_  | ARGB=(255, 255, 255, 255) |
-| _COLOR\_GRAY_   | ARGB=(255, 128, 128, 128) |
-| _COLOR\_RED_    | ARGB=(255, 255, 0, 0)     |
-| _COLOR\_GREEN_  | ARGB=(255, 0, 255, 0)     |
-| _COLOR\_BLUE_   | ARGB=(255, 0, 0, 255)     |
-| _COLOR\_YELLOW_ | ARGB=(255, 255, 255, 0)   |
+| 枚举值             | 描述                           |
+| --------------- | ---------------------------- |
+| _COLOR\_BLACK_  | 黑色。ARGB=(255, 0, 0, 0)       |
+| _COLOR\_WHITE_  | 白色。ARGB=(255, 255, 255, 255) |
+| _COLOR\_GRAY_   | 灰色。ARGB=(255, 128, 128, 128) |
+| _COLOR\_RED_    | 红色。ARGB=(255, 255, 0, 0)     |
+| _COLOR\_GREEN_  | 绿色。ARGB=(255, 0, 255, 0)     |
+| _COLOR\_BLUE_   | 蓝色。ARGB=(255, 0, 0, 255)     |
+| _COLOR\_YELLOW_ | 黄色。ARGB=(255, 255, 255, 0)   |
 
 ### LightingState
 
