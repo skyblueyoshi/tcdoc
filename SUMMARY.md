@@ -42,6 +42,7 @@
       * [Vector3](cn/mod/engine-api/vector3.md)
       * [Vector4](cn/mod/engine-api/vector4.md)
     * [Game API](cn/mod/game-api/README.md)
+      * [Attack](cn/mod/game-api/attack.md)
       * [ArrayList\<T>](cn/mod/game-api/arraylist-less-than-t-greater-than.md)
       * [Entity](cn/mod/game-api/entity.md)
       * [LightingUtils](cn/mod/game-api/lightingutils.md)
