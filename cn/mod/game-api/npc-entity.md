@@ -36,6 +36,41 @@ NPC泛指除了玩家之外的所有生物，如动物、敌怪、村民、BOSS�
 | <p><strong>int animationTickTime</strong><br>NPC在当前动画索引所经过的时间。每帧自动自增1，当动画状态切换时自动重置为0。</p>                 |
 | <p><strong>double watchAngle</strong><br><strong>【只读】</strong>NPC的目视角度。若NPC目标存在，则总是目视目标。否则总是根据朝向水平目视。</p> |
 | <p><strong>ArrayList&#x3C;ItemSlot> itemSlots</strong><br>当前NPC自己的物品格子列表。物品格子数目在NPC的AI数据表中指定。</p>         |
+| <p><strong>NpcType type</strong><br>NPC类型。</p>                                                            |
+| <p><strong>double spawnCount</strong></p><p>占用生成量。</p>                                                    |
+| <p><strong>double defaultKnockBackDefenseValue</strong></p><p>击退抗性。</p>                                   |
+| <p><strong>double toolUseRate</strong></p><p>工具使用概率。</p>                                                  |
+| <p><strong>int maxDisappearTime</strong></p><p>最大消失时间。</p>                                                |
+| <p><strong>int defaultDefenseValue</strong></p><p>防御力。</p>                                                |
+| <p><strong>int defaultAttackValue</strong></p><p>攻击力。</p>                                                 |
+| <p><strong>int defaultCritValue</strong></p><p>双倍暴击率百分比。</p>                                              |
+| <p><strong>int defaultKnockBackValue</strong></p><p>击退力。</p>                                              |
+| <p><strong>int movement</strong></p><p>运动方式。</p>                                                          |
+| <p><strong>int gfxOffsetX</strong></p><p>贴图偏移量X。</p>                                                      |
+| <p><strong>int gfxOffsetY</strong></p><p>贴图偏移量Y。</p>                                                      |
+| <p><strong>int gfxWidth</strong></p><p>贴图宽度。</p>                                                          |
+| <p><strong>int gfxHeight</strong></p><p>贴图高度。</p>                                                         |
+| <p><strong>int frameStyle</strong></p><p>贴图方式 0-不分左右 1-分左右。</p>                                           |
+| <p><strong>int exps</strong></p><p>经验值。</p>                                                               |
+| <p><strong>int checkTargetDistance</strong></p><p>检测目标的半径。</p>                                            |
+| <p><strong>int special</strong></p><p>特殊值)</p>                                                            |
+| <p><strong>int magicRate</strong></p><p>产生魔法碎片概率的反比)</p>                                                  |
+| <p><strong>bool friendly</strong></p><p>是否友好。</p>                                                         |
+| <p><strong>bool hasGravity</strong></p><p>是否受重力。</p>                                                      |
+| <p><strong>bool canClimbWal</strong></p><p>是否能爬墙。</p>                                                     |
+| <p><strong>bool isForeground</strong></p><p>是否置前。</p>                                                     |
+| <p><strong>bool isAntiLava</strong></p><p>(是否抵抗岩浆。</p>                                                    |
+| <p><strong>bool noFixByBlock</strong></p><p>是否不根据方块修正位置。</p>                                              |
+| <p><strong>bool willBurnUnderSun</strong></p><p>是否白天自燃。</p>                                               |
+| <p><strong>bool defaultAngry</strong></p><p>是否易怒。</p>                                                     |
+| <p><strong>bool isBoss</strong></p><p>是否作为BOSS。</p>                                                       |
+| <p><strong>bool noShowHp</strong></p><p>是否不显示血条。</p>                                                      |
+| <p><strong>bool noBurnSound</strong></p><p>是否不播放燃烧音效。</p>                                                 |
+| <p><strong>bool usingBoneModule</strong></p><p>是否使用骨骼模型。</p>                                              |
+| <p><strong>bool isCheckPlayerTarget</strong></p><p>是否自动检测玩家目标。</p>                                        |
+| <p><strong>bool isVisionNoCrossTile</strong></p><p>是否视野不穿墙。</p>                                           |
+| <p><strong>bool isAutoSave</strong></p><p>是否保存到存档。</p>                                                    |
+| <p><strong>bool netUpdate</strong> </p><p>是否使用逻辑网络同步。</p>                                                 |
 
 ### 类成员函数
 
