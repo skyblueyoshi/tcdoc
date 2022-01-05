@@ -8,8 +8,9 @@ NPC通用模块。
 
 ## 函数
 
-| 函数                                                                                                                                                                                                                                                                      |
+| <p><strong>Npc/nil NpcUtils.Get(EntityIndex entityIndex)</strong><br><strong></strong>获取指定索引表示的NPC，如果不存在，返回nil。</p>                                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>bool NpcUtils.IsAlive(EntityIndex entityIndex)</strong><br><strong></strong>判断指定索引的NPC是否存在。</p>                                                                                                                                                              |
 | <p><strong>Npc NpcUtils.Create(int id, double x, double y, double speedX = 0.0, double speedY = 0.0)</strong><br>在指定位置创建一个NPC，返回创建好的NPC实体。<br><code>id</code>：NPC的ID。<br><code>x</code>和<code>y</code>：创建NPC的坐标。<br><code>speedX</code>和<code>speedY</code>：初始运动速度。</p> |
 | <p><strong>ArrayList&#x3C;Npc> NpcUtils.SearchByRect(double x, double y, int width, int height)</strong><br>返回包含于指定矩形区域内部的所有NPC列表。</p>                                                                                                                                  |
 | <p><strong>ArrayList&#x3C;Npc> NpcUtils.SearchByCircle(double centerX, double centerY, int radius)</strong><br>返回包含于指定圆形区域内部的所有NPC列表。</p>                                                                                                                               |
