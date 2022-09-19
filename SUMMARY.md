@@ -9,7 +9,7 @@
       * [JSON](en/mod/api/json.md)
       * [Entity](en/mod/api/entity.md)
       * [NPC](en/mod/api/npc.md)
-* [简体中文](cn/README.md)
+* [简体中文（旧版教程）](cn/README.md)
   * [模组文档](cn/mod/README.md)
     * [Engine API](cn/mod/engine-api/README.md)
       * [App](cn/mod/engine-api/app.md)
