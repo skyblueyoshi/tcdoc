@@ -107,3 +107,16 @@
       * [背景表（backgrounds.json）](cn/mod/datatable/bei-jing-biao-backgrounds.json.md)
       * [皮肤表（skins.json）](cn/mod/datatable/pi-fu-biao-skins.json.md)
       * [着色器表（shaders.json）](cn/mod/datatable/zhe-se-qi-biao-shaders.json.md)
+
+## 新版教程 <a href="#NewGuide" id="NewGuide"></a>
+
+* [1 基础部分](NewGuide/1-base/README.md)
+  * [1.1 安装集成开发环境](NewGuide/1-base/env.md)
+  * [1.2 获取TerraCraft源码](NewGuide/1-base/sources.md)
+  * [1.3 认识Lua](NewGuide/1-base/lua.md)
+  * [1.4 Mod架构](NewGuide/1-base/mod.md)
+  * [1.5 游戏主生命周期和主状态机](NewGuide/1-base/game-state-machine.md)
+  * [1.6 Lua实战](NewGuide/1-base/lua-ex.md)
+  * [1.7 第一个物品](NewGuide/1-base/item.md)
+  * [1.8 本地化翻译](NewGuide/1-base/locale.md)
+  * [1.9 配方系统初探和矿物字典](NewGuide/1-base/recipes.md)
